@@ -1,6 +1,6 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-07-25T17:16:46.723Z",
+  "checkedAt": "2026-07-25T18:12:06.788Z",
   "calls": [
     {
       "identifier": "SMP-COSME-2024-CLUSTER-01",
@@ -13,7 +13,7 @@
     },
     {
       "identifier": "SMP-COSME-2024-CLUSTER-01",
-      "title": "Joint Cluster Initiatives (EUROCLUSTERS) for Europe’s recovery",
+      "title": "Iniciativas conjuntas de clústeres (EUROCLUSTERS) para la recuperación de Europa",
       "callIdentifier": "SMP-COSME-2024-CLUSTER-01",
       "deadline": "2026-07-31T17:00:00.000Z",
       "startDate": "2026-06-01T00:00:00.000+0000",
@@ -41,6 +41,15 @@
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
       "title": "Stypendia podoktorskie MSCA 2026",
+      "callIdentifier": "HORIZON-MSCA-2026-PF-01",
+      "deadline": "2026-09-09T00:00:00.000Z",
+      "startDate": "2026-04-09T00:00:00.000+0000",
+      "actionType": "HORIZON TMA MSCA Postdoctoral Fellowships - European Fellowships",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-pf-01-01"
+    },
+    {
+      "identifier": "HORIZON-MSCA-2026-PF-01-01",
+      "title": "Becas postdoctorales MSCA 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
@@ -85,7 +94,7 @@
     },
     {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "Call Town Twinning 2026",
+      "title": "Llamada Ciudad hermanamiento 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
       "deadline": "2026-09-23T00:00:00.000Z",
       "startDate": "2026-05-06T00:00:00.000+0000",
@@ -94,21 +103,12 @@
     },
     {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "αδελφοποίηση Call Town 2026",
+      "title": "Call Town Twinning 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
       "deadline": "2026-09-23T00:00:00.000Z",
       "startDate": "2026-05-06T00:00:00.000+0000",
       "actionType": "CERV Lump Sum Grants",
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/cerv-2026-citizens-town-tt"
-    },
-    {
-      "identifier": "HORIZON-MSCA-2026-DN-01-01",
-      "title": "Sieci doktoranckie MSCA 2026",
-      "callIdentifier": "HORIZON-MSCA-2026-DN-01",
-      "deadline": "2026-11-24T00:00:00.000Z",
-      "startDate": "2026-05-28T00:00:00.000+0000",
-      "actionType": "HORIZON TMA MSCA Doctoral Networks - Joint Doctorates",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-dn-01-01"
     }
   ]
 }
