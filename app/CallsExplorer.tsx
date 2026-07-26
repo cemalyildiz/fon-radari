@@ -29,7 +29,10 @@ const trDateTime = new Intl.DateTimeFormat("tr-TR", {
 
 function realStatus(call: FundingCall, now: number): CallStatus {
   const open = new Date(call.openDate).getTime();
-  const close = new Date(call.deadline).getTime();
+  if (call.applicationType === "continuous") {
+    return open > now ? "upcoming" : "open";
+  }
+  const close = call.deadline ? new Date(call.deadline).getTime() : Number.POSITIVE_INFINITY;
   if (close < now) return "archived";
   if (open > now) return "upcoming";
   return "open";
@@ -49,6 +52,9 @@ function Countdown({ call, now }: { call: FundingCall; now: number }) {
   const status = realStatus(call, now);
   if (status === "archived") return <span className="countdown archived">Süre sona erdi</span>;
   if (status === "upcoming") return <span className="countdown upcoming">Yakında</span>;
+  if (call.applicationType === "continuous" || !call.deadline) {
+    return <span className="countdown continuous"><strong>∞</strong> sürekli başvuru</span>;
+  }
   const days = daysLeft(call.deadline, now);
   return (
     <span className={`countdown ${days <= 30 ? "urgent" : ""}`}>
@@ -61,6 +67,8 @@ export default function CallsExplorer({ calls }: Props) {
   const [scope, setScope] = useState<CallScope>("national");
   const [status, setStatus] = useState<StatusFilter>("active");
   const [scale, setScale] = useState("Tümü");
+  const [theme, setTheme] = useState("Tümü");
+  const [sector, setSector] = useState("Tümü");
   const [query, setQuery] = useState("");
   const [selected, setSelected] = useState<FundingCall | null>(null);
   const [now, setNow] = useState(() => Date.now());
@@ -116,6 +124,32 @@ export default function CallsExplorer({ calls }: Props) {
     ],
     [normalizedCalls, scope],
   );
+  const themeOptions = useMemo(
+    () => [
+      "Tümü",
+      ...Array.from(
+        new Set(
+          normalizedCalls
+            .filter((call) => call.scope === scope)
+            .flatMap((call) => call.themes ?? call.tags),
+        ),
+      ).sort((a, b) => a.localeCompare(b, "tr-TR")),
+    ],
+    [normalizedCalls, scope],
+  );
+  const sectorOptions = useMemo(
+    () => [
+      "Tümü",
+      ...Array.from(
+        new Set(
+          normalizedCalls
+            .filter((call) => call.scope === scope)
+            .flatMap((call) => call.sectors ?? ["Sektörler Arası"]),
+        ),
+      ).sort((a, b) => a.localeCompare(b, "tr-TR")),
+    ],
+    [normalizedCalls, scope],
+  );
 
   const filtered = normalizedCalls
     .filter((call) => call.scope === scope)
@@ -125,16 +159,28 @@ export default function CallsExplorer({ calls }: Props) {
       return call.status === status;
     })
     .filter((call) => scale === "Tümü" || call.companyScale.includes(scale))
+    .filter((call) => theme === "Tümü" || (call.themes ?? call.tags).includes(theme))
+    .filter((call) => sector === "Tümü" || (call.sectors ?? ["Sektörler Arası"]).includes(sector))
     .filter((call) => {
-      const haystack = `${call.title} ${call.code} ${call.institutionShort} ${call.tags.join(" ")}`.toLocaleLowerCase(
-        "tr-TR",
-      );
+      const haystack = [
+        call.title,
+        call.code,
+        call.institution,
+        call.institutionShort,
+        call.summary,
+        call.applicants,
+        ...call.tags,
+        ...(call.themes ?? []),
+        ...(call.sectors ?? []),
+      ].join(" ").toLocaleLowerCase("tr-TR");
       return haystack.includes(query.toLocaleLowerCase("tr-TR"));
     })
     .sort((a, b) => {
       if (a.status === "archived" && b.status !== "archived") return 1;
       if (a.status !== "archived" && b.status === "archived") return -1;
-      return new Date(a.deadline).getTime() - new Date(b.deadline).getTime();
+      const aDeadline = a.deadline ? new Date(a.deadline).getTime() : Number.POSITIVE_INFINITY;
+      const bDeadline = b.deadline ? new Date(b.deadline).getTime() : Number.POSITIVE_INFINITY;
+      return aDeadline - bDeadline;
     });
 
   return (
@@ -172,8 +218,8 @@ export default function CallsExplorer({ calls }: Props) {
             <em>doğru zamanda</em> bulun.
           </h1>
           <p>
-            Türkiye ve Avrupa’daki güncel fon çağrılarını; tarih, destek türü, bütçe,
-            başvuru sahibi ve firma ölçeği bilgileriyle tek ekranda inceleyin.
+            Türkiye ve Avrupa’daki güncel sanayi fırsatlarını; sektör, dönüşüm teması,
+            tarih, destek türü, bütçe ve firma ölçeği bilgileriyle tek ekranda inceleyin.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#cagrilar">
@@ -226,6 +272,9 @@ export default function CallsExplorer({ calls }: Props) {
 
       <section className="source-strip" aria-label="İzlenen kaynaklar">
         <span>İzlenen resmî kaynaklar</span>
+        <div><b>SANAYİ</b> BAKANLIĞI</div>
+        <div><b>TİCARET</b> BAKANLIĞI</div>
+        <div><b>SSB</b></div>
         <div><b>TÜBİTAK</b></div>
         <div><b>KOSGEB</b></div>
         <div><b>HORIZON</b> EUROPE</div>
@@ -239,8 +288,8 @@ export default function CallsExplorer({ calls }: Props) {
         <div className="section-heading">
           <div>
             <span className="kicker">FIRSATLARI KEŞFET</span>
-            <h2>Güncel proje çağrıları</h2>
-            <p>Firmanızın ölçeğine ve hedeflerine uyan destekleri karşılaştırın.</p>
+            <h2>Güncel sanayi çağrıları ve destekleri</h2>
+            <p>Yeşil ve dijital dönüşüm dâhil tüm temalarda, sektörünüze uyan fırsatları karşılaştırın.</p>
           </div>
           <div className={`sync-chip ${liveFeed.degraded ? "degraded" : ""}`}>
             <span />
@@ -263,6 +312,8 @@ export default function CallsExplorer({ calls }: Props) {
             onClick={() => {
               setScope("national");
               setScale("Tümü");
+              setTheme("Tümü");
+              setSector("Tümü");
             }}
           >
             <span className="tab-icon">TR</span>
@@ -279,6 +330,8 @@ export default function CallsExplorer({ calls }: Props) {
             onClick={() => {
               setScope("international");
               setScale("Tümü");
+              setTheme("Tümü");
+              setSector("Tümü");
             }}
           >
             <span className="tab-icon globe">◎</span>
@@ -296,7 +349,7 @@ export default function CallsExplorer({ calls }: Props) {
             <input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              placeholder="Çağrı adı, kodu, kurum veya konu ara…"
+              placeholder="Çağrı, kurum, sektör veya konsept ara…"
               aria-label="Çağrılarda ara"
             />
             {query && (
@@ -304,6 +357,22 @@ export default function CallsExplorer({ calls }: Props) {
                 ×
               </button>
             )}
+          </label>
+          <label>
+            <span>Tema / konsept</span>
+            <select value={theme} onChange={(event) => setTheme(event.target.value)}>
+              {themeOptions.map((option) => (
+                <option key={option}>{option}</option>
+              ))}
+            </select>
+          </label>
+          <label>
+            <span>Sektör</span>
+            <select value={sector} onChange={(event) => setSector(event.target.value)}>
+              {sectorOptions.map((option) => (
+                <option key={option}>{option}</option>
+              ))}
+            </select>
           </label>
           <label>
             <span>Firma ölçeği</span>
@@ -349,14 +418,15 @@ export default function CallsExplorer({ calls }: Props) {
               <h3>{call.title}</h3>
               <p className="card-summary">{call.summary}</p>
               <div className="tag-row">
-                {call.tags.slice(0, 3).map((tag) => (
-                  <span key={tag}>{tag}</span>
-                ))}
+                {Array.from(new Set([
+                  ...(call.themes ?? call.tags).slice(0, 2),
+                  ...(call.sectors ?? ["Sektörler Arası"]).slice(0, 2),
+                ])).map((tag) => <span key={tag}>{tag}</span>)}
               </div>
               <dl className="card-facts">
                 <div>
                   <dt>Son başvuru</dt>
-                  <dd>{trDate.format(new Date(call.deadline))}</dd>
+                  <dd>{call.applicationType === "continuous" || !call.deadline ? "Sürekli başvuru" : trDate.format(new Date(call.deadline))}</dd>
                 </div>
                 <div>
                   <dt>Destek türü</dt>
@@ -384,6 +454,8 @@ export default function CallsExplorer({ calls }: Props) {
                 onClick={() => {
                   setQuery("");
                   setScale("Tümü");
+                  setTheme("Tümü");
+                  setSector("Tümü");
                   setStatus("active");
                 }}
               >
@@ -406,19 +478,19 @@ export default function CallsExplorer({ calls }: Props) {
             <span>01</span>
             <div className="process-icon">⌁</div>
             <h3>Resmî kaynak taraması</h3>
-            <p>Funding & Tenders API’si saatlik taranır; EUREKA, Eurostars ve TÜBİTAK çağrıları kendi resmî sayfalarından ayrıca izlenir.</p>
+            <p>AB API’si saatlik taranır; Bakanlıklar, SSB, TÜBİTAK, KOSGEB, EUREKA ve Eurostars kendi resmî sayfalarından ayrıca izlenir.</p>
           </article>
           <article>
             <span>02</span>
             <div className="process-icon">✓</div>
             <h3>Alan bazlı doğrulama</h3>
-            <p>Tarih, destek şekli, başvuru sahibi ve ölçek bilgileri resmî çağrı metniyle eşleştirilir.</p>
+            <p>Tarih, destek şekli, başvuru sahibi, tema, sektör ve ölçek bilgileri resmî metinle eşleştirilir.</p>
           </article>
           <article>
             <span>03</span>
             <div className="process-icon">↻</div>
             <h3>Otomatik durum yönetimi</h3>
-            <p>Açılış ve kapanış tarihlerine göre çağrı durumu otomatik değişir; süresi geçen kayıt arşive taşınır.</p>
+            <p>Süreli çağrılar kapanınca arşivlenir; son tarihi olmayan programlar “sürekli başvuru” olarak ayrıştırılır.</p>
           </article>
           <article>
             <span>04</span>
@@ -478,7 +550,7 @@ export default function CallsExplorer({ calls }: Props) {
             <div className="modal-body">
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
-                <article><span>Başvuru dönemi</span><b>{trDate.format(new Date(selected.openDate))} – {trDate.format(new Date(selected.deadline))}</b></article>
+                <article><span>Başvuru dönemi</span><b>{selected.applicationType === "continuous" || !selected.deadline ? `${trDate.format(new Date(selected.openDate))} tarihinden itibaren sürekli` : `${trDate.format(new Date(selected.openDate))} – ${trDate.format(new Date(selected.deadline))}`}</b></article>
                 <article><span>Destek miktarı</span><b>{selected.fundingAmount}</b></article>
                 <article><span>Destek şekli</span><b>{selected.fundingType}</b></article>
                 <article><span>Destek oranı</span><b>{selected.supportRate ?? "Çağrı dokümanına göre"}</b></article>
@@ -486,6 +558,8 @@ export default function CallsExplorer({ calls }: Props) {
                 <article><span>Firma / kuruluş ölçeği</span><b>{selected.companyScale.join(", ")}</b></article>
                 <article><span>Azami süre</span><b>{selected.duration ?? "Çağrı dokümanına göre"}</b></article>
                 <article><span>Yürüten kurum</span><b>{selected.institution}</b></article>
+                <article><span>Tema / konsept</span><b>{(selected.themes ?? selected.tags).join(", ")}</b></article>
+                <article><span>Sektörler</span><b>{(selected.sectors ?? ["Sektörler Arası"]).join(", ")}</b></article>
               </div>
 
               <div className="detail-columns">

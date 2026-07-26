@@ -464,11 +464,13 @@ a {
   padding: 16px max(5vw, 32px);
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   gap: clamp(20px, 4vw, 56px);
   color: #7f9199;
   background: white;
   border-bottom: 1px solid var(--line);
+  overflow-x: auto;
+  scrollbar-width: thin;
 }
 
 .source-strip > span {
@@ -665,7 +667,7 @@ a {
   margin-bottom: 25px;
   padding: 13px;
   display: grid;
-  grid-template-columns: minmax(260px, 2fr) minmax(150px, 0.85fr) minmax(150px, 0.85fr) auto;
+  grid-template-columns: minmax(260px, 2fr) repeat(4, minmax(130px, 0.8fr)) auto;
   align-items: end;
   gap: 12px;
   border: 1px solid #dfe9eb;
@@ -961,6 +963,11 @@ a {
 .countdown strong {
   color: #1f6e67;
   font-size: 15px;
+}
+
+.countdown.continuous,
+.countdown.continuous strong {
+  color: #1f6e67;
 }
 
 .countdown.urgent,
@@ -1414,6 +1421,14 @@ footer > a:last-child {
 
   .call-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .filters {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .search-box {
+    grid-column: 1 / -1;
   }
 
   .source-strip div:nth-last-child(-n + 2) {
