@@ -229,9 +229,10 @@ export default function CallsExplorer({ calls }: Props) {
         <div><b>TÜBİTAK</b></div>
         <div><b>KOSGEB</b></div>
         <div><b>HORIZON</b> EUROPE</div>
+        <div><b>EUREKA</b></div>
+        <div><b>EUROSTARS</b></div>
         <div><b>LIFE</b> PROGRAMME</div>
         <div><b>EIC</b></div>
-        <div><b>DIGITAL</b> EUROPE</div>
       </section>
 
       <section className="calls-section" id="cagrilar">
@@ -244,7 +245,7 @@ export default function CallsExplorer({ calls }: Props) {
           <div className={`sync-chip ${liveFeed.degraded ? "degraded" : ""}`}>
             <span />
             <div>
-              <b>{liveFeed.degraded ? "Kaynak bağlantısı bekleniyor" : "AB kaynağı senkronize"}</b>
+              <b>{liveFeed.degraded ? "AB kaynak bağlantısı bekleniyor" : "AB API kaynağı senkronize"}</b>
               <small>
                 {liveFeed.checkedAt
                   ? `Son kontrol: ${trDateTime.format(new Date(liveFeed.checkedAt))}`
@@ -283,7 +284,7 @@ export default function CallsExplorer({ calls }: Props) {
             <span className="tab-icon globe">◎</span>
             <span>
               <b>Uluslararası Projeler</b>
-              <small>Horizon Europe, LIFE, EIC ve diğerleri</small>
+              <small>Horizon Europe, EUREKA, Eurostars ve diğerleri</small>
             </span>
             <i>{internationalCount}</i>
           </button>
@@ -405,7 +406,7 @@ export default function CallsExplorer({ calls }: Props) {
             <span>01</span>
             <div className="process-icon">⌁</div>
             <h3>Resmî kaynak taraması</h3>
-            <p>Avrupa Komisyonu çağrıları resmî Funding & Tenders API’sinden saatlik ön taramaya alınır.</p>
+            <p>Funding & Tenders API’si saatlik taranır; EUREKA, Eurostars ve TÜBİTAK çağrıları kendi resmî sayfalarından ayrıca izlenir.</p>
           </article>
           <article>
             <span>02</span>
