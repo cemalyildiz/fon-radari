@@ -1,10 +1,19 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-07-26T11:37:29.770Z",
+  "checkedAt": "2026-07-26T13:57:46.259Z",
   "calls": [
     {
       "identifier": "SMP-COSME-2024-CLUSTER-01",
       "title": "Wspólne inicjatywy klastrów (EUROCLUSTERS) na rzecz odbudowy Europy",
+      "callIdentifier": "SMP-COSME-2024-CLUSTER-01",
+      "deadline": "2026-07-31T17:00:00.000Z",
+      "startDate": "2026-06-01T00:00:00.000+0000",
+      "actionType": "EU grant",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/smp-cosme-2024-cluster-01"
+    },
+    {
+      "identifier": "SMP-COSME-2024-CLUSTER-01",
+      "title": "Joint Cluster Initiatives (EUROCLUSTERS) for Europe’s recovery",
       "callIdentifier": "SMP-COSME-2024-CLUSTER-01",
       "deadline": "2026-07-31T17:00:00.000Z",
       "startDate": "2026-06-01T00:00:00.000+0000",
@@ -49,7 +58,7 @@
     },
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "Becas postdoctorales MSCA 2026",
+      "title": "MSCA Postdoctoral Fellowships 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
@@ -58,7 +67,7 @@
     },
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "MSCA Postdoctoral Fellowships 2026",
+      "title": "Becas postdoctorales MSCA 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
@@ -95,15 +104,6 @@
     {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
       "title": "Oproep Stadsjumelage 2026",
-      "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "deadline": "2026-09-23T00:00:00.000Z",
-      "startDate": "2026-05-06T00:00:00.000+0000",
-      "actionType": "CERV Lump Sum Grants",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/cerv-2026-citizens-town-tt"
-    },
-    {
-      "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "Llamada Ciudad hermanamiento 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
       "deadline": "2026-09-23T00:00:00.000Z",
       "startDate": "2026-05-06T00:00:00.000+0000",
