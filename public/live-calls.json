@@ -1,6 +1,6 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-07-29T06:45:58.539Z",
+  "checkedAt": "2026-07-29T09:50:23.288Z",
   "calls": [
     {
       "identifier": "SMP-COSME-2024-CLUSTER-01",
@@ -13,7 +13,7 @@
     },
     {
       "identifier": "SMP-COSME-2024-CLUSTER-01",
-      "title": "Joint Cluster Initiatives (EUROCLUSTERS) for Europe’s recovery",
+      "title": "Iniciativas conjuntas de clústeres (EUROCLUSTERS) para la recuperación de Europa",
       "callIdentifier": "SMP-COSME-2024-CLUSTER-01",
       "deadline": "2026-07-31T17:00:00.000Z",
       "startDate": "2026-06-01T00:00:00.000+0000",
@@ -22,7 +22,7 @@
     },
     {
       "identifier": "SMP-COSME-2024-CLUSTER-01",
-      "title": "Iniciativas conjuntas de clústeres (EUROCLUSTERS) para la recuperación de Europa",
+      "title": "Joint Cluster Initiatives (EUROCLUSTERS) for Europe’s recovery",
       "callIdentifier": "SMP-COSME-2024-CLUSTER-01",
       "deadline": "2026-07-31T17:00:00.000Z",
       "startDate": "2026-06-01T00:00:00.000+0000",
