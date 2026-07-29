@@ -1,6 +1,6 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-07-29T19:44:57.016Z",
+  "checkedAt": "2026-07-29T21:13:17.384Z",
   "calls": [
     {
       "identifier": "SMP-COSME-2024-CLUSTER-01",
@@ -39,6 +39,15 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-moc-iba"
     },
     {
+      "identifier": "HORIZON-EIT-2025-MOC-IBA",
+      "title": "2026-2027 MOC Δραστηριότητες",
+      "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
+      "deadline": "2026-09-08T17:00:00.000Z",
+      "startDate": "2026-07-01T00:00:00.000+0000",
+      "actionType": "EU grant",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-moc-iba"
+    },
+    {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
       "title": "Stypendia podoktorskie MSCA 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
@@ -58,7 +67,7 @@
     },
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "MSCA Postdoktorsstipendier 2026",
+      "title": "Μεταδιδακτορικές Υποτροφίες MSCA 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
@@ -67,7 +76,7 @@
     },
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "MSCA Postdoctoral Fellowships 2026",
+      "title": "MSCA Postdoktorsstipendier 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
@@ -77,15 +86,6 @@
     {
       "identifier": "HORIZON-EIT-2025-KIC-IBA-H",
       "title": "EITHEALTH-bedrijfsplan 2026",
-      "callIdentifier": "HORIZON-EIT-2025-KIC-IBA-H",
-      "deadline": "2026-09-16T16:00:00.000Z",
-      "startDate": "2026-07-15T00:00:00.000+0000",
-      "actionType": "EU grant",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-kic-iba-h"
-    },
-    {
-      "identifier": "HORIZON-EIT-2025-KIC-IBA-H",
-      "title": "EITHEALTH Business Plan 2026",
       "callIdentifier": "HORIZON-EIT-2025-KIC-IBA-H",
       "deadline": "2026-09-16T16:00:00.000Z",
       "startDate": "2026-07-15T00:00:00.000+0000",
