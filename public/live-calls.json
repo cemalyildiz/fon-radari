@@ -1,6 +1,6 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-08-01T06:41:19.602Z",
+  "checkedAt": "2026-08-01T09:21:43.154Z",
   "calls": [
     {
       "identifier": "HORIZON-EIT-2025-MOC-IBA",
@@ -22,25 +22,16 @@
     },
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "Becas postdoctorales MSCA 2026",
-      "callIdentifier": "HORIZON-MSCA-2026-PF-01",
-      "deadline": "2026-09-09T00:00:00.000Z",
-      "startDate": "2026-04-09T00:00:00.000+0000",
-      "actionType": "HORIZON TMA MSCA Postdoctoral Fellowships - European Fellowships",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-pf-01-01"
-    },
-    {
-      "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "MSCA Postdoktorsstipendier 2026",
-      "callIdentifier": "HORIZON-MSCA-2026-PF-01",
-      "deadline": "2026-09-09T00:00:00.000Z",
-      "startDate": "2026-04-09T00:00:00.000+0000",
-      "actionType": "HORIZON TMA MSCA Postdoctoral Fellowships - European Fellowships",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-pf-01-01"
-    },
-    {
-      "identifier": "HORIZON-MSCA-2026-PF-01-01",
       "title": "MSCA Postdoctoral Fellowships 2026",
+      "callIdentifier": "HORIZON-MSCA-2026-PF-01",
+      "deadline": "2026-09-09T00:00:00.000Z",
+      "startDate": "2026-04-09T00:00:00.000+0000",
+      "actionType": "HORIZON TMA MSCA Postdoctoral Fellowships - European Fellowships",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-pf-01-01"
+    },
+    {
+      "identifier": "HORIZON-MSCA-2026-PF-01-01",
+      "title": "Becas postdoctorales MSCA 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
@@ -76,7 +67,7 @@
     },
     {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "Llamada Ciudad hermanamiento 2026",
+      "title": "Call Town Twinning 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
       "deadline": "2026-09-23T00:00:00.000Z",
       "startDate": "2026-05-06T00:00:00.000+0000",
@@ -85,7 +76,7 @@
     },
     {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "Call Town Twinning 2026",
+      "title": "Llamada Ciudad hermanamiento 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
       "deadline": "2026-09-23T00:00:00.000Z",
       "startDate": "2026-05-06T00:00:00.000+0000",
