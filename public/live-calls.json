@@ -1,10 +1,19 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-08-15T09:42:09.790Z",
+  "checkedAt": "2026-08-15T10:40:12.176Z",
   "calls": [
     {
       "identifier": "HORIZON-EIT-2025-MOC-IBA",
       "title": "Działania MOC na lata 2026–2027",
+      "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
+      "deadline": "2026-09-08T17:00:00.000Z",
+      "startDate": "2026-07-01T00:00:00.000+0000",
+      "actionType": "EU grant",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-moc-iba"
+    },
+    {
+      "identifier": "HORIZON-EIT-2025-MOC-IBA",
+      "title": "2026-2027 MOC Δραστηριότητες",
       "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
       "deadline": "2026-09-08T17:00:00.000Z",
       "startDate": "2026-07-01T00:00:00.000+0000",
@@ -31,7 +40,7 @@
     },
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "MSCA Postdoctoral Fellowships 2026",
+      "title": "MSCA Postdoktorsstipendier 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
@@ -41,15 +50,6 @@
     {
       "identifier": "HORIZON-EIT-2025-KIC-IBA-H",
       "title": "EITHEALTH-bedrijfsplan 2026",
-      "callIdentifier": "HORIZON-EIT-2025-KIC-IBA-H",
-      "deadline": "2026-09-16T16:00:00.000Z",
-      "startDate": "2026-07-15T00:00:00.000+0000",
-      "actionType": "EU grant",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-kic-iba-h"
-    },
-    {
-      "identifier": "HORIZON-EIT-2025-KIC-IBA-H",
-      "title": "EITHEALTH Business Plan 2026",
       "callIdentifier": "HORIZON-EIT-2025-KIC-IBA-H",
       "deadline": "2026-09-16T16:00:00.000Z",
       "startDate": "2026-07-15T00:00:00.000+0000",
@@ -76,7 +76,7 @@
     },
     {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "Call Town Twinning 2026",
+      "title": "αδελφοποίηση Call Town 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
       "deadline": "2026-09-23T00:00:00.000Z",
       "startDate": "2026-05-06T00:00:00.000+0000",
@@ -94,7 +94,7 @@
     },
     {
       "identifier": "HORIZON-MSCA-2026-DN-01-01",
-      "title": "MSCA Doctoral Networks 2026",
+      "title": "Διδακτορικά Δίκτυα MSCA 2026",
       "callIdentifier": "HORIZON-MSCA-2026-DN-01",
       "deadline": "2026-11-24T00:00:00.000Z",
       "startDate": "2026-05-28T00:00:00.000+0000",
