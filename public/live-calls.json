@@ -1,6 +1,6 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-08-21T05:49:10.596Z",
+  "checkedAt": "2026-08-21T07:08:25.498Z",
   "calls": [
     {
       "identifier": "HORIZON-EIT-2025-MOC-IBA",
@@ -32,15 +32,6 @@
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
       "title": "Becas postdoctorales MSCA 2026",
-      "callIdentifier": "HORIZON-MSCA-2026-PF-01",
-      "deadline": "2026-09-09T00:00:00.000Z",
-      "startDate": "2026-04-09T00:00:00.000+0000",
-      "actionType": "HORIZON TMA MSCA Postdoctoral Fellowships - European Fellowships",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-pf-01-01"
-    },
-    {
-      "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "MSCA Postdoktorsstipendier 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
