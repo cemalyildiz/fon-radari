@@ -1,6 +1,6 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-08-21T13:11:41.523Z",
+  "checkedAt": "2026-08-21T13:58:53.102Z",
   "calls": [
     {
       "identifier": "HORIZON-EIT-2025-MOC-IBA",
@@ -40,7 +40,7 @@
     },
     {
       "identifier": "HORIZON-MSCA-2026-PF-01-01",
-      "title": "Μεταδιδακτορικές Υποτροφίες MSCA 2026",
+      "title": "MSCA Postdoktorsstipendier 2026",
       "callIdentifier": "HORIZON-MSCA-2026-PF-01",
       "deadline": "2026-09-09T00:00:00.000Z",
       "startDate": "2026-04-09T00:00:00.000+0000",
