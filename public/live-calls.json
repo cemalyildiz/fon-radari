@@ -1,10 +1,10 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-08-25T09:52:10.105Z",
+  "checkedAt": "2026-08-25T10:50:06.065Z",
   "calls": [
     {
       "identifier": "HORIZON-EIT-2025-MOC-IBA",
-      "title": "Działania MOC na lata 2026–2027",
+      "title": "2026–2027 MOC-tevékenységek",
       "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
       "deadline": "2026-09-08T17:00:00.000Z",
       "startDate": "2026-07-01T00:00:00.000+0000",
@@ -13,7 +13,7 @@
     },
     {
       "identifier": "HORIZON-EIT-2025-MOC-IBA",
-      "title": "2026-2027 MOC Δραστηριότητες",
+      "title": "Działania MOC na lata 2026–2027",
       "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
       "deadline": "2026-09-08T17:00:00.000Z",
       "startDate": "2026-07-01T00:00:00.000+0000",
@@ -77,15 +77,6 @@
     {
       "identifier": "HORIZON-MSCA-2026-DN-01-01",
       "title": "Sieci doktoranckie MSCA 2026",
-      "callIdentifier": "HORIZON-MSCA-2026-DN-01",
-      "deadline": "2026-11-24T00:00:00.000Z",
-      "startDate": "2026-05-28T00:00:00.000+0000",
-      "actionType": "HORIZON TMA MSCA Doctoral Networks - Joint Doctorates",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-dn-01-01"
-    },
-    {
-      "identifier": "HORIZON-MSCA-2026-DN-01-01",
-      "title": "Διδακτορικά Δίκτυα MSCA 2026",
       "callIdentifier": "HORIZON-MSCA-2026-DN-01",
       "deadline": "2026-11-24T00:00:00.000Z",
       "startDate": "2026-05-28T00:00:00.000+0000",
