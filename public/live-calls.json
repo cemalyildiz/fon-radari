@@ -1,19 +1,10 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-08-28T18:43:51.392Z",
+  "checkedAt": "2026-08-29T02:12:41.798Z",
   "calls": [
     {
       "identifier": "HORIZON-EIT-2025-MOC-IBA",
       "title": "Działania MOC na lata 2026–2027",
-      "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
-      "deadline": "2026-09-08T17:00:00.000Z",
-      "startDate": "2026-07-01T00:00:00.000+0000",
-      "actionType": "EU grant",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-moc-iba"
-    },
-    {
-      "identifier": "HORIZON-EIT-2025-MOC-IBA",
-      "title": "2026–2027 MOC-tevékenységek",
       "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
       "deadline": "2026-09-08T17:00:00.000Z",
       "startDate": "2026-07-01T00:00:00.000+0000",
