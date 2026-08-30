@@ -1,10 +1,19 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-08-30T17:30:24.180Z",
+  "checkedAt": "2026-08-30T21:07:37.626Z",
   "calls": [
     {
       "identifier": "HORIZON-EIT-2025-MOC-IBA",
       "title": "Działania MOC na lata 2026–2027",
+      "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
+      "deadline": "2026-09-08T17:00:00.000Z",
+      "startDate": "2026-07-01T00:00:00.000+0000",
+      "actionType": "EU grant",
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-moc-iba"
+    },
+    {
+      "identifier": "HORIZON-EIT-2025-MOC-IBA",
+      "title": "2026–2027 MOC-tevékenységek",
       "callIdentifier": "HORIZON-EIT-2025-MOC-IBA",
       "deadline": "2026-09-08T17:00:00.000Z",
       "startDate": "2026-07-01T00:00:00.000+0000",
@@ -48,15 +57,6 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-kic-iba-h"
     },
     {
-      "identifier": "HORIZON-EIT-2025-KIC-IBA-H",
-      "title": "EITHEALTH Business Plan 2026",
-      "callIdentifier": "HORIZON-EIT-2025-KIC-IBA-H",
-      "deadline": "2026-09-16T16:00:00.000Z",
-      "startDate": "2026-07-15T00:00:00.000+0000",
-      "actionType": "EU grant",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-eit-2025-kic-iba-h"
-    },
-    {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
       "title": "Oproep Stadsjumelage 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
@@ -84,26 +84,8 @@
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/cerv-2026-citizens-town-tt"
     },
     {
-      "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "Call Town Twinning 2026",
-      "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "deadline": "2026-09-23T00:00:00.000Z",
-      "startDate": "2026-05-06T00:00:00.000+0000",
-      "actionType": "CERV Lump Sum Grants",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/cerv-2026-citizens-town-tt"
-    },
-    {
       "identifier": "HORIZON-MSCA-2026-DN-01-01",
       "title": "Sieci doktoranckie MSCA 2026",
-      "callIdentifier": "HORIZON-MSCA-2026-DN-01",
-      "deadline": "2026-11-24T00:00:00.000Z",
-      "startDate": "2026-05-28T00:00:00.000+0000",
-      "actionType": "HORIZON TMA MSCA Doctoral Networks - Joint Doctorates",
-      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/horizon-msca-2026-dn-01-01"
-    },
-    {
-      "identifier": "HORIZON-MSCA-2026-DN-01-01",
-      "title": "MSCA Doctoral Networks 2026",
       "callIdentifier": "HORIZON-MSCA-2026-DN-01",
       "deadline": "2026-11-24T00:00:00.000Z",
       "startDate": "2026-05-28T00:00:00.000+0000",
