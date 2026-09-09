@@ -1,15 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { FundingCall, CallScope, CallStatus } from "./calls-data";
+import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate, validateFeed, fundingCategory, type LiveFeed } from "./call-utils";
 
 type Props = { calls: FundingCall[] };
 type StatusFilter = "active" | CallStatus | "all";
-type LiveFeed = {
-  checkedAt?: string;
-  calls?: { identifier: string; title: string; deadline: string; url: string }[];
-  degraded?: boolean;
-};
 
 const trDate = new Intl.DateTimeFormat("tr-TR", {
   day: "numeric",
@@ -27,15 +23,10 @@ const trDateTime = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
 });
 
-function realStatus(call: FundingCall, now: number): CallStatus {
-  const open = new Date(call.openDate).getTime();
-  if (call.applicationType === "continuous") {
-    return open > now ? "upcoming" : "open";
-  }
-  const close = call.deadline ? new Date(call.deadline).getTime() : Number.POSITIVE_INFINITY;
-  if (close < now) return "archived";
-  if (open > now) return "upcoming";
-  return "open";
+const formatDate = (date?: string, time = false) => validDate(date) ? (time ? trDateTime : trDate).format(new Date(date!)) : "Tarih doğrulanmalı";
+function freshness(call: FundingCall, now: number) {
+  if (call.verification === "metadata") return `${stale(call.sourceCheckedAt, now) ? "Kaynak verisi eski · " : ""}Otomatik aktarım · uygunluk kontrolü gerekli`;
+  return stale(call.verifiedAt, now, 24 * 14) ? "Koşulların yeniden doğrulanması gerekiyor" : "Editoryal kayıt · başvuru öncesi kontrol edin";
 }
 
 function daysLeft(deadline: string, now: number) {
@@ -43,6 +34,7 @@ function daysLeft(deadline: string, now: number) {
 }
 
 function statusLabel(status: CallStatus) {
+  if (status === "unknown") return "Durum doğrulanmalı";
   if (status === "open") return "Başvuruya açık";
   if (status === "upcoming") return "Yakında açılacak";
   return "Arşiv";
@@ -50,6 +42,8 @@ function statusLabel(status: CallStatus) {
 
 function Countdown({ call, now }: { call: FundingCall; now: number }) {
   const status = realStatus(call, now);
+  if (call.recordType === "program") return <span className="countdown">Program rehberi</span>;
+  if (status === "unknown") return <span className="countdown">Takvim doğrulanmalı</span>;
   if (status === "archived") return <span className="countdown archived">Süre sona erdi</span>;
   if (status === "upcoming") return <span className="countdown upcoming">Yakında</span>;
   if (call.applicationType === "continuous" || !call.deadline) {
@@ -69,44 +63,73 @@ export default function CallsExplorer({ calls }: Props) {
   const [scale, setScale] = useState("Tümü");
   const [theme, setTheme] = useState("Tümü");
   const [sector, setSector] = useState("Tümü");
+  const [institution, setInstitution] = useState("Tümü");
+  const [funding, setFunding] = useState("Tümü");
+  const [recordType, setRecordType] = useState("Tümü");
+  const [includeGeneral, setIncludeGeneral] = useState(true);
+  const [deadlineWindow, setDeadlineWindow] = useState("Tümü");
+  const [visibleCount, setVisibleCount] = useState(24);
   const [query, setQuery] = useState("");
-  const [selected, setSelected] = useState<FundingCall | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const modalRef = useRef<HTMLElement>(null);
   const [now, setNow] = useState(() => Date.now());
   const [liveFeed, setLiveFeed] = useState<LiveFeed>({});
 
   useEffect(() => {
     const clock = window.setInterval(() => setNow(Date.now()), 60_000);
     const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+    let disposed = false;
+    const controller = new AbortController();
     const load = () =>
-      fetch(`${basePath}/live-calls.json`, { cache: "no-store" })
-        .then((response) => response.json())
-        .then(setLiveFeed)
-        .catch(() => setLiveFeed({ degraded: true }));
+      fetch(`${basePath}/live-calls.json`, { cache: "no-store", signal: controller.signal })
+        .then((response) => { if (!response.ok) throw new Error("Feed unavailable"); return response.json(); })
+        .then(value => { if (!validateFeed(value)) throw new Error("Invalid feed"); if (!disposed) setLiveFeed(value); })
+        .catch(() => { if (!disposed) setLiveFeed(previous => ({ ...previous, degraded: true })); });
     load();
     const refresh = window.setInterval(load, 3_600_000);
     return () => {
       window.clearInterval(clock);
       window.clearInterval(refresh);
+      disposed = true;
+      controller.abort();
     };
   }, []);
 
   useEffect(() => {
-    if (!selected) return;
+    if (!selectedId) return;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    const focusable = () => Array.from(modalRef.current?.querySelectorAll<HTMLElement>('a[href], button, input, select, [tabindex="0"]') ?? []);
+    focusable()[0]?.focus();
     const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setSelected(null);
+      if (event.key === "Escape") setSelectedId(null);
+      if (event.key === "Tab") {
+        const items = focusable(); const first = items[0]; const last = items.at(-1);
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+      }
     };
     document.body.style.overflow = "hidden";
     window.addEventListener("keydown", onKeyDown);
     return () => {
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
+      previousFocus?.focus();
       window.removeEventListener("keydown", onKeyDown);
     };
-  }, [selected]);
+  }, [selectedId]);
 
   const normalizedCalls = useMemo(
-    () => calls.map((call) => ({ ...call, status: realStatus(call, now) })),
-    [calls, now],
+    () => mergeCalls(calls, liveFeed, now),
+    [calls, liveFeed, now],
   );
+  const selected = normalizedCalls.find(call => call.id === selectedId) ?? null;
+  const feedStale = stale(liveFeed.checkedAt, now);
+  const institutionOptions = ["Tümü", ...Array.from(new Set(normalizedCalls.filter(c => c.scope === scope).map(c => c.institutionShort))).sort((a,b) => a.localeCompare(b, "tr"))];
+  const fundingOptions = ["Tümü", ...Array.from(new Set(normalizedCalls.filter(c => c.scope === scope).map(fundingCategory)))];
+  function resetFilters() {
+    setQuery(""); setScale("Tümü"); setTheme("Tümü"); setSector("Tümü"); setInstitution("Tümü");
+    setFunding("Tümü"); setStatus("active"); setRecordType("Tümü"); setDeadlineWindow("Tümü"); setIncludeGeneral(true); setVisibleCount(24);
+  }
   const activeCount = normalizedCalls.filter((call) => call.status === "open").length;
   const internationalCount = normalizedCalls.filter(
     (call) => call.scope === "international" && call.status !== "archived",
@@ -154,27 +177,18 @@ export default function CallsExplorer({ calls }: Props) {
   const filtered = normalizedCalls
     .filter((call) => call.scope === scope)
     .filter((call) => {
-      if (status === "active") return call.status !== "archived";
+      if (status === "active") return call.status === "open" || call.status === "upcoming" || call.recordType === "program";
       if (status === "all") return true;
       return call.status === status;
     })
     .filter((call) => scale === "Tümü" || call.companyScale.includes(scale))
     .filter((call) => theme === "Tümü" || (call.themes ?? call.tags).includes(theme))
-    .filter((call) => sector === "Tümü" || (call.sectors ?? ["Sektörler Arası"]).includes(sector))
-    .filter((call) => {
-      const haystack = [
-        call.title,
-        call.code,
-        call.institution,
-        call.institutionShort,
-        call.summary,
-        call.applicants,
-        ...call.tags,
-        ...(call.themes ?? []),
-        ...(call.sectors ?? []),
-      ].join(" ").toLocaleLowerCase("tr-TR");
-      return haystack.includes(query.toLocaleLowerCase("tr-TR"));
-    })
+    .filter((call) => matchesSector(call, sector, includeGeneral))
+    .filter((call) => institution === "Tümü" || call.institutionShort === institution)
+    .filter((call) => funding === "Tümü" || fundingCategory(call) === funding)
+    .filter((call) => recordType === "Tümü" || (call.recordType ?? "call") === recordType)
+    .filter((call) => deadlineWindow === "Tümü" || Boolean(call.deadline && Date.parse(call.deadline) > now && Date.parse(call.deadline) <= now + Number(deadlineWindow) * 86_400_000))
+    .filter((call) => matchesSearch(call, query))
     .sort((a, b) => {
       if (a.status === "archived" && b.status !== "archived") return 1;
       if (a.status !== "archived" && b.status === "archived") return -1;
@@ -228,7 +242,7 @@ export default function CallsExplorer({ calls }: Props) {
             <div className="trust-note">
               <span>✓</span>
               <p>
-                <b>Doğrulanmış bilgi</b>
+                <b>Kaynağı belirtilen bilgi</b>
                 <small>Her kayıtta resmî kaynak bağlantısı</small>
               </p>
             </div>
@@ -250,7 +264,7 @@ export default function CallsExplorer({ calls }: Props) {
             <span className="blip b3" />
             <div className="radar-number">
               <strong>{activeCount}</strong>
-              <small>doğrulanmış açık çağrı</small>
+              <small>takvime göre açık kayıt</small>
             </div>
           </div>
           <div className="radar-stats">
@@ -291,13 +305,13 @@ export default function CallsExplorer({ calls }: Props) {
             <h2>Güncel sanayi çağrıları ve destekleri</h2>
             <p>Yeşil ve dijital dönüşüm dâhil tüm temalarda, sektörünüze uyan fırsatları karşılaştırın.</p>
           </div>
-          <div className={`sync-chip ${liveFeed.degraded ? "degraded" : ""}`}>
+          <div className={`sync-chip ${liveFeed.degraded || feedStale ? "degraded" : ""}`} role="status">
             <span />
             <div>
-              <b>{liveFeed.degraded ? "AB kaynak bağlantısı bekleniyor" : "AB API kaynağı senkronize"}</b>
+              <b>{liveFeed.degraded ? "AB yenilemesi başarısız · son veri korunuyor" : !liveFeed.checkedAt ? "AB verisi yükleniyor" : feedStale ? "AB verisi eski · yeniden kontrol gerekli" : "AB başlık ve takvim verisi alındı"}</b>
               <small>
                 {liveFeed.checkedAt
-                  ? `Son kontrol: ${trDateTime.format(new Date(liveFeed.checkedAt))}`
+                  ? `Son başarılı aktarım: ${formatDate(liveFeed.checkedAt, true)}`
                   : "Resmî API kontrol ediliyor…"}
               </small>
             </div>
@@ -311,9 +325,7 @@ export default function CallsExplorer({ calls }: Props) {
             className={scope === "national" ? "active" : ""}
             onClick={() => {
               setScope("national");
-              setScale("Tümü");
-              setTheme("Tümü");
-              setSector("Tümü");
+              resetFilters();
             }}
           >
             <span className="tab-icon">TR</span>
@@ -329,9 +341,7 @@ export default function CallsExplorer({ calls }: Props) {
             className={scope === "international" ? "active" : ""}
             onClick={() => {
               setScope("international");
-              setScale("Tümü");
-              setTheme("Tümü");
-              setSector("Tümü");
+              resetFilters();
             }}
           >
             <span className="tab-icon globe">◎</span>
@@ -343,7 +353,8 @@ export default function CallsExplorer({ calls }: Props) {
           </button>
         </div>
 
-        <div className="filters">
+        <p className="data-notice">Otomatik AB aktarımı, destek koşullarının doğrulandığı anlamına gelmez. Diğer kurum kayıtları editoryal olarak güncellenir. Tema etiketleri keşif amaçlıdır; başvuru uygunluğu garantisi değildir.</p>
+        <div className="filters" onChange={() => setVisibleCount(24)}>
           <label className="search-box">
             <span aria-hidden="true">⌕</span>
             <input
@@ -385,21 +396,28 @@ export default function CallsExplorer({ calls }: Props) {
           <label>
             <span>Durum</span>
             <select value={status} onChange={(event) => setStatus(event.target.value as StatusFilter)}>
-              <option value="active">Aktif ve yaklaşan</option>
+              <option value="active">Aktif, yaklaşan ve rehber</option>
               <option value="open">Başvuruya açık</option>
               <option value="upcoming">Yakında</option>
               <option value="archived">Arşiv</option>
+              <option value="unknown">Durumu doğrulanmalı</option>
               <option value="all">Tümü</option>
             </select>
           </label>
-          <div className="result-count">
+          <label><span>Kurum</span><select value={institution} onChange={e => setInstitution(e.target.value)}>{institutionOptions.map(o => <option key={o}>{o}</option>)}</select></label>
+          <label><span>Destek türü</span><select value={funding} onChange={e => setFunding(e.target.value)}>{fundingOptions.map(o => <option key={o}>{o}</option>)}</select></label>
+          <label><span>Kayıt türü</span><select value={recordType} onChange={e => setRecordType(e.target.value)}><option>Tümü</option><option value="call">Çağrı / sürekli destek</option><option value="program">Program rehberi</option></select></label>
+          <label><span>Son başvuru aralığı</span><select value={deadlineWindow} onChange={e => setDeadlineWindow(e.target.value)}><option>Tümü</option><option value="7">Önümüzdeki 7 gün</option><option value="30">Önümüzdeki 30 gün</option><option value="90">Önümüzdeki 90 gün</option></select></label>
+          <label className="general-check"><input type="checkbox" checked={includeGeneral} onChange={e => setIncludeGeneral(e.target.checked)} /> Genel sektörlü destekleri de göster</label>
+          <button className="reset-button" onClick={resetFilters}>Filtreleri temizle</button>
+          <div className="result-count" aria-live="polite">
             <strong>{filtered.length}</strong>
             <span>çağrı gösteriliyor</span>
           </div>
         </div>
 
         <div className="call-grid">
-          {filtered.map((call) => (
+          {filtered.slice(0, visibleCount).map((call) => (
             <article className={`call-card ${call.featured ? "featured" : ""}`} key={call.id}>
               {call.featured && <span className="featured-label">ÖNE ÇIKAN</span>}
               <div className="call-card-top">
@@ -412,11 +430,12 @@ export default function CallsExplorer({ calls }: Props) {
                 </div>
                 <span className={`status-badge ${call.status}`}>
                   <i />
-                  {statusLabel(call.status)}
+                  {call.recordType === "program" ? "Program rehberi" : statusLabel(call.status)}
                 </span>
               </div>
               <h3>{call.title}</h3>
               <p className="card-summary">{call.summary}</p>
+              <p className="verification-note">{freshness(call, now)}</p>
               <div className="tag-row">
                 {Array.from(new Set([
                   ...(call.themes ?? call.tags).slice(0, 2),
@@ -426,7 +445,7 @@ export default function CallsExplorer({ calls }: Props) {
               <dl className="card-facts">
                 <div>
                   <dt>Son başvuru</dt>
-                  <dd>{call.applicationType === "continuous" || !call.deadline ? "Sürekli başvuru" : trDate.format(new Date(call.deadline))}</dd>
+                  <dd>{call.recordType === "program" ? "Alt çağrıya göre" : call.applicationType === "continuous" ? "Sürekli başvuru" : formatDate(call.deadline)}</dd>
                 </div>
                 <div>
                   <dt>Destek türü</dt>
@@ -439,7 +458,7 @@ export default function CallsExplorer({ calls }: Props) {
               </dl>
               <div className="card-bottom">
                 <Countdown call={call} now={now} />
-                <button onClick={() => setSelected(call)}>
+                <button onClick={() => setSelectedId(call.id)}>
                   Detayları incele <span>→</span>
                 </button>
               </div>
@@ -451,19 +470,14 @@ export default function CallsExplorer({ calls }: Props) {
               <h3>Bu filtrelerle eşleşen çağrı bulunamadı.</h3>
               <p>Arama kelimesini veya filtreleri değiştirerek tekrar deneyin.</p>
               <button
-                onClick={() => {
-                  setQuery("");
-                  setScale("Tümü");
-                  setTheme("Tümü");
-                  setSector("Tümü");
-                  setStatus("active");
-                }}
+                onClick={resetFilters}
               >
                 Filtreleri temizle
               </button>
             </div>
           )}
         </div>
+        {filtered.length > visibleCount && <button className="load-more" onClick={() => setVisibleCount(n => n + 24)}>Daha fazla göster ({visibleCount} / {filtered.length})</button>}
       </section>
 
       <section className="process-section" id="nasil-calisir">
@@ -478,19 +492,19 @@ export default function CallsExplorer({ calls }: Props) {
             <span>01</span>
             <div className="process-icon">⌁</div>
             <h3>Resmî kaynak taraması</h3>
-            <p>AB API’si saatlik taranır; Bakanlıklar, SSB, TÜBİTAK, KOSGEB, EUREKA ve Eurostars kendi resmî sayfalarından ayrıca izlenir.</p>
+            <p>AB başlık ve takvim verisi saatlik planlanan işlemle alınır ve siteyle birlikte yayımlanır. Çalışma zamanları gecikebilir. Diğer kaynaklar editoryal olarak güncellenir.</p>
           </article>
           <article>
             <span>02</span>
             <div className="process-icon">✓</div>
             <h3>Alan bazlı doğrulama</h3>
-            <p>Tarih, destek şekli, başvuru sahibi, tema, sektör ve ölçek bilgileri resmî metinle eşleştirilir.</p>
+            <p>Otomatik kayıtlar ile editoryal özetler ayrılır. Kontrol tarihi eski olan kayıtlar uyarılır; bütçe ve uygunluk için resmî metin esas alınır.</p>
           </article>
           <article>
             <span>03</span>
             <div className="process-icon">↻</div>
             <h3>Otomatik durum yönetimi</h3>
-            <p>Süreli çağrılar kapanınca arşivlenir; son tarihi olmayan programlar “sürekli başvuru” olarak ayrıştırılır.</p>
+            <p>Bilinen son tarihler geçince çağrı arşivlenir. Çok dönemli çağrılarda sıradaki tarih seçilir. Belirsiz tarihler açık başvuru olarak kabul edilmez.</p>
           </article>
           <article>
             <span>04</span>
@@ -522,15 +536,16 @@ export default function CallsExplorer({ calls }: Props) {
       </footer>
 
       {selected && (
-        <div className="modal-backdrop" role="presentation" onMouseDown={() => setSelected(null)}>
+        <div className="modal-backdrop" role="presentation" onMouseDown={() => setSelectedId(null)}>
           <section
             className="detail-modal"
+            ref={modalRef}
             role="dialog"
             aria-modal="true"
             aria-labelledby="detail-title"
             onMouseDown={(event) => event.stopPropagation()}
           >
-            <button className="modal-close" onClick={() => setSelected(null)} aria-label="Detay penceresini kapat">
+            <button className="modal-close" onClick={() => setSelectedId(null)} aria-label="Detay penceresini kapat">
               ×
             </button>
             <div className="modal-header">
@@ -538,19 +553,20 @@ export default function CallsExplorer({ calls }: Props) {
                 <span>{selected.institutionShort.slice(0, 2).toUpperCase()}</span>
                 <div><b>{selected.institutionShort}</b><small>{selected.code}</small></div>
               </div>
-              <span className={`status-badge ${selected.status}`}><i />{statusLabel(selected.status)}</span>
+              <span className={`status-badge ${selected.status}`}><i />{selected.recordType === "program" ? "Program rehberi" : statusLabel(selected.status)}</span>
               <h2 id="detail-title">{selected.title}</h2>
               <p>{selected.summary}</p>
               <div className="modal-header-bottom">
                 <Countdown call={selected} now={now} />
-                <span>Son doğrulama: {trDateTime.format(new Date(selected.verifiedAt))}</span>
+                <span>{selected.verification === "metadata" ? `Kaynak aktarımı: ${formatDate(selected.sourceCheckedAt, true)}` : `Editoryal kontrol: ${formatDate(selected.verifiedAt, true)}`}</span>
               </div>
             </div>
 
             <div className="modal-body">
+              <div className="notice"><b>Veri durumu</b><p>{freshness(selected, now)}. Türkiye’den başvuru, firma ölçeği ve ortaklık koşullarını resmî kaynaktan teyit edin.</p></div>
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
-                <article><span>Başvuru dönemi</span><b>{selected.applicationType === "continuous" || !selected.deadline ? `${trDate.format(new Date(selected.openDate))} tarihinden itibaren sürekli` : `${trDate.format(new Date(selected.openDate))} – ${trDate.format(new Date(selected.deadline))}`}</b></article>
+                <article><span>Başvuru dönemi · Türkiye saati</span><b>{selected.recordType === "program" ? "Program rehberi — alt çağrının takvimini kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, true)} – ${formatDate(selected.deadline, true)}`}</b></article>
                 <article><span>Destek miktarı</span><b>{selected.fundingAmount}</b></article>
                 <article><span>Destek şekli</span><b>{selected.fundingType}</b></article>
                 <article><span>Destek oranı</span><b>{selected.supportRate ?? "Çağrı dokümanına göre"}</b></article>
@@ -561,15 +577,20 @@ export default function CallsExplorer({ calls }: Props) {
                 <article><span>Tema / konsept</span><b>{(selected.themes ?? selected.tags).join(", ")}</b></article>
                 <article><span>Sektörler</span><b>{(selected.sectors ?? ["Sektörler Arası"]).join(", ")}</b></article>
               </div>
+              {(selected.preDeadline || selected.deadlines?.length || selected.dateCheckedAt) && <div className="application-note"><span>Başvuru takvimi · Türkiye saati</span>
+                {selected.preDeadline && <p>Ön kayıt / ek ulusal işlem: {formatDate(selected.preDeadline, true)} — aşamanın açıklaması için önemli notları inceleyin.</p>}
+                {selected.deadlines?.map(date => <p key={date}>{formatDate(date, true)} {Date.parse(date) <= now ? "(geçti)" : ""}</p>)}
+                {selected.dateCheckedAt && <p>Takvim son kontrolü: {formatDate(selected.dateCheckedAt)}</p>}
+              </div>}
 
               <div className="detail-columns">
                 <div>
                   <h3>Çağrının hedefleri</h3>
-                  <ul>{selected.objectives.map((item) => <li key={item}>{item}</li>)}</ul>
+                  {selected.objectives.length ? <ul>{selected.objectives.map((item) => <li key={item}>{item}</li>)}</ul> : <p>Resmî çağrı metninden kontrol edilmeli.</p>}
                 </div>
                 <div>
                   <h3>Öne çıkan uygun giderler</h3>
-                  <ul>{selected.eligibleCosts.map((item) => <li key={item}>{item}</li>)}</ul>
+                  {selected.eligibleCosts.length ? <ul>{selected.eligibleCosts.map((item) => <li key={item}>{item}</li>)}</ul> : <p>Resmî çağrı metninden kontrol edilmeli.</p>}
                 </div>
               </div>
               <div className="application-note">

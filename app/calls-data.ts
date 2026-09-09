@@ -1,5 +1,5 @@
 export type CallScope = "national" | "international";
-export type CallStatus = "open" | "upcoming" | "archived";
+export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
 
 export type FundingCall = {
   id: string;
@@ -11,6 +11,11 @@ export type FundingCall = {
   status: CallStatus;
   openDate: string;
   deadline?: string;
+  deadlines?: string[];
+  dateCheckedAt?: string;
+  recordType?: "call" | "program";
+  verification?: "editorial" | "metadata";
+  sourceCheckedAt?: string;
   applicationType?: "fixed" | "continuous";
   preDeadline?: string;
   applicants: string;
@@ -240,7 +245,9 @@ export const calls: FundingCall[] = [
     institutionShort: "EIC / Horizon",
     status: "open",
     openDate: "2026-01-01T09:00:00+01:00",
-    deadline: "2026-09-02T17:00:00+02:00",
+    deadline: "2026-11-04T17:00:00+01:00",
+    deadlines: ["2026-01-07T17:00:00+01:00", "2026-03-04T17:00:00+01:00", "2026-05-06T17:00:00+02:00", "2026-07-08T17:00:00+02:00", "2026-09-02T17:00:00+02:00", "2026-11-04T17:00:00+01:00"],
+    dateCheckedAt: "2026-09-09",
     applicants: "Yüksek büyüme potansiyeline sahip start-up ve KOBİ’ler; belirli koşullarda small mid-cap’ler",
     companyScale: ["Start-up", "KOBİ", "Small Mid-cap"],
     fundingAmount: "2,5 milyon avronun altında hibe ve 1–10 milyon avro yatırım bileşeni",
@@ -266,7 +273,7 @@ export const calls: FundingCall[] = [
     tags: ["Deep Tech", "Ölçeklenme", "Yatırım", "Hibe"],
     themes: ["Deep Tech", "Ölçeklenme", "Ar-Ge ve Yenilik"],
     sectors: ["Sektörler Arası"],
-    notice: "2026 tam başvuru değerlendirme tarihleri içinde sıradaki kesim tarihi 2 Eylül 2026’dır.",
+    notice: "Kısa başvuru sürekli yapılabilir. Tam başvuru için olumlu kısa başvuru sonucu gerekir; aşağıdaki tarihler tam başvuru değerlendirme kesimleridir. Tarihler 9 Eylül 2026’da yeniden kontrol edildi; diğer alanların doğrulama tarihi ayrıdır.",
   },
   {
     id: "eic-step-scaleup-2026",
@@ -645,7 +652,7 @@ export const calls: FundingCall[] = [
     institutionShort: "TÜBİTAK",
     status: "open",
     openDate: "2024-05-16T00:00:00+03:00",
-    deadline: "2030-01-01T23:59:00+03:00",
+    recordType: "program",
     applicants: "Sermaye şirketi niteliğindeki KOBİ’ler",
     companyScale: ["KOBİ"],
     themes: ["Yeşil Dönüşüm", "Karbon Yönetimi", "Kaynak Verimliliği", "Mentörlük"],
@@ -864,6 +871,7 @@ export const calls: FundingCall[] = [
   },
   {
     id: "sanayi-hit30-active",
+    recordType: "program",
     scope: "national",
     code: "HIT-30 · Aktif Çağrılar",
     title: "HIT-30 Yüksek Teknoloji Yatırım Çağrıları",
@@ -902,6 +910,7 @@ export const calls: FundingCall[] = [
   },
   {
     id: "ssb-saga-active",
+    recordType: "program",
     scope: "national",
     code: "SSB · SAGA",
     title: "SSB Ar-Ge Geniş Alan (SAGA) Çağrıları",
