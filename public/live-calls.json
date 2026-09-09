@@ -1,6 +1,6 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
-  "checkedAt": "2026-09-09T14:37:06.630Z",
+  "checkedAt": "2026-09-09T18:37:50.930Z",
   "calls": [
     {
       "identifier": "HORIZON-EIT-2025-KIC-IBA-H",
@@ -31,7 +31,7 @@
     },
     {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "Llamada Ciudad hermanamiento 2026",
+      "title": "Call Town Twinning 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
       "deadline": "2026-09-23T00:00:00.000Z",
       "startDate": "2026-05-06T00:00:00.000+0000",
@@ -40,7 +40,7 @@
     },
     {
       "identifier": "CERV-2026-CITIZENS-TOWN-TT",
-      "title": "Call Town Twinning 2026",
+      "title": "Llamada Ciudad hermanamiento 2026",
       "callIdentifier": "CERV-2026-CITIZENS-TOWN-TT",
       "deadline": "2026-09-23T00:00:00.000Z",
       "startDate": "2026-05-06T00:00:00.000+0000",
