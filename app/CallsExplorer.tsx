@@ -66,6 +66,7 @@ export default function CallsExplorer({ calls }: Props) {
   const [institution, setInstitution] = useState("Tümü");
   const [funding, setFunding] = useState("Tümü");
   const [recordType, setRecordType] = useState("Tümü");
+  const [ttoRole, setTtoRole] = useState("Tümü");
   const [includeGeneral, setIncludeGeneral] = useState(true);
   const [deadlineWindow, setDeadlineWindow] = useState("Tümü");
   const [visibleCount, setVisibleCount] = useState(24);
@@ -127,6 +128,7 @@ export default function CallsExplorer({ calls }: Props) {
   const institutionOptions = ["Tümü", ...Array.from(new Set(normalizedCalls.filter(c => c.scope === scope).map(c => c.institutionShort))).sort((a,b) => a.localeCompare(b, "tr"))];
   const fundingOptions = ["Tümü", ...Array.from(new Set(normalizedCalls.filter(c => c.scope === scope).map(fundingCategory)))];
   function resetFilters() {
+    setTtoRole("Tümü");
     setQuery(""); setScale("Tümü"); setTheme("Tümü"); setSector("Tümü"); setInstitution("Tümü");
     setFunding("Tümü"); setStatus("active"); setRecordType("Tümü"); setDeadlineWindow("Tümü"); setIncludeGeneral(true); setVisibleCount(24);
   }
@@ -187,6 +189,7 @@ export default function CallsExplorer({ calls }: Props) {
     .filter((call) => institution === "Tümü" || call.institutionShort === institution)
     .filter((call) => funding === "Tümü" || fundingCategory(call) === funding)
     .filter((call) => recordType === "Tümü" || (call.recordType ?? "call") === recordType)
+    .filter((call) => ttoRole === "Tümü" || (ttoRole === "TTO fırsatları" ? Boolean(call.ttoRole) : call.ttoRole === ttoRole))
     .filter((call) => deadlineWindow === "Tümü" || Boolean(call.deadline && Date.parse(call.deadline) > now && Date.parse(call.deadline) <= now + Number(deadlineWindow) * 86_400_000))
     .filter((call) => matchesSearch(call, query))
     .sort((a, b) => {
@@ -409,6 +412,7 @@ export default function CallsExplorer({ calls }: Props) {
           <label><span>Kayıt türü</span><select value={recordType} onChange={e => setRecordType(e.target.value)}><option>Tümü</option><option value="call">Çağrı / sürekli destek</option><option value="program">Program rehberi</option></select></label>
           <label><span>Son başvuru aralığı</span><select value={deadlineWindow} onChange={e => setDeadlineWindow(e.target.value)}><option>Tümü</option><option value="7">Önümüzdeki 7 gün</option><option value="30">Önümüzdeki 30 gün</option><option value="90">Önümüzdeki 90 gün</option></select></label>
           <label className="general-check"><input type="checkbox" checked={includeGeneral} onChange={e => setIncludeGeneral(e.target.checked)} /> Genel sektörlü destekleri de göster</label>
+          <label><span>TTO katılımı</span><select value={ttoRole} onChange={e => setTtoRole(e.target.value)}>{["Tümü", "TTO fırsatları", "Doğrudan başvuru", "Üniversite adına başvuru", "Konsorsiyum ortağı", "Hizmet sağlayıcı"].map(role => <option key={role}>{role}</option>)}</select></label>
           <button className="reset-button" onClick={resetFilters}>Filtreleri temizle</button>
           <div className="result-count" aria-live="polite">
             <strong>{filtered.length}</strong>
@@ -434,6 +438,7 @@ export default function CallsExplorer({ calls }: Props) {
                 </span>
               </div>
               <h3>{call.title}</h3>
+              {call.ttoRole && <p className="verification-note">TTO: {call.ttoRole}</p>}
               <p className="card-summary">{call.summary}</p>
               <p className="verification-note">{freshness(call, now)}</p>
               <div className="tag-row">
@@ -563,6 +568,7 @@ export default function CallsExplorer({ calls }: Props) {
             </div>
 
             <div className="modal-body">
+              {selected.ttoRole && <div className="notice"><b>TTO: {selected.ttoRole}</b><p>{selected.ttoEligibility}</p></div>}
               <div className="notice"><b>Veri durumu</b><p>{freshness(selected, now)}. Türkiye’den başvuru, firma ölçeği ve ortaklık koşullarını resmî kaynaktan teyit edin.</p></div>
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">

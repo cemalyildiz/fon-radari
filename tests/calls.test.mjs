@@ -5,7 +5,16 @@ import { calls } from "../app/calls-data.ts";
 import { realStatus, nextDeadline, matchesSector, matchesSearch, stale, mergeCalls, validateFeed } from "../app/call-utils.ts";
 import { parseResult, reconcile, collect } from "../scripts/update-live-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
-const base = { ...calls[0] };
+const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("TTO opportunities distinguish open support, closed rounds and service provision", () => {
+  const date = Date.parse("2026-09-10T15:00:00Z");
+  assert.equal(realStatus(calls.find(c => c.id === "tubitak-1613-ttp"), date), "open");
+  assert.equal(realStatus(calls.find(c => c.id === "tubitak-1601-2026-gcip"), date), "archived");
+  assert.equal(realStatus(calls.find(c => c.id === "tubitak-1513-tto"), date), "unknown");
+  assert.equal(realStatus(calls.find(c => c.id === "msca-staff-exchanges-2027-tto"), date), "unknown");
+  assert.equal(calls.find(c => c.id === "tubitak-1831-continuous").ttoRole, "Hizmet sağlayıcı");
+  for (const call of calls.filter(c => c.ttoRole)) assert.ok(call.ttoEligibility);
+});
 const item = (id, date = "2026-11-04T16:00:00Z") => ({summary:`Topic ${id}`,metadata:{identifier:[id],deadlineDate:[date],startDate:["2026-01-01T00:00:00Z"],status:["31094502"]}});
 test("EIC advances to next deadline instead of archiving entire programme", () => {
   const eic = calls.find(c => c.id === "eic-accelerator-2026");
