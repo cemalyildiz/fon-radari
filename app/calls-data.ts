@@ -57,7 +57,7 @@ export const calls: FundingCall[] = [
     objectives: ["Ticarileştirme ve iş geliştirme kapasitesi"], eligibleCosts: ["Bir tam zamanlı TTP’nin personel gideri", "Yetkinlik geliştirme eğitimi ve genel giderler; çağrı limitleriyle"],
     application: "PRODİS üzerinden; sürekli başvuru, iki aylık değerlendirme grupları.",
     sourceUrl: "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1613-teknoloji-transferi-profesyoneli-cagrisi",
-    sourceLabel: "TÜBİTAK 1613 ve bağlantılı çağrı metni", verifiedAt: "2026-09-10T17:00:00+03:00",
+    sourceLabel: "TÜBİTAK 1613 ve bağlantılı çağrı metni", verifiedAt: "2026-09-10T16:48:00+03:00",
     tags: ["TTO", "Personel", "TTP"], notice: "Sürekli başvuru bilgisi resmî sayfaya dayanır; kurumun destek geçmişi henüz doğrulanmadı.",
   },
   {
@@ -74,7 +74,7 @@ export const calls: FundingCall[] = [
     objectives: ["Kurumsal kapasite geliştirme", "Hedef odaklı büyüme"], eligibleCosts: ["Çağrı ve mali esaslara uygun teknoloji transferi faaliyet giderleri"],
     application: "Yalnızca TÜBİTAK’ın açtığı çağrının başvuru döneminde başvurulabilir.",
     sourceUrl: "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1513-teknoloji-transfer-ofisleri-destekleme-programi",
-    sourceLabel: "TÜBİTAK 1513 program sayfası", verifiedAt: "2026-09-10T17:00:00+03:00",
+    sourceLabel: "TÜBİTAK 1513 program sayfası", verifiedAt: "2026-09-10T16:48:00+03:00",
     tags: ["TTO", "Fikri Mülkiyet"], notice: "Yeni açık çağrı takvimi doğrulanmadı; program rehberi olarak listelenir.",
   },
   {
@@ -92,7 +92,7 @@ export const calls: FundingCall[] = [
     objectives: ["1707 ve 1832 için uygulanabilir proje geliştirme"], eligibleCosts: ["Harcama geri ödemesi yerine koşullara bağlı çıktı ödülü"],
     application: "PRODİS başvurusu 8 Mayıs 2026’da kapandı. Yeni dönem için izlenmeli.",
     sourceUrl: "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
-    sourceLabel: "TÜBİTAK 1601-2026-1 çağrı metni", verifiedAt: "2026-09-10T17:00:00+03:00",
+    sourceLabel: "TÜBİTAK 1601-2026-1 çağrı metni", verifiedAt: "2026-09-10T16:48:00+03:00",
     tags: ["TTO", "GCIP", "IGT"], notice: "Ödeme, geçerli proje başvurusu ve vaka analizi gibi koşullara bağlıdır; en fazla altı arayüz kuruluşu desteklenir.",
   },
   {
@@ -109,7 +109,7 @@ export const calls: FundingCall[] = [
     objectives: ["Bilgi paylaşımı ve uluslararası Ar-Ge iş birliği"], eligibleCosts: ["Çağrı birim katkı kurallarına uygun personel değişimi ve kurumsal faaliyetler"],
     application: "En az üç farklı ülkeden üç bağımsız kuruluş; en az ikisi farklı AB/ilişkili ülkede. Her iki sektör temsil edilmeli.",
     sourceUrl: "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027",
-    sourceLabel: "Avrupa Komisyonu MSCA 2027 sayfası", verifiedAt: "2026-09-10T17:00:00+03:00",
+    sourceLabel: "Avrupa Komisyonu MSCA 2027 sayfası", verifiedAt: "2026-09-10T16:48:00+03:00",
     tags: ["TTO", "MSCA", "Personel Değişimi"], notice: "Gösterge takvim: 15 Aralık 2026 açılış, 15 Nisan 2027 kapanış; resmî sayfada TBC. Kesin takvim olarak kullanılmaz.",
   },
   {
@@ -752,7 +752,7 @@ export const calls: FundingCall[] = [
     sourceUrl:
       "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
     sourceLabel: "Resmî TÜBİTAK 1831 program sayfası",
-    verifiedAt: "2026-09-10T17:00:00+03:00",
+    verifiedAt: "2026-09-10T16:48:00+03:00",
     tags: ["Yeşil Dönüşüm", "Mentörlük", "KOBİ", "Yol Haritası"],
     featured: true,
     notice: "KOBİ başvuru kabul durumu ve çözüm ortağı sözleşme koşulları başvuru öncesi teyit edilmelidir.",
