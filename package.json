@@ -10,7 +10,7 @@
     "build": "next build",
     "lint": "eslint .",
     "test": "node --experimental-strip-types --test tests/*.test.mjs",
-    "update:calls": "node scripts/update-live-calls.mjs"
+    "update:calls": "node scripts/supervise-refresh.mjs"
   },
   "dependencies": {
     "next": "16.3.4",
