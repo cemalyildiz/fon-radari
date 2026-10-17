@@ -1,8 +1,8 @@
 {
   "source": "European Commission Funding & Tenders Portal API",
   "checkedAt": "2026-10-17T17:11:14.730Z",
-  "attemptedAt": "2026-10-17T17:11:14.730Z",
-  "degraded": false,
+  "attemptedAt": "2026-10-17T19:24:50.824Z",
+  "degraded": true,
   "scannedRecords": 13776,
   "pages": 143,
   "calls": [
