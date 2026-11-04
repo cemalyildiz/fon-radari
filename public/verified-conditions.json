@@ -1,4 +1,30 @@
 {
+  "msca-staff-exchanges-2027-tto": {
+    "applicants": "Üç farklı ülkede en az üç bağımsız tüzel kişi; en az ikisi farklı AB üyesi/Ufuk Avrupa asosiye ülkede olmalı. Akademik ve akademik olmayan sektörler birlikte temsil edilir. Araştırmacılar ile Ar-Ge/yeniliği destekleyen idari, yönetici ve teknik personel değişime katılabilir.",
+    "fundingAmount": "Gösterge toplam çağrı bütçesi 95,04 milyon avro; resmî sayfada TBC (teyide tabi). Kuruluş başına sabit hibe tutarı olarak yorumlanmamalı.",
+    "application": "Gösterge açılış 15 Aralık 2026, kapanış 15 Nisan 2027; resmî sayfa bunları TBC olarak bildiriyor. Başvuru çağrı portalından konsorsiyum olarak yapılır.",
+    "notice": "Takvim/bütçe henüz kesinleştirilmiş kabul edilmez. Personel değişim sonrası gönderen kuruma dönmeli; iki asosiye olmayan üçüncü ülke arasındaki değişimler uygun değil. Kurumların bağımsızlığı ayrıca değerlendirilir.",
+    "evidenceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027",
+    "verifiedFields": ["applicants", "fundingAmount", "application", "notice"]
+  },
+  "eic-step-scaleup-2026": {
+    "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
+    "applicants": "AB veya uygun asosiye ülkede kurulu tek KOBİ veya 500’den az çalışanlı small mid-cap; Birleşik Krallık hariç. Uygun şirket adına yatırımcı da öneri sunabilir. Tek nitelikli yatırımcıdan hedef turun en az %20’si için ön taahhüt gerekir.",
+    "fundingAmount": "10–30 milyon avro yalnız öz sermaye yatırımı; 2026 toplam bütçesi 300 milyon avro. Hedef yatırım turu 50–150 milyon avro ve EIC yatırımının en az 3–5 katı ölçeğinde olmalı.",
+    "application": "Funding & Tenders üzerinden iş planı (en fazla 50 sayfa), sunum (en fazla 15 sayfa), tek yatırımcı ön taahhüdü, finansal plan, FTO analizi/açıklaması ve kilit personel özgeçmişleri sunulur. Sayfa sürekli gönderim bildiriyor; değerlendirme kesimleri portal takviminden teyit edilmeli.",
+    "notice": "Öz sermaye yatırımı hibe değildir; EIC Fund yatırım incelemesine tabidir. Şirketin stratejik teknoloji alanı ve uygun ülkede kuruluş şartları sağlanmalıdır. Genel sayfadaki sürekli gönderim ifadesi tek başına belirli bir kesim tarihini doğrulamaz.",
+    "evidenceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
+    "verifiedFields": ["applicants", "fundingAmount", "application", "notice"]
+  },
+  "eic-accelerator-2026": {
+    "applicants": "AB/Ufuk Avrupa asosiye ülkelerinde tek start-up veya KOBİ (spin-out dâhil); 499 çalışana kadar small mid-cap yalnız TRL 9 ölçeklenmesi için yatırım bileşenine başvurabilir. Birleşik Krallık kuruluşları yalnız hibe. Uygun şirket kurmayı amaçlayan gerçek/tüzel kişiler için çağrıdaki özel hükümler uygulanır.",
+    "fundingAmount": "TRL 6–8 faaliyetlerine 2,5 milyon avronun altında götürü hibe; resmî program sayfasında 1–10 milyon avro yatırım bileşeni. 2026 Accelerator Open toplam bütçesi 414 milyon avro.",
+    "duration": "Hibe faaliyetleri 24 ay içinde tamamlanmalı",
+    "application": "Kısa öneri herhangi bir zamanda sunulur; GO sonucu tam öneriye geçiş sağlar. 2026 tam öneri kesimleri: 7 Ocak, 4 Mart, 6 Mayıs, 8 Temmuz, 2 Eylül, 4 Kasım; saat 17.00 Brüksel. Sonrasında uzman değerlendirmesi ve davet edilenlere jüri görüşmesi yapılır.",
+    "notice": "Small mid-cap için hibe seçeneği yoktur. Hibe-only Ufuk Avrupa 2021–2027 döneminde yalnız bir kez verilir. Yatırım bileşeni ayrıca EIC Fund incelemesine tabidir; kısa öneri gönderimi tam öneri kesiminden farklıdır.",
+    "evidenceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+    "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
+  },
   "tubitak-1501-2026-2": {
     "duration": "Başvuruda en fazla 24 ay; gerekçeli değerlendirmeyle bir kez en fazla %50 uzatma ve toplamda en fazla 36 ay",
     "preDeadline": "2026-10-22T23:59:00+03:00",
