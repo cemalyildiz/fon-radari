@@ -1,0 +1,21 @@
+{
+  "kosgeb-kobi-dijital-donusum": {
+    "verifiedAt": "2026-11-04T17:00:00+03:00",
+    "applicants": "NACE Kısım C-İmalat sektöründe küçük veya orta ölçekli işletmeler; KOSGEB kaydı aktif ve beyanı güncel olmalı. Onaylı DDX veya SIRI raporu, son mali yılda pozitif öz kaynak ve son üç mali yıldan en az birinde pozitif faaliyet kârı gerekir. Mikro işletmeler kapsam dışıdır.",
+    "fundingAmount": "İşletme başına 1.000.000–20.000.000 TL yatırım kredisi",
+    "fundingType": "Kredi faiz giderlerine geri ödemesiz destek; kredi anaparası geri ödenir",
+    "supportRate": "20 destek puanı",
+    "duration": "Program 24 ay; azami kredi vadesi 36 ay; bankanın uygun bulmasıyla en fazla 6 ay ödemesiz dönem",
+    "notice": "Yeni makine, teçhizat, yazılım ve donanım giderleri Kurul onayına tabidir. EBRD uygun bulunmayan sektör/faaliyet listesi uygulanır. Desteklenen varlıklar son kredi vadesinden sonraki bir yıl boyunca satılamaz, kiralanamaz veya devredilemez.",
+    "evidenceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9144/kobi-dijital-donusum-destek-programi",
+    "verifiedFields": ["applicants", "fundingAmount", "fundingType", "supportRate", "duration", "notice"]
+  },
+  "tubitak-1513-tto": {
+    "status": "unknown",
+    "recordType": "program",
+    "supportRate": "Kurumsal Kapasite Geliştirme %80; Hedef Odaklı Büyüme performansa göre %40–80",
+    "notice": "Resmî program sayfası açık çağrı bulunmadığını ve şu anda başvuru alınmadığını bildiriyor. Yeni çağrı açılmadan başvuru yapılamaz.",
+    "evidenceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1513-teknoloji-transfer-ofisleri-destekleme-programi",
+    "verifiedFields": ["status", "recordType", "supportRate", "notice"]
+  }
+}
