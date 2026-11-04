@@ -364,19 +364,20 @@
     {
       "id": "eureka-xecs-call-6-2026",
       "title": "Eureka Xecs 6. Çağrısı",
-      "source": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-6-cagrisi-acildi",
+      "source": "https://eureka-xecs.com/calls/",
       "verifiedFields": [
         "applicants",
-        "application"
+        "application",
+        "companyScale",
+        "fundingType",
+        "fundingAmount",
+        "supportRate",
+        "openDate",
+        "deadline",
+        "notice"
       ],
       "pendingFields": [
-        "companyScale",
-        "fundingAmount",
-        "fundingType",
-        "supportRate",
-        "duration",
-        "openDate",
-        "deadline"
+        "duration"
       ],
       "issues": [],
       "complete": false
@@ -387,17 +388,17 @@
       "source": "https://tubitak.gov.tr/tr/duyuru/eureka-smart-kumesi-10-cagrisi-acildi",
       "verifiedFields": [
         "application",
-        "notice"
-      ],
-      "pendingFields": [
+        "notice",
         "applicants",
         "companyScale",
-        "fundingAmount",
         "fundingType",
+        "fundingAmount",
         "supportRate",
-        "duration",
         "openDate",
         "deadline"
+      ],
+      "pendingFields": [
+        "duration"
       ],
       "issues": [],
       "complete": false
