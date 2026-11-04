@@ -1,4 +1,37 @@
 {
+  "tubitak-1507-2026-2": {
+    "dateCheckedAt": "2026-11-04T17:00:00+03:00",
+    "openDate": "2026-07-20T00:00:00+03:00",
+    "deadline": "2026-11-11T23:59:00+03:00",
+    "preDeadline": "2026-11-09T23:59:00+03:00",
+    "applicants": "Türkiye’de yerleşik KOBİ ölçeğinde sermaye şirketleri. En az ikisi ortaklı olmak üzere ilk beş proje kuralı ve uygulama esaslarındaki istisnalar geçerlidir.",
+    "fundingAmount": "Program sayfasında belirtilen toplam proje bütçesi üst limiti 3.500.000 TL; bu tutar hibe tutarı değildir",
+    "fundingType": "Geri ödemesiz hibe",
+    "supportRate": "Çağrıda aksi belirtilmedikçe %75; uygulama esaslarındaki harcama ve oransal destek hükümleri uygulanır",
+    "duration": "En fazla 18 ay",
+    "notice": "2026/2 döneminde 1501 ve 1507 başvuruları birlikte sayılarak kuruluş başına en fazla iki öneri sunulabilir. Ön kayıt son saati 9 Kasım 23.59; ön kayıt evrakları kapanıştan en az bir iş günü önce ulaşmalı. Mevcut ön kayıt onayı olanlar tekrar kayıt yapmaz. E-imza gerekir.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/1507_KOBI_Ar-Ge_Baslangic_Destek_Programlari_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1507-tubitak-kobi-ar-ge-baslangic-destek-programi", "https://tubitak.gov.tr/sites/default/files/2026-10/1507_UE_25.09.2026_84YK_islenmis_hali_0.pdf"],
+    "verifiedFields": ["openDate", "deadline", "preDeadline", "applicants", "fundingAmount", "fundingType", "supportRate", "duration", "notice"]
+  },
+  "tubitak-1831-continuous": {
+    "applicants": "Sermaye şirketi niteliğindeki KOBİ’ler; mentörlük hizmeti TÜBİTAK’ın çözüm ortağı kuruluşlarından alınır",
+    "fundingAmount": "Proje bütçesi üst limiti 310.000 TL; bu tutarın %90’ı desteklenir",
+    "fundingType": "Mentörlük hizmeti için geri ödemesiz hibe",
+    "supportRate": "%90",
+    "duration": "En az 3, en fazla 6 ay",
+    "ttoEligibility": "GTÜ Teknoloji Transfer Ofisi A.Ş. resmî 2023-01 çözüm ortakları listesinde yer alıyor. Hizmet alıcısı başvuru sahibi KOBİ’dir.",
+    "evidenceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
+    "verifiedFields": ["applicants", "fundingAmount", "fundingType", "supportRate", "duration", "ttoEligibility"]
+  },
+  "tubitak-1613-ttp": {
+    "fundingAmount": "A=24×6×başvuru tarihindeki brüt asgari ücret; B=A×%5; C=(A+B)×%5; toplam üst sınır A+B+C. Eğitim hizmeti toplamı ayrıca en fazla 50.000 TL",
+    "supportRate": "1513 desteğini tamamlamış TTO: yeni istihdam %60, mevcut istihdam %40. Tamamlamamış TTO: yeni istihdam %80, mevcut istihdam %60",
+    "duration": "24 ay",
+    "notice": "Bir TTP kesintisiz tam zamanlı istihdam edilir. Bütçedeki personel maliyeti dönem brüt asgari ücretinin 4–6 katı aralığında olmalı. Sürekli başvuru, iki aylık değerlendirme gruplarıyla yürütülür.",
+    "evidenceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1613-teknoloji-transferi-profesyoneli-cagrisi",
+    "verifiedFields": ["fundingAmount", "supportRate", "duration", "notice"]
+  },
   "kosgeb-kobi-dijital-donusum": {
     "verifiedAt": "2026-11-04T17:00:00+03:00",
     "applicants": "NACE Kısım C-İmalat sektöründe küçük veya orta ölçekli işletmeler; KOSGEB kaydı aktif ve beyanı güncel olmalı. Onaylı DDX veya SIRI raporu, son mali yılda pozitif öz kaynak ve son üç mali yıldan en az birinde pozitif faaliyet kârı gerekir. Mikro işletmeler kapsam dışıdır.",
