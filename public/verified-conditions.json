@@ -1,4 +1,16 @@
 {
+  "life-circular-2026": {
+    "code": "LIFE-2026-SAP-ENV-ENVIRONMENT",
+    "applicants": "AB ve LIFE’a katılan uygun ülkelerde kurulu kamu/özel tüzel kişiler. Resmî 1 Mart 2026 ülke listesinde Türkiye yer almıyor. Türkiye’de kurulu kuruluşlar standart hibe yararlanıcısı olarak uygun kabul edilemez; fon sağlayıcının uygulama için zorunlu gördüğü istisnai katılım veya fon almayan ortaklık ayrı değerlendirilir.",
+    "fundingAmount": "Döngüsel Ekonomi ve Sıfır Kirlilik konusu toplam bütçesi 79 milyon avro (4 milyonu Bauhaus alt konusu); gösterge proje bütçesi aralığı 2–10 milyon avro. Çağrının yönetişim konusuyla toplamı 85,5 milyon avro; bunlar tek firmaya verilecek hibe değildir.",
+    "supportRate": "Uygun maliyetlerin en fazla %60’ı",
+    "duration": "24–120 ay; gerekçeli sözleşme değişikliğiyle uzatma mümkün",
+    "application": "Tek aşamalı Funding & Tenders başvurusu. Açılış 21 Nisan, son başvuru 22 Eylül 2026 saat 17.00 Brüksel. Bu dönem kapanmıştır. Her öneri yalnız bir konuya sunulur.",
+    "notice": "Türkiye’nin Ufuk Avrupa’ya katılması LIFE’a otomatik uygunluk sağlamaz. Koordinatör uygun ülkede kurulmuş olmalı. Başka ülkelerden kuruluşlara istisnai fonlama ancak yetkili makamın katılımı zorunlu görmesiyle mümkün. Uygun ülke dışında faaliyet için AB çevre/iklim hedeflerine zorunluluk gerekçesi gerekir.",
+    "evidenceUrl": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/life/wp-call/2026/call-fiche_life-2026-sap-env_en.pdf",
+    "additionalEvidence": ["https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/life/guidance/list-3rd-country-participation_life_en.pdf", "https://cinea.ec.europa.eu/programmes/life/life-support-applicants_en"],
+    "verifiedFields": ["applicants", "fundingAmount", "supportRate", "duration", "application", "notice"]
+  },
   "msca-staff-exchanges-2027-tto": {
     "applicants": "Üç farklı ülkede en az üç bağımsız tüzel kişi; en az ikisi farklı AB üyesi/Ufuk Avrupa asosiye ülkede olmalı. Akademik ve akademik olmayan sektörler birlikte temsil edilir. Araştırmacılar ile Ar-Ge/yeniliği destekleyen idari, yönetici ve teknik personel değişime katılabilir.",
     "fundingAmount": "Gösterge toplam çağrı bütçesi 95,04 milyon avro; resmî sayfada TBC (teyide tabi). Kuruluş başına sabit hibe tutarı olarak yorumlanmamalı.",
