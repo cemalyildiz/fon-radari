@@ -1,4 +1,43 @@
 {
+  "eureka-biotech-2026": {
+    "dateCheckedAt": "2026-11-04T17:00:00+03:00",
+    "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 500.000 avro; ulusal çağrı bütçesi 2.500.000 avro. Sermaye şirketi dışındaki kurum bütçeleri toplam proje bütçesinin %30’unu aşamaz. Bütçe limiti hibe tutarı değildir.",
+    "supportRate": "KOBİ %75; büyük ölçek %60; çağrıda tanımlanan uygun kamu, üniversite ve araştırma kuruluşları %100",
+    "duration": "En fazla 36 ay",
+    "application": "Uluslararası başvuru 25 Eylül 2026 saat 14.00 GMT’de kapandı. Ulusal başvuru yalnız uluslararası değerlendirmesi olumlu kuruluşlar için: ön kayıt 17 Kasım 2026 saat 23.59, PRODİS proje başvurusu 18 Kasım 2026 saat 23.59. Türkiye’den birden fazla ortak birlikte tek ulusal proje başvurusu sunar.",
+    "applicants": "Türkiye’de sermaye şirketi yürütücülüğünde şirketler, üniversite, kamu araştırma merkezi/enstitüsü, eğitim-araştırma hastanesi ve 6550 altyapıları. Şirket dışı kuruluşlar tek başına başvuramaz. Her şirkette ilgili konuda en az lisans; üniversite/hastanede doktora veya tıpta uzmanlık derecesine sahip en az bir proje personeli zorunlu.",
+    "notice": "Ulusal aşama yeni uluslararası başvurulara açık değildir. Şirketlere harcama sonrası ödeme; teminat ve yönerge şartlarıyla en fazla proje bütçesinin %30’u ön ödeme. Ticarileşme giderleri desteklenmez. Konsorsiyum içi hizmet alımında üniversite/araştırma kurumu istisnaları dışında kısıt bulunur.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/1719_Biyoteknoloji_Cagrisi_Ulusal_Cagri_Duyurusu_2026.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/1719-eureka-network-biyoteknoloji-2026-cagrisi-acildi"],
+    "verifiedFields": ["fundingAmount", "supportRate", "duration", "application", "applicants", "notice"]
+  },
+  "eureka-xecs-quantum-2026": {
+    "dateCheckedAt": "2026-11-04T17:00:00+03:00",
+    "applicants": "Çağrıyı destekleyen en az iki Eureka ülkesinden kuruluş; en az biri AB veya Ufuk Avrupa asosiye ülkesinde olmalı. Türkiye’de sermaye şirketi yürütücü olmalıdır. Üniversite, kamu araştırma kuruluşu, eğitim-araştırma hastanesi ve 6550 altyapıları en az bir sermaye şirketiyle ortak başvurabilir. Firmada ilgili konuda lisans mezunu, üniversite/hastanede doktora veya tıpta uzmanlık sahibi en az bir proje personeli gerekir.",
+    "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 600.000 avro; ulusal çağrı bütçesi 3 milyon avro. Bunlar hibe tutarı değildir. Sermaye şirketi dışındaki ortakların bütçesi toplamın en fazla %30’u olabilir.",
+    "supportRate": "KOBİ %75; büyük ölçekli kuruluş %60; çağrıda sayılan uygun kamu/araştırma ve vakıf üniversitesi kuruluşları %100",
+    "duration": "En fazla 36 ay",
+    "preDeadline": "2027-03-30T23:59:00+03:00",
+    "application": "PO 26 Kasım 2026, FPP 5 Mart 2027. Ulusal çağrı 8 Ocak 2027’de açılır; ön kayıt 30 Mart, PRODİS proje başvurusu 31 Mart 2027 saat 23.59’da kapanır. Türkiye’den birden çok ortak tek ortaklı ulusal başvuru sunar; ayrı ulusal başvurular kabul edilmez.",
+    "notice": "Şirketlere harcama sonrası ödeme yapılır. Yönerge koşullarıyla teminat karşılığı ön ödeme, destek kapsamındaki bütçenin %30’unu geçemez. Ticarileşme giderleri desteklenmez. Konsorsiyum içi danışmanlık/hizmet alımı için üniversite ve araştırma kurumu istisnaları dışında kısıt vardır.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/1719_Kuantum_Ulusal_Cagri_Metni.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/eureka-xecs-2026-uygulamali-kuantum-teknolojileri-cagrisi-acildi"],
+    "verifiedFields": ["applicants", "fundingAmount", "supportRate", "duration", "preDeadline", "application", "notice"]
+  },
+  "eureka-xecs-call-6-2026": {
+    "dateCheckedAt": "2026-11-04T17:00:00+03:00",
+    "applicants": "Uluslararası çağrı KOBİ, büyük işletme, araştırma/teknoloji kuruluşu ve üniversitelere açıktır. Türkiye’de 1509 kapsamında yalnız sermaye şirketleri doğrudan başvurabilir; üniversite ve araştırma enstitüleri hizmet sağlayıcı olabilir.",
+    "application": "Çağrı açılışı 2 Haziran 2026. PO son tarihi 21 Ocak 2027, FPP son tarihi 5 Nisan 2027. Türk katılımcılar 1509 ulusal başvuru kurallarını ayrıca tamamlar.",
+    "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-6-cagrisi-acildi",
+    "verifiedFields": ["applicants", "application"]
+  },
+  "eureka-smart-call-10-2026": {
+    "dateCheckedAt": "2026-11-04T17:00:00+03:00",
+    "application": "İlk aşama PO: 26 Ocak 2027 saat 11.00 CET (Türkiye 13.00). FPP daveti 12 Mart 2027; ikinci aşama FPP: 15 Nisan 2027 saat 11.00 CEST (Türkiye 12.00). Etiket kararı 2 Haziran 2027. FPP aşaması davet edilen projeler içindir.",
+    "notice": "Uluslararası iki aşama farklı saat dilimleriyle yürütülür; ulusal destek başvurusu ve uygunluk koşulları ayrıca uygulanır.",
+    "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-smart-kumesi-10-cagrisi-acildi",
+    "verifiedFields": ["application", "notice"]
+  },
   "tubitak-1507-2026-2": {
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "openDate": "2026-07-20T00:00:00+03:00",
