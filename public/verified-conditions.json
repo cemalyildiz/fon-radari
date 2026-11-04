@@ -311,14 +311,22 @@
   },
   "tubitak-1831-continuous": {
     "applicantGroups": ["Özel sektör"],
+    "companyScale": ["KOBİ"],
+    "status": "unknown",
+    "recordType": "program",
+    "openDate": "",
+    "applicationType": "fixed",
     "applicants": "Sermaye şirketi niteliğindeki KOBİ’ler; mentörlük hizmeti TÜBİTAK’ın çözüm ortağı kuruluşlarından alınır",
     "fundingAmount": "Proje bütçesi üst limiti 310.000 TL; bu tutarın %90’ı desteklenir",
     "fundingType": "Mentörlük hizmeti için geri ödemesiz hibe",
     "supportRate": "%90",
     "duration": "En az 3, en fazla 6 ay",
+    "application": "Resmî Mayıs 2024 KOBİ kılavuzuna göre: kuruluş bazlı ön kayıt tamamlanır; PRODİS’e Firma kullanıcısı rolüyle girilip Çözüm Ortağı Desteği Çağrıları Başvuru İşlemleri üzerinden öneri hazırlanır. Onaylı çözüm ortağı seçilir; kuruluş yetkilisi kabul ve taahhütleri elektronik imzayla onaylar. M015 Hizmet Alımları bütçesi ve ekler tamamlanıp TÜBİTAK’a gönderilir. Kılavuzdaki çağrı kodu 1831-2024-01’dir; güncel kabul durumu ayrıca teyit edilmelidir.",
+    "notice": "Bu kayıt program rehberidir; güncel başvuru kabul takvimi doğrulanmadığı için sürekli açık çağrı olarak gösterilmez. Çözüm ortağı niyet beyanı duyuruları KOBİ hizmet alımı başvurusundan farklıdır. Program sayfasının doğruladığı 310.000 TL bütçenin %90’ı en fazla 279.000 TL hibe karşılığıdır; bütçe ile hibe aynı tutar değildir. Mayıs 2024 kılavuzu başvuru yöntemini açıklar, 2026’da kabulün açık olduğunu kanıtlamaz.",
     "ttoEligibility": "GTÜ Teknoloji Transfer Ofisi A.Ş. resmî 2023-01 çözüm ortakları listesinde yer alıyor. Hizmet alıcısı başvuru sahibi KOBİ’dir.",
     "evidenceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
-    "verifiedFields": ["applicants", "fundingAmount", "fundingType", "supportRate", "duration", "ttoEligibility"]
+    "additionalEvidence": ["https://tubitak.gov.tr/sites/default/files/2024-05/1831_KOBI_BASVURU_KILAVUZU.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "application", "recordType", "notice", "ttoEligibility"]
   },
   "tubitak-1613-ttp": {
     "applicantGroups": ["TTO / Arayüz kuruluşu", "Üniversite / Araştırma"],

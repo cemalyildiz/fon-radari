@@ -409,19 +409,19 @@
       "source": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
       "verifiedFields": [
         "applicants",
+        "companyScale",
         "fundingAmount",
         "fundingType",
         "supportRate",
         "duration",
+        "application",
+        "recordType",
+        "notice",
         "ttoEligibility"
       ],
-      "pendingFields": [
-        "companyScale",
-        "application",
-        "recordType"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "sanayi-yesil-donusum-programi-2026",
@@ -608,5 +608,5 @@
     }
   ],
   "total": 29,
-  "complete": 5
+  "complete": 6
 }
