@@ -1,4 +1,27 @@
 {
+  "eurostars-2026-2": {
+    "dateCheckedAt": "2026-11-04T17:00:00+03:00",
+    "fundingAmount": "Türk ortaklar için proje bütçesi üst sınırı 600.000 avro; Türkiye’den ortaklı proje başvurusunda 850.000 avro. Şirket dışı kuruluşların payı toplamın %50’sini ve toplam 300.000 avroyu aşamaz. Ulusal çağrı bütçesi 4 milyon avrodur; bu limitler hibe tutarı değildir.",
+    "supportRate": "KOBİ %75; büyük ölçek %60; çağrıda sayılan uygun kamu/araştırma kuruluşları ve vakıf üniversiteleri %100",
+    "duration": "En fazla 36 ay",
+    "application": "Uluslararası son başvuru 10 Eylül 2026 saat 14.00 Brüksel; ulusal ön kayıt 21 Eylül, ön proje 24 Eylül 2026 saat 23.59 Türkiye. Uluslararası kabul daveti alanların ikinci aşama ulusal başvuru dönemi 8 Ocak–10 Mayıs 2027. Türkiye’den birden çok ortak tek ortaklı ulusal başvuru yapar.",
+    "applicants": "Türkiye’de sermaye şirketi yürütücülüğünde şirketler ile en az bir Türk sermaye şirketine ortak üniversite, kamu araştırma merkezi/enstitüsü, eğitim-araştırma hastanesi ve 6550 altyapıları. Her şirkette ilgili konuda en az lisans mezunu; üniversite/hastanede doktora veya tıpta uzmanlık sahibi en az bir personel gerekir. Ulusal ön uygunluk ve uluslararası kabul şarttır.",
+    "notice": "Şirketlere harcama sonrası ödeme yapılır; yönerge ve teminat şartlarıyla bütçenin en fazla %30’u ön ödeme olabilir. Şirket genel gideri uluslararası koordinatörse %20, diğer şirketlerde %10. Ticarileşme giderleri desteklenmez. İkinci aşama, yeni uluslararası başvurulara açık değildir.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/1709-EUREKA-EUROSTARS_CAGRI_DUYURUSU_20262.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/1709-eureka-eurostars-2026-yili-2-cagrisi-acildi"],
+    "verifiedFields": ["fundingAmount", "supportRate", "duration", "application", "applicants", "notice"]
+  },
+  "eurostars-coordination-support-2026-2": {
+    "dateCheckedAt": "2026-11-04T17:00:00+03:00",
+    "fundingAmount": "Türkiye’den uzman/kuruluş için 150.000 TL; yurt dışından uzman/kuruluş için 5.000 avro. Eğitim seyahat giderleri en fazla 1.500 avro; çağrıdaki bebek/refakatçi istisnası onaya tabidir.",
+    "supportRate": "%100; uygun bulunan belgeli harcamalar ve üst limitler dâhilinde",
+    "applicants": "Eurostars 2026/2 için koordinatör olmayı planlayan Türkiye’de yerleşik KOBİ ölçeğindeki sermaye şirketleri",
+    "application": "PRODİS üzerinden başvuru: açılış 5 Haziran 2026; ön kayıt son tarihi 23 Temmuz 2026 saat 23.59; destek başvurusu son tarihi 27 Temmuz 2026 saat 23.59. Bu dönem kapanmıştır.",
+    "notice": "Aynı başvuruda eğitim ve proje yazdırma birlikte istenemez. Eğitim desteğinden koordinatör adayı yalnız bir kez; proje yazdırmadan aynı konu/kapsam için yalnız bir kez yararlanır. Hizmet sonrası asıl harcama belgeleri 1709 ön proje başvurusuyla ilişkilendirilerek sunulur; ödeme uygunluk sonrasıdır.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-06/Eurostars_Koordinatorluk_Destegi_Programi_2026-2_Ulusal_Cagri_Duyurusu.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/eurostars-koordinatorluk-destegi-programi-2026-yili-2-ulusal-cagrisi-acildi"],
+    "verifiedFields": ["fundingAmount", "supportRate", "applicants", "application", "notice"]
+  },
   "eureka-biotech-2026": {
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 500.000 avro; ulusal çağrı bütçesi 2.500.000 avro. Sermaye şirketi dışındaki kurum bütçeleri toplam proje bütçesinin %30’unu aşamaz. Bütçe limiti hibe tutarı değildir.",
