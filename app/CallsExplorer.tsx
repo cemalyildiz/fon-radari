@@ -570,6 +570,7 @@ export default function CallsExplorer({ calls }: Props) {
             <div className="modal-body">
               {selected.ttoRole && <div className="notice"><b>TTO: {selected.ttoRole}</b><p>{selected.ttoEligibility}</p></div>}
               <div className="notice"><b>Veri durumu</b><p>{freshness(selected, now)}. Türkiye’den başvuru, firma ölçeği ve ortaklık koşullarını resmî kaynaktan teyit edin.</p></div>
+              {selected.sourceConditions?.ok && <div className="notice"><b>Resmî kaynaktaki güncel koşullar · {formatDate(selected.sourceConditions.checkedAt, true)}</b><p>Aşağıdaki alıntılar otomatik olarak resmî sayfadan alınmıştır. Eski editoryal özetle farklılık varsa güncel resmî metni esas alın.</p>{selected.sourceConditions.excerpts.map((text, index) => <p key={index}>{text}</p>)}</div>}
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
                 <article><span>Başvuru dönemi · Türkiye saati</span><b>{selected.recordType === "program" ? "Program rehberi — alt çağrının takvimini kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, true)} – ${formatDate(selected.deadline, true)}`}</b></article>

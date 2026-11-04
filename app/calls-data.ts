@@ -2,6 +2,7 @@ export type CallScope = "national" | "international";
 export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
 
 export type FundingCall = {
+  sourceConditions?: { checkedAt: string; excerpts: string[]; ok: boolean; changed?: boolean };
   id: string;
   scope: CallScope;
   code: string;
