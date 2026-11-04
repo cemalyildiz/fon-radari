@@ -2,6 +2,7 @@ export type CallScope = "national" | "international";
 export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
 
 export type FundingCall = {
+  evidencePending?: boolean;
   verifiedFields?: string[];
   evidenceUrl?: string;
   additionalEvidence?: string[];

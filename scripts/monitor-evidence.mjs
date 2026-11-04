@@ -1,0 +1,42 @@
+import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
+import { pathToFileURL } from 'node:url';
+
+export function evidenceState(previous, hash, checkedAt) {
+  const baselineHash = previous?.baselineHash ?? hash;
+  return { baselineHash, hash, checkedAt, ok: true, changed: hash !== baselineHash };
+}
+export function contentHash(bytes, type) {
+  if (type.includes('pdf')) return createHash('sha256').update(bytes).digest('hex');
+  const html = new TextDecoder().decode(bytes);
+  if (/access denied|erişim engellendi|captcha challenge/i.test(html)) throw new Error('Kaynak erişim engeli');
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? html;
+  const stable = main.replace(/<(script|style|nav|footer)\b[^>]*>[\s\S]*?<\/\1>/gi,'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+  if (stable.length < 200) throw new Error('Yetersiz kaynak içeriği');
+  return createHash('sha256').update(stable).digest('hex');
+}
+async function run() {
+  const reviews = JSON.parse(await readFile('public/verified-conditions.json','utf8'));
+  const target = 'public/evidence-status.json';
+  const previous = await readFile(target,'utf8').then(JSON.parse).catch(()=>({}));
+  const urls = [...new Set(Object.values(reviews).flatMap(r=>[r.evidenceUrl,...(r.additionalEvidence ?? [])]).filter(Boolean))];
+  const result = {};
+  let cursor = 0;
+  await Promise.all(Array.from({length:4}, async()=>{
+    while(cursor < urls.length) {
+      const url = urls[cursor++];
+      const attemptedAt = new Date().toISOString();
+      try {
+        const parsed = new URL(url);
+        if(parsed.protocol !== 'https:') throw new Error('HTTPS gerekli');
+        const response = await fetch(url,{signal:AbortSignal.timeout(25000)});
+        if(!response.ok) throw new Error(`HTTP ${response.status}`);
+        const bytes = new Uint8Array(await response.arrayBuffer());
+        result[url] = evidenceState(previous[url],contentHash(bytes,response.headers.get('content-type') ?? ''),attemptedAt);
+      } catch(error) { result[url] = {...previous[url],ok:false,attemptedAt,error:error.message}; }
+    }
+  }));
+  await writeFile(target,JSON.stringify(result,null,2)+'\n');
+  console.log(`${urls.length} dayanak izlendi; ${Object.values(result).filter(r=>!r.ok || r.changed).length} kaynak kontrol bekliyor.`);
+}
+if(process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) await run();

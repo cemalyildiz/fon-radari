@@ -6,7 +6,13 @@ import type { FundingCall } from "./calls-data";
 export default async function Home() {
   const conditions = await readFile('public/conditions.json', 'utf8').then(JSON.parse).catch(() => ({}));
   const verified = await readFile('public/verified-conditions.json', 'utf8').then(JSON.parse).catch(() => ({}));
-  const updatedCalls = calls.map(c => ({...c, ...verified[c.id], sourceConditions: conditions[c.id]}));
+  const evidence = await readFile('public/evidence-status.json', 'utf8').then(JSON.parse).catch(() => ({}));
+  const updatedCalls = calls.map(c => {
+    const review = verified[c.id];
+    const urls = review ? [review.evidenceUrl, ...(review.additionalEvidence ?? [])].filter(Boolean) : [];
+    const evidencePending = urls.some(url => !evidence[url]?.ok || evidence[url]?.changed || Date.now() - Date.parse(evidence[url]?.checkedAt ?? '') > 48 * 3600000);
+    return {...c, ...review, evidencePending, sourceConditions: conditions[c.id]};
+  });
   const feed = await readFile('public/national-calls.json', 'utf8').then(JSON.parse).catch(() => ({ calls: [] }));
   return <><aside style={{padding:'12px 24px',background:'#eef4f0'}}>Ulusal kaynak taraması: {Object.entries(feed.sources ?? {}).map(([name, value]) => { const s = value as {ok:boolean;checkedAt?:string}; return `${name}: ${s.ok ? 'kontrol edildi' : 'erişim sorunu'}${s.checkedAt ? ` (${new Date(s.checkedAt).toLocaleString('tr-TR', {timeZone:'Europe/Istanbul'})})` : ''}`; }).join(' · ')}. Otomatik keşfedilen duyurular için “Tüm durumlar” filtresini kullanın.</aside><CallsExplorer calls={[...updatedCalls, ...feed.calls as FundingCall[]]} /></>;
 }

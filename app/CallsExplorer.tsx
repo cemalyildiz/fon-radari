@@ -25,6 +25,7 @@ const trDateTime = new Intl.DateTimeFormat("tr-TR", {
 
 const formatDate = (date?: string, time = false) => validDate(date) ? (time ? trDateTime : trDate).format(new Date(date!)) : "Tarih doğrulanmalı";
 function freshness(call: FundingCall, now: number) {
+  if (call.evidencePending) return "Dayanak değişti veya okunamadı · koşullar yeniden kontrol bekliyor";
   if (call.verifiedFields?.length) return "Bazı alanlar belgeyle kontrol edildi · tam doğrulama sürüyor";
   if (call.verification === "metadata") return `${stale(call.sourceCheckedAt, now) ? "Kaynak verisi eski · " : ""}Otomatik aktarım · uygunluk kontrolü gerekli`;
   return stale(call.verifiedAt, now, 24 * 14) ? "Koşulların yeniden doğrulanması gerekiyor" : "Editoryal kayıt · başvuru öncesi kontrol edin";
