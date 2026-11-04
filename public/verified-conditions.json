@@ -11,6 +11,7 @@
     "verifiedFields": ["recordType", "application", "notice"]
   },
   "tubitak-1707-2026-2": {
+    "applicantGroups": ["Özel sektör"],
     "companyScale": ["KOBİ", "Büyük Ölçek"],
     "fundingType": "TÜBİTAK hibesi ve müşteri eş finansmanı",
     "openDate": "2026-05-04T00:00:00+03:00",
@@ -39,6 +40,7 @@
     "verifiedFields": ["status", "deadline", "application"]
   },
   "eureka-lightweighting-2026": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma","Kamu kurum / kuruluşu"],
     "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 500.000 avro; ulusal çağrı bütçesi 2,5 milyon avro. Şirket dışı kuruluşların payı toplam proje bütçesinin en fazla %30’u. Bu tutarlar hibe tutarı değildir.",
     "duration": "En fazla 36 ay",
     "supportRate": "KOBİ %75, büyük %60; çağrıda tanımlanan uygun kamu/araştırma ve vakıf üniversitesi kuruluşları %100",
@@ -58,6 +60,7 @@
     "verifiedFields": ["fundingAmount", "duration", "supportRate", "application", "notice"]
   },
   "kosgeb-yapay-zeka-kredi-2026": {
+    "applicantGroups": ["Özel sektör"],
     "fundingAmount": "Toplam en fazla 5 milyon TL kredi. Ücretsiz hizmet limitinden bağımsız teminat karşılığı en fazla 500.000 TL; onaylı ücretsiz hizmet limiti varsa teminat karşılığı o tutar kadar ilave kredi. Eski 500.000 TL alt limit hükmü 20 Ekim 2026 revizyonunda değiştirilmiştir.",
     "fundingType": "Faiz ve komisyon uygulanmayan, teminatlı geri ödemeli kredi",
     "supportRate": "Hibe değildir; kredi anaparası geri ödenir",
@@ -70,6 +73,7 @@
     "verifiedFields": ["fundingAmount", "fundingType", "supportRate", "duration", "applicants", "application", "notice"]
   },
   "horizon-hop-on-2026": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma"],
     "code": "HORIZON-WIDERA-2026-03-WIDENING-01",
     "fundingAmount": "Toplam gösterge konu bütçesi 30 milyon avro; proje başına beklenen AB katkısı 200.000–600.000 avro, farklı tutar talebi dışlanmıyor. En az %90 yeni Widening yararlanıcısına, en fazla %10 koordinatörün entegrasyonuna ayrılır.",
     "applicants": "Bir Widening ülkesinde kurulu yeni yararlanıcı ve uygun mevcut projenin koordinatörü. Mevcut sözleşmede Widening ülkesinden yararlanıcı, bağlı kuruluş veya associated partner bulunmamalı. Uygun Horizon Pillar II ana çalışma programı/EIC Pathfinder ortak Ar-Ge projesi gerekir.",
@@ -80,6 +84,7 @@
     "verifiedFields": ["fundingAmount", "applicants", "application", "notice"]
   },
   "life-circular-2026": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma","Kamu kurum / kuruluşu","STK"],
     "code": "LIFE-2026-SAP-ENV-ENVIRONMENT",
     "applicants": "AB ve LIFE’a katılan uygun ülkelerde kurulu kamu/özel tüzel kişiler. Resmî 1 Mart 2026 ülke listesinde Türkiye yer almıyor. Türkiye’de kurulu kuruluşlar standart hibe yararlanıcısı olarak uygun kabul edilemez; fon sağlayıcının uygulama için zorunlu gördüğü istisnai katılım veya fon almayan ortaklık ayrı değerlendirilir.",
     "fundingAmount": "Döngüsel Ekonomi ve Sıfır Kirlilik konusu toplam bütçesi 79 milyon avro (4 milyonu Bauhaus alt konusu); gösterge proje bütçesi aralığı 2–10 milyon avro. Çağrının yönetişim konusuyla toplamı 85,5 milyon avro; bunlar tek firmaya verilecek hibe değildir.",
@@ -92,6 +97,7 @@
     "verifiedFields": ["applicants", "fundingAmount", "supportRate", "duration", "application", "notice"]
   },
   "msca-staff-exchanges-2027-tto": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma","TTO / Arayüz kuruluşu"],
     "applicants": "Üç farklı ülkede en az üç bağımsız tüzel kişi; en az ikisi farklı AB üyesi/Ufuk Avrupa asosiye ülkede olmalı. Akademik ve akademik olmayan sektörler birlikte temsil edilir. Araştırmacılar ile Ar-Ge/yeniliği destekleyen idari, yönetici ve teknik personel değişime katılabilir.",
     "fundingAmount": "Gösterge toplam çağrı bütçesi 95,04 milyon avro; resmî sayfada TBC (teyide tabi). Kuruluş başına sabit hibe tutarı olarak yorumlanmamalı.",
     "application": "Gösterge açılış 15 Aralık 2026, kapanış 15 Nisan 2027; resmî sayfa bunları TBC olarak bildiriyor. Başvuru çağrı portalından konsorsiyum olarak yapılır.",
@@ -100,6 +106,7 @@
     "verifiedFields": ["applicants", "fundingAmount", "application", "notice"]
   },
   "eic-step-scaleup-2026": {
+    "applicantGroups": ["Özel sektör"],
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
     "applicants": "AB veya uygun asosiye ülkede kurulu tek KOBİ veya 500’den az çalışanlı small mid-cap; Birleşik Krallık hariç. Uygun şirket adına yatırımcı da öneri sunabilir. Tek nitelikli yatırımcıdan hedef turun en az %20’si için ön taahhüt gerekir.",
     "fundingAmount": "10–30 milyon avro yalnız öz sermaye yatırımı; 2026 toplam bütçesi 300 milyon avro. Hedef yatırım turu 50–150 milyon avro ve EIC yatırımının en az 3–5 katı ölçeğinde olmalı.",
@@ -109,6 +116,7 @@
     "verifiedFields": ["applicants", "fundingAmount", "application", "notice"]
   },
   "eic-accelerator-2026": {
+    "applicantGroups": ["Özel sektör"],
     "applicants": "AB/Ufuk Avrupa asosiye ülkelerinde tek start-up veya KOBİ (spin-out dâhil); 499 çalışana kadar small mid-cap yalnız TRL 9 ölçeklenmesi için yatırım bileşenine başvurabilir. Birleşik Krallık kuruluşları yalnız hibe. Uygun şirket kurmayı amaçlayan gerçek/tüzel kişiler için çağrıdaki özel hükümler uygulanır.",
     "fundingAmount": "TRL 6–8 faaliyetlerine 2,5 milyon avronun altında götürü hibe; resmî program sayfasında 1–10 milyon avro yatırım bileşeni. 2026 Accelerator Open toplam bütçesi 414 milyon avro.",
     "duration": "Hibe faaliyetleri 24 ay içinde tamamlanmalı",
@@ -118,15 +126,23 @@
     "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
   },
   "tubitak-1501-2026-2": {
+    "applicantGroups": ["Özel sektör"],
+    "applicants": "Türkiye’de yerleşik KOBİ ölçeğindeki sermaye şirketleri; büyük işletmeler başvuramaz.",
+    "companyScale": ["KOBİ"],
+    "fundingType": "Geri ödemesiz hibe",
+    "application": "PRODİS üzerinden kuruluş bazlı ön kayıt onayı ve e-imzayla başvurulur. Her ortak ayrı ön kayıt yaptırır; mevcut ön kayıt onayı olanlar tekrar kayıt yapmaz. Firma kullanıcısı A1 bölümünü kuruluş yetkilisinin e-imza onayına gönderir, diğer bölümler tamamlanınca TÜBİTAK’a GÖNDER işlemiyle başvuru sunulur.",
+    "openDate": "2026-07-20T00:00:00+03:00",
+    "deadline": "2026-10-26T23:59:00+03:00",
     "duration": "Başvuruda en fazla 24 ay; gerekçeli değerlendirmeyle bir kez en fazla %50 uzatma ve toplamda en fazla 36 ay",
     "preDeadline": "2026-10-22T23:59:00+03:00",
     "fundingAmount": "Proje başına TÜBİTAK hibe katkısı en fazla 20 milyon TL",
     "supportRate": "Desteklenen ilk beş projede %75; altıncı ve sonraki projelerde %60",
     "notice": "İlk beş proje hesabında 1 Ocak 2020’den itibaren sözleşmesi imzalanan projeler dikkate alınır; 1505, 1512/1812, 1831 ve 1702 hariçtir. 1711/1707’de yalnız tedarikçi kuruluşun projeleri sayılır. 2026/2’de 1501 ve 1507 toplamı en fazla iki öneridir. Başvuru dönemi kapanmıştır.",
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
-    "verifiedFields": ["duration", "preDeadline", "fundingAmount", "supportRate", "notice"]
+    "verifiedFields": ["applicants", "companyScale", "fundingType", "application", "openDate", "deadline", "duration", "preDeadline", "fundingAmount", "supportRate", "notice"]
   },
   "tubitak-1711-2026": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma","Kamu kurum / kuruluşu"],
     "companyScale": ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
     "fundingType": "TÜBİTAK hibesi ve müşteri eş finansmanı",
     "openDate": "2026-06-15T00:00:00+03:00",
@@ -143,6 +159,7 @@
     "verifiedFields": ["deadline", "preDeadline", "fundingAmount", "duration", "supportRate", "applicants", "application", "notice", "companyScale", "fundingType", "openDate"]
   },
   "tubitak-1601-2026-gcip": {
+    "applicantGroups": ["TTO / Arayüz kuruluşu","Üniversite / Araştırma","STK"],
     "applicants": "Üniversite TTO birimleri veya TTO Yönetmeliği kapsamında sermaye şirketleri; TGB yönetici şirketleri veya teknoloji transferi yapan iştirakleri; kanunla kurulmuş vakıflar. Ortaklı başvuru kabul edilmez.",
     "fundingAmount": "Geçerli 1832 proje önerisi başına 135.000 TL; geçerli 1707 önerisi başına 180.000 TL çıktı ödülü. Arayüz başına en fazla on girişim; en fazla altı arayüz desteklenir. Proje bütçesi için ayrıca üst sınır belirlenmemiştir.",
     "duration": "1 Temmuz 2026’dan başlayan 12 ay; uzatılamaz",
@@ -152,6 +169,7 @@
     "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
   },
   "tubitak-1832-2026-1": {
+    "applicantGroups": ["Özel sektör"],
     "companyScale": ["KOBİ", "Büyük Ölçek"],
     "openDate": "2026-04-01T00:00:00+03:00",
     "deadline": "2026-06-09T23:59:00+03:00",
@@ -167,6 +185,7 @@
     "verifiedFields": ["fundingAmount", "fundingType", "supportRate", "duration", "applicants", "application", "notice", "companyScale", "openDate", "deadline"]
   },
   "ticaret-pazara-giris-belgesi": {
+    "applicantGroups": ["Özel sektör"],
     "applicants": "Üretimini ve/veya ihracatını yaptıkları ürünler için uygun belge, test/analiz, ruhsat veya kayıt işlemi gerçekleştiren şirketler. Belgede EK-1/B listesi, kuruluşun akreditasyon/yetkisi ve işlem türüne özgü hükümler uygulanır.",
     "eligibleCosts": ["EK-1/B kapsamındaki belge alımı/yenileme ve kapsam genişletme giderleri", "Pazara girişte zorunlu veya avantaj sağlayan ve genelgedeki şartları karşılayan test/analizler", "Uygun ruhsatlandırma/kayıt giderleri; REACH için veri erişimi, test ve ECHA kayıt ücreti"],
     "application": "DYS üzerinden üye olunan İhracatçı Birliği Genel Sekreterliğine başvurulur. Belge düzenlenmesinden, denetim/gözetimde rapor tarihinden; ruhsat/kayıtta ödeme belgesi tarihinden itibaren altı ay. REACH için ECHA kayıt numarasının alınmasından itibaren altı ay. Süre hesabında DYS iletim tarihi esas alınır.",
@@ -176,6 +195,7 @@
     "verifiedFields": ["applicants", "eligibleCosts", "application", "notice"]
   },
   "ticaret-responsible-programi": {
+    "applicantGroups": ["Özel sektör"],
     "applicants": "Cari yıldan önceki son üç takvim yılında toplam en az 300.000 ABD doları ihracat yapan imalatçı ve ihracatçı şirketler. 10 Ağustos 2026 değişikliğiyle organik bağlı/grup şirketi, sektörel dış ticaret veya dış ticaret sermaye şirketi aracılığıyla ihracat ve ihraç kayıtlı satışlar da hesaba katılır.",
     "supportRate": "Uygun danışmanlık ve ilgili hizmet giderlerinin %50’si",
     "duration": "Bakanlık kapsam onayının DYS üzerinden bildiriminden başlayan 5 yıl",
@@ -186,6 +206,7 @@
     "verifiedFields": ["applicants", "supportRate", "duration", "application", "notice"]
   },
   "eurostars-2026-2": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma","Kamu kurum / kuruluşu"],
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "fundingAmount": "Türk ortaklar için proje bütçesi üst sınırı 600.000 avro; Türkiye’den ortaklı proje başvurusunda 850.000 avro. Şirket dışı kuruluşların payı toplamın %50’sini ve toplam 300.000 avroyu aşamaz. Ulusal çağrı bütçesi 4 milyon avrodur; bu limitler hibe tutarı değildir.",
     "supportRate": "KOBİ %75; büyük ölçek %60; çağrıda sayılan uygun kamu/araştırma kuruluşları ve vakıf üniversiteleri %100",
@@ -198,6 +219,7 @@
     "verifiedFields": ["fundingAmount", "supportRate", "duration", "application", "applicants", "notice"]
   },
   "eurostars-coordination-support-2026-2": {
+    "applicantGroups": ["Özel sektör"],
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "fundingAmount": "Türkiye’den uzman/kuruluş için 150.000 TL; yurt dışından uzman/kuruluş için 5.000 avro. Eğitim seyahat giderleri en fazla 1.500 avro; çağrıdaki bebek/refakatçi istisnası onaya tabidir.",
     "supportRate": "%100; uygun bulunan belgeli harcamalar ve üst limitler dâhilinde",
@@ -209,6 +231,7 @@
     "verifiedFields": ["fundingAmount", "supportRate", "applicants", "application", "notice"]
   },
   "eureka-biotech-2026": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma","Kamu kurum / kuruluşu"],
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 500.000 avro; ulusal çağrı bütçesi 2.500.000 avro. Sermaye şirketi dışındaki kurum bütçeleri toplam proje bütçesinin %30’unu aşamaz. Bütçe limiti hibe tutarı değildir.",
     "supportRate": "KOBİ %75; büyük ölçek %60; çağrıda tanımlanan uygun kamu, üniversite ve araştırma kuruluşları %100",
@@ -221,6 +244,7 @@
     "verifiedFields": ["fundingAmount", "supportRate", "duration", "application", "applicants", "notice"]
   },
   "eureka-xecs-quantum-2026": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma","Kamu kurum / kuruluşu"],
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "applicants": "Çağrıyı destekleyen en az iki Eureka ülkesinden kuruluş; en az biri AB veya Ufuk Avrupa asosiye ülkesinde olmalı. Türkiye’de sermaye şirketi yürütücü olmalıdır. Üniversite, kamu araştırma kuruluşu, eğitim-araştırma hastanesi ve 6550 altyapıları en az bir sermaye şirketiyle ortak başvurabilir. Firmada ilgili konuda lisans mezunu, üniversite/hastanede doktora veya tıpta uzmanlık sahibi en az bir proje personeli gerekir.",
     "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 600.000 avro; ulusal çağrı bütçesi 3 milyon avro. Bunlar hibe tutarı değildir. Sermaye şirketi dışındaki ortakların bütçesi toplamın en fazla %30’u olabilir.",
@@ -234,6 +258,7 @@
     "verifiedFields": ["applicants", "fundingAmount", "supportRate", "duration", "preDeadline", "application", "notice"]
   },
   "eureka-xecs-call-6-2026": {
+    "applicantGroups": ["Özel sektör","Üniversite / Araştırma"],
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "applicants": "Uluslararası çağrı KOBİ, büyük işletme, araştırma/teknoloji kuruluşu ve üniversitelere açıktır. Türkiye’de 1509 kapsamında yalnız sermaye şirketleri doğrudan başvurabilir; üniversite ve araştırma enstitüleri hizmet sağlayıcı olabilir.",
     "application": "Çağrı açılışı 2 Haziran 2026. PO son tarihi 21 Ocak 2027, FPP son tarihi 5 Nisan 2027. Türk katılımcılar 1509 ulusal başvuru kurallarını ayrıca tamamlar.",
@@ -248,6 +273,7 @@
     "verifiedFields": ["application", "notice"]
   },
   "tubitak-1507-2026-2": {
+    "applicantGroups": ["Özel sektör"],
     "companyScale": ["KOBİ"],
     "application": "PRODİS üzerinden e-imzalı başvuru yapılır. Kuruluş bazlı ön kayıt onayı gerekir; mevcut onayı olan şirketler tekrar kayıt yapmaz. 1501 ve 1507 aynı dönemde toplam en fazla iki proje önerisiyle sınırlıdır.",
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
@@ -265,6 +291,7 @@
     "verifiedFields": ["openDate", "deadline", "preDeadline", "applicants", "fundingAmount", "fundingType", "supportRate", "duration", "notice", "companyScale", "application"]
   },
   "tubitak-1831-continuous": {
+    "applicantGroups": ["Özel sektör"],
     "applicants": "Sermaye şirketi niteliğindeki KOBİ’ler; mentörlük hizmeti TÜBİTAK’ın çözüm ortağı kuruluşlarından alınır",
     "fundingAmount": "Proje bütçesi üst limiti 310.000 TL; bu tutarın %90’ı desteklenir",
     "fundingType": "Mentörlük hizmeti için geri ödemesiz hibe",
@@ -275,14 +302,23 @@
     "verifiedFields": ["applicants", "fundingAmount", "fundingType", "supportRate", "duration", "ttoEligibility"]
   },
   "tubitak-1613-ttp": {
-    "fundingAmount": "A=24×6×başvuru tarihindeki brüt asgari ücret; B=A×%5; C=(A+B)×%5; toplam üst sınır A+B+C. Eğitim hizmeti toplamı ayrıca en fazla 50.000 TL",
+    "applicantGroups": ["TTO / Arayüz kuruluşu", "Üniversite / Araştırma"],
+    "applicants": "Yükseköğretim kurumları adına TTO birimleri, 2017 TTO Yönetmeliği kapsamındaki sermaye şirketleri, üniversitenin ortağı olduğu TGB yönetici şirketindeki birimler veya TGB yönetici şirketinin ortak olduğu TTO şirketleri; ayrıca 6550 kapsamında tüzel kişilik kazanmış araştırma altyapıları. Ortaklı başvuru kabul edilmez; genel sanayi işletmelerine yönelik değildir.",
+    "companyScale": ["TTO", "Üniversite / Araştırma"],
+    "fundingType": "Geri ödemesiz hibe",
+    "applicationType": "continuous",
+    "application": "Proje bazlı ön kayıt onayından sonra PRODİS üzerinden çevrimiçi başvuru yapılır. TTP özgeçmişi, TTP Öz Değerlendirme Formu ve TTO Performans Hedefleri Tablosu zorunludur; eksikse değerlendirmeye alınmaz. Başka bir duyuruya kadar sürekli başvuru ve iki aylık panel grupları uygulanır.",
+    "fundingAmount": "24 aylık proje bütçesi üst sınırı: A=24×6×başvuru tarihindeki brüt asgari ücret; B=A×%5; C=(A+B)×%5; toplam A+B+C. Eğitim gideri üst sınırı için kaynaklar çelişiyor: çağrı metni personel bütçesinin %5’i, program sayfası 50.000 TL diyor. Bu alt kalemin uygulanacak limiti kesinleştirilemedi.",
     "supportRate": "1513 desteğini tamamlamış TTO: yeni istihdam %60, mevcut istihdam %40. Tamamlamamış TTO: yeni istihdam %80, mevcut istihdam %60",
-    "duration": "24 ay",
-    "notice": "Bir TTP kesintisiz tam zamanlı istihdam edilir. Bütçedeki personel maliyeti dönem brüt asgari ücretinin 4–6 katı aralığında olmalı. Sürekli başvuru, iki aylık değerlendirme gruplarıyla yürütülür.",
+    "duration": "24 ay; uzatılamaz",
+    "notice": "Bir TTP kesintisiz tam zamanlı istihdam edilir; yürütücü başka bir tam zamanlı çalışan olmalıdır. Personel maliyeti dönem brüt asgari ücretinin 4–6 katı aralığındadır. En fazla iki destek; bu çağrıda değerlendirmede/izlemede proje varken yeni başvuru yapılamaz. 1513 ile örtüşen dönem için mükerrer destek verilmez.",
     "evidenceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1613-teknoloji-transferi-profesyoneli-cagrisi",
-    "verifiedFields": ["fundingAmount", "supportRate", "duration", "notice"]
+    "additionalEvidence": ["https://tubitak.gov.tr/sites/default/files/2024-03/1601-2023-1_cagri_duyurusu_v2.pdf"],
+    "verificationIssues": [{"field": "fundingAmount", "message": "Eğitim hizmeti üst sınırı program sayfasında 50.000 TL, sayfaya bağlı v2 çağrı belgesinin 7.3.2 maddesinde personel bütçesinin %5’i. Hangi limitin uygulanacağına ilişkin açıklayıcı resmî güncelleme bulunmadığından bu alt kalem kesin tutar olarak yayımlanmaz."}],
+    "verifiedFields": ["applicants", "companyScale", "fundingType", "applicationType", "application", "supportRate", "duration", "notice"]
   },
   "kosgeb-kobi-dijital-donusum": {
+    "applicantGroups": ["Özel sektör"],
     "verifiedAt": "2026-11-04T17:00:00+03:00",
     "applicants": "NACE Kısım C-İmalat sektöründe küçük veya orta ölçekli işletmeler; KOSGEB kaydı aktif ve beyanı güncel olmalı. Onaylı DDX veya SIRI raporu, son mali yılda pozitif öz kaynak ve son üç mali yıldan en az birinde pozitif faaliyet kârı gerekir. Mikro işletmeler kapsam dışıdır.",
     "fundingAmount": "İşletme başına 1.000.000–20.000.000 TL yatırım kredisi",

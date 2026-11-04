@@ -1,7 +1,10 @@
 export type CallScope = "national" | "international";
 export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
+export type ApplicantGroup = "Özel sektör" | "Akademisyen" | "Üniversite / Araştırma" | "Kamu kurum / kuruluşu" | "TTO / Arayüz kuruluşu" | "STK";
 
 export type FundingCall = {
+  applicantGroups?: ApplicantGroup[];
+  verificationIssues?: { field: string; message: string }[];
   evidencePending?: boolean;
   verifiedFields?: string[];
   evidenceUrl?: string;

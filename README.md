@@ -18,7 +18,10 @@ npm run dev
 - AB araması 2021–2027 program dönemindeki, gelecekte son tarihi bulunan 1/2/8 türlerini tüm sonuç sayfalarında tarar. Kaynağın 10.000 sonuç sınırı için tarih aralıkları bölünür. Bütün fonların veya Türkiye’ye uygun sanayi çağrılarının eksiksiz envanteri olduğu iddia edilmez.
 - Eski kayıtlar silinmez. Gelecek tarihli fakat artık bulunamayan kayıtlar kontrol bekler; geçmiş tarihli kayıtlar arşivde kalır.
 - Otomatik aktarım yalnızca başlık/takvimdir; uygunluk, sektör, bütçe ve Türkiye’den katılım doğrulaması değildir. Sınıflandırılmamış kayıtlar açıkça ayrılır.
-- Diğer kurumların kayıtları `app/calls-data.ts` içinde editoryal güncellenir; bu kaynaklar için otomatik tarayıcı henüz yoktur.
+- Ulusal kaynakların duyuru bağlantıları da saatlik taranır; keşfedilen duyuru, açık çağrı veya doğrulanmış koşul kabul edilmez. Kaynak erişim hataları ayrıca gösterilir.
+- Varsayılan “Kimler için?” filtresi özel sektördür. Üniversite/araştırma, bireysel akademisyen, kamu, TTO/arayüz ve STK ayrı seçilebilir. Tüm gruplar birlikte gösterildiğinde firma fırsatları önceliklidir. Sekme değişiminde başvuru grubu korunur; filtre sıfırlama özel sektör görünümüne döner.
+- `applicantGroups` yalnız başvuru koşulları incelendikten sonra `public/verified-conditions.json` içinde atanır. Kurum adı, başlık, ARDEB kodu veya anahtar kelime üzerinden otomatik uygunluk kararı verilmez. Sınıflandırılmamış kayıtlar özel sektör filtresine girmez. Grup etiketi, doğrudan başvuru ile konsorsiyum katılımını veya ülke uygunluğunu birbirine eşitlemez; ayrıntılardaki kısıtlar geçerlidir.
+- Resmî kaynaklar arasında çözümlenmemiş çelişkiler `verificationIssues` ile yayımlanır ve o alan doğrulanmış sayılmaz. Otomatik metin parçaları kesin koşul olarak gösterilmez.
 - `verifiedAt` editoryal koşul kontrolü, `dateCheckedAt` ayrı takvim kontrolü, `sourceCheckedAt` API kaydının görülme zamanıdır.
 - 48 saatten eski AB aktarımı ve 14 günden eski editoryal kontrol uyarılır. Başarısız aktarımda son başarılı zaman değiştirilmez; eski veri ve hata göstergesi yayımlanır.
 - Genel program rehberleri açık çağrı sayısına katılmaz. Tarih bulunmaması sürekli başvuru anlamına gelmez.

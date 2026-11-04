@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { FundingCall, CallScope, CallStatus } from "./calls-data";
 import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate, validateFeed, fundingCategory, type LiveFeed } from "./call-utils";
+import { audienceOptions, matchesAudience, privateSectorPriority, type AudienceFilter } from "./audience-utils";
 
 type Props = { calls: FundingCall[] };
 type StatusFilter = "active" | CallStatus | "all";
@@ -25,6 +26,7 @@ const trDateTime = new Intl.DateTimeFormat("tr-TR", {
 
 const formatDate = (date?: string, time = false) => validDate(date) ? (time ? trDateTime : trDate).format(new Date(date!)) : "Tarih doğrulanmalı";
 function freshness(call: FundingCall, now: number) {
+  if (call.verificationIssues?.length) return "Resmî kaynaklar arasında çelişki var · ayrıntıları inceleyin";
   if (call.evidencePending) return "Dayanak değişti veya okunamadı · koşullar yeniden kontrol bekliyor";
   if (call.verifiedFields?.length) return "Bazı alanlar belgeyle kontrol edildi · tam doğrulama sürüyor";
   if (call.verification === "metadata") return `${stale(call.sourceCheckedAt, now) ? "Kaynak verisi eski · " : ""}Otomatik aktarım · uygunluk kontrolü gerekli`;
@@ -62,6 +64,7 @@ function Countdown({ call, now }: { call: FundingCall; now: number }) {
 export default function CallsExplorer({ calls }: Props) {
   const [scope, setScope] = useState<CallScope>("national");
   const [status, setStatus] = useState<StatusFilter>("active");
+  const [audience, setAudience] = useState<AudienceFilter>("Özel sektör");
   const [scale, setScale] = useState("Tümü");
   const [theme, setTheme] = useState("Tümü");
   const [sector, setSector] = useState("Tümü");
@@ -129,13 +132,15 @@ export default function CallsExplorer({ calls }: Props) {
   const feedStale = stale(liveFeed.checkedAt, now);
   const institutionOptions = ["Tümü", ...Array.from(new Set(normalizedCalls.filter(c => c.scope === scope).map(c => c.institutionShort))).sort((a,b) => a.localeCompare(b, "tr"))];
   const fundingOptions = ["Tümü", ...Array.from(new Set(normalizedCalls.filter(c => c.scope === scope).map(fundingCategory)))];
-  function resetFilters() {
+  function resetFilters(preserveAudience = false) {
+    if (!preserveAudience) setAudience("Özel sektör");
     setTtoRole("Tümü");
     setQuery(""); setScale("Tümü"); setTheme("Tümü"); setSector("Tümü"); setInstitution("Tümü");
     setFunding("Tümü"); setStatus("active"); setRecordType("Tümü"); setDeadlineWindow("Tümü"); setIncludeGeneral(true); setVisibleCount(24);
   }
-  const activeCount = normalizedCalls.filter((call) => call.status === "open").length;
-  const internationalCount = normalizedCalls.filter(
+  const audienceCalls = normalizedCalls.filter(call => matchesAudience(call, audience));
+  const activeCount = audienceCalls.filter((call) => call.status === "open").length;
+  const internationalCount = audienceCalls.filter(
     (call) => call.scope === "international" && call.status !== "archived",
   ).length;
   const scaleOptions = useMemo(
@@ -180,6 +185,7 @@ export default function CallsExplorer({ calls }: Props) {
 
   const filtered = normalizedCalls
     .filter((call) => call.scope === scope)
+    .filter((call) => matchesAudience(call, audience))
     .filter((call) => {
       if (status === "active") return call.status === "open" || call.status === "upcoming" || call.recordType === "program";
       if (status === "all") return true;
@@ -197,6 +203,8 @@ export default function CallsExplorer({ calls }: Props) {
     .sort((a, b) => {
       if (a.status === "archived" && b.status !== "archived") return 1;
       if (a.status !== "archived" && b.status === "archived") return -1;
+      const priority = privateSectorPriority(a, b);
+      if (priority) return priority;
       const aDeadline = a.deadline ? new Date(a.deadline).getTime() : Number.POSITIVE_INFINITY;
       const bDeadline = b.deadline ? new Date(b.deadline).getTime() : Number.POSITIVE_INFINITY;
       return aDeadline - bDeadline;
@@ -237,8 +245,8 @@ export default function CallsExplorer({ calls }: Props) {
             <em>doğru zamanda</em> bulun.
           </h1>
           <p>
-            Türkiye ve Avrupa’daki güncel sanayi fırsatlarını; sektör, dönüşüm teması,
-            tarih, destek türü, bütçe ve firma ölçeği bilgileriyle tek ekranda inceleyin.
+            Öncelikle firmalara yönelik ulusal ve uluslararası destekleri inceleyin.
+            Akademisyen, üniversite, kamu ve TTO fırsatlarını “Kimler için?” filtresinden seçin.
           </p>
           <div className="hero-actions">
             <a className="primary-button" href="#cagrilar">
@@ -269,12 +277,12 @@ export default function CallsExplorer({ calls }: Props) {
             <span className="blip b3" />
             <div className="radar-number">
               <strong>{activeCount}</strong>
-              <small>takvime göre açık kayıt</small>
+              <small>seçili başvuru grubunda açık kayıt</small>
             </div>
           </div>
           <div className="radar-stats">
             <span>
-              <b>{normalizedCalls.filter((call) => call.scope === "national" && call.status === "open").length}</b>
+              <b>{audienceCalls.filter((call) => call.scope === "national" && call.status === "open").length}</b>
               Ulusal
             </span>
             <span>
@@ -330,7 +338,7 @@ export default function CallsExplorer({ calls }: Props) {
             className={scope === "national" ? "active" : ""}
             onClick={() => {
               setScope("national");
-              resetFilters();
+              resetFilters(true);
             }}
           >
             <span className="tab-icon">TR</span>
@@ -338,7 +346,7 @@ export default function CallsExplorer({ calls }: Props) {
               <b>Ulusal Projeler</b>
               <small>TÜBİTAK, KOSGEB ve diğerleri</small>
             </span>
-            <i>{normalizedCalls.filter((call) => call.scope === "national" && call.status !== "archived").length}</i>
+            <i>{audienceCalls.filter((call) => call.scope === "national" && call.status !== "archived").length}</i>
           </button>
           <button
             role="tab"
@@ -346,7 +354,7 @@ export default function CallsExplorer({ calls }: Props) {
             className={scope === "international" ? "active" : ""}
             onClick={() => {
               setScope("international");
-              resetFilters();
+              resetFilters(true);
             }}
           >
             <span className="tab-icon globe">◎</span>
@@ -358,8 +366,14 @@ export default function CallsExplorer({ calls }: Props) {
           </button>
         </div>
 
-        <p className="data-notice">Otomatik AB aktarımı, destek koşullarının doğrulandığı anlamına gelmez. Diğer kurum kayıtları editoryal olarak güncellenir. Tema etiketleri keşif amaçlıdır; başvuru uygunluğu garantisi değildir.</p>
+        <p className="data-notice">Varsayılan görünüm özel sektördür. Başvuru grubu, doğrudan başvuruyu veya koşullara bağlı ortak katılımı gösterir; Türkiye’den uygunluk ve konsorsiyum şartları ayrıntılardadır. Henüz sınıflandırılmamış otomatik kayıtlar yalnız “Tümü” veya “Henüz sınıflandırılmamış” seçiminde görünür. Akademisyen seçeneği bireysel başvuru içindir; kurumsal araştırma çağrıları “Üniversite / Araştırma” altında yer alır.</p>
         <div className="filters" onChange={() => setVisibleCount(24)}>
+          <label>
+            <span>Kimler için?</span>
+            <select value={audience} onChange={event => setAudience(event.target.value as AudienceFilter)}>
+              {audienceOptions.map(option => <option key={option}>{option}</option>)}
+            </select>
+          </label>
           <label className="search-box">
             <span aria-hidden="true">⌕</span>
             <input
@@ -415,7 +429,7 @@ export default function CallsExplorer({ calls }: Props) {
           <label><span>Son başvuru aralığı</span><select value={deadlineWindow} onChange={e => setDeadlineWindow(e.target.value)}><option>Tümü</option><option value="7">Önümüzdeki 7 gün</option><option value="30">Önümüzdeki 30 gün</option><option value="90">Önümüzdeki 90 gün</option></select></label>
           <label className="general-check"><input type="checkbox" checked={includeGeneral} onChange={e => setIncludeGeneral(e.target.checked)} /> Genel sektörlü destekleri de göster</label>
           <label><span>TTO katılımı</span><select value={ttoRole} onChange={e => setTtoRole(e.target.value)}>{["Tümü", "TTO fırsatları", "Doğrudan başvuru", "Üniversite adına başvuru", "Konsorsiyum ortağı", "Hizmet sağlayıcı"].map(role => <option key={role}>{role}</option>)}</select></label>
-          <button className="reset-button" onClick={resetFilters}>Filtreleri temizle</button>
+          <button className="reset-button" onClick={() => resetFilters()}>Filtreleri temizle</button>
           <div className="result-count" aria-live="polite">
             <strong>{filtered.length}</strong>
             <span>çağrı gösteriliyor</span>
@@ -442,6 +456,7 @@ export default function CallsExplorer({ calls }: Props) {
               <h3>{call.title}</h3>
               {call.ttoRole && <p className="verification-note">TTO: {call.ttoRole}</p>}
               <p className="card-summary">{call.summary}</p>
+              <p className="verification-note">Kimler için: {call.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</p>
               <p className="verification-note">{freshness(call, now)}</p>
               <div className="tag-row">
                 {Array.from(new Set([
@@ -477,7 +492,7 @@ export default function CallsExplorer({ calls }: Props) {
               <h3>Bu filtrelerle eşleşen çağrı bulunamadı.</h3>
               <p>Arama kelimesini veya filtreleri değiştirerek tekrar deneyin.</p>
               <button
-                onClick={resetFilters}
+                onClick={() => resetFilters()}
               >
                 Filtreleri temizle
               </button>
@@ -572,10 +587,12 @@ export default function CallsExplorer({ calls }: Props) {
             <div className="modal-body">
               {selected.ttoRole && <div className="notice"><b>TTO: {selected.ttoRole}</b><p>{selected.ttoEligibility}</p></div>}
               <div className="notice"><b>Veri durumu</b><p>{freshness(selected, now)}. Türkiye’den başvuru, firma ölçeği ve ortaklık koşullarını resmî kaynaktan teyit edin.</p></div>
-              {selected.sourceConditions?.ok && <div className="notice"><b>Resmî kaynaktaki güncel koşullar · {formatDate(selected.sourceConditions.checkedAt, true)}</b><p>Aşağıdaki alıntılar otomatik olarak resmî sayfadan alınmıştır. Eski editoryal özetle farklılık varsa güncel resmî metni esas alın.</p>{selected.sourceConditions.excerpts.map((text, index) => <p key={index}>{text}</p>)}</div>}
+              {selected.sourceConditions?.ok && <div className="notice"><b>Otomatik sayfa erişim kontrolü · {formatDate(selected.sourceConditions.checkedAt, true)}</b><p>Resmî sayfa okunabildi. Bu işlem destek koşullarının doğrulandığı anlamına gelmez; otomatik metin eşleşmeleri kesin başvuru koşulu olarak gösterilmez.</p></div>}
+              {selected.verificationIssues?.map(issue => <div className="notice" key={issue.field}><b>Çözümlenmemiş kaynak çelişkisi</b><p>{issue.message}</p></div>)}
               {selected.evidenceUrl && <div className="notice"><b>Doğrulama kaynakları</b><p>Bu kayıtta bazı alanlar belgeyle karşılaştırıldı. Bu kontrol kaydın tamamının doğrulandığı anlamına gelmez. <a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/verification-audit.json`} target="_blank" rel="noopener noreferrer">Alan bazlı kontrol dökümü</a></p>{[selected.evidenceUrl, ...(selected.additionalEvidence ?? [])].map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">Resmî belge {index + 1}</a></p>)}</div>}
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
+                <article><span>Kimler için?</span><b>{selected.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</b></article>
                 <article><span>Başvuru dönemi · Türkiye saati</span><b>{selected.recordType === "program" ? "Program rehberi — alt çağrının takvimini kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, true)} – ${formatDate(selected.deadline, true)}`}</b></article>
                 <article><span>Destek miktarı</span><b>{selected.fundingAmount}</b></article>
                 <article><span>Destek şekli</span><b>{selected.fundingType}</b></article>

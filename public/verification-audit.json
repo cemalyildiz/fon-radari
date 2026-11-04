@@ -5,17 +5,23 @@
       "title": "Teknoloji Transferi Profesyoneli İstihdam Desteği",
       "source": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1613-teknoloji-transferi-profesyoneli-cagrisi",
       "verifiedFields": [
-        "fundingAmount",
+        "applicants",
+        "companyScale",
+        "fundingType",
+        "applicationType",
+        "application",
         "supportRate",
         "duration",
         "notice"
       ],
       "pendingFields": [
-        "applicants",
-        "companyScale",
-        "fundingType",
-        "application",
-        "applicationType"
+        "fundingAmount"
+      ],
+      "issues": [
+        {
+          "field": "fundingAmount",
+          "message": "Eğitim hizmeti üst sınırı program sayfasında 50.000 TL, sayfaya bağlı v2 çağrı belgesinin 7.3.2 maddesinde personel bütçesinin %5’i. Hangi limitin uygulanacağına ilişkin açıklayıcı resmî güncelleme bulunmadığından bu alt kalem kesin tutar olarak yayımlanmaz."
+        }
       ],
       "complete": false
     },
@@ -37,6 +43,7 @@
         "duration",
         "application"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -57,6 +64,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -76,6 +84,7 @@
         "duration",
         "recordType"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -83,21 +92,21 @@
       "title": "Sanayi Ar-Ge Projeleri Destekleme Programı",
       "source": "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
       "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingType",
+        "application",
+        "openDate",
+        "deadline",
         "duration",
         "preDeadline",
         "fundingAmount",
         "supportRate",
         "notice"
       ],
-      "pendingFields": [
-        "applicants",
-        "companyScale",
-        "fundingType",
-        "application",
-        "openDate",
-        "deadline"
-      ],
-      "complete": false
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
     },
     {
       "id": "tubitak-1507-2026-2",
@@ -117,6 +126,7 @@
         "application"
       ],
       "pendingFields": [],
+      "issues": [],
       "complete": true
     },
     {
@@ -137,6 +147,7 @@
         "openDate"
       ],
       "pendingFields": [],
+      "issues": [],
       "complete": true
     },
     {
@@ -157,6 +168,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -177,6 +189,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -197,6 +210,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -217,6 +231,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -237,6 +252,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -257,6 +273,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -277,6 +294,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -297,6 +315,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -317,6 +336,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -338,6 +358,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -357,6 +378,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -377,6 +399,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -396,6 +419,7 @@
         "application",
         "recordType"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -416,6 +440,7 @@
         "duration",
         "openDate"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -435,6 +460,7 @@
         "fundingType",
         "applicationType"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -455,6 +481,7 @@
         "duration",
         "applicationType"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -474,6 +501,7 @@
         "application",
         "applicationType"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -494,6 +522,7 @@
         "openDate",
         "deadline"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -513,6 +542,7 @@
         "supportRate",
         "duration"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -532,6 +562,7 @@
         "supportRate",
         "duration"
       ],
+      "issues": [],
       "complete": false
     },
     {
@@ -551,6 +582,7 @@
         "deadline"
       ],
       "pendingFields": [],
+      "issues": [],
       "complete": true
     },
     {
@@ -570,9 +602,10 @@
         "deadline"
       ],
       "pendingFields": [],
+      "issues": [],
       "complete": true
     }
   ],
   "total": 29,
-  "complete": 4
+  "complete": 5
 }
