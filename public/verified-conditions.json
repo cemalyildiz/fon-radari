@@ -1,4 +1,14 @@
 {
+  "ticaret-responsible-programi": {
+    "applicants": "Cari yıldan önceki son üç takvim yılında toplam en az 300.000 ABD doları ihracat yapan imalatçı ve ihracatçı şirketler. 10 Ağustos 2026 değişikliğiyle organik bağlı/grup şirketi, sektörel dış ticaret veya dış ticaret sermaye şirketi aracılığıyla ihracat ve ihraç kayıtlı satışlar da hesaba katılır.",
+    "supportRate": "Uygun danışmanlık ve ilgili hizmet giderlerinin %50’si",
+    "duration": "Bakanlık kapsam onayının DYS üzerinden bildiriminden başlayan 5 yıl",
+    "application": "Portal başvuru formu ve Ek-1 belgeleriyle DYS başvurusu yapılır. Faz 1 için yetkili danışmanlardan üç teklif ve Ek-7 ile Bakanlık ön onayı gerekir. Onaydan sonra bir ay içinde ödeme, ödemeden sonra bir ay içinde çalışmaya başlama esastır. Faz 1 raporu Bakanlıkça onaylanmadan diğer desteklerden yararlanılamaz.",
+    "notice": "Faz 1 danışmanlık harcaması mikro/küçük için 500.000 TL, orta için 1.000.000 TL, büyük için 1.500.000 TL’ye kadar; %50 destek uygulanır. Bunlar toplam program desteği üst limiti değildir. Hakediş başvurusu kural olarak ödeme belgesinden itibaren altı ay; Faz 1 için rapor onayından itibaren altı ay içinde yapılır. Bankacılık sistemiyle ödeme ve ilişkili olmayan hizmet sağlayıcı şartı vardır.",
+    "evidenceUrl": "https://ticaret.gov.tr/data/66a2407413b87634b8ce2b30/Ye%C5%9Fil%20Mutabakata%20Uyum%20Projesi%20Deste%C4%9Fine%20%C4%B0li%C5%9Fkin%20Genelge%2010082026.pdf",
+    "additionalEvidence": ["https://ticaret.gov.tr/destekler/ihracat-destekleri/5973-sayili-ihracat-destekleri-hakkinda-karara-iliskin-genelgeler/yesil-mutabakata-uyum-projesi-destegi-responsible-programi"],
+    "verifiedFields": ["applicants", "supportRate", "duration", "application", "notice"]
+  },
   "eurostars-2026-2": {
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "fundingAmount": "Türk ortaklar için proje bütçesi üst sınırı 600.000 avro; Türkiye’den ortaklı proje başvurusunda 850.000 avro. Şirket dışı kuruluşların payı toplamın %50’sini ve toplam 300.000 avroyu aşamaz. Ulusal çağrı bütçesi 4 milyon avrodur; bu limitler hibe tutarı değildir.",
