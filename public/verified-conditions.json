@@ -1,4 +1,13 @@
 {
+  "ticaret-pazara-giris-belgesi": {
+    "applicants": "Üretimini ve/veya ihracatını yaptıkları ürünler için uygun belge, test/analiz, ruhsat veya kayıt işlemi gerçekleştiren şirketler. Belgede EK-1/B listesi, kuruluşun akreditasyon/yetkisi ve işlem türüne özgü hükümler uygulanır.",
+    "eligibleCosts": ["EK-1/B kapsamındaki belge alımı/yenileme ve kapsam genişletme giderleri", "Pazara girişte zorunlu veya avantaj sağlayan ve genelgedeki şartları karşılayan test/analizler", "Uygun ruhsatlandırma/kayıt giderleri; REACH için veri erişimi, test ve ECHA kayıt ücreti"],
+    "application": "DYS üzerinden üye olunan İhracatçı Birliği Genel Sekreterliğine başvurulur. Belge düzenlenmesinden, denetim/gözetimde rapor tarihinden; ruhsat/kayıtta ödeme belgesi tarihinden itibaren altı ay. REACH için ECHA kayıt numarasının alınmasından itibaren altı ay. Süre hesabında DYS iletim tarihi esas alınır.",
+    "notice": "Eğitim, danışmanlık, yol/konaklama ve tarım ürünlerinde muayene giderleri desteklenmez. REACH tek temsilcilik hizmeti, idari ücretler ve danışmanlık kapsam dışıdır. Yenilemede önceki belgenin geçerlilik döneminde ihracatın tevsiki gerekir. Yurt içi hizmet sağlayıcı ilişkili kişi olmamalıdır. Her çevre/karbon belgesi otomatik olarak uygun kabul edilmez.",
+    "evidenceUrl": "https://ticaret.gov.tr/data/63341ce713b8769ec0647ebe/30.06.2025%20PAZARA%20G%C4%B0R%C4%B0%C5%9E%20BELGES%C4%B0NE%20%C4%B0L%C4%B0%C5%9EK%C4%B0N%20GENELGE.pdf",
+    "additionalEvidence": ["https://ticaret.gov.tr/destekler/ihracat-destekleri/5973-sayili-ihracat-destekleri-hakkinda-karara-iliskin-genelgeler/pazara-giris-belgesi-destegi"],
+    "verifiedFields": ["applicants", "eligibleCosts", "application", "notice"]
+  },
   "ticaret-responsible-programi": {
     "applicants": "Cari yıldan önceki son üç takvim yılında toplam en az 300.000 ABD doları ihracat yapan imalatçı ve ihracatçı şirketler. 10 Ağustos 2026 değişikliğiyle organik bağlı/grup şirketi, sektörel dış ticaret veya dış ticaret sermaye şirketi aracılığıyla ihracat ve ihraç kayıtlı satışlar da hesaba katılır.",
     "supportRate": "Uygun danışmanlık ve ilgili hizmet giderlerinin %50’si",
