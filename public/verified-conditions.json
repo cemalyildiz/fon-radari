@@ -1,4 +1,23 @@
 {
+  "eureka-lightweighting-2026": {
+    "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 500.000 avro; ulusal çağrı bütçesi 2,5 milyon avro. Şirket dışı kuruluşların payı toplam proje bütçesinin en fazla %30’u. Bu tutarlar hibe tutarı değildir.",
+    "duration": "En fazla 36 ay",
+    "supportRate": "KOBİ %75, büyük %60; çağrıda tanımlanan uygun kamu/araştırma ve vakıf üniversitesi kuruluşları %100",
+    "applicants": "Uluslararası değerlendirmesi olumlu Türk kuruluşlar; sermaye şirketi yürütücü, üniversite/araştırma/hastane/6550 altyapıları en az bir şirketle ortak olabilir. Şirkette ilgili lisans mezunu; üniversite/hastanede doktora veya uzmanlık sahibi proje personeli gerekir.",
+    "application": "Uluslararası çağrı 8 Ekim 2026’da kapandı. Ulusal aşama yalnız uluslararası başvurusu olumlu kuruluşlara: ön kayıt 1 Aralık, PRODİS proje başvurusu 2 Aralık 2026 saat 23.59. Aynı uluslararası projedeki Türk ortaklar tek ortaklı ulusal başvuru sunar.",
+    "notice": "Şirketlere harcama sonrası ödeme; teminat ve yönerge şartlarıyla en fazla bütçenin %30’u ön ödeme. Ticarileşme giderleri kapsam dışı; konsorsiyum içi hizmet alımı üniversite/araştırma istisnaları dışında desteklenmez.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-05/Hafifletme_Teknolojileri_Ulusal_Cagrisi.pdf",
+    "verifiedFields": ["fundingAmount", "duration", "supportRate", "applicants", "application", "notice"]
+  },
+  "eureka-disaster-resilience-2026": {
+    "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 500.000 avro; ulusal çağrı bütçesi 2,5 milyon avro. Şirket dışı kuruluşların bütçesi toplamın en fazla %30’u. Bütçe sınırı hibe tutarı değildir.",
+    "duration": "En fazla 36 ay",
+    "supportRate": "KOBİ %75, büyük %60; çağrıda tanımlanan uygun kamu/araştırma ve vakıf üniversitesi kuruluşları %100",
+    "application": "Uluslararası son tarih 26 Ekim 2026. Ulusal ön kayıt 15 Aralık, proje başvurusu 16 Aralık 2026 saat 23.59; Türk ortaklar birlikte tek ulusal başvuru yapar. Ulusal aşama yeni uluslararası başvuru hakkı sağlamaz.",
+    "notice": "Resmî PDF’nin 14.1 maddesinde Hafifletme ve Kuantum çağrılarının adları geçiyor; belge içi tutarsızlık nedeniyle bu madde TÜBİTAK’tan teyit edilmeden kesin yorumlanmamalı. Bütçe, süre, oran ve takvim ayrı maddelerden kontrol edildi. Şirketlere harcama sonrası; yönerge/teminat şartıyla en fazla bütçenin %30’u ön ödeme uygulanır.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-06/Eureka_Network_Afetlerde_Direnclilik_Ulusal_Cagri_Metni-2026.pdf",
+    "verifiedFields": ["fundingAmount", "duration", "supportRate", "application", "notice"]
+  },
   "kosgeb-yapay-zeka-kredi-2026": {
     "fundingAmount": "Toplam en fazla 5 milyon TL kredi. Ücretsiz hizmet limitinden bağımsız teminat karşılığı en fazla 500.000 TL; onaylı ücretsiz hizmet limiti varsa teminat karşılığı o tutar kadar ilave kredi. Eski 500.000 TL alt limit hükmü 20 Ekim 2026 revizyonunda değiştirilmiştir.",
     "fundingType": "Faiz ve komisyon uygulanmayan, teminatlı geri ödemeli kredi",
