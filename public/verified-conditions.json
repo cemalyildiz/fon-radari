@@ -1,4 +1,26 @@
 {
+  "kosgeb-yapay-zeka-kredi-2026": {
+    "fundingAmount": "Toplam en fazla 5 milyon TL kredi. Ücretsiz hizmet limitinden bağımsız teminat karşılığı en fazla 500.000 TL; onaylı ücretsiz hizmet limiti varsa teminat karşılığı o tutar kadar ilave kredi. Eski 500.000 TL alt limit hükmü 20 Ekim 2026 revizyonunda değiştirilmiştir.",
+    "fundingType": "Faiz ve komisyon uygulanmayan, teminatlı geri ödemeli kredi",
+    "supportRate": "Hibe değildir; kredi anaparası geri ödenir",
+    "duration": "24 ay vade; ilk 12 ay ödemesiz, ardından dörder aylık dönemlerle dört eşit taksit",
+    "applicants": "Uygun KOSGEB sektörlerinde faaliyet gösteren KOBİ; Türk Ticaret Kanunu kapsamındaki gerçek/tüzel kişi, aktif KOSGEB kaydı ve güncel beyan, başvuru tarihinde geçerli Teknogirişim Rozeti ve GO Dijital Cüzdan hesabı gerekir.",
+    "application": "KOSGEB sistemi/e-Devlet başvurusu sonrası koşullar kontrol edilir. Kesin teminat mektubu geldikten sonra kredi cüzdana blokeli aktarılır. Onay sonrası faturalar yüklenir; uygun hizmet giderleri KDV hariç serbest bırakılır. Hizmet sağlayıcı ve giderler resmî listelerde olmalıdır.",
+    "notice": "20 Ekim 2026 tarihli Rev.02 yönergesi esas alındı. İlk blokeli transferden itibaren 12 ay içinde en fazla dört kredi tanımı; kullanılmayan blokeler için iptal hükümleri var. Limit üzeri vergi/SGK borcu blokeli ödemeyi engeller. Teminatın süre ve yenileme şartları ayrıca uygulanır.",
+    "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Yapay%20Zeka%20Kredi%20Programi/2026/2026.09.28/Yapay_Zeka_Kredi_Yo%CC%88nergesi_Rev.02.pdf",
+    "additionalEvidence": ["https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9414/yapay-zek-kredi-programi"],
+    "verifiedFields": ["fundingAmount", "fundingType", "supportRate", "duration", "applicants", "application", "notice"]
+  },
+  "horizon-hop-on-2026": {
+    "code": "HORIZON-WIDERA-2026-03-WIDENING-01",
+    "fundingAmount": "Toplam gösterge konu bütçesi 30 milyon avro; proje başına beklenen AB katkısı 200.000–600.000 avro, farklı tutar talebi dışlanmıyor. En az %90 yeni Widening yararlanıcısına, en fazla %10 koordinatörün entegrasyonuna ayrılır.",
+    "applicants": "Bir Widening ülkesinde kurulu yeni yararlanıcı ve uygun mevcut projenin koordinatörü. Mevcut sözleşmede Widening ülkesinden yararlanıcı, bağlı kuruluş veya associated partner bulunmamalı. Uygun Horizon Pillar II ana çalışma programı/EIC Pathfinder ortak Ar-Ge projesi gerekir.",
+    "application": "Başvuruyu mevcut projenin koordinatörü konsorsiyum onayıyla yapar. Son tarihte ilk raporlama dönemi devam ediyor ve proje başlangıcından 1–12 ay geçmiş olmalı. Seçilen öneri yeni bağımsız hibe yerine mevcut sözleşme değişikliğiyle uygulanır. 2026 çağrısı 24 Eylül’de kapanmıştır.",
+    "notice": "Yeni ortağın ayırt edilebilir görev/iş paketi ve Ar-Ge katma değeri gösterilir. Genel bir yeni konsorsiyum çağrısı değildir. Mevcut sözleşmenin fon sağlayıcısı Komisyon veya yürütme ajansı olmalıdır.",
+    "evidenceUrl": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-11-widening-participation-and-strengthening-the-european-research-area_horizon-2026-2027_en.pdf",
+    "additionalEvidence": ["https://rea.ec.europa.eu/funding-and-grants/horizon-europe-widening-participation-and-spreading-excellence/hop-facility_en"],
+    "verifiedFields": ["fundingAmount", "applicants", "application", "notice"]
+  },
   "life-circular-2026": {
     "code": "LIFE-2026-SAP-ENV-ENVIRONMENT",
     "applicants": "AB ve LIFE’a katılan uygun ülkelerde kurulu kamu/özel tüzel kişiler. Resmî 1 Mart 2026 ülke listesinde Türkiye yer almıyor. Türkiye’de kurulu kuruluşlar standart hibe yararlanıcısı olarak uygun kabul edilemez; fon sağlayıcının uygulama için zorunlu gördüğü istisnai katılım veya fon almayan ortaklık ayrı değerlendirilir.",
