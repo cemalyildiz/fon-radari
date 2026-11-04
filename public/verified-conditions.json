@@ -1,4 +1,25 @@
 {
+  "tubitak-1601-2026-gcip": {
+    "applicants": "Üniversite TTO birimleri veya TTO Yönetmeliği kapsamında sermaye şirketleri; TGB yönetici şirketleri veya teknoloji transferi yapan iştirakleri; kanunla kurulmuş vakıflar. Ortaklı başvuru kabul edilmez.",
+    "fundingAmount": "Geçerli 1832 proje önerisi başına 135.000 TL; geçerli 1707 önerisi başına 180.000 TL çıktı ödülü. Arayüz başına en fazla on girişim; en fazla altı arayüz desteklenir. Proje bütçesi için ayrıca üst sınır belirlenmemiştir.",
+    "duration": "1 Temmuz 2026’dan başlayan 12 ay; uzatılamaz",
+    "application": "PRODİS başvuruları 13 Nisan–8 Mayıs 2026. Proje bazlı ön kayıt evrak giriş son tarihi 4 Mayıs, eksik belge tamamlama 15 Mayıs 2026. Çağrı ilanı 6 Nisan 2026’dır; başvuru almaya başlama tarihiyle farklıdır.",
+    "notice": "Ödül için yalnız danışmanlık/yönlendirme yeterli değil: aktif proje geliştirme ve girişim onaylı vaka analizi gerekir. 1707 yolunda en az üç müşteri görüşmesi ve geçerli başvuru; 1832 yolunda geçerli başvuru gerekir. Eksik bilgi nedeniyle değerlendirmeye alınmayan öneriler için ödeme yapılmaz. Bu başvuru dönemi kapanmıştır.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
+    "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
+  },
+  "tubitak-1832-2026-1": {
+    "fundingAmount": "Proje bütçesi: mikro/küçük KOBİ 14 milyon TL, orta KOBİ 22,5 milyon TL, büyük 48 milyon TL. Kuruluşun tüm 1832 destekleri için geri ödemeli destek tavanı sırasıyla 500.000, 800.000 ve 1.500.000 ABD doları; önceki projeler hesaba katılır.",
+    "fundingType": "Kısmen hibeye dönüşen geri ödemeli destek",
+    "supportRate": "Kabul edilen bütçenin büyükte %70’i, KOBİ’de %80’i, tanımlı deprem bölgesi KOBİ’sinde %90’ı destek. Nihai destek tutarının büyükte %50’si, KOBİ’de %60’ı hibeye dönüşür; oranlar proje bütçesine değil destek tutarına uygulanır.",
+    "duration": "Ek süre dâhil en fazla 24 ay",
+    "applicants": "Türkiye’de yerleşik KOBİ veya büyük sermaye şirketleri; yürütücünün en az %75’i özel sektöre ait olmalı. Tescil en az iki yıl (spin-off ve 1512/1812 ile kurulan şirket istisnaları var). Banka referans mektubu, mali yeterlilik ve çevresel-sosyal risk belgeleri gerekir. Savunma faaliyetleri/çıktıları ve Dünya Bankası kısıtlı faaliyetleri kapsam dışıdır.",
+    "application": "2026/1 başvuruları 1 Nisan–9 Haziran 2026 arasında PRODİS üzerinden alındı; ön kayıt son günü 4 Haziran. Tek firma veya en fazla üç ortak başvurabilir. Başlangıç THS en az 3; THS 8–9’dan başlayan projeler kapsam dışı. Ölçek büyütme faaliyeti ve bitişte en az THS 7 gerekir.",
+    "notice": "Desteğin tamamı kadar teminat alınır. Hibeye dönüşmeyen tutarın geri ödemesi destek bitiminden bir yıl sonra başlar, yılda iki taksit; geri ödemesiz dönem dâhil en fazla dört yıl. Başarı için seçilen yeşil dönüşüm göstergelerinden en az biri doğrulanmalı: birim elektrik/su tüketimi veya geri dönüştürülemeyen atıkta en az %10 azalma ya da yenilikçi yeşil teknoloji çözümü. Bu çağrı dönemi kapanmıştır.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/1832_2026-1_Cagri_Duyurusu.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-1-cagrisi-basvuruya-acildi"],
+    "verifiedFields": ["fundingAmount", "fundingType", "supportRate", "duration", "applicants", "application", "notice"]
+  },
   "ticaret-pazara-giris-belgesi": {
     "applicants": "Üretimini ve/veya ihracatını yaptıkları ürünler için uygun belge, test/analiz, ruhsat veya kayıt işlemi gerçekleştiren şirketler. Belgede EK-1/B listesi, kuruluşun akreditasyon/yetkisi ve işlem türüne özgü hükümler uygulanır.",
     "eligibleCosts": ["EK-1/B kapsamındaki belge alımı/yenileme ve kapsam genişletme giderleri", "Pazara girişte zorunlu veya avantaj sağlayan ve genelgedeki şartları karşılayan test/analizler", "Uygun ruhsatlandırma/kayıt giderleri; REACH için veri erişimi, test ve ECHA kayıt ücreti"],
