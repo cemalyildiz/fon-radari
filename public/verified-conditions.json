@@ -1,4 +1,26 @@
 {
+  "tubitak-1501-2026-2": {
+    "duration": "Başvuruda en fazla 24 ay; gerekçeli değerlendirmeyle bir kez en fazla %50 uzatma ve toplamda en fazla 36 ay",
+    "preDeadline": "2026-10-22T23:59:00+03:00",
+    "fundingAmount": "Proje başına TÜBİTAK hibe katkısı en fazla 20 milyon TL",
+    "supportRate": "Desteklenen ilk beş projede %75; altıncı ve sonraki projelerde %60",
+    "notice": "İlk beş proje hesabında 1 Ocak 2020’den itibaren sözleşmesi imzalanan projeler dikkate alınır; 1505, 1512/1812, 1831 ve 1702 hariçtir. 1711/1707’de yalnız tedarikçi kuruluşun projeleri sayılır. 2026/2’de 1501 ve 1507 toplamı en fazla iki öneridir. Başvuru dönemi kapanmıştır.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
+    "verifiedFields": ["duration", "preDeadline", "fundingAmount", "supportRate", "notice"]
+  },
+  "tubitak-1711-2026": {
+    "deadline": "2026-10-02T23:59:00+03:00",
+    "preDeadline": "2026-09-28T23:59:00+03:00",
+    "fundingAmount": "Genel gider, proje teşvik ikramiyesi ve kurum hissesi hariç en fazla 10 milyon TL proje bütçesi",
+    "duration": "En fazla 24 ay",
+    "supportRate": "Teknoloji sağlayıcı şirkete TÜBİTAK hibesi: müşteri büyükse kabul edilen harcamanın %60’ı, müşteri KOBİ ise %70’i. Müşteri, sağlayıcının beyan ettiği giderin sırasıyla %20/%10’unu öder. Çağrıda tanımlı uygun araştırma/kamu/üniversite kurumları %100; toplam payları proje bütçesinin %25’ini aşamaz.",
+    "applicants": "Türkiye’de yerleşik müşteri sermaye şirketi (KOBİ veya büyük), en az bir KOBİ teknoloji sağlayıcı, en az bir üniversite araştırma laboratuvarı/merkezi veya kamu araştırma merkezi/enstitüsü ve TÜBİTAK Yapay Zekâ Enstitüsü içeren konsorsiyum. Sonuçların Türkiye’de uygulanması taahhüt edilir.",
+    "application": "Müşteri kuruluş PRODİS başvurusunu yapar; tedarikçiler ortak olarak eklenir. YZE ile proje kurgusu görüşülür, mutabık kalınan Niyet Beyan Formu ve iş birliği sözleşmesi sunulur. Güncel takvimde ön kayıt 28 Eylül, kapanış 2 Ekim 2026 saat 23.59’dur.",
+    "notice": "Müşterinin yalnız teknolojiyi bünyesine kazandırmaya yönelik işgücü en fazla 18 adam-ay ile desteklenir; kabul edilen müşteri personel harcamasına hibe %60. Ortaklar arası ve ilişkili kişilerden danışmanlık/hizmet ile ticarileşme giderleri desteklenmez. Çağrı kapanmıştır.",
+    "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1711-yapay-zeka-ekosistem-cagrisi",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-09/1711_YZE_2026_Cagri_Metni_Guncel.pdf",
+    "verifiedFields": ["deadline", "preDeadline", "fundingAmount", "duration", "supportRate", "applicants", "application", "notice"]
+  },
   "tubitak-1601-2026-gcip": {
     "applicants": "Üniversite TTO birimleri veya TTO Yönetmeliği kapsamında sermaye şirketleri; TGB yönetici şirketleri veya teknoloji transferi yapan iştirakleri; kanunla kurulmuş vakıflar. Ortaklı başvuru kabul edilmez.",
     "fundingAmount": "Geçerli 1832 proje önerisi başına 135.000 TL; geçerli 1707 önerisi başına 180.000 TL çıktı ödülü. Arayüz başına en fazla on girişim; en fazla altı arayüz desteklenir. Proje bütçesi için ayrıca üst sınır belirlenmemiştir.",
