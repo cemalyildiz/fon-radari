@@ -1,0 +1,540 @@
+{
+  "records": [
+    {
+      "id": "tubitak-1613-ttp",
+      "title": "Teknoloji Transferi Profesyoneli İstihdam Desteği",
+      "source": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1613-teknoloji-transferi-profesyoneli-cagrisi",
+      "verifiedFields": [
+        "fundingAmount",
+        "supportRate",
+        "duration",
+        "notice"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingType",
+        "application"
+      ],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1513-tto",
+      "title": "Teknoloji Transfer Ofisleri Destekleme Programı",
+      "source": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1513-teknoloji-transfer-ofisleri-destekleme-programi",
+      "verifiedFields": [
+        "status",
+        "recordType",
+        "supportRate",
+        "notice"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "duration",
+        "application"
+      ],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1601-2026-gcip",
+      "title": "Temiz Teknoloji Girişimlerine Teknik Yardım — Arayüz Kuruluşları",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
+      "verifiedFields": [
+        "applicants",
+        "fundingAmount",
+        "duration",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType",
+        "supportRate"
+      ],
+      "complete": false
+    },
+    {
+      "id": "msca-staff-exchanges-2027-tto",
+      "title": "MSCA Staff Exchanges 2027 — Araştırma ve Yenilik Personel Değişimi",
+      "source": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027",
+      "verifiedFields": [
+        "applicants",
+        "fundingAmount",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1501-2026-2",
+      "title": "Sanayi Ar-Ge Projeleri Destekleme Programı",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
+      "verifiedFields": [
+        "duration",
+        "preDeadline",
+        "fundingAmount",
+        "supportRate",
+        "notice"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingType",
+        "application"
+      ],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1507-2026-2",
+      "title": "KOBİ Ar-Ge Başlangıç Destek Programı",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-07/1507_KOBI_Ar-Ge_Baslangic_Destek_Programlari_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
+      "verifiedFields": [
+        "openDate",
+        "deadline",
+        "preDeadline",
+        "applicants",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "application"
+      ],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1711-2026",
+      "title": "Yapay Zekâ Ekosistem Çağrısı",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-09/1711_YZE_2026_Cagri_Metni_Guncel.pdf",
+      "verifiedFields": [
+        "deadline",
+        "preDeadline",
+        "fundingAmount",
+        "duration",
+        "supportRate",
+        "applicants",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "horizon-hop-on-2026",
+      "title": "Hop-on Facility",
+      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-11-widening-participation-and-strengthening-the-european-research-area_horizon-2026-2027_en.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "applicants",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "life-circular-2026",
+      "title": "Döngüsel Ekonomi ve Sıfır Kirlilik – Standart Eylem Projeleri",
+      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/life/wp-call/2026/call-fiche_life-2026-sap-env_en.pdf",
+      "verifiedFields": [
+        "applicants",
+        "fundingAmount",
+        "supportRate",
+        "duration",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eic-accelerator-2026",
+      "title": "EIC Accelerator Open",
+      "source": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
+      "verifiedFields": [
+        "applicants",
+        "fundingAmount",
+        "duration",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType",
+        "supportRate"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eic-step-scaleup-2026",
+      "title": "EIC STEP Scale Up",
+      "source": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
+      "verifiedFields": [
+        "applicants",
+        "fundingAmount",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eurostars-coordination-support-2026-2",
+      "title": "Eurostars Koordinatörlük Desteği Programı 2026/2",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-06/Eurostars_Koordinatorluk_Destegi_Programi_2026-2_Ulusal_Cagri_Duyurusu.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "supportRate",
+        "applicants",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eurostars-2026-2",
+      "title": "Eurostars-3 2026 Yılı 2. Çağrısı",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-07/1709-EUREKA-EUROSTARS_CAGRI_DUYURUSU_20262.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "supportRate",
+        "duration",
+        "application",
+        "applicants",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eureka-biotech-2026",
+      "title": "Eureka Network Biyoteknoloji 2026 Çağrısı",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-04/1719_Biyoteknoloji_Cagrisi_Ulusal_Cagri_Duyurusu_2026.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "supportRate",
+        "duration",
+        "application",
+        "applicants",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eureka-lightweighting-2026",
+      "title": "Eureka Network Hafifletme Teknolojileri 2026",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-05/Hafifletme_Teknolojileri_Ulusal_Cagrisi.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "duration",
+        "supportRate",
+        "applicants",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eureka-disaster-resilience-2026",
+      "title": "Eureka Network Afetlerde Dirençlilik 2026",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-06/Eureka_Network_Afetlerde_Direnclilik_Ulusal_Cagri_Metni-2026.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "duration",
+        "supportRate",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eureka-xecs-quantum-2026",
+      "title": "Eureka Xecs Uygulamalı Kuantum Teknolojileri",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-07/1719_Kuantum_Ulusal_Cagri_Metni.pdf",
+      "verifiedFields": [
+        "applicants",
+        "fundingAmount",
+        "supportRate",
+        "duration",
+        "preDeadline",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eureka-xecs-call-6-2026",
+      "title": "Eureka Xecs 6. Çağrısı",
+      "source": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-6-cagrisi-acildi",
+      "verifiedFields": [
+        "applicants",
+        "application"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "eureka-smart-call-10-2026",
+      "title": "Eureka SMART Kümesi 10. Çağrısı",
+      "source": "https://tubitak.gov.tr/tr/duyuru/eureka-smart-kumesi-10-cagrisi-acildi",
+      "verifiedFields": [
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1831-continuous",
+      "title": "Yeşil İnovasyon Teknoloji Mentörlük Çağrısı",
+      "source": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
+      "verifiedFields": [
+        "applicants",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "ttoEligibility"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "application"
+      ],
+      "complete": false
+    },
+    {
+      "id": "sanayi-yesil-donusum-programi-2026",
+      "title": "Sanayi ve Teknoloji Bakanlığı Yeşil Dönüşüm Programı",
+      "source": "https://ticaret.gov.tr/dis-iliskiler/yesil-mutabakat/duyurular/yesil-donusum-programi-cagri-duyurusu",
+      "verifiedFields": [
+        "status",
+        "deadline",
+        "application"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "ticaret-responsible-programi",
+      "title": "Yeşil Mutabakata Uyum Projesi Desteği",
+      "source": "https://ticaret.gov.tr/data/66a2407413b87634b8ce2b30/Ye%C5%9Fil%20Mutabakata%20Uyum%20Projesi%20Deste%C4%9Fine%20%C4%B0li%C5%9Fkin%20Genelge%2010082026.pdf",
+      "verifiedFields": [
+        "applicants",
+        "supportRate",
+        "duration",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingAmount",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "ticaret-pazara-giris-belgesi",
+      "title": "Pazara Giriş Belgesi Desteği",
+      "source": "https://ticaret.gov.tr/data/63341ce713b8769ec0647ebe/30.06.2025%20PAZARA%20G%C4%B0R%C4%B0%C5%9E%20BELGES%C4%B0NE%20%C4%B0L%C4%B0%C5%9EK%C4%B0N%20GENELGE.pdf",
+      "verifiedFields": [
+        "applicants",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "kosgeb-kobi-dijital-donusum",
+      "title": "KOBİ Dijital Dönüşüm Destek Programı",
+      "source": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9144/kobi-dijital-donusum-destek-programi",
+      "verifiedFields": [
+        "applicants",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "application"
+      ],
+      "complete": false
+    },
+    {
+      "id": "kosgeb-yapay-zeka-kredi-2026",
+      "title": "Yapay Zekâ Kredi Programı",
+      "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Yapay%20Zeka%20Kredi%20Programi/2026/2026.09.28/Yapay_Zeka_Kredi_Yo%CC%88nergesi_Rev.02.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "applicants",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale"
+      ],
+      "complete": false
+    },
+    {
+      "id": "sanayi-hit30-active",
+      "title": "HIT-30 Yüksek Teknoloji Yatırım Çağrıları",
+      "source": "https://hit30.sanayi.gov.tr/cagrilar",
+      "verifiedFields": [
+        "recordType",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "ssb-saga-active",
+      "title": "SSB Ar-Ge Geniş Alan (SAGA) Çağrıları",
+      "source": "https://arge.ssb.gov.tr/_layouts/15/CustomHttpHandler/FileDownload.ashx?dosyaId=6972&duyuruId=4921",
+      "verifiedFields": [
+        "recordType",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1707-2026-2",
+      "title": "Siparişe Dayalı Ar-Ge Projeleri için KOBİ Destekleme",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-07/Siparis_Ar-Ge_2026-2_Cagri_Dokumani-Guncellenmis.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "duration",
+        "supportRate",
+        "applicants",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingType"
+      ],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1832-2026-1",
+      "title": "Sanayide Yeşil Dönüşüm Çağrısı",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-04/1832_2026-1_Cagri_Duyurusu.pdf",
+      "verifiedFields": [
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "applicants",
+        "application",
+        "notice"
+      ],
+      "pendingFields": [
+        "companyScale"
+      ],
+      "complete": false
+    }
+  ],
+  "total": 29,
+  "complete": 0
+}

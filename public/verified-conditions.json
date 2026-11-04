@@ -1,4 +1,15 @@
 {
+  "ssb-saga-active": {
+    "status": "unknown",
+    "recordType": "program",
+    "openDate": "",
+    "applicationType": "fixed",
+    "application": "SSB resmî SAGA kılavuzuna göre çevrimiçi formda aktif çağrı seçilir; proje önerisinin adını içeren, yetkili imza/kaşeli başvuru yazısı yüklenir ve başvuru onaya gönderilir. Yalnız kaydetmek başvuruyu tamamlamaz. Her SAGA başlığının kendi son tarihi uygulanır.",
+    "notice": "Aktif 2026 SAGA başlıkları portal erişim reddi nedeniyle doğrulanamadı; sürekli açık başvuru olarak kabul edilmez. Mayıs 2024 sürüm 2 kılavuzu başvuru yöntemini açıklıyor; güncel bütçe, oran veya açık çağrı takvimini kanıtlamaz.",
+    "evidenceUrl": "https://arge.ssb.gov.tr/_layouts/15/CustomHttpHandler/FileDownload.ashx?dosyaId=6972&duyuruId=4921",
+    "additionalEvidence": ["https://katalog.ssb.gov.tr/pybs-disportal/openpages/basvuruislemleridisportal/sagaGirisi.xhtml"],
+    "verifiedFields": ["recordType", "application", "notice"]
+  },
   "tubitak-1707-2026-2": {
     "fundingAmount": "Toplam proje bütçesi en fazla 10 milyon TL; bu tutar hibe değildir",
     "duration": "Uzatma dâhil en fazla 24 ay",

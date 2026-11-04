@@ -25,7 +25,7 @@ const trDateTime = new Intl.DateTimeFormat("tr-TR", {
 
 const formatDate = (date?: string, time = false) => validDate(date) ? (time ? trDateTime : trDate).format(new Date(date!)) : "Tarih doğrulanmalı";
 function freshness(call: FundingCall, now: number) {
-  if (call.verifiedFields?.length) return "Belgeye dayalı alan kontrolü yapıldı · ayrıntılar için doğrulama kaynaklarına bakın";
+  if (call.verifiedFields?.length) return "Bazı alanlar belgeyle kontrol edildi · tam doğrulama sürüyor";
   if (call.verification === "metadata") return `${stale(call.sourceCheckedAt, now) ? "Kaynak verisi eski · " : ""}Otomatik aktarım · uygunluk kontrolü gerekli`;
   return stale(call.verifiedAt, now, 24 * 14) ? "Koşulların yeniden doğrulanması gerekiyor" : "Editoryal kayıt · başvuru öncesi kontrol edin";
 }
@@ -572,7 +572,7 @@ export default function CallsExplorer({ calls }: Props) {
               {selected.ttoRole && <div className="notice"><b>TTO: {selected.ttoRole}</b><p>{selected.ttoEligibility}</p></div>}
               <div className="notice"><b>Veri durumu</b><p>{freshness(selected, now)}. Türkiye’den başvuru, firma ölçeği ve ortaklık koşullarını resmî kaynaktan teyit edin.</p></div>
               {selected.sourceConditions?.ok && <div className="notice"><b>Resmî kaynaktaki güncel koşullar · {formatDate(selected.sourceConditions.checkedAt, true)}</b><p>Aşağıdaki alıntılar otomatik olarak resmî sayfadan alınmıştır. Eski editoryal özetle farklılık varsa güncel resmî metni esas alın.</p>{selected.sourceConditions.excerpts.map((text, index) => <p key={index}>{text}</p>)}</div>}
-              {selected.evidenceUrl && <div className="notice"><b>Doğrulama kaynakları</b><p>Doğrulanan alan sayısı: {selected.verifiedFields?.length}. Diğer alanların kontrolü sürüyor.</p>{[selected.evidenceUrl, ...(selected.additionalEvidence ?? [])].map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">Resmî belge {index + 1}</a></p>)}</div>}
+              {selected.evidenceUrl && <div className="notice"><b>Doğrulama kaynakları</b><p>Bu kayıtta bazı alanlar belgeyle karşılaştırıldı. Bu kontrol kaydın tamamının doğrulandığı anlamına gelmez. <a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/verification-audit.json`} target="_blank" rel="noopener noreferrer">Alan bazlı kontrol dökümü</a></p>{[selected.evidenceUrl, ...(selected.additionalEvidence ?? [])].map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">Resmî belge {index + 1}</a></p>)}</div>}
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
                 <article><span>Başvuru dönemi · Türkiye saati</span><b>{selected.recordType === "program" ? "Program rehberi — alt çağrının takvimini kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, true)} – ${formatDate(selected.deadline, true)}`}</b></article>

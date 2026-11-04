@@ -45,6 +45,8 @@ jobs:
             git commit -m "Update funding calls"
             git push
           fi
+      - name: Audit field verification coverage
+        run: node --experimental-strip-types scripts/audit-verification.mjs
       - run: npm run build
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
