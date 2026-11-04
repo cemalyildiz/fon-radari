@@ -5,7 +5,9 @@ const required = ['applicants','companyScale','fundingAmount','fundingType','sup
 const records = calls.map(call => {
   const review = verified[call.id] ?? {};
   const fields = review.verifiedFields ?? [];
-  const missing = required.filter(field => !fields.includes(field));
+  const merged = {...call,...review};
+  const calendar = merged.recordType === 'program' ? ['recordType'] : merged.applicationType === 'continuous' ? ['applicationType'] : ['openDate','deadline'];
+  const missing = [...required,...calendar].filter(field => !fields.includes(field));
   return { id: call.id, title: call.title, source: review.evidenceUrl ?? call.sourceUrl, verifiedFields: fields, pendingFields: missing, complete: missing.length === 0 };
 });
 await writeFile('public/verification-audit.json', JSON.stringify({ records, total: records.length, complete: records.filter(r=>r.complete).length },null,2)+'\n');

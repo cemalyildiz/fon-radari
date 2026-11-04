@@ -14,7 +14,8 @@
         "applicants",
         "companyScale",
         "fundingType",
-        "application"
+        "application",
+        "applicationType"
       ],
       "complete": false
     },
@@ -52,7 +53,9 @@
       "pendingFields": [
         "companyScale",
         "fundingType",
-        "supportRate"
+        "supportRate",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -70,7 +73,8 @@
         "companyScale",
         "fundingType",
         "supportRate",
-        "duration"
+        "duration",
+        "recordType"
       ],
       "complete": false
     },
@@ -89,7 +93,9 @@
         "applicants",
         "companyScale",
         "fundingType",
-        "application"
+        "application",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -106,13 +112,12 @@
         "fundingType",
         "supportRate",
         "duration",
-        "notice"
-      ],
-      "pendingFields": [
+        "notice",
         "companyScale",
         "application"
       ],
-      "complete": false
+      "pendingFields": [],
+      "complete": true
     },
     {
       "id": "tubitak-1711-2026",
@@ -126,13 +131,13 @@
         "supportRate",
         "applicants",
         "application",
-        "notice"
-      ],
-      "pendingFields": [
+        "notice",
         "companyScale",
-        "fundingType"
+        "fundingType",
+        "openDate"
       ],
-      "complete": false
+      "pendingFields": [],
+      "complete": true
     },
     {
       "id": "horizon-hop-on-2026",
@@ -148,7 +153,9 @@
         "companyScale",
         "fundingType",
         "supportRate",
-        "duration"
+        "duration",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -166,7 +173,9 @@
       ],
       "pendingFields": [
         "companyScale",
-        "fundingType"
+        "fundingType",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -184,7 +193,9 @@
       "pendingFields": [
         "companyScale",
         "fundingType",
-        "supportRate"
+        "supportRate",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -202,7 +213,9 @@
         "companyScale",
         "fundingType",
         "supportRate",
-        "duration"
+        "duration",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -220,7 +233,9 @@
       "pendingFields": [
         "companyScale",
         "fundingType",
-        "duration"
+        "duration",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -238,7 +253,9 @@
       ],
       "pendingFields": [
         "companyScale",
-        "fundingType"
+        "fundingType",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -256,7 +273,9 @@
       ],
       "pendingFields": [
         "companyScale",
-        "fundingType"
+        "fundingType",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -274,7 +293,9 @@
       ],
       "pendingFields": [
         "companyScale",
-        "fundingType"
+        "fundingType",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -292,7 +313,9 @@
       "pendingFields": [
         "applicants",
         "companyScale",
-        "fundingType"
+        "fundingType",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -311,7 +334,9 @@
       ],
       "pendingFields": [
         "companyScale",
-        "fundingType"
+        "fundingType",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -328,7 +353,9 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
-        "duration"
+        "duration",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -346,7 +373,9 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
-        "duration"
+        "duration",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -364,7 +393,8 @@
       ],
       "pendingFields": [
         "companyScale",
-        "application"
+        "application",
+        "recordType"
       ],
       "complete": false
     },
@@ -383,7 +413,8 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
-        "duration"
+        "duration",
+        "openDate"
       ],
       "complete": false
     },
@@ -401,7 +432,8 @@
       "pendingFields": [
         "companyScale",
         "fundingAmount",
-        "fundingType"
+        "fundingType",
+        "applicationType"
       ],
       "complete": false
     },
@@ -420,7 +452,8 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
-        "duration"
+        "duration",
+        "applicationType"
       ],
       "complete": false
     },
@@ -438,7 +471,8 @@
       ],
       "pendingFields": [
         "companyScale",
-        "application"
+        "application",
+        "applicationType"
       ],
       "complete": false
     },
@@ -456,7 +490,9 @@
         "notice"
       ],
       "pendingFields": [
-        "companyScale"
+        "companyScale",
+        "openDate",
+        "deadline"
       ],
       "complete": false
     },
@@ -508,13 +544,14 @@
         "supportRate",
         "applicants",
         "application",
-        "notice"
-      ],
-      "pendingFields": [
+        "notice",
         "companyScale",
-        "fundingType"
+        "fundingType",
+        "openDate",
+        "deadline"
       ],
-      "complete": false
+      "pendingFields": [],
+      "complete": true
     },
     {
       "id": "tubitak-1832-2026-1",
@@ -527,14 +564,15 @@
         "duration",
         "applicants",
         "application",
-        "notice"
+        "notice",
+        "companyScale",
+        "openDate",
+        "deadline"
       ],
-      "pendingFields": [
-        "companyScale"
-      ],
-      "complete": false
+      "pendingFields": [],
+      "complete": true
     }
   ],
   "total": 29,
-  "complete": 0
+  "complete": 4
 }

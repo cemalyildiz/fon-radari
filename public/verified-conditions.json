@@ -11,6 +11,10 @@
     "verifiedFields": ["recordType", "application", "notice"]
   },
   "tubitak-1707-2026-2": {
+    "companyScale": ["KOBİ", "Büyük Ölçek"],
+    "fundingType": "TÜBİTAK hibesi ve müşteri eş finansmanı",
+    "openDate": "2026-05-04T00:00:00+03:00",
+    "deadline": "2026-07-17T23:59:00+03:00",
     "fundingAmount": "Toplam proje bütçesi en fazla 10 milyon TL; bu tutar hibe değildir",
     "duration": "Uzatma dâhil en fazla 24 ay",
     "supportRate": "Tedarikçiye kabul edilen harcamanın %40’ı TÜBİTAK hibesi; müşteri beyan edilen giderin en az %40’ını öder. Müşterinin uygun giderlerine de %40 hibe uygulanır.",
@@ -18,7 +22,7 @@
     "application": "Müşteri kuruluş PRODİS’ten tek ortaklı öneriyi sunar, tedarikçileri ortak ekler. İş birliği sözleşmesi ve ekonomik fizibilite hazırlanır. Ön kayıt 14 Temmuz, kapanış 17 Temmuz 2026; bu dönem kapanmıştır.",
     "notice": "Müşterinin desteklenen personeli en fazla 18 adam-ay; uygun şehirlerarası seyahat ve mali müşavirlik giderleri de kapsamda. Ortaklar arası/ilişkili kişilerden hizmet alımı ve ticarileşme giderleri desteklenmez. Bir projede birden fazla müşteri olamaz.",
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/Siparis_Ar-Ge_2026-2_Cagri_Dokumani-Guncellenmis.pdf",
-    "verifiedFields": ["fundingAmount", "duration", "supportRate", "applicants", "application", "notice"]
+    "verifiedFields": ["fundingAmount", "duration", "supportRate", "applicants", "application", "notice", "companyScale", "fundingType", "openDate", "deadline"]
   },
   "sanayi-hit30-active": {
     "recordType": "program",
@@ -123,6 +127,9 @@
     "verifiedFields": ["duration", "preDeadline", "fundingAmount", "supportRate", "notice"]
   },
   "tubitak-1711-2026": {
+    "companyScale": ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
+    "fundingType": "TÜBİTAK hibesi ve müşteri eş finansmanı",
+    "openDate": "2026-06-15T00:00:00+03:00",
     "deadline": "2026-10-02T23:59:00+03:00",
     "preDeadline": "2026-09-28T23:59:00+03:00",
     "fundingAmount": "Genel gider, proje teşvik ikramiyesi ve kurum hissesi hariç en fazla 10 milyon TL proje bütçesi",
@@ -133,7 +140,7 @@
     "notice": "Müşterinin yalnız teknolojiyi bünyesine kazandırmaya yönelik işgücü en fazla 18 adam-ay ile desteklenir; kabul edilen müşteri personel harcamasına hibe %60. Ortaklar arası ve ilişkili kişilerden danışmanlık/hizmet ile ticarileşme giderleri desteklenmez. Çağrı kapanmıştır.",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1711-yapay-zeka-ekosistem-cagrisi",
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-09/1711_YZE_2026_Cagri_Metni_Guncel.pdf",
-    "verifiedFields": ["deadline", "preDeadline", "fundingAmount", "duration", "supportRate", "applicants", "application", "notice"]
+    "verifiedFields": ["deadline", "preDeadline", "fundingAmount", "duration", "supportRate", "applicants", "application", "notice", "companyScale", "fundingType", "openDate"]
   },
   "tubitak-1601-2026-gcip": {
     "applicants": "Üniversite TTO birimleri veya TTO Yönetmeliği kapsamında sermaye şirketleri; TGB yönetici şirketleri veya teknoloji transferi yapan iştirakleri; kanunla kurulmuş vakıflar. Ortaklı başvuru kabul edilmez.",
@@ -145,6 +152,9 @@
     "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
   },
   "tubitak-1832-2026-1": {
+    "companyScale": ["KOBİ", "Büyük Ölçek"],
+    "openDate": "2026-04-01T00:00:00+03:00",
+    "deadline": "2026-06-09T23:59:00+03:00",
     "fundingAmount": "Proje bütçesi: mikro/küçük KOBİ 14 milyon TL, orta KOBİ 22,5 milyon TL, büyük 48 milyon TL. Kuruluşun tüm 1832 destekleri için geri ödemeli destek tavanı sırasıyla 500.000, 800.000 ve 1.500.000 ABD doları; önceki projeler hesaba katılır.",
     "fundingType": "Kısmen hibeye dönüşen geri ödemeli destek",
     "supportRate": "Kabul edilen bütçenin büyükte %70’i, KOBİ’de %80’i, tanımlı deprem bölgesi KOBİ’sinde %90’ı destek. Nihai destek tutarının büyükte %50’si, KOBİ’de %60’ı hibeye dönüşür; oranlar proje bütçesine değil destek tutarına uygulanır.",
@@ -154,7 +164,7 @@
     "notice": "Desteğin tamamı kadar teminat alınır. Hibeye dönüşmeyen tutarın geri ödemesi destek bitiminden bir yıl sonra başlar, yılda iki taksit; geri ödemesiz dönem dâhil en fazla dört yıl. Başarı için seçilen yeşil dönüşüm göstergelerinden en az biri doğrulanmalı: birim elektrik/su tüketimi veya geri dönüştürülemeyen atıkta en az %10 azalma ya da yenilikçi yeşil teknoloji çözümü. Bu çağrı dönemi kapanmıştır.",
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/1832_2026-1_Cagri_Duyurusu.pdf",
     "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-1-cagrisi-basvuruya-acildi"],
-    "verifiedFields": ["fundingAmount", "fundingType", "supportRate", "duration", "applicants", "application", "notice"]
+    "verifiedFields": ["fundingAmount", "fundingType", "supportRate", "duration", "applicants", "application", "notice", "companyScale", "openDate", "deadline"]
   },
   "ticaret-pazara-giris-belgesi": {
     "applicants": "Üretimini ve/veya ihracatını yaptıkları ürünler için uygun belge, test/analiz, ruhsat veya kayıt işlemi gerçekleştiren şirketler. Belgede EK-1/B listesi, kuruluşun akreditasyon/yetkisi ve işlem türüne özgü hükümler uygulanır.",
@@ -238,6 +248,8 @@
     "verifiedFields": ["application", "notice"]
   },
   "tubitak-1507-2026-2": {
+    "companyScale": ["KOBİ"],
+    "application": "PRODİS üzerinden e-imzalı başvuru yapılır. Kuruluş bazlı ön kayıt onayı gerekir; mevcut onayı olan şirketler tekrar kayıt yapmaz. 1501 ve 1507 aynı dönemde toplam en fazla iki proje önerisiyle sınırlıdır.",
     "dateCheckedAt": "2026-11-04T17:00:00+03:00",
     "openDate": "2026-07-20T00:00:00+03:00",
     "deadline": "2026-11-11T23:59:00+03:00",
@@ -250,7 +262,7 @@
     "notice": "2026/2 döneminde 1501 ve 1507 başvuruları birlikte sayılarak kuruluş başına en fazla iki öneri sunulabilir. Ön kayıt son saati 9 Kasım 23.59; ön kayıt evrakları kapanıştan en az bir iş günü önce ulaşmalı. Mevcut ön kayıt onayı olanlar tekrar kayıt yapmaz. E-imza gerekir.",
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/1507_KOBI_Ar-Ge_Baslangic_Destek_Programlari_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
     "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1507-tubitak-kobi-ar-ge-baslangic-destek-programi", "https://tubitak.gov.tr/sites/default/files/2026-10/1507_UE_25.09.2026_84YK_islenmis_hali_0.pdf"],
-    "verifiedFields": ["openDate", "deadline", "preDeadline", "applicants", "fundingAmount", "fundingType", "supportRate", "duration", "notice"]
+    "verifiedFields": ["openDate", "deadline", "preDeadline", "applicants", "fundingAmount", "fundingType", "supportRate", "duration", "notice", "companyScale", "application"]
   },
   "tubitak-1831-continuous": {
     "applicants": "Sermaye şirketi niteliğindeki KOBİ’ler; mentörlük hizmeti TÜBİTAK’ın çözüm ortağı kuruluşlarından alınır",
