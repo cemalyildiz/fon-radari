@@ -1,4 +1,28 @@
 {
+  "tubitak-1707-2026-2": {
+    "fundingAmount": "Toplam proje bütçesi en fazla 10 milyon TL; bu tutar hibe değildir",
+    "duration": "Uzatma dâhil en fazla 24 ay",
+    "supportRate": "Tedarikçiye kabul edilen harcamanın %40’ı TÜBİTAK hibesi; müşteri beyan edilen giderin en az %40’ını öder. Müşterinin uygun giderlerine de %40 hibe uygulanır.",
+    "applicants": "Türkiye’de yerleşik bir müşteri sermaye şirketi (KOBİ/büyük) ve en az bir KOBİ tedarikçi. İlişkili kişi kuruluşlar müşteri/tedarikçi olarak aynı projede yer alamaz; yalnız aynı fondan yatırım alma bu ilişkiyi doğurmaz. Her iki tarafta uygun lisans mezunu proje personeli gerekir.",
+    "application": "Müşteri kuruluş PRODİS’ten tek ortaklı öneriyi sunar, tedarikçileri ortak ekler. İş birliği sözleşmesi ve ekonomik fizibilite hazırlanır. Ön kayıt 14 Temmuz, kapanış 17 Temmuz 2026; bu dönem kapanmıştır.",
+    "notice": "Müşterinin desteklenen personeli en fazla 18 adam-ay; uygun şehirlerarası seyahat ve mali müşavirlik giderleri de kapsamda. Ortaklar arası/ilişkili kişilerden hizmet alımı ve ticarileşme giderleri desteklenmez. Bir projede birden fazla müşteri olamaz.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/Siparis_Ar-Ge_2026-2_Cagri_Dokumani-Guncellenmis.pdf",
+    "verifiedFields": ["fundingAmount", "duration", "supportRate", "applicants", "application", "notice"]
+  },
+  "sanayi-hit30-active": {
+    "recordType": "program",
+    "application": "Resmî aktif çağrılar listesinden teknoloji konusu seçilir; ilan edilmiş konu dışında HIT-30 kapsamındaki yüksek teknoloji alanlarında da başvuru alınabildiği belirtiliyor. Konuya özgü yatırım eşiği ve başvuru şartları ayrıca uygulanır.",
+    "notice": "HIT-Solar resmî listede sona eren çağrılar arasındadır. Aktif örnekler: elektrikli araçta yılda en az 150.000 araç, bataryada hücreden başlayan yılda en az 5 GWh, robotta yılda en az 5.000 robot kapasitesi. HIT-Ar-Ge, AB endüstriyel Ar-Ge yatırım sıralamasındaki ilk 1.000 şirket ve en az 250 Ar-Ge personeli koşulunu belirtir. Milyar dolarlık bütçeler çağrı toplamıdır, her firmaya verilen tutar değildir.",
+    "evidenceUrl": "https://hit30.sanayi.gov.tr/cagrilar",
+    "verifiedFields": ["recordType", "application", "notice"]
+  },
+  "sanayi-yesil-donusum-programi-2026": {
+    "status": "archived",
+    "deadline": "2026-07-31T23:59:00+03:00",
+    "application": "Ticaret Bakanlığının 23 Haziran 2026 resmî duyurusu, Sanayi ve Teknoloji Bakanlığı programı için 31 Temmuz 2026 son tarihini bildiriyor ve yesildonusum.sanayi.gov.tr adresine yönlendiriyor. Bu duyuru dönemi kapanmıştır; yeni dönem aynı kayıtla açık kabul edilmez.",
+    "evidenceUrl": "https://ticaret.gov.tr/dis-iliskiler/yesil-mutabakat/duyurular/yesil-donusum-programi-cagri-duyurusu",
+    "verifiedFields": ["status", "deadline", "application"]
+  },
   "eureka-lightweighting-2026": {
     "fundingAmount": "Türk ortakların toplam proje bütçesi en fazla 500.000 avro; ulusal çağrı bütçesi 2,5 milyon avro. Şirket dışı kuruluşların payı toplam proje bütçesinin en fazla %30’u. Bu tutarlar hibe tutarı değildir.",
     "duration": "En fazla 36 ay",
