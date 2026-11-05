@@ -114,6 +114,11 @@ test("cascade and EuropeAid use their own official identities, titles and links"
   const cards = mergeCalls([],{calls:migrated.calls},now);
   assert.equal(cards.find(c=>c.code===cascade.identifier).status,"unknown");
   assert.equal(cards.find(c=>c.code===topic.identifier).deadline,topic.deadline);
+  const reviewed = {...cards.find(c=>c.code===cascade.identifier), id:"reviewed-cascade", code:"Reviewed", reviewedPortalIdentifier:cascade.identifier};
+  const withReview = mergeCalls([reviewed],{calls:[cascade,otherCascade]},now);
+  assert.equal(withReview.length,2);
+  assert.equal(withReview.some(c=>c.id==="reviewed-cascade"),true);
+  assert.equal(withReview.some(c=>c.code===otherCascade.identifier),true);
 });
 test("legacy entries are preserved for audit but never shown with a guessed topic URL", () => {
   const date = new Date(now).toISOString();

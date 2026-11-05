@@ -199,6 +199,18 @@
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
     "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
   },
+  "valleys-open-call-1": {
+    "applicantGroups": ["Özel sektör", "TTO / Arayüz kuruluşu", "Üniversite / Araştırma", "Kamu kurum / kuruluşu", "STK"],
+    "evidenceUrl": "https://valleysproject.eu/wp-content/uploads/2026/10/VALLEYS_OC1_Guidelines-for-Applicants_FINAL.pdf",
+    "additionalEvidence": ["https://valleysproject.eu/open-call-1/", "https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/europe-world/international-cooperation/association-horizon-europe_en"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "eligibleCosts", "notice"]
+  },
+  "systemeu-fstp-2026": {
+    "evidenceUrl": "https://systemeuvalley.eu/open-call-for-fstp/",
+    "additionalEvidence": ["https://eismea.ec.europa.eu/funding-opportunities/calls-proposals/systemeu-project-open-call-interregional-innovation-proposals-areas-digital-transformation_en", "https://opportunities.getonepass.eu/open-opportunities/systemeu/systemeu-fstpcall"],
+    "verificationIssues": [{"field":"deadline","message":"SYSTEMEU ve EISMEA 16 Kasım 17.00 CET; AB Funding & Tenders kaydı 23.59 Brüksel saati, başvuru platformu 23.55 CET gösteriyor. Kartta düzenleyicinin yayımladığı en erken saat (19.00 TSİ) esas alındı."}],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "application", "notice"]
+  },
   "eureka-turkiye-ispanya-2026": {
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi",

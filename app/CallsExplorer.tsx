@@ -620,7 +620,7 @@ export default function CallsExplorer({ calls }: Props) {
               {!!selected.portalDocuments?.length && <div className="notice"><b>Portalın koşul belgeleri</b><p>Bağlantılar ilgili çağrının resmî koşul bölümünden alınmıştır. Belgelerin içerdiği istisnalar ayrıca kontrol edilmelidir.</p>{selected.portalDocuments.map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">AB koşul belgesi {index + 1}</a></p>)}</div>}
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
-                <article><span>Kimler için?</span><b>{selected.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</b></article>
+                <article><span>Kimler için?</span><b>{selected.turkeyFundingExcluded ? "Türkiye’de yerleşik kuruluşlar fonlanamaz" : selected.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</b></article>
                 <article><span>{selected.followUpStages?.length ? "İlk uluslararası başvuru" : "Başvuru dönemi"}{selected.calendarDateOnly ? "" : " · Türkiye saati"}</span><b>{selected.recordType === "program" ? "Program rehberi — güncel başvuru kabulünü resmî kaynaktan kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, !selected.calendarDateOnly && !selected.openingDateOnly)} – ${formatDate(selected.deadline, !selected.calendarDateOnly)}`}</b></article>
                 <article><span>Destek miktarı</span><b>{selected.fundingAmount}</b></article>
                 <article><span>Destek şekli</span><b>{selected.fundingType}</b></article>

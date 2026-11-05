@@ -14,6 +14,8 @@ export type FundingCall = {
   additionalEvidence?: string[];
   portalDocuments?: string[];
   portalBudget?: boolean;
+  reviewedPortalIdentifier?: string;
+  turkeyFundingExcluded?: boolean;
   sourceConditions?: { checkedAt: string; excerpts: string[]; ok: boolean; changed?: boolean };
   id: string;
   scope: CallScope;
@@ -57,6 +59,54 @@ export type FundingCall = {
 };
 
 export const calls: FundingCall[] = [
+  {
+    id: "valleys-open-call-1", scope: "international", code: "VALLEYS · Open Call #1",
+    reviewedPortalIdentifier: "cascade-48351491-16482",
+    title: "VALLEYS — Teknoloji Transferi ve Bilginin Değere Dönüşümü",
+    institution: "VALLEYS Projesi · Ufuk Avrupa", institutionShort: "VALLEYS",
+    status: "open", openDate: "2026-10-14T00:00:00+03:00", openingDateOnly: true,
+    deadline: "2026-12-14T19:00:00+03:00",
+    applicants: "Türkiye dâhil bir AB üyesi veya Ufuk Avrupa asosiye ülkede yerleşik ve bilgi değerlendirme aracısı olarak çalışan tüzel kişiler: KOBİ/girişim, üniversite/araştırma kuruluşu, kamu kuruluşu veya STK/vakıf/dernek. TTO, kuluçka merkezi, kümelenme veya fikrî mülkiyet danışmanlığı gibi faaliyet tek başına yeterli değil; başvuran tüzel kişi kılavuzdaki dört türden birine girmeli.",
+    companyScale: ["KOBİ", "TTO", "Üniversite / Araştırma"],
+    fundingAmount: "A: tek kuruluş 10.000 €. B: ev sahibi 10.000 €, misafir 20.000 € (toplam 30.000 €). C: ev sahibi 15.000 €, misafir 25.000 € (toplam 40.000 €).",
+    fundingType: "Götürü alt hibe; kilometre taşlarına bağlı ödemeler",
+    supportRate: "Gider yüzdesi yerine sabit hibe tutarı. İlk ödeme %10, ara ödeme en fazla %45, kalan ödeme doğrulanan sonuçlara ve eğitim koşullarına bağlı.",
+    duration: "6 aylık pilot",
+    summary: "Teknoloji transferi ve inovasyon aracıları için yapay zekâ araçlarını uygulama, sınır ötesi personel değişimi veya ikisini birleştiren pilotlar.",
+    objectives: ["Fikrî varlık yönetimi ve akademi–sanayi iş birliğini geliştirmek", "En az bir AB Bilgi Değerlendirme Uygulama Kodu ile uyumlu pilot yürütmek"],
+    eligibleCosts: ["A: VALLEYS araçlarının gerçek süreçlerde denenmesi", "B: yüz yüze sınır ötesi personel görevlendirmesi", "C: araç uygulaması ve personel hareketliliği"],
+    application: "İngilizce başvuru, resmî sayfadaki A/B/C kanalına göre SPLORO platformunda yapılır. A için yalnızca bir tüzel kişi; B ve C için iki farklı uygun ülkeden, birbirinden bağımsız iki tüzel kişi gerekir.",
+    notice: "Türkiye ülke şartını karşılar, ancak aracı kuruluş niteliği ayrıca kanıtlanır. Bağımsız büyük şirket, uygun türler arasında listelenmiyor. B/C’de ev sahibi ve misafir tanımlanır; tamamen çevrim içi değişim uygun değildir.",
+    sourceUrl: "https://valleysproject.eu/open-call-1/",
+    sourceLabel: "VALLEYS — resmî çağrı ve başvuru bağlantıları",
+    verifiedAt: "2026-11-05",
+    tags: ["TTO", "Teknoloji Transferi", "Kademeli Fonlama"],
+    themes: ["Teknoloji Transferi", "Dijital Dönüşüm"], sectors: ["Sektörler Arası"],
+  },
+  {
+    id: "systemeu-fstp-2026", scope: "international", code: "SYSTEMEU · FSTP",
+    reviewedPortalIdentifier: "cascade-45659376-15681", turkeyFundingExcluded: true,
+    title: "SYSTEMEU — Bölgeler Arası Dijital Dönüşüm Alt Çağrısı",
+    institution: "SYSTEMEU Projesi · Ufuk Avrupa", institutionShort: "SYSTEMEU",
+    status: "open", openDate: "2026-09-15T00:00:00+03:00", openingDateOnly: true,
+    deadline: "2026-11-16T19:00:00+03:00",
+    applicants: "Fonlanan ortaklar yalnız Bavyera, Romanya, Kastilya ve León, Tuzla Kantonu veya Portekiz Norte bölgesinde yerleşik olabilir. Türkiye’de yerleşik kuruluş bu çağrı kapsamında fon alan başvuru sahibi olamaz.",
+    companyScale: ["Uygun bölgelerde KOBİ veya büyük işletme"],
+    fundingAmount: "Küçük proje 750.000 €, orta 1.100.000 €, amiral proje 2.200.000 € üst limit. Ortak başına asgari 50.000 €; bir veya birden fazla projede üçüncü taraf başına toplam azami 600.000 €. Çağrının toplam bütçesi 7.550.000 €.",
+    fundingType: "Üçüncü taraflara kademeli hibe",
+    supportRate: "Kuruluş türüne ve bölgeye göre %50–100.",
+    duration: "15–18 ay",
+    summary: "Sağlık, enerji ve hareketlilikte dijital yenilik; fonlama beş bölgeyle sınırlı.",
+    objectives: ["Bölgeler arası dijital çözümleri gerçek ortamda test etmek"],
+    eligibleCosts: ["Çağrı koşullarına uyan geliştirme, test ve pilot faaliyetleri"],
+    application: "Yalnız uygun bölgesel konsorsiyumlar, SYSTEMEU resmî sayfasındaki başvuru platformunu kullanır. Konsorsiyum büyüklüğüne göre ortak sayısı ve bölge şartları değişir.",
+    notice: "Türkiye’de yerleşik kuruluşlar fonlanacak ortak olamaz. Düzenleyici ve EISMEA en erken son saati 17.00 CET (19.00 TSİ) olarak veriyor; AB portalı ve başvuru ekranında farklı saatler görüldü. Başvuruyu daha geç saate bırakmayın.",
+    sourceUrl: "https://systemeuvalley.eu/open-call-for-fstp/",
+    sourceLabel: "SYSTEMEU — resmî alt çağrı",
+    verifiedAt: "2026-11-05",
+    tags: ["Bölgesel Uygunluk", "Kademeli Fonlama", "Dijital Dönüşüm"],
+    themes: ["Dijital Dönüşüm", "Ar-Ge ve Yenilik"], sectors: ["Sağlık", "Enerji", "Otomotiv ve Mobilite"],
+  },
   {
     id: "eureka-turkiye-ispanya-2026", scope: "international", code: "Eureka Network · TR–ES 2026",
     title: "Eureka Network — Türkiye–İspanya Ortak Sanayi Ar-Ge Çağrısı",

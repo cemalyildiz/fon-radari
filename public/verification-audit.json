@@ -1,6 +1,74 @@
 {
   "records": [
     {
+      "id": "valleys-open-call-1",
+      "title": "VALLEYS — Teknoloji Transferi ve Bilginin Değere Dönüşümü",
+      "source": "https://valleysproject.eu/wp-content/uploads/2026/10/VALLEYS_OC1_Guidelines-for-Applicants_FINAL.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "eligibleCosts",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "systemeu-fstp-2026",
+      "title": "SYSTEMEU — Bölgeler Arası Dijital Dönüşüm Alt Çağrısı",
+      "source": "https://systemeuvalley.eu/open-call-for-fstp/",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate"
+      ],
+      "pendingFields": [
+        "deadline"
+      ],
+      "issues": [
+        {
+          "field": "deadline",
+          "message": "SYSTEMEU ve EISMEA 16 Kasım 17.00 CET; AB Funding & Tenders kaydı 23.59 Brüksel saati, başvuru platformu 23.55 CET gösteriyor. Kartta düzenleyicinin yayımladığı en erken saat (19.00 TSİ) esas alındı."
+        }
+      ],
+      "complete": false
+    },
+    {
       "id": "eureka-turkiye-ispanya-2026",
       "title": "Eureka Network — Türkiye–İspanya Ortak Sanayi Ar-Ge Çağrısı",
       "source": "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi",
@@ -1118,6 +1186,6 @@
       "complete": true
     }
   ],
-  "total": 37,
-  "complete": 18
+  "total": 39,
+  "complete": 19
 }

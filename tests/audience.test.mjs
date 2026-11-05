@@ -51,3 +51,13 @@ test('unresolved training cap conflict is not marked verified', () => {
   assert.ok(tto.verificationIssues.some(issue => issue.field === 'fundingAmount'));
   assert.equal(tto.verifiedFields.includes('fundingAmount'), false);
 });
+
+test('verified regional restrictions differ from unknown eligibility', () => {
+  const restricted = records.find(call => call.id === 'systemeu-fstp-2026');
+  const intermediary = records.find(call => call.id === 'valleys-open-call-1');
+  assert.equal(matchesAudience(restricted, 'Türkiye’den fonlanamaz'), true);
+  assert.equal(matchesAudience(restricted, 'Özel sektör'), false);
+  assert.equal(matchesAudience(restricted, 'Henüz sınıflandırılmamış'), false);
+  assert.equal(matchesAudience(intermediary, 'Özel sektör'), true);
+  assert.equal(matchesAudience(intermediary, 'TTO / Arayüz kuruluşu'), true);
+});

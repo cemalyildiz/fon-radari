@@ -136,10 +136,11 @@ export function portalDeadlinePassed(date: string, now: number) {
 }
 export function mergeCalls(curated: FundingCall[], feed: LiveFeed, now: number): FundingCall[] {
   const codes = new Set(curated.map(c => c.code.toLowerCase()));
+  const reviewed = new Set(curated.filter(c => c.scope === "international" && c.reviewedPortalIdentifier).map(c => c.reviewedPortalIdentifier!.toLowerCase()));
   const seen = new Set<string>();
   const imported: FundingCall[] = (feed.calls ?? []).filter(c => {
     const key = c.identifier.toLowerCase();
-    if (!c.sourceKind || (c.sourceKind === "topic" && codes.has(key)) || seen.has(key)) return false;
+    if (!c.sourceKind || reviewed.has(key) || (c.sourceKind === "topic" && codes.has(key)) || seen.has(key)) return false;
     seen.add(key); return true;
   }).map(c => ({
     id: `eu-${c.identifier}`, scope: "international", code: c.identifier, title: c.title,
