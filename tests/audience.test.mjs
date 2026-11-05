@@ -7,6 +7,18 @@ import { audienceOptions, matchesAudience, privateSectorPriority } from '../app/
 const reviews = JSON.parse(await readFile(new URL('../public/verified-conditions.json', import.meta.url), 'utf8'));
 const records = calls.map(call => ({ ...call, ...reviews[call.id] }));
 
+test('reviewed Japan and SAYEM records distinguish international deadline and closed national round', () => {
+  const japan = records.find(call => call.id === 'eureka-globalstars-japan-2026');
+  const sayem = records.find(call => call.id === 'tubitak-1833-2026-1');
+  assert.equal(japan.deadline, '2027-01-20T02:00:00+03:00');
+  assert.match(japan.followUpStages[0].schedule, /e-postayla/);
+  assert.equal(matchesAudience(japan, 'Üniversite / Araştırma'), false);
+  assert.equal(sayem.status, 'archived');
+  assert.equal(sayem.deadline, '2026-06-04');
+  assert.equal(matchesAudience(sayem, 'Özel sektör'), true);
+  assert.equal(matchesAudience(sayem, 'Üniversite / Araştırma'), true);
+});
+
 test('EIC thematic calls keep company eligibility and planned batches separate from unconfirmed opening', () => {
   const topics = records.filter(call => /^eic-accelerator-challenge-.+-2027$/.test(call.id));
   assert.equal(topics.length, 4);

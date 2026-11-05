@@ -1,4 +1,16 @@
 {
+  "eureka-globalstars-japan-2026": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://www.eurekanetwork.org/programmes-and-calls/globalstars/globalstars-call-with-japan-2026/",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/eureka-globalstars-japonya-2026-cagrisi-acildi", "https://tubitak.gov.tr/tr/destekler/sanayi/uluslararasi-ortakli-destek-programlari/1509-tubitak-uluslararasi-sanayi-ar-ge-projeleri-destekleme-programi", "https://www.nedo.go.jp/koubo/CA2_100541.html", "https://apply-for-innovation-funding.service.gov.uk/competition/2586/overview/d9e61ae4-6e56-4f38-9206-5d91ef98c916"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
+  "tubitak-1833-2026-1": {
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/1833_SAYEM_Cagri_Duyurusu.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/1833-sayem-yesil-donusum-2026-1-cagrisi-2-asamasi-basvuruya-acildi", "https://tubitak.gov.tr/sites/default/files/2026-05/1833_SAYEM_2026_CAGRISI_BILGILENDIRME_WEB_13.04.26_1.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "tubitak-2244-sanayi-doktora-2026": {
     "applicantGroups": ["Üniversite / Araştırma"],
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-10/2244_Cagri_Metni_2026.pdf",

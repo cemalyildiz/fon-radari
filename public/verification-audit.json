@@ -129,6 +129,70 @@
       "complete": false
     },
     {
+      "id": "eureka-globalstars-japan-2026",
+      "title": "Eureka Globalstars Japonya 2026 — Ortak Sanayi Ar-Ge",
+      "source": "https://www.eurekanetwork.org/programmes-and-calls/globalstars/globalstars-call-with-japan-2026/",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "tubitak-1833-2026-1",
+      "title": "TÜBİTAK 1833 SAYEM — Yeşil Dönüşüm 2026/1",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-04/1833_SAYEM_Cagri_Duyurusu.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "eic-pre-accelerator-2027",
       "title": "EIC Pre-Accelerator 2027 — Derin Teknoloji KOBİ’leri",
       "source": "https://ec.europa.eu/transparency/documents-register/api/files/C%282025%298493_11/090166e526657dd7?rendition=false",
@@ -1662,6 +1726,6 @@
       "complete": true
     }
   ],
-  "total": 54,
-  "complete": 26
+  "total": 56,
+  "complete": 28
 }
