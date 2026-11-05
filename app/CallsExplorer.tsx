@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { FundingCall, CallScope, CallStatus } from "./calls-data";
-import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate, validateFeed, fundingCategory, utcMidnight, portalDeadlinePassed, type LiveFeed } from "./call-utils";
+import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate, validateFeed, fundingCategory, utcMidnight, portalDeadlinePassed, dateOnly, deadlinePassed, type LiveFeed } from "./call-utils";
 import { audienceOptions, matchesAudience, privateSectorPriority, type AudienceFilter } from "./audience-utils";
 import { verificationCoverage, verificationFieldLabel } from "./verification-utils";
 
@@ -635,7 +635,7 @@ export default function CallsExplorer({ calls }: Props) {
               {selected.followUpStages?.map(stage => <div className="application-note" key={stage.title}><span>{stage.title}</span><p>{stage.schedule}</p><p>{stage.access}</p></div>)}
               {((selected.preDeadline && !selected.followUpStages?.length) || selected.deadlines?.length || selected.dateCheckedAt) && <div className="application-note"><span>Başvuru takvimi · Türkiye saati</span>
                 {selected.preDeadline && !selected.followUpStages?.length && <p>Ön kayıt / ek ulusal işlem: {formatDate(selected.preDeadline, true)} — aşamanın açıklaması için önemli notları inceleyin.</p>}
-                {selected.deadlines?.map(date => <p key={date}>{formatDate(date, selected.verification !== "metadata" || !utcMidnight(date))} {(selected.verification === "metadata" ? portalDeadlinePassed(date, now) : Date.parse(date) <= now) ? "(geçti)" : ""}</p>)}
+                {selected.deadlines?.map(date => <p key={date}>{formatDate(date, !dateOnly(date) && (selected.verification !== "metadata" || !utcMidnight(date)))} {dateOnly(date) ? "· saat duyurudan teyit edilmeli" : ""} {(selected.verification === "metadata" ? portalDeadlinePassed(date, now) : deadlinePassed(date, now)) ? "(geçti)" : ""}</p>)}
                 {selected.dateCheckedAt && <p>Takvim son kontrolü: {formatDate(selected.dateCheckedAt)}</p>}
               </div>}
 

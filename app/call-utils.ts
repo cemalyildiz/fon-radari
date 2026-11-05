@@ -18,16 +18,21 @@ export type LiveFeed = { checkedAt?: string | null; attemptedAt?: string; calls?
 export function validDate(value?: string | null): boolean {
   return Boolean(value && Number.isFinite(Date.parse(value)));
 }
+export const dateOnly = (value?: string | null) => typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
+export function deadlinePassed(date: string, now: number) {
+  return dateOnly(date) ? date < turkeyDay.format(now) : Date.parse(date) <= now;
+}
 export function nextDeadline(call: Pick<FundingCall, "deadline" | "deadlines">, now: number) {
   const dates = (call.deadlines?.length ? call.deadlines : [call.deadline]).filter((d): d is string => validDate(d));
   dates.sort((a, b) => Date.parse(a) - Date.parse(b));
-  return dates.find(d => Date.parse(d) > now) ?? dates.at(-1);
+  return dates.find(d => !deadlinePassed(d, now)) ?? dates.at(-1);
 }
 export function realStatus(call: FundingCall, now: number): CallStatus {
   if (call.recordType === "program" || call.status === "unknown") return "unknown";
   if (call.status === "archived") return "archived";
   const deadline = nextDeadline(call, now);
-  if (deadline && Date.parse(deadline) <= now) return "archived";
+  if (deadline && deadlinePassed(deadline, now)) return "archived";
+  if (deadline && dateOnly(deadline) && deadline === turkeyDay.format(now)) return "unknown";
   if (validDate(call.openDate) && Date.parse(call.openDate) > now) return "upcoming";
   if (call.applicationType === "continuous") return "open";
   if (!deadline || !validDate(call.openDate)) return "unknown";
@@ -165,5 +170,8 @@ export function mergeCalls(curated: FundingCall[], feed: LiveFeed, now: number):
     sourceCheckedAt: c.sourceCheckedAt ?? feed.checkedAt ?? undefined, tags: [c.identifier, ...(c.sourceReference ? [c.sourceReference] : [])],
     notice: [c.sourceWarning, c.sourceBudgetConflict ? "Aynı eylem için farklı bütçe değerleri geldiğinden otomatik tutar gösterilmiyor." : "", utcMidnight(nextDeadline(c, now)) ? "AB API’sindeki gece yarısı zaman damgası kesin kapanış saati olarak gösterilmez. Güncel saati çağrı belgesinden kontrol edin." : ""].filter(Boolean).join(" ") || undefined,
   }));
-  return [...curated, ...imported].map(c => ({ ...c, deadline: nextDeadline(c, now), status: realStatus(c, now) }));
+  return [...curated, ...imported].map(c => {
+    const deadline = nextDeadline(c, now);
+    return { ...c, deadline, calendarDateOnly: c.calendarDateOnly || dateOnly(deadline), status: realStatus(c, now) };
+  });
 }

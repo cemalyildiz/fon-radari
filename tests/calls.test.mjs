@@ -39,6 +39,18 @@ test("TTO opportunities distinguish open support, closed rounds and service prov
 });
 const portal = "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/";
 const item = (id, date = "2026-11-04T16:00:00Z") => ({summary:`Topic ${id}`,metadata:{type:["1"],identifier:[id],url:[portal+"topic-details/"+id],deadlineDate:[date],startDate:["2026-01-01T00:00:00Z"],status:["31094502"]}});
+test("date-only cut-offs remain uncertain on the local closing day, then advance", () => {
+  const call = calls.find(c => c.id === "eit-urban-mobility-startups-2026-2028");
+  const dayBefore = Date.parse("2027-04-11T20:59:00Z");
+  const closingDay = Date.parse("2027-04-11T21:00:00Z");
+  const followingDay = Date.parse("2027-04-12T21:00:00Z");
+  assert.equal(nextDeadline(call,dayBefore),"2027-04-12");
+  assert.equal(mergeCalls([call],{},dayBefore)[0].calendarDateOnly,true);
+  assert.equal(realStatus(call,closingDay),"unknown");
+  assert.equal(nextDeadline(call,followingDay),"2027-08-30");
+  assert.equal(realStatus(call,followingDay),"open");
+  assert.equal(realStatus(call,Date.parse("2028-03-13T19:00:00+03:00")),"archived");
+});
 test("EIC advances to next deadline instead of archiving entire programme", () => {
   const eic = calls.find(c => c.id === "eic-accelerator-2026");
   assert.equal(nextDeadline(eic,now), "2026-11-04T17:00:00+01:00");
