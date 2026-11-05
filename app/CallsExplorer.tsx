@@ -27,6 +27,7 @@ const trDateTime = new Intl.DateTimeFormat("tr-TR", {
 
 const formatDate = (date?: string, time = false) => validDate(date) ? (time ? trDateTime : trDate).format(new Date(date!)) : "Tarih doğrulanmalı";
 function freshness(call: FundingCall, now: number) {
+  if (call.calendarObservation?.conflict) return "Resmî takvim önceki kayıtla uyuşmuyor · tarih kontrolü gerekli";
   if (call.verificationIssues?.length) return "Resmî kaynaklar arasında çelişki var · ayrıntıları inceleyin";
   if (call.evidencePending) return "Dayanak değişti veya okunamadı · koşullar yeniden kontrol bekliyor";
   if (call.verifiedFields?.length) return verificationCoverage(call).complete
@@ -609,6 +610,11 @@ export default function CallsExplorer({ calls }: Props) {
               <div className="notice"><b>Veri durumu</b><p>{freshness(selected, now)}. Türkiye’den başvuru, firma ölçeği ve ortaklık koşullarını resmî kaynaktan teyit edin.</p></div>
               {selected.sourceConditions?.ok && <div className="notice"><b>Otomatik sayfa erişim kontrolü · {formatDate(selected.sourceConditions.checkedAt, true)}</b><p>Resmî sayfa okunabildi. Bu işlem destek koşullarının doğrulandığı anlamına gelmez; otomatik metin eşleşmeleri kesin başvuru koşulu olarak gösterilmez.</p></div>}
               {selected.verificationIssues?.map(issue => <div className="notice" key={issue.field}><b>Çözümlenmemiş kaynak çelişkisi</b><p>{issue.message}</p></div>)}
+              {selected.calendarObservation && <div className="notice">
+                <b>{selected.calendarObservation.conflict ? "TÜBİTAK takvimi kayıtla uyuşmuyor" : "TÜBİTAK listesindeki başvuru takvimi"}</b>
+                <p>{formatDate(selected.calendarObservation.openDate, true)} – {formatDate(selected.calendarObservation.deadline, true)} (TSİ). Son eşleşme: {formatDate(selected.calendarObservation.checkedAt, true)}.</p>
+                <p>{selected.calendarObservation.notCurrent ? "Son taramada bu eşleşme yeniden doğrulanamadı; gösterilen önceki gözlemdir." : selected.calendarObservation.conflict ? "Önceki kayıtla fark var. Başvurudan önce resmî takvimi ve çağrı belgesini karşılaştırın." : "Liste ve çağrı sayfasındaki tarihler eşleşti. Bu kontrol başvuru koşullarını doğrulamaz."} <a href={selected.calendarObservation.sourceUrl} target="_blank" rel="noopener noreferrer">Resmî takvim</a></p>
+              </div>}
               {selected.evidenceUrl && <VerificationDetails call={selected} />}
               {selected.portalBudget && <div className="notice"><b>AB portalından alınan gösterge bütçe</b><p>Yalnız bu çağrı koduyla eşleşen satırlar gösterilir. Konu bütçesi tek bir firmaya verilen tutar değildir. Beklenen katkı garanti veya kesin üst limit değildir; bu aktarım Türkiye’den başvuru uygunluğunu doğrulamaz.</p></div>}
               {!!selected.portalDocuments?.length && <div className="notice"><b>Portalın koşul belgeleri</b><p>Bağlantılar ilgili çağrının resmî koşul bölümünden alınmıştır. Belgelerin içerdiği istisnalar ayrıca kontrol edilmelidir.</p>{selected.portalDocuments.map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">AB koşul belgesi {index + 1}</a></p>)}</div>}

@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { calls } from '../app/calls-data.ts';
+import { calendarIndex, confirmCalendarDetail, extractCalendarIndex } from './tubitak-calendar.mjs';
 
 const path = 'public/national-calls.json';
 const previous = await readFile(path, 'utf8').then(JSON.parse).catch(() => ({ calls: [], sources: {} }));
@@ -15,6 +16,34 @@ const sources = [
 const clean = value => value.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim();
 const records = new Map(previous.calls.map(c => [c.sourceUrl, c]));
 const state = { ...previous.sources };
+let calendars = previous.calendars ?? [];
+try {
+  const response = await fetch(calendarIndex, {signal: AbortSignal.timeout(20000)});
+  if (!response.ok || response.url !== calendarIndex) throw new Error(`Takvim sayfası okunamadı (${response.status})`);
+  const rows = extractCalendarIndex(await response.text());
+  if (!rows.length) throw new Error('Doğrulanabilir kod ve takvim içeren satır bulunamadı');
+  const checked = await Promise.all(rows.map(async row => {
+    try {
+      const detail = await fetch(row.sourceUrl, {signal: AbortSignal.timeout(20000)});
+      if (!detail.ok || detail.url !== row.sourceUrl || !confirmCalendarDetail(row, await detail.text())) return;
+      return {...row, checkedAt: now};
+    } catch {
+      return undefined;
+    }
+  }));
+  const priorUrls = new Map(calendars.map(row => [row.key, row.sourceUrl]));
+  const matches = checked.filter(row => row && (!priorUrls.has(row.key) || priorUrls.get(row.key) === row.sourceUrl));
+  calendars = [...new Map([
+    ...calendars.map(row => [row.key, {...row, notCurrent:true}]),
+    ...matches.map(row => [row.key, row]),
+  ]).values()];
+  if (!matches.length) throw new Error('Liste ve çağrı ayrıntısında aynı takvim bulunamadı');
+  state['TÜBİTAK çağrı takvimi'] = {url: calendarIndex, checkedAt: now, attemptedAt: now, ok: true, found: matches.length, unmatched: rows.length - matches.length};
+  console.log(`TÜBİTAK takvimi: ${matches.length}/${rows.length} çağrı ayrıntısıyla eşleşti.`);
+} catch (error) {
+  state['TÜBİTAK çağrı takvimi'] = {...state['TÜBİTAK çağrı takvimi'], url: calendarIndex, attemptedAt: now, ok: false, error: error.message};
+  console.warn(`TÜBİTAK takvimi: ${error.message}`);
+}
 for (const [institution, url] of sources) {
   try {
     const response = await fetch(url, { signal: AbortSignal.timeout(45000), headers: { 'User-Agent': 'FonRadari/1.0 official funding announcement monitor' } });
@@ -41,4 +70,4 @@ for (const [institution, url] of sources) {
     console.warn(`${institution}: ${error.message}`);
   }
 }
-await writeFile(path, JSON.stringify({ attemptedAt: now, sources: state, calls: [...records.values()] }, null, 2) + '\n');
+await writeFile(path, JSON.stringify({ attemptedAt: now, sources: state, calls: [...records.values()], calendars }, null, 2) + '\n');

@@ -7,6 +7,8 @@ export type FundingCall = {
   verificationIssues?: { field: string; message: string }[];
   evidencePending?: boolean;
   evidenceAlerts?: { url: string; reason: string }[];
+  calendarSourceUrl?: string;
+  calendarObservation?: { sourceUrl: string; openDate: string; deadline: string; checkedAt: string; conflict?: boolean; notCurrent?: boolean };
   verifiedFields?: string[];
   evidenceUrl?: string;
   additionalEvidence?: string[];
@@ -84,6 +86,7 @@ export const calls: FundingCall[] = [
   },
   {
     id: "tubitak-1707-2026-3", scope: "national", code: "1707 · 2026/3",
+    calendarSourceUrl: "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi",
     title: "Siparişe Dayalı Ar-Ge — 2026/3",
     institution: "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu — TEYDEB", institutionShort: "TÜBİTAK",
     status: "open", openDate: "2026-09-01T00:00:00+03:00", openingDateOnly: true,
@@ -361,6 +364,7 @@ export const calls: FundingCall[] = [
   },
   {
     id: "tubitak-1507-2026-2",
+    calendarSourceUrl: "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1507-kobi-ar-ge-baslangic-destek-programi-2026-yili-2-cagrisi-acildi",
     scope: "national",
     code: "1507 · 2026/2",
     title: "KOBİ Ar-Ge Başlangıç Destek Programı",

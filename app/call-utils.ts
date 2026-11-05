@@ -78,6 +78,41 @@ export function unreviewedAnnouncements(reviewed: Pick<FundingCall, "sourceUrl">
   const reviewedUrls = new Set(reviewed.map(call => call.sourceUrl));
   return discovered.filter(call => !reviewedUrls.has(call.sourceUrl));
 }
+export type NationalCalendarRow = {
+  key: string; title: string; sourceUrl: string; openDate: string; deadline: string; checkedAt: string;
+  notCurrent?: boolean;
+};
+export function mergeNationalCalendars(calls: FundingCall[], observations: NationalCalendarRow[], now: number) {
+  const byKey = new Map(observations.filter(row =>
+    /^\d{4}-20\d\d-\d{1,2}$/.test(row.key) &&
+    /^https:\/\/tubitak\.gov\.tr\/tr\/destekler\/destek\/sanayi\/ulusal-destek-programlari\/cagri-[a-z0-9-]+$/.test(row.sourceUrl) &&
+    validDate(row.openDate) && validDate(row.deadline) && Date.parse(row.deadline) > Date.parse(row.openDate) &&
+    validDate(row.checkedAt)
+  ).map(row => [row.key, row]));
+  const used = new Set<string>();
+  const updated = calls.map(call => {
+    const row = byKey.get(call.id.replace(/^tubitak-/, ""));
+    if (!row || call.scope !== "national" || row.sourceUrl !== call.calendarSourceUrl) return call;
+    used.add(row.key);
+    const {sourceUrl, openDate, deadline, checkedAt} = row;
+    const conflict = Date.parse(openDate) !== Date.parse(call.openDate) || Date.parse(deadline) !== Date.parse(call.deadline ?? "");
+    return { ...call, calendarObservation: {sourceUrl, openDate, deadline, checkedAt, conflict, notCurrent:row.notCurrent}, ...(conflict && {status: "unknown" as const}) };
+  });
+  const discovered: FundingCall[] = [...byKey.values()].filter(row => !used.has(row.key)).map(row => ({
+    id: `tubitak-calendar-${row.key}`, title: row.title, code: row.key, scope: "national",
+    institution: "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu", institutionShort: "TÜBİTAK",
+    status: Date.parse(row.deadline) <= now ? "archived" : row.notCurrent || stale(row.checkedAt, now) ? "unknown" : "open",
+    openDate: row.openDate, deadline: row.deadline, sourceCheckedAt: row.checkedAt, verifiedAt: "",
+    sourceUrl: row.sourceUrl, sourceLabel: "TÜBİTAK resmî çağrı sayfası",
+    applicants: "Başvuru sahipleri henüz doğrulanmadı", companyScale: [],
+    fundingAmount: "Henüz doğrulanmadı", fundingType: "Henüz doğrulanmadı",
+    summary: "Başvuru aralığı TÜBİTAK açık çağrı listesiyle çağrı sayfasında karşılaştırıldı. Başvuru koşulları henüz doğrulanmadı.",
+    verification: "metadata", objectives: [], eligibleCosts: [], tags: ["Resmî takvim"],
+    application: "Başvurmadan önce resmî çağrı metnindeki koşulları inceleyin.",
+    calendarObservation: {sourceUrl:row.sourceUrl, openDate:row.openDate, deadline:row.deadline, checkedAt:row.checkedAt, notCurrent:row.notCurrent},
+  }));
+  return { updated, discovered };
+}
 function importedStatus(call: LiveCall, now: number): CallStatus {
   const deadline = nextDeadline(call, now);
   if (["31094503", "310945031", "99999998"].includes(call.status ?? "") || (deadline && portalDeadlinePassed(deadline, now))) return "archived";
