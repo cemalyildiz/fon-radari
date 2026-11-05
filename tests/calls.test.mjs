@@ -161,6 +161,40 @@ test("old archive rows are recovered only by an exact official identifier", asyn
   assert.deepEqual(result.calls.map(c=>c.identifier),["CURRENT"]);
   assert.deepEqual(result.historical.map(c=>c.identifier),["ARCHIVE"]);
 });
+test("Horizon budget uses exact topic and separates annual amount from expected contribution", () => {
+  const sample = item("HORIZON-TEST");
+  const row = {action:"HORIZON-TEST - HORIZON-IA",budgetYearMap:{"2027":"30000000"},minContribution:10000000,maxContribution:10000000,expectedGrants:3};
+  const source = "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/example.pdf";
+  Object.assign(sample.metadata, {
+    frameworkProgramme:["43108390"],
+    topicConditions:[`<a href="${source}">Work programme</a><a href="https://example.com/file.pdf">Other</a>`],
+    budgetOverview:[JSON.stringify({budgetTopicActionMap:{a:[row],b:[{...row,action:"HORIZON-TEST-OTHER - HORIZON-IA",budgetYearMap:{"2027":"999"}}]}})]
+  });
+  const stamp = new Date(now).toISOString();
+  const record = parseResult(sample,stamp);
+  assert.deepEqual(record.sourceBudget,[{action:"HORIZON-IA",yearly:{"2027":30000000},min:10000000,max:10000000,grants:3}]);
+  assert.deepEqual(record.conditionDocuments,[source]);
+  assert.equal(validateFeed({calls:[record]}),true);
+  assert.equal(validateFeed({calls:[{...record,conditionDocuments:[null]}]}),false);
+  const [card] = mergeCalls([],{calls:[record]},now);
+  assert.match(card.fundingAmount,/30\.000\.000/);
+  assert.match(card.fundingAmount,/Proje başına beklenen AB katkısı: .*10\.000\.000/);
+  assert.equal(card.verification,"metadata");
+  assert.equal(card.applicantGroups,undefined);
+  const different = {...record,sourceBudget:[{...record.sourceBudget[0],yearly:{"2027":20000000}}]};
+  const [conflict] = reconcile([], [record,different,record],stamp);
+  assert.equal(conflict.sourceBudgetConflict,true);
+  assert.equal(conflict.sourceBudget,undefined);
+  sample.metadata.budgetOverview=[JSON.stringify({budgetTopicActionMap:{shared:[row,{...row,action:"HORIZON-TEST-OTHER - HORIZON-IA"}]}})];
+  assert.deepEqual(parseResult(sample,stamp).sourceBudget[0].yearly,{});
+});
+test("midnight placeholder dates do not assert an exact closing hour or same-day archive", () => {
+  const record = parseResult(item("TEST","2026-11-04T00:00:00Z"),new Date(now).toISOString());
+  const onDay = mergeCalls([],{calls:[record]},Date.parse("2026-11-04T12:00:00+03:00"))[0];
+  assert.equal(onDay.status,"unknown");
+  assert.equal(onDay.calendarDateOnly,true);
+  assert.equal(mergeCalls([],{calls:[record]},Date.parse("2026-11-05T00:00:00+03:00"))[0].status,"archived");
+});
 test("curated identifiers unique and official links use HTTPS", () => {
   assert.equal(new Set(calls.map(c=>c.id)).size,calls.length);
   for(const call of calls) {

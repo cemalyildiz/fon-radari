@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { FundingCall, CallScope, CallStatus } from "./calls-data";
-import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate, validateFeed, fundingCategory, type LiveFeed } from "./call-utils";
+import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate, validateFeed, fundingCategory, utcMidnight, portalDeadlinePassed, type LiveFeed } from "./call-utils";
 import { audienceOptions, matchesAudience, privateSectorPriority, type AudienceFilter } from "./audience-utils";
 import { verificationCoverage, verificationFieldLabel } from "./verification-utils";
 
@@ -607,6 +607,8 @@ export default function CallsExplorer({ calls }: Props) {
               {selected.sourceConditions?.ok && <div className="notice"><b>Otomatik sayfa erişim kontrolü · {formatDate(selected.sourceConditions.checkedAt, true)}</b><p>Resmî sayfa okunabildi. Bu işlem destek koşullarının doğrulandığı anlamına gelmez; otomatik metin eşleşmeleri kesin başvuru koşulu olarak gösterilmez.</p></div>}
               {selected.verificationIssues?.map(issue => <div className="notice" key={issue.field}><b>Çözümlenmemiş kaynak çelişkisi</b><p>{issue.message}</p></div>)}
               {selected.evidenceUrl && <VerificationDetails call={selected} />}
+              {selected.portalBudget && <div className="notice"><b>AB portalından alınan gösterge bütçe</b><p>Yalnız bu çağrı koduyla eşleşen satırlar gösterilir. Konu bütçesi tek bir firmaya verilen tutar değildir. Beklenen katkı garanti veya kesin üst limit değildir; bu aktarım Türkiye’den başvuru uygunluğunu doğrulamaz.</p></div>}
+              {!!selected.portalDocuments?.length && <div className="notice"><b>Portalın koşul belgeleri</b><p>Bağlantılar ilgili çağrının resmî koşul bölümünden alınmıştır. Belgelerin içerdiği istisnalar ayrıca kontrol edilmelidir.</p>{selected.portalDocuments.map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">AB koşul belgesi {index + 1}</a></p>)}</div>}
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
                 <article><span>Kimler için?</span><b>{selected.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</b></article>
@@ -624,7 +626,7 @@ export default function CallsExplorer({ calls }: Props) {
               {selected.followUpStages?.map(stage => <div className="application-note" key={stage.title}><span>{stage.title}</span><p>{stage.schedule}</p><p>{stage.access}</p></div>)}
               {((selected.preDeadline && !selected.followUpStages?.length) || selected.deadlines?.length || selected.dateCheckedAt) && <div className="application-note"><span>Başvuru takvimi · Türkiye saati</span>
                 {selected.preDeadline && !selected.followUpStages?.length && <p>Ön kayıt / ek ulusal işlem: {formatDate(selected.preDeadline, true)} — aşamanın açıklaması için önemli notları inceleyin.</p>}
-                {selected.deadlines?.map(date => <p key={date}>{formatDate(date, true)} {Date.parse(date) <= now ? "(geçti)" : ""}</p>)}
+                {selected.deadlines?.map(date => <p key={date}>{formatDate(date, selected.verification !== "metadata" || !utcMidnight(date))} {(selected.verification === "metadata" ? portalDeadlinePassed(date, now) : Date.parse(date) <= now) ? "(geçti)" : ""}</p>)}
                 {selected.dateCheckedAt && <p>Takvim son kontrolü: {formatDate(selected.dateCheckedAt)}</p>}
               </div>}
 

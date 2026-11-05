@@ -1,6 +1,7 @@
 import { readFile, writeFile, rename } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 import { destinationIdentifier, officialDestination } from "../app/live-source.mjs";
+import { extractTopicEvidence, mergeTopicBudgets } from "../app/live-evidence.mjs";
 
 const API_URL = "https://api.tech.ec.europa.eu/search-api/prod/rest/search";
 const TARGET = "public/live-calls.json";
@@ -34,6 +35,7 @@ export function parseResult(item, checkedAt) {
     startDate: iso(m.startDate?.[0]), status: conflictingDates && ["31094501", "31094502"].includes(m.status?.[0]) ? "unknown" : m.status?.[0] ?? "unknown",
     ...(conflictingDates ? { sourceWarning: "AB verisinde kapanış ve son başvuru alanları farklı. Güncel kabul durumunu alt çağrı bağlantısından kontrol edin." } : {}),
     actionType: m.typesOfAction?.[0] ?? "Çağrı koşullarına bağlı",
+    ...(kind === "topic" ? extractTopicEvidence(m, identifier) : {}),
     sourceCheckedAt: checkedAt,
     url: destination.url,
   };
@@ -53,7 +55,15 @@ export function reconcile(previous, incoming, checkedAt) {
     const sameLanguage = existing?.sourceLanguage === call.sourceLanguage;
     // Group duplicate action types, but do not resurrect obsolete historical deadlines.
     const deadlines = [...new Set([...(sameLanguage ? existing?.deadlines ?? [] : []), ...call.deadlines])].sort();
-    grouped.set(key, { ...call, deadlines, deadline: deadlines.find(d => d > checkedAt) ?? deadlines.at(-1) });
+    const budget = sameLanguage
+      ? existing?.sourceBudgetConflict || call.sourceBudgetConflict ? null : mergeTopicBudgets(existing?.sourceBudget ?? [], call.sourceBudget ?? [])
+      : call.sourceBudgetConflict ? null : call.sourceBudget ?? [];
+    grouped.set(key, { ...call, deadlines, deadline: deadlines.find(d => d > checkedAt) ?? deadlines.at(-1),
+      sourceBudget: budget?.length ? budget : undefined,
+      sourceBudgetConflict: budget === null ? true : undefined,
+      ...(sameLanguage && (existing?.conditionDocuments || call.conditionDocuments)
+        ? { conditionDocuments: [...new Set([...(existing?.conditionDocuments ?? []), ...(call.conditionDocuments ?? [])])].slice(0, 10) } : {}),
+    });
   }
   for (const [key, call] of grouped) records.set(key, call);
   return [...records.values()].sort((a,b) => a.identifier.localeCompare(b.identifier));

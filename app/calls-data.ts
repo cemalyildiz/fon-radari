@@ -9,6 +9,8 @@ export type FundingCall = {
   verifiedFields?: string[];
   evidenceUrl?: string;
   additionalEvidence?: string[];
+  portalDocuments?: string[];
+  portalBudget?: boolean;
   sourceConditions?: { checkedAt: string; excerpts: string[]; ok: boolean; changed?: boolean };
   id: string;
   scope: CallScope;
