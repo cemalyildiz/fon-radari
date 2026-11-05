@@ -450,19 +450,18 @@
       "source": "https://ticaret.gov.tr/data/66a2407413b87634b8ce2b30/Ye%C5%9Fil%20Mutabakata%20Uyum%20Projesi%20Deste%C4%9Fine%20%C4%B0li%C5%9Fkin%20Genelge%2010082026.pdf",
       "verifiedFields": [
         "applicants",
+        "companyScale",
+        "recordType",
+        "fundingAmount",
+        "fundingType",
         "supportRate",
         "duration",
         "application",
         "notice"
       ],
-      "pendingFields": [
-        "companyScale",
-        "fundingAmount",
-        "fundingType",
-        "applicationType"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "ticaret-pazara-giris-belgesi",
@@ -470,20 +469,19 @@
       "source": "https://ticaret.gov.tr/data/63341ce713b8769ec0647ebe/30.06.2025%20PAZARA%20G%C4%B0R%C4%B0%C5%9E%20BELGES%C4%B0NE%20%C4%B0L%C4%B0%C5%9EK%C4%B0N%20GENELGE.pdf",
       "verifiedFields": [
         "applicants",
-        "eligibleCosts",
-        "application",
-        "notice"
-      ],
-      "pendingFields": [
         "companyScale",
+        "recordType",
         "fundingAmount",
         "fundingType",
         "supportRate",
         "duration",
-        "applicationType"
+        "eligibleCosts",
+        "application",
+        "notice"
       ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "kosgeb-kobi-dijital-donusum",
@@ -606,5 +604,5 @@
     }
   ],
   "total": 29,
-  "complete": 8
+  "complete": 10
 }
