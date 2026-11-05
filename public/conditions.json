@@ -1,6 +1,6 @@
 {
   "tubitak-1613-ttp": {
-    "checkedAt": "2026-11-05T11:01:50.065Z",
+    "checkedAt": "2026-11-05T11:07:02.506Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1613-teknoloji-transferi-profesyoneli-cagrisi",
     "excerpts": [
       "Başvuru aşamasında 24 aylık proje süresi için sunulabilecek proje bütçesi üst sınırı aşağıdaki şekilde hesaplanır:",
@@ -17,7 +17,7 @@
     "ok": true
   },
   "tubitak-1513-tto": {
-    "checkedAt": "2026-11-05T11:01:50.302Z",
+    "checkedAt": "2026-11-05T11:07:03.155Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1513-teknoloji-transfer-ofisleri-destekleme-programi",
     "excerpts": [
       "1513 Programında açık bir çağrı bulunmadığından şu an için programa başvuru alınmamaktadır.",
@@ -48,7 +48,7 @@
     "error": "PDF metni ayrıca doğrulanmalı"
   },
   "msca-staff-exchanges-2027-tto": {
-    "checkedAt": "2026-11-05T11:01:51.230Z",
+    "checkedAt": "2026-11-05T11:07:04.147Z",
     "sourceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027",
     "excerpts": [
       "Eligible staff include researchers at any career stage, as well as administrative, managerial and technical personnel supporting the project’s R&I activities.",
@@ -67,7 +67,7 @@
     "error": "HTTP 403"
   },
   "tubitak-1507-2026-2": {
-    "checkedAt": "2026-11-05T11:01:52.671Z",
+    "checkedAt": "2026-11-05T11:07:06.508Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1507-kobi-ar-ge-baslangic-destek-programi-2026-yili-2-cagrisi-acildi",
     "excerpts": [
       "2026 yılı 2. dönem başvuruları 20 Temmuz 2026 tarihi itibarıyla",
@@ -82,7 +82,7 @@
     "error": "HTTP 404"
   },
   "horizon-hop-on-2026": {
-    "checkedAt": "2026-11-05T11:01:53.802Z",
+    "checkedAt": "2026-11-05T11:07:08.067Z",
     "sourceUrl": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-widening-participation-and-spreading-excellence/hop-facility_en",
     "excerpts": [
       "is a funding programme under Horizon Europe that supports breakthrough deep tech projects with a high degree of scientific and technological ambition and risk.",
@@ -97,7 +97,7 @@
     "ok": true
   },
   "life-circular-2026": {
-    "checkedAt": "2026-11-05T11:01:54.429Z",
+    "checkedAt": "2026-11-05T11:07:08.858Z",
     "sourceUrl": "https://cinea.ec.europa.eu/life-calls-proposals-2026_en",
     "excerpts": [
       "See below the submission deadlines for all Calls for proposals.",
@@ -129,7 +129,7 @@
     "ok": true
   },
   "eic-accelerator-2026": {
-    "checkedAt": "2026-11-05T11:01:54.542Z",
+    "checkedAt": "2026-11-05T11:07:08.958Z",
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
     "excerpts": [
       "is a funding programme under Horizon Europe that offers support to start-ups and SMEs that:",
@@ -157,7 +157,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "eurostars-coordination-support-2026-2": {
-    "checkedAt": "2026-11-05T11:01:55.189Z",
+    "checkedAt": "2026-11-05T11:07:10.248Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eurostars-koordinatorluk-destegi-programi-2026-yili-2-ulusal-cagrisi-acildi",
     "excerpts": [
       "TÜBİTAK Teknoloji ve Yenilik Destek Programları Başkanlığı tarafından yürütülen Eurostars Koordinatörlük Desteği Programı 2026 yılı 2. Ulusal Çağrısı açılmıştır. Bu çağrı kapsamında, Eurostars-3 Programı’nın 2026 yılı 2. Dönem Çağrısı’na uluslararası Ar-Ge ve yenilik projeleriyle başvurmak isteyen Türkiye’de yerleşik",
@@ -177,7 +177,7 @@
     "ok": true
   },
   "eurostars-2026-2": {
-    "checkedAt": "2026-11-05T11:01:56.233Z",
+    "checkedAt": "2026-11-05T11:07:10.457Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1709-eureka-eurostars-2026-yili-2-cagrisi-acildi",
     "excerpts": [
       "Eurostars-3 hakkında daha fazla bilgi, yardımcı dokümanlar ve uluslararası başvuru için lütfen",
@@ -196,7 +196,7 @@
     "ok": true
   },
   "eureka-biotech-2026": {
-    "checkedAt": "2026-11-05T11:01:56.636Z",
+    "checkedAt": "2026-11-05T11:07:10.671Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1719-eureka-network-biyoteknoloji-2026-cagrisi-acildi",
     "excerpts": [
       "1719-Eureka Biyoteknoloji Uluslararası Çağrısı’na ülkemizden sermaye şirketi statüsündeki firmalar, yükseköğretim kurumları, kamu araştırma merkez ve enstitüleri, eğitim ve araştırma hastaneleri ve 6550 sayılı kanun kapsamındaki araştırma altyapıları başvuruda bulunabilir. İlgili kurumların başvuruları en az bir sermaye şirketi ortaklığında kabul edilir. Çağrı kapsamında sunulan projelerde sermaye şirketi Yürütücü Kuruluş (Muhatap Kuruluş) olmalıdır.",
@@ -215,7 +215,7 @@
     "ok": true
   },
   "eureka-lightweighting-2026": {
-    "checkedAt": "2026-11-05T11:01:57.067Z",
+    "checkedAt": "2026-11-05T11:07:10.883Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-hafifletme-teknolojileri-2026-yili-cagrisi-acildi",
     "excerpts": [
       "Eureka’nın önemli destek mekanizmalarından biri olan Eureka Network Projeleri kapsamında “Hafifletme Teknolojileri” konulu uluslararası çağrı başvuruya açılmıştır.",
@@ -236,7 +236,7 @@
     "ok": true
   },
   "eureka-disaster-resilience-2026": {
-    "checkedAt": "2026-11-05T11:01:57.473Z",
+    "checkedAt": "2026-11-05T11:07:11.091Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-afetlerde-direnclilik-2026-cagrisi-acildi",
     "excerpts": [
       "1719- Eureka Afetlere Dayanıklılık, Müdahale ve İyileştirme kodlu çağrıya ülkemizden sermaye şirketi statüsündeki firmalar, yükseköğretim kurumları, kamu araştırma merkez ve enstitüleri, eğitim ve araştırma hastaneleri ve 6550 sayılı kanun kapsamındaki araştırma altyapıları başvuruda bulunabilir. İlgili kurumların başvuruları en az bir sermaye şirketi ortaklığında kabul edilir. Çağrı kapsamında sunulan projelerde sermaye şirketi Yürütücü Kuruluş (Muhatap Kuruluş) olmalıdır.",
@@ -254,7 +254,7 @@
     "ok": true
   },
   "eureka-xecs-quantum-2026": {
-    "checkedAt": "2026-11-05T11:01:57.873Z",
+    "checkedAt": "2026-11-05T11:07:11.300Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-2026-uygulamali-kuantum-teknolojileri-cagrisi-acildi",
     "excerpts": [
       "Türkiye'den başvuracak kuruluşlar, uluslararası Eureka başvurularını tamamlamalarının ardından 1719-Eureka Kuantum Teknolojileri Ulusal Çağrısı kapsamında TÜBİTAK'a ulusal başvurularını gerçekleştirebilecektir.",
@@ -273,7 +273,7 @@
     "ok": true
   },
   "eureka-xecs-call-6-2026": {
-    "checkedAt": "2026-11-05T11:01:58.273Z",
+    "checkedAt": "2026-11-05T11:07:11.510Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-6-cagrisi-acildi",
     "excerpts": [
       "Çağrı KOBİ'lere, büyük işletmelere, araştırma ve teknoloji kuruluşları ile üniversitelere açıktır. Türk katılımcılar 1509–TÜBİTAK Uluslararası Sanayi Ar-Ge Projeleri Destekleme Programı kapsamında desteklenecektir. 1509 Programı kuralları gereğince Türkiye’den sadece sermaye şirketi statüsündeki firmalar doğrudan proje başvurusunda bulunabilirler. Üniversiteler ve araştırma enstitüleri projelere hizmet sağlayıcı olarak dâhil olabilirler.",
@@ -287,7 +287,7 @@
     "ok": true
   },
   "eureka-smart-call-10-2026": {
-    "checkedAt": "2026-11-05T11:01:58.684Z",
+    "checkedAt": "2026-11-05T11:07:11.718Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-smart-kumesi-10-cagrisi-acildi",
     "excerpts": [
       "SMART Kümesi 10. Çağrısı 1 Temmuz 2026 itibarıyla açılmıştır. İki aşamalı yürütülecek olan çağrı için 26 Ocak 2027 tarihine kadar ilk aşama olan PO (Project Outline) başvuruları yapılabilecektir. Çağrının detaylarına",
@@ -301,7 +301,7 @@
     "ok": true
   },
   "tubitak-1831-continuous": {
-    "checkedAt": "2026-11-05T11:01:59.093Z",
+    "checkedAt": "2026-11-05T11:07:11.936Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
     "excerpts": [
       "Yeşil teknolojiler konusunda güncel teknolojiler için firmaların teknoloji danışmanlığı, kapasite ya da durum analizi, mevcut problemlerin tespiti ve çözüm yaklaşımları ve yol haritası hazırlama gibi konularda uzman kuruluşlardan alacakları hizmetin %90’ı hibe destek olarak TÜBİTAK tarafından karşılanacaktır. Destek süresi en az 3 ay olup en fazla 6 aydır. Proje bütçesi üstü limiti 310.000 TL’dir. TÜBİTAK, KOBİ’lere yönelik bu hizmetin Çözüm Ortakları aracılığı ile verilmesini sağlayacaktır.",
@@ -314,7 +314,7 @@
   },
   "sanayi-yesil-donusum-programi-2026": {
     "ok": false,
-    "error": "Yeterli koşul metni alınamadı"
+    "error": "fetch failed"
   },
   "ticaret-responsible-programi": {
     "checkedAt": "2026-11-05T11:02:02.825Z",
@@ -326,14 +326,15 @@
     ],
     "hash": "7e8e87edbe5b00417309e1336d73cb271e0c1de0323a7ae446e8ed176f14f68b",
     "changed": false,
-    "ok": true
+    "ok": false,
+    "error": "fetch failed"
   },
   "ticaret-pazara-giris-belgesi": {
     "ok": false,
     "error": "Yeterli koşul metni alınamadı"
   },
   "kosgeb-kobi-dijital-donusum": {
-    "checkedAt": "2026-11-05T11:02:03.977Z",
+    "checkedAt": "2026-11-05T11:07:31.216Z",
     "sourceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9144/kobi-dijital-donusum-destek-programi",
     "excerpts": [
       "Başvuru Formları ve Diğer Ekler",
@@ -358,7 +359,7 @@
     "ok": true
   },
   "kosgeb-yapay-zeka-kredi-2026": {
-    "checkedAt": "2026-11-05T11:02:05.018Z",
+    "checkedAt": "2026-11-05T11:07:32.896Z",
     "sourceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9427/kosgebden-teknoloji-girisimlerine-yapay-zek-kredi-programi",
     "excerpts": [
       "Yapay Zek&acirc; Geliştiren ve Kullanan Girişimlere 5 Milyon TL&rsquo;ye Kadar Kredi",
@@ -378,7 +379,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "ssb-saga-active": {
-    "checkedAt": "2026-11-05T11:02:12.245Z",
+    "checkedAt": "2026-11-05T11:07:40.797Z",
     "sourceUrl": "https://arge.ssb.gov.tr/",
     "excerpts": [
       "Kimyasal Dekontaminasyon Atıklarına Yönelik Nötralizasyon Teknolojileri Geliştirilmesi (ARI) SAGA Çağrısı Başvuruları Başladı",
@@ -395,7 +396,7 @@
     "error": "HTTP 404"
   },
   "tubitak-1832-2026-1": {
-    "checkedAt": "2026-11-05T11:02:14.523Z",
+    "checkedAt": "2026-11-05T11:07:44.321Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-1-cagrisi-basvuruya-acildi",
     "excerpts": [
       "1832-Sanayide Yeşil Dönüşüm 2026-1 Çağrısı Başvuruya Açıldı | TÜBİTAK | Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
@@ -415,7 +416,7 @@
     "ok": true
   },
   "tubitak-2244-sanayi-doktora-2026": {
-    "checkedAt": "2026-11-05T11:01:49.829Z",
+    "checkedAt": "2026-11-05T11:07:01.853Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/2244-sanayi-doktora-programi-2026-yili-cagrisi-acildi-0",
     "excerpts": [
       "2244–Sanayi Doktora Programı’na başvurular çevrim içi olarak",
@@ -427,7 +428,7 @@
     "ok": true
   },
   "tubitak-1832-2026-2": {
-    "checkedAt": "2026-11-05T11:02:14.287Z",
+    "checkedAt": "2026-11-05T11:07:44.109Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-2-cagrisi-basvuruya-acildi",
     "excerpts": [
       "1832-Sanayide Yeşil Dönüşüm 2026-2 Çağrısı Başvuruya Açıldı | TÜBİTAK | Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
@@ -447,7 +448,7 @@
     "ok": true
   },
   "dut-2026": {
-    "checkedAt": "2026-11-05T11:01:48.920Z",
+    "checkedAt": "2026-11-05T11:07:01.013Z",
     "sourceUrl": "https://dutpartnership.eu/calls/dut-call-2026/",
     "excerpts": [
       "A funding opportunity for transformative urban research and innovation",
@@ -491,7 +492,7 @@
     "ok": true
   },
   "sbep-2026": {
-    "checkedAt": "2026-11-05T11:01:48.204Z",
+    "checkedAt": "2026-11-05T11:07:00.070Z",
     "sourceUrl": "https://bluepartnership.eu/funding-opportunity/sustainable-blue-economy-partnerships-fourth-joint-transnational-call",
     "excerpts": [
       "Brazilian National Council of State Funding Agencies",
@@ -509,7 +510,7 @@
     "ok": true
   },
   "biodivfuture-2026": {
-    "checkedAt": "2026-11-05T11:01:41.967Z",
+    "checkedAt": "2026-11-05T11:06:57.230Z",
     "sourceUrl": "https://www.biodiversa.eu/2026/06/09/2026-2027-joint-call/",
     "excerpts": [
       ". It aims at funding novel, high-quality transnational research with potential for societal and political impact that will significantly improve our understanding of novel ecosystems with",
@@ -535,7 +536,7 @@
     "ok": true
   },
   "forestpathways-2026": {
-    "checkedAt": "2026-11-05T11:01:42.987Z",
+    "checkedAt": "2026-11-05T11:06:58.600Z",
     "sourceUrl": "https://forest-partnership.eu/jointcall2026/",
     "excerpts": [
       "FORESTPathways brings together 36 research funding organisations from 27 countries to support collaborative research and innovation for resilient forests and sustainable forest-based futures",
@@ -579,7 +580,7 @@
     "ok": true
   },
   "tubitak-1707-2026-3": {
-    "checkedAt": "2026-11-05T11:01:41.439Z",
+    "checkedAt": "2026-11-05T11:06:56.432Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi",
     "excerpts": [
       "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
@@ -590,7 +591,7 @@
     "ok": true
   },
   "eureka-turkiye-ispanya-2026": {
-    "checkedAt": "2026-11-05T11:01:41.203Z",
+    "checkedAt": "2026-11-05T11:06:56.215Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi",
     "excerpts": [
       "EUREKA Programı'nın amaçlarına paralel olarak, ticarileşme potansiyeli yüksek, pazara yönelik ürün, süreç ve hizmetlerin geliştirildiği projeler 1509 - TÜBİTAK Uluslararası Sanayi Ar-Ge Projeleri programı kapsamında desteklenecektir. Türkiye’de sermaye şirketi statüsündeki bir firma, İspanya'dan en az bir firma ile birlikte doğrudan proje başvurusunda bulunabilir. Üniversiteler ve araştırma enstitüleri ise doğrudan başvuru yapamayacak, ancak projelerde hizmet sağlayıcı olarak yer alabileceklerdir. Çağrı tüm tematik alanlara açıktır, belirtilen alanlar başvuruları sınırlandırmamaktadır.",
@@ -609,7 +610,7 @@
     "ok": true
   },
   "valleys-open-call-1": {
-    "checkedAt": "2026-11-05T11:01:39.032Z",
+    "checkedAt": "2026-11-05T11:06:53.365Z",
     "sourceUrl": "https://valleysproject.eu/open-call-1/",
     "excerpts": [
       "Competitive cascade funding for organisations across Europe to test and scale innovative valorisation approaches aligned with EU Codes of Practice.",
@@ -624,7 +625,7 @@
     "ok": true
   },
   "systemeu-fstp-2026": {
-    "checkedAt": "2026-11-05T11:01:40.342Z",
+    "checkedAt": "2026-11-05T11:06:54.894Z",
     "sourceUrl": "https://systemeuvalley.eu/open-call-for-fstp/",
     "excerpts": [
       ", including at least one research organisation (RTO, university) and one for-profit company. Maximum funding of",
@@ -647,7 +648,7 @@
     "ok": true
   },
   "eit-urban-mobility-sme-expansion-2027": {
-    "checkedAt": "2026-11-05T11:01:26.430Z",
+    "checkedAt": "2026-11-05T11:06:39.559Z",
     "sourceUrl": "https://www.eiturbanmobility.eu/call-for-proposals/sme-market-expansion-open-call-2027/",
     "excerpts": [
       "The total estimated funding allocated to this Call is €600,000.",
@@ -704,10 +705,11 @@
     ],
     "hash": "8e3b13da7b453f2485a4e9b005c5c3c0a000c56755823721740544e40c0e9ebc",
     "changed": false,
-    "ok": true
+    "ok": false,
+    "error": "Yeterli koşul metni alınamadı"
   },
   "eit-urban-mobility-startups-2026-2028": {
-    "checkedAt": "2026-11-05T11:01:25.701Z",
+    "checkedAt": "2026-11-05T11:06:38.791Z",
     "sourceUrl": "https://www.eiturbanmobility.eu/call-for-proposals/financial-support-to-startups-open-call-3/",
     "excerpts": [
       ". The purpose of this document is to invite eligible companies to apply for this financial support. Funding is provided through an open application process with multiple cut offs throughout 2026, 2027 and 2028:",
@@ -727,7 +729,7 @@
     "error": "HTTP 403"
   },
   "eit-urban-mobility-strategic-innovation-cutoff-4": {
-    "checkedAt": "2026-11-05T11:01:24.862Z",
+    "checkedAt": "2026-11-05T11:06:37.997Z",
     "sourceUrl": "https://www.eiturbanmobility.eu/call-for-proposals/strategic-innovation-open-call/",
     "excerpts": [
       "In the future, the Call may also include specific topic scopes to address key market opportunities or urgent market failures that can be addressed through our funding.",
@@ -742,7 +744,7 @@
     "ok": true
   },
   "kosgeb-kuresel-rekabetcilik-2026-1": {
-    "checkedAt": "2026-11-05T11:01:22.390Z",
+    "checkedAt": "2026-11-05T11:06:35.281Z",
     "sourceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9206/kuresel-rekabetcilik-destek-programi",
     "excerpts": [
       "2026 Yılı 1. Başvuru D&ouml;nemi Proje Teklif &Ccedil;ağrısı",
@@ -765,7 +767,7 @@
     "ok": true
   },
   "kosgeb-istihdami-koruma-2026-2": {
-    "checkedAt": "2026-11-05T11:01:23.530Z",
+    "checkedAt": "2026-11-05T11:06:36.570Z",
     "sourceUrl": "https://kosgeb.gov.tr/site/tr/genel/destekdetay/9224/istihdami-koruma-destek-programi",
     "excerpts": [
       "Programa KOBİ ve b&uuml;y&uuml;k işletmeler başvuru yapabilir.",
@@ -800,7 +802,7 @@
     "ok": true
   },
   "eic-accelerator-open-2027": {
-    "checkedAt": "2026-11-05T11:01:21.407Z",
+    "checkedAt": "2026-11-05T11:06:33.423Z",
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
     "excerpts": [
       "is a funding programme under Horizon Europe that offers support to start-ups and SMEs that:",
@@ -824,7 +826,7 @@
     "ok": true
   },
   "eic-step-scaleup-2027": {
-    "checkedAt": "2026-11-05T11:01:21.436Z",
+    "checkedAt": "2026-11-05T11:06:34.019Z",
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
     "excerpts": [
       "Catalysing major funding rounds to scale up breakthrough innovations in the fields of digital, deep tech, clean tech & biotech.",
@@ -844,6 +846,38 @@
       "Online information day - EIC funding opportunities in 2027"
     ],
     "hash": "b694dfa4045eec427cd1ba9a97c5f9e47c744e6b1172404084f9d4934a45ba55",
+    "changed": false,
+    "ok": true
+  },
+  "eic-pre-accelerator-2027": {
+    "ok": false,
+    "error": "Yeterli koşul metni alınamadı"
+  },
+  "eic-transition-open-2027": {
+    "checkedAt": "2026-11-05T11:06:33.399Z",
+    "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en",
+    "excerpts": [
+      "Single applicants (SMEs, spin-offs, start-ups, research organisations, universities) or consortia (minimum 2, maximum 5 legal entities).",
+      "is a funding programme under Horizon Europe targeting innovation activities that goes beyond the experimental proof of principle in laboratory. It supports both the maturation and validation of novel technologies from the lab to the relevant application environments.",
+      "This document presents the 2027 European Innovation Council (EIC) Work Programme funded by the European Union’s Horizon Europe Framework Programme for Research and Innovation. It sets out how the EIC will allocate its funding of for the year 2027 and has been prepared following the advice of the EIC Board.",
+      "established in a Member State or an Associated Country (‘mono-beneficiary’) if you are a start-up, SME or research performing organisation (university, research or technology organisation, including teams, individual Principal Investigators and inventors in such institutions who intend to form a spin-off company). Larger companies (i.e. which do not qualify as SMEs) are not eligible to apply as a single legal entity",
+      "results already achieved within an eligible project",
+      "that are, at least, at experimental proof of concept (TRL 3 completed) or, ideally, technology validated in the lab level (TRL 4). Proposals building on project results at TRLs other than TRL3 completed or TRL4 are not eligible.",
+      "EIC Transition is restricted to proposals based on results generated by the following eligible projects:",
+      "funded under Horizon 2020 Societal challenges and Leadership in Industrial Technologies and under Horizon Europe pillar II, with an eligible TRL",
+      "EIC Transition - List of eligible projects 2026",
+      "Funding and Tender Opportunities Portal",
+      "Your proposal will be evaluated first by EIC expert evaluators. If your proposal successfully passes this first evaluation phase, you will be invited for an interview, which will be organised approximately between 11-13 weeks after the deadline.",
+      "All applicants will receive as feedback of the evaluation an Evaluation Summary Report from the first evaluation step. If they have been invited for an interview, they will also receive feedback from the jury.",
+      "If they meet all evaluation criteria thresholds at the first step but are not selected for funding (including from a No-GO recommendation from the jury), they will be awarded a",
+      "the purpose of this template is to provide an overview of the information that is needed to be filled in when applying. Applicants must download and fill in the application template from the Funding and Tenders portal.",
+      "the purpose of this template is to provide an overview of the information that is needed to be filled in and added as an annex to the application when applying. Applicants can download and fill in this template here or from the Funding and Tenders portal once the call is opened. As the call officially opens in Spring 2027, it is made available on this page following the publication of the Work Programme 2027 to give applicants maximum time to prepare.",
+      "Find answers to questions frequently asked by applicants about types of funding, eligibility, submission of proposals, and more.",
+      "European Innovation Council launches €1.8 billion in funding for 2027",
+      "Check the statistics from the recent EIC Transition call deadline, revealing a record number of submitted proposals.",
+      "Online information day - EIC funding opportunities in 2027"
+    ],
+    "hash": "136104fa64b156299fe1b12608463a8348004773102f912936ddd02254c3a069",
     "changed": false,
     "ok": true
   }
