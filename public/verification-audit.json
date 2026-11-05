@@ -1,6 +1,73 @@
 {
   "records": [
     {
+      "id": "eic-pre-accelerator-2027",
+      "title": "EIC Pre-Accelerator 2027 — Derin Teknoloji KOBİ’leri",
+      "source": "https://ec.europa.eu/transparency/documents-register/api/files/C%282025%298493_11/090166e526657dd7?rendition=false",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "eligibleCosts",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "eic-transition-open-2027",
+      "title": "EIC Transition Open 2027 — Araştırma Sonucundan Pazara",
+      "source": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application"
+      ],
+      "pendingFields": [
+        "openDate",
+        "deadline"
+      ],
+      "issues": [
+        {
+          "field": "deadline",
+          "message": "5 Kasım tarihli 2027 çalışma programı özet tablosunda 14 Eylül 2027, Bölüm III başvuru metninde 16 Eylül 2027 saat 17.00 Brüksel yazıyor. Başvuru portalında yıl ve çağrı bazında tek bir tarih teyit edilene kadar kesin kapanış gösterilmiyor."
+        }
+      ],
+      "complete": false
+    },
+    {
       "id": "eic-accelerator-open-2027",
       "title": "EIC Accelerator Open — 2027 Hibe ve Yatırım",
       "source": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
@@ -1467,6 +1534,6 @@
       "complete": true
     }
   ],
-  "total": 48,
-  "complete": 25
+  "total": 50,
+  "complete": 26
 }

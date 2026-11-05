@@ -18,6 +18,18 @@ test("verification coverage separates documented fields, missing values and conf
   assert.deepEqual(check.pendingFields, ["application"]);
   assert.equal(check.complete, false);
 });
+test("EIC 2027 publishes the confirmed WIDERA schedule without assigning a contradictory Transition deadline", async () => {
+  const data = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const id = "eic-transition-open-2027";
+  const transition = {...calls.find(c => c.id === id), ...data[id]};
+  const checked = verificationCoverage(transition);
+  assert.deepEqual(checked.pendingFields, ["openDate", "deadline"]);
+  assert.equal(nextDeadline(transition,now),undefined);
+  const pre = calls.find(c => c.id === "eic-pre-accelerator-2027");
+  assert.equal(realStatus(pre,Date.parse("2026-11-05T12:00:00+03:00")),"upcoming");
+  assert.equal(realStatus(pre,Date.parse("2027-11-18T19:00:00+03:00")),"archived");
+  assert.equal(verificationCoverage({...pre,...data[pre.id]}).complete,true);
+});
 test("a reviewed national announcement replaces its metadata card without hiding other calls", async () => {
   const feed = JSON.parse(await readFile(new URL("../public/national-calls.json", import.meta.url), "utf8"));
   const reviewed = calls.find(c => c.id === "tubitak-2244-sanayi-doktora-2026");

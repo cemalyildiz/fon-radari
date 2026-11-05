@@ -136,6 +136,19 @@
     "evidenceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027",
     "verifiedFields": ["applicants", "fundingAmount", "application", "notice"]
   },
+  "eic-pre-accelerator-2027": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://ec.europa.eu/transparency/documents-register/api/files/C%282025%298493_11/090166e526657dd7?rendition=false",
+    "additionalEvidence": ["https://eic.ec.europa.eu/eic-frequently-asked-questions/faqs-eic-pre-accelerator_en", "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pre-accelerator_en"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "eligibleCosts", "notice"]
+  },
+  "eic-transition-open-2027": {
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma"],
+    "evidenceUrl": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
+    "additionalEvidence": ["https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verificationIssues": [{"field":"deadline","message":"5 Kasım tarihli 2027 çalışma programı özet tablosunda 14 Eylül 2027, Bölüm III başvuru metninde 16 Eylül 2027 saat 17.00 Brüksel yazıyor. Başvuru portalında yıl ve çağrı bazında tek bir tarih teyit edilene kadar kesin kapanış gösterilmiyor."}],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "application", "notice"]
+  },
   "eic-accelerator-open-2027": {
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
