@@ -1,6 +1,6 @@
 {
   "tubitak-1613-ttp": {
-    "checkedAt": "2026-11-05T06:51:32.225Z",
+    "checkedAt": "2026-11-05T06:54:45.129Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1613-teknoloji-transferi-profesyoneli-cagrisi",
     "excerpts": [
       "Başvuru aşamasında 24 aylık proje süresi için sunulabilecek proje bütçesi üst sınırı aşağıdaki şekilde hesaplanır:",
@@ -17,7 +17,7 @@
     "ok": true
   },
   "tubitak-1513-tto": {
-    "checkedAt": "2026-11-05T06:51:32.513Z",
+    "checkedAt": "2026-11-05T06:54:45.450Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1513-teknoloji-transfer-ofisleri-destekleme-programi",
     "excerpts": [
       "1513 Programında açık bir çağrı bulunmadığından şu an için programa başvuru alınmamaktadır.",
@@ -48,7 +48,7 @@
     "error": "PDF metni ayrıca doğrulanmalı"
   },
   "msca-staff-exchanges-2027-tto": {
-    "checkedAt": "2026-11-05T06:51:33.133Z",
+    "checkedAt": "2026-11-05T06:54:46.249Z",
     "sourceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027",
     "excerpts": [
       "Eligible staff include researchers at any career stage, as well as administrative, managerial and technical personnel supporting the project’s R&I activities.",
@@ -67,7 +67,7 @@
     "error": "HTTP 403"
   },
   "tubitak-1507-2026-2": {
-    "checkedAt": "2026-11-05T06:51:34.260Z",
+    "checkedAt": "2026-11-05T06:54:47.664Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1507-kobi-ar-ge-baslangic-destek-programi-2026-yili-2-cagrisi-acildi",
     "excerpts": [
       "2026 yılı 2. dönem başvuruları 20 Temmuz 2026 tarihi itibarıyla",
@@ -82,7 +82,7 @@
     "error": "HTTP 404"
   },
   "horizon-hop-on-2026": {
-    "checkedAt": "2026-11-05T06:51:34.704Z",
+    "checkedAt": "2026-11-05T06:54:49.514Z",
     "sourceUrl": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-widening-participation-and-spreading-excellence/hop-facility_en",
     "excerpts": [
       "is a funding programme under Horizon Europe that supports breakthrough deep tech projects with a high degree of scientific and technological ambition and risk.",
@@ -97,7 +97,7 @@
     "ok": true
   },
   "life-circular-2026": {
-    "checkedAt": "2026-11-05T06:51:35.192Z",
+    "checkedAt": "2026-11-05T06:54:50.155Z",
     "sourceUrl": "https://cinea.ec.europa.eu/life-calls-proposals-2026_en",
     "excerpts": [
       "See below the submission deadlines for all Calls for proposals.",
@@ -129,7 +129,7 @@
     "ok": true
   },
   "eic-accelerator-2026": {
-    "checkedAt": "2026-11-05T06:51:35.610Z",
+    "checkedAt": "2026-11-05T06:54:50.444Z",
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
     "excerpts": [
       "is a funding programme under Horizon Europe that offers support to start-ups and SMEs that:",
@@ -159,7 +159,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "eurostars-coordination-support-2026-2": {
-    "checkedAt": "2026-11-05T06:51:35.751Z",
+    "checkedAt": "2026-11-05T06:54:51.011Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eurostars-koordinatorluk-destegi-programi-2026-yili-2-ulusal-cagrisi-acildi",
     "excerpts": [
       "TÜBİTAK Teknoloji ve Yenilik Destek Programları Başkanlığı tarafından yürütülen Eurostars Koordinatörlük Desteği Programı 2026 yılı 2. Ulusal Çağrısı açılmıştır. Bu çağrı kapsamında, Eurostars-3 Programı’nın 2026 yılı 2. Dönem Çağrısı’na uluslararası Ar-Ge ve yenilik projeleriyle başvurmak isteyen Türkiye’de yerleşik",
@@ -179,7 +179,7 @@
     "ok": true
   },
   "eurostars-2026-2": {
-    "checkedAt": "2026-11-05T06:51:35.889Z",
+    "checkedAt": "2026-11-05T06:54:51.164Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1709-eureka-eurostars-2026-yili-2-cagrisi-acildi",
     "excerpts": [
       "Eurostars-3 hakkında daha fazla bilgi, yardımcı dokümanlar ve uluslararası başvuru için lütfen",
@@ -198,7 +198,7 @@
     "ok": true
   },
   "eureka-biotech-2026": {
-    "checkedAt": "2026-11-05T06:51:36.031Z",
+    "checkedAt": "2026-11-05T06:54:51.318Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1719-eureka-network-biyoteknoloji-2026-cagrisi-acildi",
     "excerpts": [
       "1719-Eureka Biyoteknoloji Uluslararası Çağrısı’na ülkemizden sermaye şirketi statüsündeki firmalar, yükseköğretim kurumları, kamu araştırma merkez ve enstitüleri, eğitim ve araştırma hastaneleri ve 6550 sayılı kanun kapsamındaki araştırma altyapıları başvuruda bulunabilir. İlgili kurumların başvuruları en az bir sermaye şirketi ortaklığında kabul edilir. Çağrı kapsamında sunulan projelerde sermaye şirketi Yürütücü Kuruluş (Muhatap Kuruluş) olmalıdır.",
@@ -217,7 +217,7 @@
     "ok": true
   },
   "eureka-lightweighting-2026": {
-    "checkedAt": "2026-11-05T06:51:36.169Z",
+    "checkedAt": "2026-11-05T06:54:51.472Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-hafifletme-teknolojileri-2026-yili-cagrisi-acildi",
     "excerpts": [
       "Eureka’nın önemli destek mekanizmalarından biri olan Eureka Network Projeleri kapsamında “Hafifletme Teknolojileri” konulu uluslararası çağrı başvuruya açılmıştır.",
@@ -238,7 +238,7 @@
     "ok": true
   },
   "eureka-disaster-resilience-2026": {
-    "checkedAt": "2026-11-05T06:51:36.303Z",
+    "checkedAt": "2026-11-05T06:54:51.624Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-afetlerde-direnclilik-2026-cagrisi-acildi",
     "excerpts": [
       "1719- Eureka Afetlere Dayanıklılık, Müdahale ve İyileştirme kodlu çağrıya ülkemizden sermaye şirketi statüsündeki firmalar, yükseköğretim kurumları, kamu araştırma merkez ve enstitüleri, eğitim ve araştırma hastaneleri ve 6550 sayılı kanun kapsamındaki araştırma altyapıları başvuruda bulunabilir. İlgili kurumların başvuruları en az bir sermaye şirketi ortaklığında kabul edilir. Çağrı kapsamında sunulan projelerde sermaye şirketi Yürütücü Kuruluş (Muhatap Kuruluş) olmalıdır.",
@@ -256,7 +256,7 @@
     "ok": true
   },
   "eureka-xecs-quantum-2026": {
-    "checkedAt": "2026-11-05T06:51:36.436Z",
+    "checkedAt": "2026-11-05T06:54:51.797Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-2026-uygulamali-kuantum-teknolojileri-cagrisi-acildi",
     "excerpts": [
       "Türkiye'den başvuracak kuruluşlar, uluslararası Eureka başvurularını tamamlamalarının ardından 1719-Eureka Kuantum Teknolojileri Ulusal Çağrısı kapsamında TÜBİTAK'a ulusal başvurularını gerçekleştirebilecektir.",
@@ -275,7 +275,7 @@
     "ok": true
   },
   "eureka-xecs-call-6-2026": {
-    "checkedAt": "2026-11-05T06:51:36.572Z",
+    "checkedAt": "2026-11-05T06:54:51.954Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-6-cagrisi-acildi",
     "excerpts": [
       "Çağrı KOBİ'lere, büyük işletmelere, araştırma ve teknoloji kuruluşları ile üniversitelere açıktır. Türk katılımcılar 1509–TÜBİTAK Uluslararası Sanayi Ar-Ge Projeleri Destekleme Programı kapsamında desteklenecektir. 1509 Programı kuralları gereğince Türkiye’den sadece sermaye şirketi statüsündeki firmalar doğrudan proje başvurusunda bulunabilirler. Üniversiteler ve araştırma enstitüleri projelere hizmet sağlayıcı olarak dâhil olabilirler.",
@@ -289,7 +289,7 @@
     "ok": true
   },
   "eureka-smart-call-10-2026": {
-    "checkedAt": "2026-11-05T06:51:36.717Z",
+    "checkedAt": "2026-11-05T06:54:52.107Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-smart-kumesi-10-cagrisi-acildi",
     "excerpts": [
       "SMART Kümesi 10. Çağrısı 1 Temmuz 2026 itibarıyla açılmıştır. İki aşamalı yürütülecek olan çağrı için 26 Ocak 2027 tarihine kadar ilk aşama olan PO (Project Outline) başvuruları yapılabilecektir. Çağrının detaylarına",
@@ -303,7 +303,7 @@
     "ok": true
   },
   "tubitak-1831-continuous": {
-    "checkedAt": "2026-11-05T06:51:36.857Z",
+    "checkedAt": "2026-11-05T06:54:52.262Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
     "excerpts": [
       "Yeşil teknolojiler konusunda güncel teknolojiler için firmaların teknoloji danışmanlığı, kapasite ya da durum analizi, mevcut problemlerin tespiti ve çözüm yaklaşımları ve yol haritası hazırlama gibi konularda uzman kuruluşlardan alacakları hizmetin %90’ı hibe destek olarak TÜBİTAK tarafından karşılanacaktır. Destek süresi en az 3 ay olup en fazla 6 aydır. Proje bütçesi üstü limiti 310.000 TL’dir. TÜBİTAK, KOBİ’lere yönelik bu hizmetin Çözüm Ortakları aracılığı ile verilmesini sağlayacaktır.",
@@ -319,7 +319,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "ticaret-responsible-programi": {
-    "checkedAt": "2026-11-05T06:51:38.268Z",
+    "checkedAt": "2026-11-05T06:54:59.705Z",
     "sourceUrl": "https://ticaret.gov.tr/destekler/ihracat-destekleri/5973-sayili-ihracat-destekleri-hakkinda-karara-iliskin-genelgeler/yesil-mutabakata-uyum-projesi-destegi-responsible-programi",
     "excerpts": [
       "Harcama Başvurusunda İbraz Edilmesi Gereken Belgeler",
@@ -335,7 +335,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "kosgeb-kobi-dijital-donusum": {
-    "checkedAt": "2026-11-05T06:51:39.148Z",
+    "checkedAt": "2026-11-05T06:55:00.847Z",
     "sourceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9144/kobi-dijital-donusum-destek-programi",
     "excerpts": [
       "Başvuru Formları ve Diğer Ekler",
@@ -360,7 +360,7 @@
     "ok": true
   },
   "kosgeb-yapay-zeka-kredi-2026": {
-    "checkedAt": "2026-11-05T06:51:39.827Z",
+    "checkedAt": "2026-11-05T06:55:01.726Z",
     "sourceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9427/kosgebden-teknoloji-girisimlerine-yapay-zek-kredi-programi",
     "excerpts": [
       "Yapay Zek&acirc; Geliştiren ve Kullanan Girişimlere 5 Milyon TL&rsquo;ye Kadar Kredi",
@@ -380,7 +380,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "ssb-saga-active": {
-    "checkedAt": "2026-11-05T06:51:42.034Z",
+    "checkedAt": "2026-11-05T06:55:09.498Z",
     "sourceUrl": "https://arge.ssb.gov.tr/",
     "excerpts": [
       "Kimyasal Dekontaminasyon Atıklarına Yönelik Nötralizasyon Teknolojileri Geliştirilmesi (ARI) SAGA Çağrısı Başvuruları Başladı",
@@ -397,7 +397,7 @@
     "error": "HTTP 404"
   },
   "tubitak-1832-2026-1": {
-    "checkedAt": "2026-11-05T06:51:43.301Z",
+    "checkedAt": "2026-11-05T06:55:11.138Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-1-cagrisi-basvuruya-acildi",
     "excerpts": [
       "1832-Sanayide Yeşil Dönüşüm 2026-1 Çağrısı Başvuruya Açıldı | TÜBİTAK | Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
@@ -417,7 +417,7 @@
     "ok": true
   },
   "tubitak-2244-sanayi-doktora-2026": {
-    "checkedAt": "2026-11-05T06:51:32.081Z",
+    "checkedAt": "2026-11-05T06:54:44.967Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/2244-sanayi-doktora-programi-2026-yili-cagrisi-acildi-0",
     "excerpts": [
       "2244–Sanayi Doktora Programı’na başvurular çevrim içi olarak",
@@ -429,7 +429,7 @@
     "ok": true
   },
   "tubitak-1832-2026-2": {
-    "checkedAt": "2026-11-05T06:51:43.122Z",
+    "checkedAt": "2026-11-05T06:55:10.968Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-2-cagrisi-basvuruya-acildi",
     "excerpts": [
       "1832-Sanayide Yeşil Dönüşüm 2026-2 Çağrısı Başvuruya Açıldı | TÜBİTAK | Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
@@ -445,6 +445,50 @@
       "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
     ],
     "hash": "0eb99a28de5f9098074e500385768a754e1dc05f58015de088a34d52532b4a60",
+    "changed": false,
+    "ok": true
+  },
+  "dut-2026": {
+    "checkedAt": "2026-11-05T06:54:44.065Z",
+    "sourceUrl": "https://dutpartnership.eu/calls/dut-call-2026/",
+    "excerpts": [
+      "A funding opportunity for transformative urban research and innovation",
+      "Submission of a pre-proposal by a main applicant. The main applicant is responsible for coordination and contact with the DUT Call Secretariat.",
+      "A separate national application may also be necessary for some countries. The national requirements for each funding agency can be found in the national annexes in the call text.",
+      "Applicants who proceed to the second stage receive information via the application system and will be asked to submit a full proposal. Pre-proposals and full proposals must be submitted on the UEFISCDI electronic submission system,",
+      "For a country list, scroll down to the paragraph \"participating countries\". For a list of specific funding agencies, please refer to the National Annex A (Annex A in the call text).",
+      "Available budget and funding scheme",
+      "The total available budget for this Call is approximately EUR 49 M of budget committed by the participating Funding Agencies. Additionally, the EC will support this Call through Horizon Europe (co-funded action DUT – Grant Agreement number 101069506) with a co-fund of up to 30% of the eligible Funding Agency budget for the 2026, 2027 and 2028 DUT Partnership Calls.",
+      "transnational requirements common for all applicants",
+      ", which apply to applicants that claim funds from a specific funding agency. See Annex A of the call text for further information.",
+      "All funded partners in this call will be funded by their national/regional funding agencies, in accordance with their respective national/regional eligibility criteria. Please note that a specific national/regional agency may not be able to fund all types of organisations and/or TPs and/or research activities. Applicants must pay careful attention to the relevant national/regional funding rules indicated in Annex A and contact the relevant national/regional contact person with any queries to avoid any issues related to national/regional eligibility.",
+      "Annex A of the call text also includes a table that indicates which funding agency supports proposals under which Transition Pathway and topic.",
+      "To help ensure a balanced portfolio of funded projects covering the R&I landscape, applicants are asked to identify and indicate which of the following approaches is the best fit for their project, depending on the main purpose of their proposal:",
+      "The combination of different research types within one project (with potential differentiation at work package level) is possible, as long as the involved funding agencies’ eligibility rules are fulfilled.",
+      "Different funding agencies have the possibility to fund different parts of the R&I landscape. Table 1 in Annex A indicates the research types that will be funded by each funding agency.",
+      "(i.e. legal entities) that apply for funding. Applicants can be but are not limited to:",
+      "Apart from this transnational definition, national funding rules may restrict the eligibility of certain groups. Therefore, it is important to check the specific rules in your country/region and the respective funding agency. Please refer to Annex A of the call text for further details.",
+      "project coordinator). It will be the contact point with the DUT Call Secretariat on behalf of the whole consortium and is responsible for the administrative management of the complete project. The Main Applicant is responsible for overseeing the project activities and ensuring that the work programme is on track.",
+      "are applicants other than the Main Applicant, eligible for funding from a Funding Agency. There may be more than one Co-applicant from any participating country. In some cases where there is more than one Co-applicant from one country, the responsible funding agency may require one of them to be identified as the National Contact Point (NCP); this is done by the Main Applicant, by nominating a partner as such.",
+      "are partners that are ineligible for funding from funding agencies (e.g. partners from countries not participating in this call or ineligible for funding by any of the funding agencies, or are eligible but want to participate without receiving funding), but may be included in a project as Cooperation Partners if a) they finance their activity from other sources and (b) the consortium in general fulfils the requirements on the number of eligible applicants from participating countries. A clear description/indication of the role and form of engagement of these Cooperation Partners should be included in the proposal. A written commitment (Letter of Intent) from Cooperation Partners, participating with their own funding or with an in-kind contribution should be submitted with the full proposal. It should be noted that Cooperation Partners do not count toward the minimum of three eligible applicants from at least three participating countries outlined in the transnational eligibility rule 1 below.",
+      "is defined as the person who is the lead investigator for an applicant.",
+      "A pre-proposal includes a description of the partners, concise project description not exceeding the page limits indicated in the template (exceeding this limit will render the pre-proposal ineligible for funding), and budget indications with limited details fulfilling national/regional requirements.",
+      "Stage 2 opens for full proposal submission in February 2027 and closes on 15 April 2027 13:00 (CEST). Only pre-proposals invited to submit a full proposal are eligible in stage 2.",
+      "Once the evaluation and selection of proposals to be invited to stage 2 are done, all main applicants will have the opportunity to check on the submission platform the Summary report made by the experts. You will receive feedback on which aspects to improve, and where the strengths and weaknesses of your proposal lie.",
+      "by the principal investigator (PI) of the main applicant.",
+      "Some funding agencies may require submission of a proposal on national/regional level, meaning that the other project partners need to apply at national level. See the respective national/regional requirements for more information (Annex A).",
+      "Partners from countries outside the DUT Partnership can join project as cooperation partners (partners that do not directly receive funding). You may add cooperation partners at any time during the pre- or full proposal stage.",
+      "Consortia are expected to be balanced between countries, both in terms of number of partners and distribution of budget and no individual Applicant or Cooperation Partner may represent more than 50% of the workload calculated in terms of person-months.",
+      "either as a Main Applicant, Co-applicant, or Cooperation Partner depending on the national/regional eligibility criteria.",
+      "Each consortium submitting an application to the cross-cutting topic must include at least one private sector organisation (industry, company, business, SME, branch/sector organization) either as a Main Applicant or Co-applicant.",
+      "Typically, small to medium sized consortia (involving funding requests to 3-5 Funding Agencies on average per proposal), are expected. However, there is no upper limit, and consortia may involve as many partners as necessary for a convincing proposal, ensuring that all participants have a justified role. Each partner within the consortium should clearly add value to the objectives of the proposed project. Depending on the nature of the project, each partner in the consortium must demonstrate how they will exploit the expected results.",
+      "It is possible that invited consortia will be explicitly allowed by the DUT Call Secretariat to integrate, in their full proposal, additional partners requesting funds from specific funding agencies, if these funding agencies are underrepresented in the proposals invited to the second stage.",
+      "This addition of applicants shall be done in a way that is compatible with all the national eligibility conditions already indicated in the call text and the internal regulations of the respective funding agencies.",
+      "This inclusion option between the pre-proposal stage and the full-proposal stage shall be conducted in close cooperation with the respective funding agencies with the aim of allowing as many countries as possible to be involved in the funding of the transnational projects.",
+      "The additional Co-applicants may not effect a significant change to the proposal’s original aims, impact and main tasks, but should enhance the original focus.",
+      "The Project Contact Point (PCP) is defined as the person who is the lead investigator for an Applicant."
+    ],
+    "hash": "b80a1b6980f606bfa6f8b7e71664a0784a061ab7c3d97466a0d1da8a3cf85051",
     "changed": false,
     "ok": true
   }
