@@ -1,6 +1,6 @@
 {
   "tubitak-1613-ttp": {
-    "checkedAt": "2026-11-05T12:25:21.826Z",
+    "checkedAt": "2026-11-05T20:43:18.770Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1613-teknoloji-transferi-profesyoneli-cagrisi",
     "excerpts": [
       "Başvuru aşamasında 24 aylık proje süresi için sunulabilecek proje bütçesi üst sınırı aşağıdaki şekilde hesaplanır:",
@@ -17,7 +17,7 @@
     "ok": true
   },
   "tubitak-1513-tto": {
-    "checkedAt": "2026-11-05T12:25:22.004Z",
+    "checkedAt": "2026-11-05T20:43:19.126Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1513-teknoloji-transfer-ofisleri-destekleme-programi",
     "excerpts": [
       "1513 Programında açık bir çağrı bulunmadığından şu an için programa başvuru alınmamaktadır.",
@@ -48,7 +48,7 @@
     "error": "PDF metni ayrıca doğrulanmalı"
   },
   "msca-staff-exchanges-2027-tto": {
-    "checkedAt": "2026-11-05T12:25:22.931Z",
+    "checkedAt": "2026-11-05T20:43:20.072Z",
     "sourceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027",
     "excerpts": [
       "Eligible staff include researchers at any career stage, as well as administrative, managerial and technical personnel supporting the project’s R&I activities.",
@@ -67,7 +67,7 @@
     "error": "HTTP 403"
   },
   "tubitak-1507-2026-2": {
-    "checkedAt": "2026-11-05T12:25:25.121Z",
+    "checkedAt": "2026-11-05T20:43:22.331Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1507-kobi-ar-ge-baslangic-destek-programi-2026-yili-2-cagrisi-acildi",
     "excerpts": [
       "2026 yılı 2. dönem başvuruları 20 Temmuz 2026 tarihi itibarıyla",
@@ -82,7 +82,7 @@
     "error": "HTTP 404"
   },
   "horizon-hop-on-2026": {
-    "checkedAt": "2026-11-05T12:25:25.992Z",
+    "checkedAt": "2026-11-05T20:43:23.592Z",
     "sourceUrl": "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-widening-participation-and-spreading-excellence/hop-facility_en",
     "excerpts": [
       "is a funding programme under Horizon Europe that supports breakthrough deep tech projects with a high degree of scientific and technological ambition and risk.",
@@ -97,7 +97,7 @@
     "ok": true
   },
   "life-circular-2026": {
-    "checkedAt": "2026-11-05T12:25:26.659Z",
+    "checkedAt": "2026-11-05T20:43:24.062Z",
     "sourceUrl": "https://cinea.ec.europa.eu/life-calls-proposals-2026_en",
     "excerpts": [
       "See below the submission deadlines for all Calls for proposals.",
@@ -129,7 +129,7 @@
     "ok": true
   },
   "eic-accelerator-2026": {
-    "checkedAt": "2026-11-05T12:25:26.782Z",
+    "checkedAt": "2026-11-05T20:43:24.125Z",
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
     "excerpts": [
       "is a funding programme under Horizon Europe that offers support to start-ups and SMEs that:",
@@ -157,7 +157,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "eurostars-coordination-support-2026-2": {
-    "checkedAt": "2026-11-05T12:25:27.368Z",
+    "checkedAt": "2026-11-05T20:43:24.438Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eurostars-koordinatorluk-destegi-programi-2026-yili-2-ulusal-cagrisi-acildi",
     "excerpts": [
       "TÜBİTAK Teknoloji ve Yenilik Destek Programları Başkanlığı tarafından yürütülen Eurostars Koordinatörlük Desteği Programı 2026 yılı 2. Ulusal Çağrısı açılmıştır. Bu çağrı kapsamında, Eurostars-3 Programı’nın 2026 yılı 2. Dönem Çağrısı’na uluslararası Ar-Ge ve yenilik projeleriyle başvurmak isteyen Türkiye’de yerleşik",
@@ -169,15 +169,15 @@
       "Koordinatörlük Desteği Programı Başvuruları için Son Tarih:",
       "Eurostars Koordinatörlük Desteği Programı’na, yalnızca Türkiye’de yerleşik KOBİ ölçeğindeki sermaye şirketleri başvuru yapabilirler.",
       "Aynı proje için tek başvuruda hem proje yazma-sunma eğitimi desteği hem de proje yazdırma desteği talep edilemez.",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "c05c3da7b96a555a7f9fd7486f065131317fb1dbb36b1388545055191056d43d",
-    "changed": false,
+    "hash": "4e008ec78a8dcd396361828cef89e19a62bf1f502ac9508af7ffe5be538b13d6",
+    "changed": true,
     "ok": true
   },
   "eurostars-2026-2": {
-    "checkedAt": "2026-11-05T12:25:27.545Z",
+    "checkedAt": "2026-11-05T20:43:24.617Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1709-eureka-eurostars-2026-yili-2-cagrisi-acildi",
     "excerpts": [
       "Eurostars-3 hakkında daha fazla bilgi, yardımcı dokümanlar ve uluslararası başvuru için lütfen",
@@ -188,15 +188,15 @@
       "Uluslararası çağrı için son başvuru tarihi:",
       "Ulusal ön proje başvuruları için son tarih:",
       "bu çağrıya kamu desteği ayırmayı öngörmemektedir. Adı geçen ülkelerle ortaklık kurulmasının önünde bir engel yoktur ancak ilgili kuruluşlar kendi kaynaklarıyla yani “self-funding” olarak katılabileceklerdir.",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "6c233837c216081c24823c164e9ef7ece9d4f383d1cc177dd198dddac3213a45",
-    "changed": false,
+    "hash": "992beaee629f9f33cc95ddbe7a13f640780504e058c34ef67a5aff8a2d52f77f",
+    "changed": true,
     "ok": true
   },
   "eureka-biotech-2026": {
-    "checkedAt": "2026-11-05T12:25:27.747Z",
+    "checkedAt": "2026-11-05T20:43:24.792Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1719-eureka-network-biyoteknoloji-2026-cagrisi-acildi",
     "excerpts": [
       "1719-Eureka Biyoteknoloji Uluslararası Çağrısı’na ülkemizden sermaye şirketi statüsündeki firmalar, yükseköğretim kurumları, kamu araştırma merkez ve enstitüleri, eğitim ve araştırma hastaneleri ve 6550 sayılı kanun kapsamındaki araştırma altyapıları başvuruda bulunabilir. İlgili kurumların başvuruları en az bir sermaye şirketi ortaklığında kabul edilir. Çağrı kapsamında sunulan projelerde sermaye şirketi Yürütücü Kuruluş (Muhatap Kuruluş) olmalıdır.",
@@ -207,15 +207,15 @@
       "üzerinden ulusal başvurularını yapmaları gerekmektedir.",
       "Ulusal proje başvuruları son tarih:",
       "Uluslararası ve Ulusal Başvuru Süreci için:",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "428f53239ef8e2699e8caf27237ebf99b4a1a3984354206ab289646601e451bc",
-    "changed": false,
+    "hash": "9b46344990f767f0fe8b23b77ee92e8ea38bc04b1fed42f36dbb9a848964fc9a",
+    "changed": true,
     "ok": true
   },
   "eureka-lightweighting-2026": {
-    "checkedAt": "2026-11-05T12:25:27.922Z",
+    "checkedAt": "2026-11-05T20:43:24.974Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-hafifletme-teknolojileri-2026-yili-cagrisi-acildi",
     "excerpts": [
       "Eureka’nın önemli destek mekanizmalarından biri olan Eureka Network Projeleri kapsamında “Hafifletme Teknolojileri” konulu uluslararası çağrı başvuruya açılmıştır.",
@@ -228,15 +228,15 @@
       "Ulusal başvuru öncesinde aşağıda yer alan çağrı metninin dikkatle incelenmesi gerekmektedir, başvuru kurallarına uyulmaması durumunda başvurunun değerlendirmeye alınmadan iade edilmesi söz konusu olabilir.",
       "Ulusal Proje Başvuruları Son Tarih:",
       "Uluslararası ve Ulusal Başvuru Süreci için:",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "bcfd1be3104123c3094f1e2adcdaa0b086ccfa9bb6bc7cf6744bfcdd83ab4bd7",
-    "changed": false,
+    "hash": "84a8b60fd58371748345418bc2a63c11f5f1e3c1e2a4566b8396c8ab8d9f514e",
+    "changed": true,
     "ok": true
   },
   "eureka-disaster-resilience-2026": {
-    "checkedAt": "2026-11-05T12:25:28.097Z",
+    "checkedAt": "2026-11-05T20:43:25.153Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-afetlerde-direnclilik-2026-cagrisi-acildi",
     "excerpts": [
       "1719- Eureka Afetlere Dayanıklılık, Müdahale ve İyileştirme kodlu çağrıya ülkemizden sermaye şirketi statüsündeki firmalar, yükseköğretim kurumları, kamu araştırma merkez ve enstitüleri, eğitim ve araştırma hastaneleri ve 6550 sayılı kanun kapsamındaki araştırma altyapıları başvuruda bulunabilir. İlgili kurumların başvuruları en az bir sermaye şirketi ortaklığında kabul edilir. Çağrı kapsamında sunulan projelerde sermaye şirketi Yürütücü Kuruluş (Muhatap Kuruluş) olmalıdır.",
@@ -246,15 +246,15 @@
       "Türkiye’den katılımcıların uluslararası başvuru formuyla birlikte TÜBİTAK 1719-Eureka Afetlerde Dirençlilik ulusal çağrısına 16 Aralık 2026 tarihine kadar ulusal başvurularını",
       "Ulusal Proje Başvuruları Son Tarih:",
       "Uluslararası ve Ulusal Başvuru Süreci için:",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "e28c4666a374843ff4aafc533e1da02f120546d06e5c8c0f1d90cf267d01576f",
-    "changed": false,
+    "hash": "d7b23d9225c9decb07fdc4ef42b7b4512859e090d6792a679aba9bc64721ddac",
+    "changed": true,
     "ok": true
   },
   "eureka-xecs-quantum-2026": {
-    "checkedAt": "2026-11-05T12:25:28.271Z",
+    "checkedAt": "2026-11-05T20:43:25.338Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-2026-uygulamali-kuantum-teknolojileri-cagrisi-acildi",
     "excerpts": [
       "Türkiye'den başvuracak kuruluşlar, uluslararası Eureka başvurularını tamamlamalarının ardından 1719-Eureka Kuantum Teknolojileri Ulusal Çağrısı kapsamında TÜBİTAK'a ulusal başvurularını gerçekleştirebilecektir.",
@@ -265,43 +265,43 @@
       "Türkiye’den katılımcıların uluslararası başvuru formuyla birlikte TÜBİTAK 1719-Eureka Xecs Uygulamalı Kuantum Teknolojileri ulusal çağrısına 31 Mart 2027 tarihine kadar",
       "Çağrıya ilişkin başvuru koşulları, değerlendirme süreci ve diğer ayrıntılar",
       "Uluslararası ve Ulusal Başvuru Süreci için:",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "dc4fc630f15a4b0c65e3ca9e2fccc12493197afb5b5202eaf2cc4d2eef0f1c0c",
-    "changed": false,
+    "hash": "062ff29cd5c3badaa42fbf03c3c3b4485f320958a84767d86362de9798ad631a",
+    "changed": true,
     "ok": true
   },
   "eureka-xecs-call-6-2026": {
-    "checkedAt": "2026-11-05T12:25:28.451Z",
+    "checkedAt": "2026-11-05T20:43:25.519Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-6-cagrisi-acildi",
     "excerpts": [
       "Çağrı KOBİ'lere, büyük işletmelere, araştırma ve teknoloji kuruluşları ile üniversitelere açıktır. Türk katılımcılar 1509–TÜBİTAK Uluslararası Sanayi Ar-Ge Projeleri Destekleme Programı kapsamında desteklenecektir. 1509 Programı kuralları gereğince Türkiye’den sadece sermaye şirketi statüsündeki firmalar doğrudan proje başvurusunda bulunabilirler. Üniversiteler ve araştırma enstitüleri projelere hizmet sağlayıcı olarak dâhil olabilirler.",
       "1. Aşama - PO başvurusu son tarihi:",
       "2. Aşama - FPP başvurusu son tarihi:",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "9c544780804338dcbf30d8402914a09f08329c5cd00e6c847b0518c1e1f3e57b",
-    "changed": false,
+    "hash": "ea5f2353b7cbaac34c93d46667160ea724acea9baca6176e5a66da1eb8baf1c5",
+    "changed": true,
     "ok": true
   },
   "eureka-smart-call-10-2026": {
-    "checkedAt": "2026-11-05T12:25:28.639Z",
+    "checkedAt": "2026-11-05T20:43:25.696Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-smart-kumesi-10-cagrisi-acildi",
     "excerpts": [
       "SMART Kümesi 10. Çağrısı 1 Temmuz 2026 itibarıyla açılmıştır. İki aşamalı yürütülecek olan çağrı için 26 Ocak 2027 tarihine kadar ilk aşama olan PO (Project Outline) başvuruları yapılabilecektir. Çağrının detaylarına",
       "1. Aşama - PO Başvuru son tarihi:",
       "2. Aşama - FPP Başvurusu son tarihi:",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "19fbecc0517a1b18781802d0a2d517f49747690bfe7bfa14a337175efa12cb5e",
-    "changed": false,
+    "hash": "d57e7643bb2845becd922b1611ee96597311c385d2190dd4d828583b44c891b8",
+    "changed": true,
     "ok": true
   },
   "tubitak-1831-continuous": {
-    "checkedAt": "2026-11-05T12:25:28.815Z",
+    "checkedAt": "2026-11-05T20:43:25.871Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
     "excerpts": [
       "Yeşil teknolojiler konusunda güncel teknolojiler için firmaların teknoloji danışmanlığı, kapasite ya da durum analizi, mevcut problemlerin tespiti ve çözüm yaklaşımları ve yol haritası hazırlama gibi konularda uzman kuruluşlardan alacakları hizmetin %90’ı hibe destek olarak TÜBİTAK tarafından karşılanacaktır. Destek süresi en az 3 ay olup en fazla 6 aydır. Proje bütçesi üstü limiti 310.000 TL’dir. TÜBİTAK, KOBİ’lere yönelik bu hizmetin Çözüm Ortakları aracılığı ile verilmesini sağlayacaktır.",
@@ -317,7 +317,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "ticaret-responsible-programi": {
-    "checkedAt": "2026-11-05T12:25:34.906Z",
+    "checkedAt": "2026-11-05T20:43:32.125Z",
     "sourceUrl": "https://ticaret.gov.tr/destekler/ihracat-destekleri/5973-sayili-ihracat-destekleri-hakkinda-karara-iliskin-genelgeler/yesil-mutabakata-uyum-projesi-destegi-responsible-programi",
     "excerpts": [
       "Harcama Başvurusunda İbraz Edilmesi Gereken Belgeler",
@@ -333,7 +333,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "kosgeb-kobi-dijital-donusum": {
-    "checkedAt": "2026-11-05T12:25:36.160Z",
+    "checkedAt": "2026-11-05T20:43:33.074Z",
     "sourceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9144/kobi-dijital-donusum-destek-programi",
     "excerpts": [
       "Başvuru Formları ve Diğer Ekler",
@@ -358,7 +358,7 @@
     "ok": true
   },
   "kosgeb-yapay-zeka-kredi-2026": {
-    "checkedAt": "2026-11-05T12:25:37.067Z",
+    "checkedAt": "2026-11-05T20:43:34.036Z",
     "sourceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9427/kosgebden-teknoloji-girisimlerine-yapay-zek-kredi-programi",
     "excerpts": [
       "Yapay Zek&acirc; Geliştiren ve Kullanan Girişimlere 5 Milyon TL&rsquo;ye Kadar Kredi",
@@ -378,7 +378,7 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "ssb-saga-active": {
-    "checkedAt": "2026-11-05T12:25:45.058Z",
+    "checkedAt": "2026-11-05T20:43:41.765Z",
     "sourceUrl": "https://arge.ssb.gov.tr/",
     "excerpts": [
       "Kimyasal Dekontaminasyon Atıklarına Yönelik Nötralizasyon Teknolojileri Geliştirilmesi (ARI) SAGA Çağrısı Başvuruları Başladı",
@@ -395,7 +395,7 @@
     "error": "HTTP 404"
   },
   "tubitak-1832-2026-1": {
-    "checkedAt": "2026-11-05T12:25:47.132Z",
+    "checkedAt": "2026-11-05T20:43:43.782Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-1-cagrisi-basvuruya-acildi",
     "excerpts": [
       "1832-Sanayide Yeşil Dönüşüm 2026-1 Çağrısı Başvuruya Açıldı | TÜBİTAK | Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
@@ -407,27 +407,28 @@
       "Başarıyla tamamlanan projelere verilen ilave %20 hibe destek uygulaması kaldırılmıştır.",
       "Çağrıya başvurusu yapılması için başvuru sahibi kuruluşta proje konusuyla ilgili en az lisans seviyesinde bir personel olması gerektiğini önemle hatırlatırız.",
       "üzerinden elektronik olarak başvuru yapılabilmektedir.",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "e8634b9474a179ce5482c06d96fefcc8981a3784a4e5e825272f0d66f00b6e8e",
-    "changed": false,
+    "hash": "c10c1c8d04a0679c6dfd22ac7ad264a028be6790ca01a4fb14b89ea84426ab8c",
+    "changed": true,
     "ok": true
   },
   "tubitak-2244-sanayi-doktora-2026": {
-    "checkedAt": "2026-11-05T12:25:21.149Z",
+    "checkedAt": "2026-11-05T20:43:18.589Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/2244-sanayi-doktora-programi-2026-yili-cagrisi-acildi-0",
     "excerpts": [
       "2244–Sanayi Doktora Programı’na başvurular çevrim içi olarak",
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
       "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
       "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
     ],
-    "hash": "d84c5d84b6c3e6c7d560b1cc21c53af1725d1db4bb29f8c80bc8ad89a9aea1b2",
-    "changed": false,
+    "hash": "06f6f465ff9ca77594978bc3f551ffe2396e29c27560e9fc5672a1216709f0d5",
+    "changed": true,
     "ok": true
   },
   "tubitak-1832-2026-2": {
-    "checkedAt": "2026-11-05T12:25:46.956Z",
+    "checkedAt": "2026-11-05T20:43:43.592Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1832-sanayide-yesil-donusum-2026-2-cagrisi-basvuruya-acildi",
     "excerpts": [
       "1832-Sanayide Yeşil Dönüşüm 2026-2 Çağrısı Başvuruya Açıldı | TÜBİTAK | Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
@@ -439,15 +440,15 @@
       "Başarıyla tamamlanan projelere verilen ilave %20 hibe destek uygulaması kaldırılmıştır.",
       "Çağrıya başvurusu yapılması için başvuru sahibi kuruluşta proje konusu ile ilgili en az lisans seviyesinde bir personel olması gerektiğini önemle hatırlatırız.",
       "üzerinden elektronik olarak başvuru yapılabilmektedir.",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "0eb99a28de5f9098074e500385768a754e1dc05f58015de088a34d52532b4a60",
-    "changed": false,
+    "hash": "3ee10620e2814075815dfa300c287db431226654e97ca7797d8cf0e667e52a51",
+    "changed": true,
     "ok": true
   },
   "dut-2026": {
-    "checkedAt": "2026-11-05T12:25:20.950Z",
+    "checkedAt": "2026-11-05T20:43:17.246Z",
     "sourceUrl": "https://dutpartnership.eu/calls/dut-call-2026/",
     "excerpts": [
       "A funding opportunity for transformative urban research and innovation",
@@ -491,7 +492,7 @@
     "ok": true
   },
   "sbep-2026": {
-    "checkedAt": "2026-11-05T12:25:20.101Z",
+    "checkedAt": "2026-11-05T20:43:16.345Z",
     "sourceUrl": "https://bluepartnership.eu/funding-opportunity/sustainable-blue-economy-partnerships-fourth-joint-transnational-call",
     "excerpts": [
       "Brazilian National Council of State Funding Agencies",
@@ -509,7 +510,7 @@
     "ok": true
   },
   "biodivfuture-2026": {
-    "checkedAt": "2026-11-05T12:25:17.630Z",
+    "checkedAt": "2026-11-05T20:43:12.636Z",
     "sourceUrl": "https://www.biodiversa.eu/2026/06/09/2026-2027-joint-call/",
     "excerpts": [
       ". It aims at funding novel, high-quality transnational research with potential for societal and political impact that will significantly improve our understanding of novel ecosystems with",
@@ -535,7 +536,7 @@
     "ok": true
   },
   "forestpathways-2026": {
-    "checkedAt": "2026-11-05T12:25:18.698Z",
+    "checkedAt": "2026-11-05T20:43:13.553Z",
     "sourceUrl": "https://forest-partnership.eu/jointcall2026/",
     "excerpts": [
       "FORESTPathways brings together 36 research funding organisations from 27 countries to support collaborative research and innovation for resilient forests and sustainable forest-based futures",
@@ -579,18 +580,18 @@
     "ok": true
   },
   "tubitak-1707-2026-3": {
-    "checkedAt": "2026-11-05T12:25:17.060Z",
+    "checkedAt": "2026-11-05T20:43:12.044Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi",
     "excerpts": [
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "9135191a0d384d9b9273b6a0b76f457c581a5aa7ff1006626d97a9cc61c3839c",
-    "changed": false,
+    "hash": "1df24ce8bfbdd5cb463157e5ddadbd019020430cae0802dd8a56793f68b1358c",
+    "changed": true,
     "ok": true
   },
   "eureka-turkiye-ispanya-2026": {
-    "checkedAt": "2026-11-05T12:25:16.880Z",
+    "checkedAt": "2026-11-05T20:43:11.864Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi",
     "excerpts": [
       "EUREKA Programı'nın amaçlarına paralel olarak, ticarileşme potansiyeli yüksek, pazara yönelik ürün, süreç ve hizmetlerin geliştirildiği projeler 1509 - TÜBİTAK Uluslararası Sanayi Ar-Ge Projeleri programı kapsamında desteklenecektir. Türkiye’de sermaye şirketi statüsündeki bir firma, İspanya'dan en az bir firma ile birlikte doğrudan proje başvurusunda bulunabilir. Üniversiteler ve araştırma enstitüleri ise doğrudan başvuru yapamayacak, ancak projelerde hizmet sağlayıcı olarak yer alabileceklerdir. Çağrı tüm tematik alanlara açıktır, belirtilen alanlar başvuruları sınırlandırmamaktadır.",
@@ -601,15 +602,15 @@
       "kapsamında gerçekleştirmeleri gerekmektedir. Ön başvuru ve ulusal başvuruya ilişkin tarihler TÜBİTAK tarafından e-posta yoluyla bildirilecektir. Ön başvurular ve ulusal başvurular",
       "Eureka Network Türkiye-İspanya Çağrısı’na proje başvuruları 1509–Uluslararası Sanayi Ar-Ge Projeleri Destekleme Programı kuralları çerçevesinde yürütülecektir. Çağrıya ülkemizden sermaye şirketi statüsündeki firmalar başvuruda bulunabilir. Bu kurallara uygun olmayan başvurular değerlendirmeye alınmadan iade edilebilir.",
       "Uluslararası ve Ulusal Başvuru Süreci için:",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "7ffaa8dd9d492fa6f55b15fb0580e74f7032b9879cdcaeacb5b9343552ffdd9d",
-    "changed": false,
+    "hash": "81f937c1d6f3b2ed1a1b02108c117c7e03655132c70dba8dc338012f06d7ba63",
+    "changed": true,
     "ok": true
   },
   "valleys-open-call-1": {
-    "checkedAt": "2026-11-05T12:25:14.704Z",
+    "checkedAt": "2026-11-05T20:43:09.333Z",
     "sourceUrl": "https://valleysproject.eu/open-call-1/",
     "excerpts": [
       "Competitive cascade funding for organisations across Europe to test and scale innovative valorisation approaches aligned with EU Codes of Practice.",
@@ -624,7 +625,7 @@
     "ok": true
   },
   "systemeu-fstp-2026": {
-    "checkedAt": "2026-11-05T12:25:16.064Z",
+    "checkedAt": "2026-11-05T20:43:10.725Z",
     "sourceUrl": "https://systemeuvalley.eu/open-call-for-fstp/",
     "excerpts": [
       ", including at least one research organisation (RTO, university) and one for-profit company. Maximum funding of",
@@ -647,7 +648,7 @@
     "ok": true
   },
   "eit-urban-mobility-sme-expansion-2027": {
-    "checkedAt": "2026-11-05T12:25:02.124Z",
+    "checkedAt": "2026-11-05T20:43:00.497Z",
     "sourceUrl": "https://www.eiturbanmobility.eu/call-for-proposals/sme-market-expansion-open-call-2027/",
     "excerpts": [
       "The total estimated funding allocated to this Call is €600,000.",
@@ -663,7 +664,7 @@
     "ok": true
   },
   "aenaon-open-call-1": {
-    "checkedAt": "2026-11-05T12:25:13.090Z",
+    "checkedAt": "2026-11-05T20:43:07.864Z",
     "sourceUrl": "https://aenaon-project.eu/info-day-aenaon-project-open-call-round-1/",
     "excerpts": [
       "50% of the eligible sub-project budget",
@@ -707,7 +708,7 @@
     "ok": true
   },
   "eit-urban-mobility-startups-2026-2028": {
-    "checkedAt": "2026-11-05T12:25:01.312Z",
+    "checkedAt": "2026-11-05T20:42:59.710Z",
     "sourceUrl": "https://www.eiturbanmobility.eu/call-for-proposals/financial-support-to-startups-open-call-3/",
     "excerpts": [
       ". The purpose of this document is to invite eligible companies to apply for this financial support. Funding is provided through an open application process with multiple cut offs throughout 2026, 2027 and 2028:",
@@ -727,7 +728,7 @@
     "error": "HTTP 403"
   },
   "eit-urban-mobility-strategic-innovation-cutoff-4": {
-    "checkedAt": "2026-11-05T12:25:00.346Z",
+    "checkedAt": "2026-11-05T20:42:58.993Z",
     "sourceUrl": "https://www.eiturbanmobility.eu/call-for-proposals/strategic-innovation-open-call/",
     "excerpts": [
       "In the future, the Call may also include specific topic scopes to address key market opportunities or urgent market failures that can be addressed through our funding.",
@@ -742,7 +743,7 @@
     "ok": true
   },
   "kosgeb-kuresel-rekabetcilik-2026-1": {
-    "checkedAt": "2026-11-05T12:24:57.775Z",
+    "checkedAt": "2026-11-05T20:42:56.771Z",
     "sourceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9206/kuresel-rekabetcilik-destek-programi",
     "excerpts": [
       "2026 Yılı 1. Başvuru D&ouml;nemi Proje Teklif &Ccedil;ağrısı",
@@ -765,7 +766,7 @@
     "ok": true
   },
   "kosgeb-istihdami-koruma-2026-2": {
-    "checkedAt": "2026-11-05T12:24:58.804Z",
+    "checkedAt": "2026-11-05T20:42:57.846Z",
     "sourceUrl": "https://kosgeb.gov.tr/site/tr/genel/destekdetay/9224/istihdami-koruma-destek-programi",
     "excerpts": [
       "Programa KOBİ ve b&uuml;y&uuml;k işletmeler başvuru yapabilir.",
@@ -800,7 +801,7 @@
     "ok": true
   },
   "eic-accelerator-open-2027": {
-    "checkedAt": "2026-11-05T12:24:56.297Z",
+    "checkedAt": "2026-11-05T20:42:55.276Z",
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en",
     "excerpts": [
       "is a funding programme under Horizon Europe that offers support to start-ups and SMEs that:",
@@ -824,7 +825,7 @@
     "ok": true
   },
   "eic-step-scaleup-2027": {
-    "checkedAt": "2026-11-05T12:24:56.718Z",
+    "checkedAt": "2026-11-05T20:42:55.701Z",
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
     "excerpts": [
       "Catalysing major funding rounds to scale up breakthrough innovations in the fields of digital, deep tech, clean tech & biotech.",
@@ -852,22 +853,23 @@
     "error": "Yeterli koşul metni alınamadı"
   },
   "eic-transition-open-2027": {
-    "checkedAt": "2026-11-05T12:24:56.277Z",
+    "checkedAt": "2026-11-05T20:42:54.860Z",
     "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en",
     "excerpts": [
-      "Single applicants (SMEs, spin-offs, start-ups, research organisations, universities) or consortia (minimum 2, maximum 5 legal entities).",
+      "Single applicants (SMEs, spin-offs, start-ups, research organisations, universities) with affiliated entities and subcontracting allowed",
       "is a funding programme under Horizon Europe targeting innovation activities that goes beyond the experimental proof of principle in laboratory. It supports both the maturation and validation of novel technologies from the lab to the relevant application environments.",
       "This document presents the 2027 European Innovation Council (EIC) Work Programme funded by the European Union’s Horizon Europe Framework Programme for Research and Innovation. It sets out how the EIC will allocate its funding of for the year 2027 and has been prepared following the advice of the EIC Board.",
-      "established in a Member State or an Associated Country (‘mono-beneficiary’) if you are a start-up, SME or research performing organisation (university, research or technology organisation, including teams, individual Principal Investigators and inventors in such institutions who intend to form a spin-off company). Larger companies (i.e. which do not qualify as SMEs) are not eligible to apply as a single legal entity",
-      "results already achieved within an eligible project",
-      "that are, at least, at experimental proof of concept (TRL 3 completed) or, ideally, technology validated in the lab level (TRL 4). Proposals building on project results at TRLs other than TRL3 completed or TRL4 are not eligible.",
+      "(i.e. which do not qualify as SMEs) are not eligible to apply as a single legal entity (but may be involved e.g. as subcontractors or signatories of letters of intent).",
+      "In order to be eligible your proposal",
+      "must build on results already achieved within an eligible project",
+      ". Proposals building on project results at other TRLs level (e.g., 5 and beyond) are not eligible.",
       "EIC Transition is restricted to proposals based on results generated by the following eligible projects:",
-      "funded under Horizon 2020 Societal challenges and Leadership in Industrial Technologies and under Horizon Europe pillar II, with an eligible TRL",
+      "funded under Horizon 2020 Societal challenges and Leadership in Industrial Technologies under Horizon Europe Pillar II and the European Defence Fund, with an eligible TRL.",
       "EIC Transition - List of eligible projects 2026",
       "Funding and Tender Opportunities Portal",
       "Your proposal will be evaluated first by EIC expert evaluators. If your proposal successfully passes this first evaluation phase, you will be invited for an interview, which will be organised approximately between 11-13 weeks after the deadline.",
-      "All applicants will receive as feedback of the evaluation an Evaluation Summary Report from the first evaluation step. If they have been invited for an interview, they will also receive feedback from the jury.",
-      "If they meet all evaluation criteria thresholds at the first step but are not selected for funding (including from a No-GO recommendation from the jury), they will be awarded a",
+      "The deadline for submitting your proposal is 14 September 2027 at 17h00 Brussels local time.",
+      "If you are successful, you can expect your grant agreement to be signed within 6 months from the call deadline (indicative) and you are expected to start your project within 1-2 months after signing the grant agreement.",
       "the purpose of this template is to provide an overview of the information that is needed to be filled in when applying. Applicants must download and fill in the application template from the Funding and Tenders portal.",
       "the purpose of this template is to provide an overview of the information that is needed to be filled in and added as an annex to the application when applying. Applicants can download and fill in this template here or from the Funding and Tenders portal once the call is opened. As the call officially opens in Spring 2027, it is made available on this page following the publication of the Work Programme 2027 to give applicants maximum time to prepare.",
       "Find answers to questions frequently asked by applicants about types of funding, eligibility, submission of proposals, and more.",
@@ -875,8 +877,8 @@
       "Check the statistics from the recent EIC Transition call deadline, revealing a record number of submitted proposals.",
       "Online information day - EIC funding opportunities in 2027"
     ],
-    "hash": "136104fa64b156299fe1b12608463a8348004773102f912936ddd02254c3a069",
-    "changed": false,
+    "hash": "4f5e6f763587969543761507bee079b14f5cbe2d08454b0553a1ba9af854d2f3",
+    "changed": true,
     "ok": true
   },
   "eic-accelerator-challenge-ocean-2027": {
@@ -896,7 +898,7 @@
     "error": "PDF metni ayrıca doğrulanmalı"
   },
   "eureka-globalstars-japan-2026": {
-    "checkedAt": "2026-11-05T12:24:55.649Z",
+    "checkedAt": "2026-11-05T20:42:53.699Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-globalstars-japonya-2026-cagrisi-acildi",
     "excerpts": [
       "Türkiye'den başvuracak kuruluşların Türkiye'de kurulmuş sermaye şirketi statüsünde olması gerekmektedir. Projelerde Türkiye ve Japonya'dan en az birer şirketin yer aldığı bir konsorsiyum oluşturulması gerekmektedir. Bu temel koşulun sağlanması kaydıyla çağrıya katılan diğer ülkelerden kuruluşlar da konsorsiyuma dâhil edilebilecektir.",
@@ -909,15 +911,15 @@
       "Uluslararası Başvuruların Başlangıç Tarihi:",
       "Uluslararası Başvuru Son Tarihi:",
       "Uluslararası ve Ulusal Başvuru Süreci için:",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "0b28f2620fed4c8c5e0d21ef4ae83667f99bea6d4a85e7f78787c44a285f04b0",
-    "changed": false,
+    "hash": "a66bd577473b7cbf140ef55a9d86561d83f6037ad59aa20ec2dfc7f4006a5beb",
+    "changed": true,
     "ok": true
   },
   "tubitak-1833-2026-1": {
-    "checkedAt": "2026-11-05T12:24:55.833Z",
+    "checkedAt": "2026-11-05T20:42:53.881Z",
     "sourceUrl": "https://tubitak.gov.tr/tr/duyuru/1833-sayem-yesil-donusum-2026-1-cagrisi-2-asamasi-basvuruya-acildi",
     "excerpts": [
       "1833 SAYEM Yeşil Dönüşüm 2026-1 Çağrısı 2. Aşaması Başvuruya Açıldı | TÜBİTAK | Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
@@ -936,11 +938,11 @@
       "KOBİ ölçeğindeki kuruluşların bütçe üst limiti 18 milyon TL’den 28 milyon TL’ye çıkarılmıştır.",
       "Başvuru sırasında kuruluşlardan alınan banka referans mektubu, sunulacak bütçenin en az %50’ si olacak şekilde istenirken, yeni uygulamada sunulacak bütçenin tamamı kadar talep edilmektedir.",
       "1833 SAYEM Yeşil Dönüşüm 2026- 1. Çağrısı başvurularının açılması",
-      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı",
-      "Bütünleşik Algılama ve Haberleşme Kış Okulu 2026 Yılı Başvuruları Başladı"
+      "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "2549–Polonya Ulusal Araştırma ve Geliştirme Merkezi (NCBR) ile İkili İşbirliği Programı Başvuru Sonuçları Açıklandı"
     ],
-    "hash": "a22b0785ac36a4a6b1162ec3da8215edde78ebc7419f37b47cc0a6baf2851022",
-    "changed": false,
+    "hash": "7e52871b8dd8f41defcb6bd04b03060476283ceca619afd4d6c6f5e8bd9f39ed",
+    "changed": true,
     "ok": true
   }
 }
