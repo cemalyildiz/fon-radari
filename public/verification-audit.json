@@ -1,6 +1,69 @@
 {
   "records": [
     {
+      "id": "kosgeb-kuresel-rekabetcilik-2026-1",
+      "title": "Küresel Rekabetçilik — 2026/1 Proje Teklif Çağrısı",
+      "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KURESEL%20REKABETC%C4%B0L%C4%B0K/2026/2026.09.07/2026_Y%C4%B1l%C4%B1_1._Proje_Teklif_C%CC%A7ag%CC%86r%C4%B1s%C4%B1.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "notice",
+        "eligibleCosts"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "kosgeb-istihdami-koruma-2026-2",
+      "title": "İstihdamı Koruma — İmalat İşletmelerine Finansman Desteği",
+      "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/%C4%B0stihdam%C4%B1%20Koruma/2026/2026.09.01/00_I%CC%87stihdam%C4%B1_Koruma_Destek_Program%C4%B1_Yo%CC%88nergesi_01.09.26-763613.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "eurostars-call-12-2027",
       "title": "Eurostars — Yenilikçi KOBİ’lerin Uluslararası Ar-Ge Çağrısı",
       "source": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
@@ -1338,6 +1401,6 @@
       "complete": true
     }
   ],
-  "total": 44,
-  "complete": 23
+  "total": 46,
+  "complete": 25
 }
