@@ -3,6 +3,9 @@ import { calls } from "./calls-data";
 import { readFile } from "node:fs/promises";
 import type { FundingCall } from "./calls-data";
 import { unreviewedAnnouncements } from "./call-utils";
+import { evidenceAlerts } from "./verification-utils";
+
+const snapshotTime = Date.now();
 
 export default async function Home() {
   const conditions = await readFile('public/conditions.json', 'utf8').then(JSON.parse).catch(() => ({}));
@@ -11,8 +14,8 @@ export default async function Home() {
   const updatedCalls = calls.map(c => {
     const review = verified[c.id];
     const urls = review ? [review.evidenceUrl, ...(review.additionalEvidence ?? [])].filter(Boolean) : [];
-    const evidencePending = urls.some(url => !evidence[url]?.ok || evidence[url]?.changed || Date.now() - Date.parse(evidence[url]?.checkedAt ?? '') > 48 * 3600000);
-    return {...c, ...review, evidencePending, sourceConditions: conditions[c.id]};
+    const alerts = evidenceAlerts(urls, evidence, snapshotTime);
+    return {...c, ...review, evidenceAlerts: alerts, evidencePending: alerts.length > 0, sourceConditions: conditions[c.id]};
   });
   const feed = await readFile('public/national-calls.json', 'utf8').then(JSON.parse).catch(() => ({ calls: [] }));
   const discovered = unreviewedAnnouncements(updatedCalls, feed.calls as FundingCall[]);

@@ -6,6 +6,7 @@ export type FundingCall = {
   applicantGroups?: ApplicantGroup[];
   verificationIssues?: { field: string; message: string }[];
   evidencePending?: boolean;
+  evidenceAlerts?: { url: string; reason: string }[];
   verifiedFields?: string[];
   evidenceUrl?: string;
   additionalEvidence?: string[];
@@ -54,6 +55,33 @@ export type FundingCall = {
 };
 
 export const calls: FundingCall[] = [
+  {
+    id: "eureka-turkiye-ispanya-2026", scope: "international", code: "Eureka Network · TR–ES 2026",
+    title: "Eureka Network — Türkiye–İspanya Ortak Sanayi Ar-Ge Çağrısı",
+    institution: "Eureka Network · TÜBİTAK ve CDTI Innovación",
+    institutionShort: "Eureka / TÜBİTAK / CDTI",
+    status: "open", openDate: "2026-10-21T00:00:00+03:00", openingDateOnly: true,
+    deadline: "2027-03-03T19:00:00+03:00",
+    applicants: "Türkiye’de yerleşik KOBİ veya büyük sermaye şirketi, İspanya’dan en az bir bağımsız şirket ile ortak başvurabilir. Türkiye’de üniversiteler ve araştırma enstitüleri doğrudan fon başvurusu yapamaz; hizmet sağlayıcı olabilir. Hiçbir kuruluş veya ülke proje bütçesinin %70’ini aşamaz.",
+    companyScale: ["KOBİ", "Büyük Ölçek"],
+    fundingAmount: "Türkiye’de 1509 ulusal proje bütçesi tavanı: tek Türk kuruluş için 25 milyon TL; birden fazla Türk ortak varsa toplam 80 milyon TL ve Türk ortak başına 25 milyon TL. Bunlar hibe tutarı değil, bütçe tavanlarıdır.",
+    fundingType: "Türkiye’de TÜBİTAK 1509 kapsamında geri ödemesiz Ar-Ge desteği",
+    supportRate: "1509’da desteklenen ilk beş projede KOBİ %75, büyük firma %60; altıncı ve sonrasında KOBİ %60, büyük firma %40. 1 Ocak 2020’den itibaren sözleşmesi imzalanmış 1509 projelerinde yürütücü ve ortak rollerindeki destekler sayılır.",
+    duration: "Çağrıya özgü bağlayıcı azami süre yayımlanan belgelerden kesinleştirilemedi.",
+    summary: "Sivil amaçlı ve ticarileşebilir yeni ürün, süreç veya hizmet geliştirmeye yönelik uluslararası Ar-Ge. Sektör kısıtı yok; akıllı imalat, enerji, hareketlilik ve tarım-gıda örnek alanlardır.",
+    objectives: ["Türk ve İspanyol firmaları arasında pazara dönük Ar-Ge iş birliği"],
+    eligibleCosts: ["1509 kapsamında uygun personel, seyahat ve ekipman", "Yazılım, malzeme, danışmanlık ve Ar-Ge hizmet alımları"],
+    application: "Ortak İngilizce başvuru Eureka SmartSimple üzerinden yapılır. Türkiye’de önce PRODİS üzerinden 1509 ön başvurusu, uygun bulunanlar için ulusal başvuru yapılır. İki ulusal adımın tarih aralığı TÜBİTAK tarafından e-postayla bildirilir.",
+    followUpStages: [
+      { title: "Türkiye — 1509 ön başvuru ve ulusal başvuru", schedule: "Takvim TÜBİTAK tarafından e-postayla bildirilir.", access: "Türk katılımcılara yönelik ulusal süreç; uluslararası son tarihin yerine geçmez." },
+    ],
+    notice: "Uluslararası son saat 17.00 CET, Türkiye saatiyle 19.00. İspanyol ortak CDTI’ye ayrıca başvurur; CDTI duyurusu bu işlemin 10 Mart 2027’den önce tamamlanmasını ister.",
+    sourceUrl: "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi",
+    sourceLabel: "TÜBİTAK — Türkiye–İspanya resmî çağrı duyurusu",
+    verifiedAt: "2026-11-05",
+    tags: ["Sanayi Ar-Ge", "Eureka", "İkili İş Birliği"],
+    themes: ["Ar-Ge ve Yenilik", "Dijital Dönüşüm"], sectors: ["İmalat", "Enerji", "Tarım ve Gıda", "Sektörler Arası"],
+  },
   {
     id: "tubitak-1707-2026-3", scope: "national", code: "1707 · 2026/3",
     title: "Siparişe Dayalı Ar-Ge — 2026/3",

@@ -45,7 +45,10 @@ function VerificationDetails({ call }: { call: FundingCall }) {
     {pendingFields.length > 0 && <p>Kontrol bekleyen: {pendingFields.map(verificationFieldLabel).join(", ")}.</p>}
     {call.evidencePending && <p>En az bir dayanak değişti veya okunamadı. Önceki karşılaştırma güncel kabul edilmemeli.</p>}
     <p><a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/verification-audit.json`} target="_blank" rel="noopener noreferrer">Alan bazlı kontrol dökümü</a></p>
-    {urls.map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">Resmî belge {index + 1}</a></p>)}
+    {[...new Set(urls)].map((url, index) => {
+      const alert = call.evidenceAlerts?.find(item => item.url === url);
+      return <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">Resmî belge {index + 1}</a>{alert && ` — ${alert.reason}`}</p>;
+    })}
   </div>;
 }
 

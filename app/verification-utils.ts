@@ -1,5 +1,21 @@
 import type { FundingCall } from "./calls-data.ts";
 
+type EvidenceObservation = { ok?: boolean; checkedAt?: string; changed?: boolean; documentsChanged?: boolean };
+
+export function evidenceAlerts(urls: string[], observations: Record<string, EvidenceObservation>, now: number) {
+  return [...new Set(urls)].flatMap(url => {
+    const row = observations[url];
+    const checked = Date.parse(row?.checkedAt ?? "");
+    const reason = !row ? "Henüz taranmadı"
+      : !row.ok ? "Son taramada kaynağa erişilemedi"
+      : row.documentsChanged ? "Bağlı belge listesi değişti"
+      : row.changed ? "Kaynak içeriği değişti"
+      : !Number.isFinite(checked) || now - checked > 48 * 3600000 ? "Son başarılı kontrol 48 saatten eski veya tarihi bilinmiyor"
+      : null;
+    return reason ? [{ url, reason }] : [];
+  });
+}
+
 const core = ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "application"] as const;
 const labels = {
   applicants: "Başvuru sahibi", companyScale: "Kuruluş ölçeği", fundingAmount: "Destek tutarı",
