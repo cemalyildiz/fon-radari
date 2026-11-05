@@ -17,6 +17,12 @@
     "additionalEvidence": ["https://katalog.ssb.gov.tr/pybs-disportal/openpages/basvuruislemleridisportal/sagaGirisi.xhtml"],
     "verifiedFields": ["recordType", "application", "notice"]
   },
+  "tubitak-1707-2026-3": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-08/Siparis_Ar-Ge_2026-3_Cagri_Dokumani.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-cagrisi", "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "notice"]
+  },
   "tubitak-1707-2026-2": {
     "applicantGroups": ["Özel sektör"],
     "companyScale": ["KOBİ", "Büyük Ölçek"],

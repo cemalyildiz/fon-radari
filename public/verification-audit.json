@@ -1,6 +1,37 @@
 {
   "records": [
     {
+      "id": "tubitak-1707-2026-3",
+      "title": "Siparişe Dayalı Ar-Ge — 2026/3",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-08/Siparis_Ar-Ge_2026-3_Cagri_Dokumani.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "biodivfuture-2026",
       "title": "BiodivFuture — Yeni Ekosistemler ve Biyoçeşitlilik",
       "source": "https://ufukavrupa.org.tr/sites/default/files/users/user397/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf",
@@ -1055,6 +1086,6 @@
       "complete": true
     }
   ],
-  "total": 35,
-  "complete": 17
+  "total": 36,
+  "complete": 18
 }
