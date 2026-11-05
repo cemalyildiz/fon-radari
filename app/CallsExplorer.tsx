@@ -593,7 +593,7 @@ export default function CallsExplorer({ calls }: Props) {
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
                 <article><span>Kimler için?</span><b>{selected.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</b></article>
-                <article><span>Başvuru dönemi{selected.calendarDateOnly ? "" : " · Türkiye saati"}</span><b>{selected.recordType === "program" ? "Program rehberi — güncel başvuru kabulünü resmî kaynaktan kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, !selected.calendarDateOnly)} – ${formatDate(selected.deadline, !selected.calendarDateOnly)}`}</b></article>
+                <article><span>{selected.followUpStages?.length ? "İlk uluslararası başvuru" : "Başvuru dönemi"}{selected.calendarDateOnly ? "" : " · Türkiye saati"}</span><b>{selected.recordType === "program" ? "Program rehberi — güncel başvuru kabulünü resmî kaynaktan kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, !selected.calendarDateOnly && !selected.openingDateOnly)} – ${formatDate(selected.deadline, !selected.calendarDateOnly)}`}</b></article>
                 <article><span>Destek miktarı</span><b>{selected.fundingAmount}</b></article>
                 <article><span>Destek şekli</span><b>{selected.fundingType}</b></article>
                 <article><span>Destek oranı</span><b>{selected.supportRate ?? "Çağrı dokümanına göre"}</b></article>
@@ -604,8 +604,9 @@ export default function CallsExplorer({ calls }: Props) {
                 <article><span>Tema / konsept</span><b>{(selected.themes ?? selected.tags).join(", ")}</b></article>
                 <article><span>Sektörler</span><b>{(selected.sectors ?? ["Sektörler Arası"]).join(", ")}</b></article>
               </div>
-              {(selected.preDeadline || selected.deadlines?.length || selected.dateCheckedAt) && <div className="application-note"><span>Başvuru takvimi · Türkiye saati</span>
-                {selected.preDeadline && <p>Ön kayıt / ek ulusal işlem: {formatDate(selected.preDeadline, true)} — aşamanın açıklaması için önemli notları inceleyin.</p>}
+              {selected.followUpStages?.map(stage => <div className="application-note" key={stage.title}><span>{stage.title}</span><p>{stage.schedule}</p><p>{stage.access}</p></div>)}
+              {((selected.preDeadline && !selected.followUpStages?.length) || selected.deadlines?.length || selected.dateCheckedAt) && <div className="application-note"><span>Başvuru takvimi · Türkiye saati</span>
+                {selected.preDeadline && !selected.followUpStages?.length && <p>Ön kayıt / ek ulusal işlem: {formatDate(selected.preDeadline, true)} — aşamanın açıklaması için önemli notları inceleyin.</p>}
                 {selected.deadlines?.map(date => <p key={date}>{formatDate(date, true)} {Date.parse(date) <= now ? "(geçti)" : ""}</p>)}
                 {selected.dateCheckedAt && <p>Takvim son kontrolü: {formatDate(selected.dateCheckedAt)}</p>}
               </div>}

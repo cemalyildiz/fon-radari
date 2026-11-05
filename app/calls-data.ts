@@ -20,6 +20,8 @@ export type FundingCall = {
   openDate: string;
   deadline?: string;
   calendarDateOnly?: boolean;
+  openingDateOnly?: boolean;
+  followUpStages?: { title: string; schedule: string; access: string }[];
   deadlines?: string[];
   dateCheckedAt?: string;
   recordType?: "call" | "program";

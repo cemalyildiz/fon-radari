@@ -265,16 +265,16 @@
         "duration",
         "application",
         "applicants",
-        "notice"
-      ],
-      "pendingFields": [
+        "notice",
         "companyScale",
         "fundingType",
         "openDate",
-        "deadline"
+        "deadline",
+        "followUpStages"
       ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "eureka-biotech-2026",
@@ -286,15 +286,20 @@
         "duration",
         "application",
         "applicants",
-        "notice"
-      ],
-      "pendingFields": [
+        "notice",
         "companyScale",
         "fundingType",
         "openDate",
-        "deadline"
+        "deadline",
+        "followUpStages"
       ],
-      "issues": [],
+      "pendingFields": [],
+      "issues": [
+        {
+          "field": "deadlineTime",
+          "message": "TÜBİTAK duyurusu 25 Eylül 2026 saat 14.00 GMT, Eureka çağrı sayfası aynı gün 23.59 CEST gösteriyor. Ortak kapanış tarihi doğrulandı; kesin saat gösterilmiyor."
+        }
+      ],
       "complete": false
     },
     {
@@ -307,16 +312,16 @@
         "supportRate",
         "applicants",
         "application",
-        "notice"
-      ],
-      "pendingFields": [
+        "notice",
         "companyScale",
         "fundingType",
         "openDate",
-        "deadline"
+        "deadline",
+        "followUpStages"
       ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "eureka-disaster-resilience-2026",
@@ -327,14 +332,15 @@
         "duration",
         "supportRate",
         "application",
-        "notice"
-      ],
-      "pendingFields": [
-        "applicants",
+        "notice",
         "companyScale",
         "fundingType",
         "openDate",
-        "deadline"
+        "deadline",
+        "followUpStages"
+      ],
+      "pendingFields": [
+        "applicants"
       ],
       "issues": [],
       "complete": false
@@ -350,16 +356,16 @@
         "duration",
         "preDeadline",
         "application",
-        "notice"
-      ],
-      "pendingFields": [
+        "notice",
         "companyScale",
         "fundingType",
         "openDate",
-        "deadline"
+        "deadline",
+        "followUpStages"
       ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "eureka-xecs-call-6-2026",
@@ -604,5 +610,5 @@
     }
   ],
   "total": 29,
-  "complete": 10
+  "complete": 13
 }
