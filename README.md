@@ -16,6 +16,7 @@ npm run dev
 ## Veri kapsamı ve sınırlar
 
 - AB araması 2021–2027 program dönemindeki, gelecekte son tarihi bulunan 1/2/8 türlerini tüm sonuç sayfalarında tarar. Kaynağın 10.000 sonuç sınırı için tarih aralıkları bölünür. Bütün fonların veya Türkiye’ye uygun sanayi çağrılarının eksiksiz envanteri olduğu iddia edilmez.
+- AB hibe konusu, EuropeAid dış eylem çağrısı ve proje alt çağrısı farklı kayıt türleridir. Alt çağrının başlığı ve portal kimliği kendi kaydından alınır; ana proje koduyla birleştirilmez. Bağlantısı yeniden eşleştirilemeyen eski aktarım satırları denetim için korunur ancak çağrı kartı olarak gösterilmez. API’de çelişen kapanış alanları açık başvuru kabul edilmez.
 - Eski kayıtlar silinmez. Gelecek tarihli fakat artık bulunamayan kayıtlar kontrol bekler; geçmiş tarihli kayıtlar arşivde kalır.
 - Otomatik aktarım yalnızca başlık/takvimdir; uygunluk, sektör, bütçe ve Türkiye’den katılım doğrulaması değildir. Sınıflandırılmamış kayıtlar açıkça ayrılır.
 - Ulusal kaynakların duyuru bağlantıları da saatlik taranır; keşfedilen duyuru, açık çağrı veya doğrulanmış koşul kabul edilmez. Kaynak erişim hataları ayrıca gösterilir.

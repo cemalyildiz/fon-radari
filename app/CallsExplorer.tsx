@@ -146,6 +146,7 @@ export default function CallsExplorer({ calls }: Props) {
   );
   const selected = normalizedCalls.find(call => call.id === selectedId) ?? null;
   const feedStale = stale(liveFeed.checkedAt, now);
+  const feedNeedsMigration = Boolean(liveFeed.calls?.some(call => !call.sourceKind));
   const institutionOptions = ["Tümü", ...Array.from(new Set(normalizedCalls.filter(c => c.scope === scope).map(c => c.institutionShort))).sort((a,b) => a.localeCompare(b, "tr"))];
   const fundingOptions = ["Tümü", ...Array.from(new Set(normalizedCalls.filter(c => c.scope === scope).map(fundingCategory)))];
   function resetFilters(preserveAudience = false) {
@@ -334,10 +335,10 @@ export default function CallsExplorer({ calls }: Props) {
             <h2>Güncel sanayi çağrıları ve destekleri</h2>
             <p>Yeşil ve dijital dönüşüm dâhil tüm temalarda, sektörünüze uyan fırsatları karşılaştırın.</p>
           </div>
-          <div className={`sync-chip ${liveFeed.degraded || feedStale ? "degraded" : ""}`} role="status">
+          <div className={`sync-chip ${liveFeed.degraded || feedStale || feedNeedsMigration ? "degraded" : ""}`} role="status">
             <span />
             <div>
-              <b>{liveFeed.degraded ? "AB yenilemesi başarısız · son veri korunuyor" : !liveFeed.checkedAt ? "AB verisi yükleniyor" : feedStale ? "AB verisi eski · yeniden kontrol gerekli" : "AB başlık ve takvim verisi alındı"}</b>
+              <b>{feedNeedsMigration ? "Eski AB kayıtlarının bağlantıları yeniden kontrol bekliyor" : liveFeed.degraded ? "AB yenilemesi başarısız · son veri korunuyor" : !liveFeed.checkedAt ? "AB verisi yükleniyor" : feedStale ? "AB verisi eski · yeniden kontrol gerekli" : "AB başlık ve takvim verisi alındı"}</b>
               <small>
                 {liveFeed.checkedAt
                   ? `Son başarılı aktarım: ${formatDate(liveFeed.checkedAt, true)}`
