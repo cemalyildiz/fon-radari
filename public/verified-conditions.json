@@ -136,15 +136,30 @@
     "evidenceUrl": "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027",
     "verifiedFields": ["applicants", "fundingAmount", "application", "notice"]
   },
+  "eic-accelerator-open-2027": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
+    "additionalEvidence": ["https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "deadline", "application", "eligibleCosts", "notice"]
+  },
+  "eic-step-scaleup-2027": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
+    "additionalEvidence": ["https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "deadline", "application", "notice"]
+  },
   "eic-step-scaleup-2026": {
     "applicantGroups": ["Özel sektör"],
-    "sourceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
+    "sourceUrl": "https://eic.ec.europa.eu/funding-opportunities_en",
     "applicants": "AB veya uygun asosiye ülkede kurulu tek KOBİ veya 500’den az çalışanlı small mid-cap; Birleşik Krallık hariç. Uygun şirket adına yatırımcı da öneri sunabilir. Tek nitelikli yatırımcıdan hedef turun en az %20’si için ön taahhüt gerekir.",
     "fundingAmount": "10–30 milyon avro yalnız öz sermaye yatırımı; 2026 toplam bütçesi 300 milyon avro. Hedef yatırım turu 50–150 milyon avro ve EIC yatırımının en az 3–5 katı ölçeğinde olmalı.",
-    "application": "Funding & Tenders üzerinden iş planı (en fazla 50 sayfa), sunum (en fazla 15 sayfa), tek yatırımcı ön taahhüdü, finansal plan, FTO analizi/açıklaması ve kilit personel özgeçmişleri sunulur. Sayfa sürekli gönderim bildiriyor; değerlendirme kesimleri portal takviminden teyit edilmeli.",
-    "notice": "Öz sermaye yatırımı hibe değildir; EIC Fund yatırım incelemesine tabidir. Şirketin stratejik teknoloji alanı ve uygun ülkede kuruluş şartları sağlanmalıdır. Genel sayfadaki sürekli gönderim ifadesi tek başına belirli bir kesim tarihini doğrulamaz.",
-    "evidenceUrl": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
-    "verifiedFields": ["applicants", "fundingAmount", "application", "notice"]
+    "supportRate": "Sabit gider destek oranı yok; EIC yatırım koşulları şirket ve ortak yatırım turuna göre müzakere edilir.",
+    "application": "Funding & Tenders üzerinden iş planı (en fazla 50 sayfa), sunum (en fazla 15 sayfa), tek yatırımcı ön taahhüdü, finansal plan, FTO analizi/açıklaması ve kilit personel özgeçmişleri sunulur. 2026 son değerlendirme kesimi 25 Kasım saat 17.00 Brüksel (19.00 TSİ).",
+    "notice": "Öz sermaye yatırımı hibe değildir; EIC Fund yatırım incelemesine tabidir. 2026 çalışma programı ve EIC çağrı dizini 25 Kasım kesiminde uyuşuyor. AB portalının otomatik veri alanındaki 8 Ekim tarihi değerlendirme kesimi olarak kullanılmadı. 2027 programı ayrı kayıttadır.",
+    "verifiedAt": "2026-11-05",
+    "evidenceUrl": "https://eic.ec.europa.eu/document/download/52598755-1351-4b54-b46b-e2682d0a3aec_en?filename=EIC-Work-Programme-2026.pdf",
+    "additionalEvidence": ["https://eic.ec.europa.eu/funding-opportunities_en", "https://eic.ec.europa.eu/news/eic-selects-new-european-scale-ups-step-scale-investments-2026-07-28_en"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "deadline", "application", "notice"]
   },
   "eic-accelerator-2026": {
     "applicantGroups": ["Özel sektör"],

@@ -1,6 +1,68 @@
 {
   "records": [
     {
+      "id": "eic-accelerator-open-2027",
+      "title": "EIC Accelerator Open — 2027 Hibe ve Yatırım",
+      "source": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "deadline",
+        "application",
+        "eligibleCosts",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "deadline"
+      ],
+      "pendingFields": [
+        "openDate"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
+      "id": "eic-step-scaleup-2027",
+      "title": "EIC STEP Scale Up — 2027 Öz Sermaye Yatırımı",
+      "source": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "deadline",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "application",
+        "deadline"
+      ],
+      "pendingFields": [
+        "duration",
+        "openDate"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
       "id": "kosgeb-kuresel-rekabetcilik-2026-1",
       "title": "Küresel Rekabetçilik — 2026/1 Proje Teklif Çağrısı",
       "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KURESEL%20REKABETC%C4%B0L%C4%B0K/2026/2026.09.07/2026_Y%C4%B1l%C4%B1_1._Proje_Teklif_C%CC%A7ag%CC%86r%C4%B1s%C4%B1.pdf",
@@ -806,26 +868,30 @@
     },
     {
       "id": "eic-step-scaleup-2026",
-      "title": "EIC STEP Scale Up",
-      "source": "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
+      "title": "EIC STEP Scale Up — 2026 Öz Sermaye Yatırımı",
+      "source": "https://eic.ec.europa.eu/document/download/52598755-1351-4b54-b46b-e2682d0a3aec_en?filename=EIC-Work-Programme-2026.pdf",
       "verifiedFields": [
         "applicants",
+        "companyScale",
         "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "deadline",
         "application",
         "notice"
       ],
       "verifiedCore": [
         "applicants",
-        "fundingAmount",
-        "application"
-      ],
-      "pendingFields": [
         "companyScale",
+        "fundingAmount",
         "fundingType",
         "supportRate",
-        "duration",
-        "openDate",
+        "application",
         "deadline"
+      ],
+      "pendingFields": [
+        "duration",
+        "openDate"
       ],
       "issues": [],
       "complete": false
@@ -1401,6 +1467,6 @@
       "complete": true
     }
   ],
-  "total": 46,
+  "total": 48,
   "complete": 25
 }
