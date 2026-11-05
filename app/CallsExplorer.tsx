@@ -597,7 +597,7 @@ export default function CallsExplorer({ calls }: Props) {
               <p>{selected.summary}</p>
               <div className="modal-header-bottom">
                 <Countdown call={selected} now={now} />
-                <span>{selected.verification === "metadata" ? `Kaynak aktarımı: ${formatDate(selected.sourceCheckedAt, true)}` : `Editoryal kontrol: ${formatDate(selected.verifiedAt, true)}`}</span>
+                <span>{selected.verification === "metadata" ? `Kaynak aktarımı: ${formatDate(selected.sourceCheckedAt, true)}` : `Editoryal kontrol: ${formatDate(selected.verifiedAt, !/^\d{4}-\d{2}-\d{2}$/.test(selected.verifiedAt))}`}</span>
               </div>
             </div>
 

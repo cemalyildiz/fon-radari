@@ -2,18 +2,45 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 
-export function evidenceState(previous, hash, checkedAt) {
+const fingerprint = value => createHash('sha256').update(value).digest('hex');
+
+export function evidenceState(previous, hash, checkedAt, documentHash) {
   const baselineHash = previous?.baselineHash ?? hash;
-  return { baselineHash, hash, checkedAt, ok: true, changed: hash !== baselineHash };
+  const baselineDocumentHash = previous?.baselineDocumentHash ?? documentHash;
+  const documentsChanged = baselineDocumentHash !== documentHash;
+  return { baselineHash, hash, baselineDocumentHash, documentHash, checkedAt, ok: true, documentsChanged, changed: hash !== baselineHash || documentsChanged };
+}
+function mainContent(html) {
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? html;
+  return main.replace(/<(script|style|nav|footer)\b[^>]*>[\s\S]*?<\/\1>/gi,'');
 }
 export function contentHash(bytes, type) {
-  if (type.includes('pdf')) return createHash('sha256').update(bytes).digest('hex');
+  if (type.includes('pdf')) return fingerprint(bytes);
   const html = new TextDecoder().decode(bytes);
   if (/access denied|erişim engellendi|captcha challenge/i.test(html)) throw new Error('Kaynak erişim engeli');
-  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? html;
-  const stable = main.replace(/<(script|style|nav|footer)\b[^>]*>[\s\S]*?<\/\1>/gi,'').replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
+  const stable = mainContent(html).replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
   if (stable.length < 200) throw new Error('Yetersiz kaynak içeriği');
-  return createHash('sha256').update(stable).digest('hex');
+  return fingerprint(stable);
+}
+export function documentLinksHash(bytes, type, pageUrl) {
+  if (type.includes('pdf')) return undefined;
+  const documents = new Set();
+  const html = mainContent(new TextDecoder().decode(bytes));
+  for (const [, href] of html.matchAll(/<a\b[^>]*\s+href\s*=\s*["']([^"']+)["']/gi)) {
+    try {
+      const url = new URL(href.replace(/&amp;|&#38;/gi, '&'), pageUrl);
+      if (url.protocol !== 'https:' || url.username || url.password || !/\.(?:pdf|docx?|xlsx?|zip)$/i.test(url.pathname)) continue;
+      url.hash = '';
+      for (const key of [...url.searchParams.keys()]) {
+        if (/^(?:utm_.*|fbclid|gclid|trk)$/i.test(key)) url.searchParams.delete(key);
+      }
+      url.searchParams.sort();
+      documents.add(url.href);
+    } catch {
+      // Unresolvable links are not valid document references.
+    }
+  }
+  return fingerprint(JSON.stringify([...documents].sort()));
 }
 async function run() {
   const reviews = JSON.parse(await readFile('public/verified-conditions.json','utf8'));
@@ -32,7 +59,8 @@ async function run() {
         const response = await fetch(url,{signal:AbortSignal.timeout(25000)});
         if(!response.ok) throw new Error(`HTTP ${response.status}`);
         const bytes = new Uint8Array(await response.arrayBuffer());
-        result[url] = evidenceState(previous[url],contentHash(bytes,response.headers.get('content-type') ?? ''),attemptedAt);
+        const type = response.headers.get('content-type') ?? '';
+        result[url] = evidenceState(previous[url],contentHash(bytes,type),attemptedAt,documentLinksHash(bytes,type,response.url || url));
       } catch(error) { result[url] = {...previous[url],ok:false,attemptedAt,error:error.message}; }
     }
   }));
