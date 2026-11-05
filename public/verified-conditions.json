@@ -193,6 +193,12 @@
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
     "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
   },
+  "tubitak-1832-2026-2": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-09/1832_2026-2_Cagri_Duyurusu_revize_1.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1832-sanayide-yesil-donusum-cagrisi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "notice"]
+  },
   "tubitak-1832-2026-1": {
     "applicantGroups": ["Özel sektör"],
     "companyScale": ["KOBİ", "Büyük Ölçek"],

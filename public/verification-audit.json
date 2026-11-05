@@ -860,6 +860,37 @@
       "complete": true
     },
     {
+      "id": "tubitak-1832-2026-2",
+      "title": "Sanayide Yeşil Dönüşüm Çağrısı — 2026/2",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-09/1832_2026-2_Cagri_Duyurusu_revize_1.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "tubitak-1832-2026-1",
       "title": "Sanayide Yeşil Dönüşüm Çağrısı",
       "source": "https://tubitak.gov.tr/sites/default/files/2026-04/1832_2026-1_Cagri_Duyurusu.pdf",
@@ -891,6 +922,6 @@
       "complete": true
     }
   ],
-  "total": 30,
-  "complete": 13
+  "total": 31,
+  "complete": 14
 }
