@@ -193,6 +193,13 @@
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
     "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
   },
+  "dut-2026": {
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "evidenceUrl": "https://ufukavrupa.org.tr/sites/default/files/users/user20728/DUT%202026_%C4%B0ki%20a%C5%9Famal%C4%B1_S%C3%BCre%C3%A7%20Dok%C3%BCman%C4%B1.pdf",
+    "additionalEvidence": ["https://dutpartnership.eu/sites/default/files/2026-10/DUT%20Call%202026_Call%20Text_0.pdf", "https://ufukavrupa.org.tr/tr/ortakliklar/kentsel-gecisleri-surdurulebilir-bir-gelecege-yonlendirme-ortakligi-dut"],
+    "verificationIssues": [{"field": "supportRate", "message": "Firma oranları iki belgede de aynı: KOBİ %75, büyük işletme %60. Türkiye ulusal kuralları kamu kurumları için %100 belirtirken, uluslararası çağrı metnindeki Türkiye ekinde ‘Public authorities’ satırı %60 gösteriyor. Kamu otoritesinin oranı için bütçe hazırlamadan önce TÜBİTAK’tan teyit alın."}],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "duration", "openDate", "deadline", "application", "eligibleCosts", "notice"]
+  },
   "tubitak-1832-2026-2": {
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-09/1832_2026-2_Cagri_Duyurusu_revize_1.pdf",
