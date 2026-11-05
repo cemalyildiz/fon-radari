@@ -61,16 +61,20 @@
   },
   "kosgeb-yapay-zeka-kredi-2026": {
     "applicantGroups": ["Özel sektör"],
+    "companyScale": ["Start-up", "KOBİ"],
+    "openDate": "2026-07-09T00:00:00+03:00",
+    "deadline": "2026-12-31T23:59:00+03:00",
+    "calendarDateOnly": true,
     "fundingAmount": "Toplam en fazla 5 milyon TL kredi. Ücretsiz hizmet limitinden bağımsız teminat karşılığı en fazla 500.000 TL; onaylı ücretsiz hizmet limiti varsa teminat karşılığı o tutar kadar ilave kredi. Eski 500.000 TL alt limit hükmü 20 Ekim 2026 revizyonunda değiştirilmiştir.",
     "fundingType": "Faiz ve komisyon uygulanmayan, teminatlı geri ödemeli kredi",
     "supportRate": "Hibe değildir; kredi anaparası geri ödenir",
     "duration": "24 ay vade; ilk 12 ay ödemesiz, ardından dörder aylık dönemlerle dört eşit taksit",
     "applicants": "Uygun KOSGEB sektörlerinde faaliyet gösteren KOBİ; Türk Ticaret Kanunu kapsamındaki gerçek/tüzel kişi, aktif KOSGEB kaydı ve güncel beyan, başvuru tarihinde geçerli Teknogirişim Rozeti ve GO Dijital Cüzdan hesabı gerekir.",
     "application": "KOSGEB sistemi/e-Devlet başvurusu sonrası koşullar kontrol edilir. Kesin teminat mektubu geldikten sonra kredi cüzdana blokeli aktarılır. Onay sonrası faturalar yüklenir; uygun hizmet giderleri KDV hariç serbest bırakılır. Hizmet sağlayıcı ve giderler resmî listelerde olmalıdır.",
-    "notice": "20 Ekim 2026 tarihli Rev.02 yönergesi esas alındı. İlk blokeli transferden itibaren 12 ay içinde en fazla dört kredi tanımı; kullanılmayan blokeler için iptal hükümleri var. Limit üzeri vergi/SGK borcu blokeli ödemeyi engeller. Teminatın süre ve yenileme şartları ayrıca uygulanır.",
+    "notice": "Başvuru dönemi resmî açılış duyurusunda 9 Temmuz–31 Aralık 2026 olarak veriliyor; kapanış saati belirtilmiyor, sistemden teyit edin. Kredi koşullarında Temmuz duyurusundaki eski tutar ve taksit anlatımı yerine 20 Ekim 2026 tarihli Rev.02 yönergesi esas alındı. İlk blokeli transferden itibaren 12 ay içinde en fazla dört kredi tanımlanabilir. Kullanılmayan blokeler, vergi/SGK borcu ve teminat yenilemesi için yönergedeki şartlar uygulanır.",
     "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Yapay%20Zeka%20Kredi%20Programi/2026/2026.09.28/Yapay_Zeka_Kredi_Yo%CC%88nergesi_Rev.02.pdf",
-    "additionalEvidence": ["https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9414/yapay-zek-kredi-programi"],
-    "verifiedFields": ["fundingAmount", "fundingType", "supportRate", "duration", "applicants", "application", "notice"]
+    "additionalEvidence": ["https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9414/yapay-zek-kredi-programi", "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9427/kosgebden-teknoloji-girisimlerine-yapay-zek-kredi-programi"],
+    "verifiedFields": ["fundingAmount", "fundingType", "supportRate", "duration", "applicants", "companyScale", "openDate", "deadline", "application", "notice"]
   },
   "horizon-hop-on-2026": {
     "applicantGroups": ["Özel sektör","Üniversite / Araştırma"],
@@ -346,15 +350,21 @@
   },
   "kosgeb-kobi-dijital-donusum": {
     "applicantGroups": ["Özel sektör"],
-    "verifiedAt": "2026-11-04T17:00:00+03:00",
-    "applicants": "NACE Kısım C-İmalat sektöründe küçük veya orta ölçekli işletmeler; KOSGEB kaydı aktif ve beyanı güncel olmalı. Onaylı DDX veya SIRI raporu, son mali yılda pozitif öz kaynak ve son üç mali yıldan en az birinde pozitif faaliyet kârı gerekir. Mikro işletmeler kapsam dışıdır.",
+    "companyScale": ["KOBİ"],
+    "recordType": "program",
+    "status": "unknown",
+    "applicationType": "fixed",
+    "openDate": "",
+    "applicants": "NACE Rev.2 Kısım C–İmalat sektöründeki küçük ve orta işletmeler; mikro işletmeler kapsam dışıdır. Türk Ticaret Kanunu kapsamında gerçek veya tüzel kişi, aktif KOSGEB kaydı, güncel işletme beyanı ve yetkili danışmandan onaylı dijital olgunluk raporu gerekir. Son mali yılda öz kaynak toplamı ve son üç mali yılın en az birinde faaliyet kârı pozitif olmalı. Son üç yılda kurulanlar için onaylı mali veriler üzerinden değerlendirme yapılır.",
     "fundingAmount": "İşletme başına 1.000.000–20.000.000 TL yatırım kredisi",
     "fundingType": "Kredi faiz giderlerine geri ödemesiz destek; kredi anaparası geri ödenir",
-    "supportRate": "20 destek puanı",
-    "duration": "Program 24 ay; azami kredi vadesi 36 ay; bankanın uygun bulmasıyla en fazla 6 ay ödemesiz dönem",
-    "notice": "Yeni makine, teçhizat, yazılım ve donanım giderleri Kurul onayına tabidir. EBRD uygun bulunmayan sektör/faaliyet listesi uygulanır. Desteklenen varlıklar son kredi vadesinden sonraki bir yıl boyunca satılamaz, kiralanamaz veya devredilemez.",
-    "evidenceUrl": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9144/kobi-dijital-donusum-destek-programi",
-    "verifiedFields": ["applicants", "fundingAmount", "fundingType", "supportRate", "duration", "notice"]
+    "supportRate": "Program tablosunda 20 destek puanı; faiz desteği hesabında bankanın krediyi kullandırdığı tarihte geçerli puan esas alınır.",
+    "duration": "İlk destek kurul kararının evrak kaydından itibaren 24 ay; kredi kullanımı bu sürede tamamlanır. Kredi vadesi en fazla 36 ay; üçer aylık eşit taksitler ve banka onayıyla vade içinde en fazla 6 ay ödemesiz dönem.",
+    "application": "Yetkili danışmandan onaylı DDX veya SIRI raporu alınır. Raporun geçerlilik/yol haritası süresi içinde; bu süre belirtilmemişse onaydan itibaren bir yıl içinde KOBİ Bilgi Sistemi’nde başvuru formu ve gerekli ekler onaylanır. KOSGEB kontrolü ve Kurul kabulü sonrası protokollü bankaya kredi başvurusu yapılır. Uygun alım ve taksit ödemesinden sonra sistemde ödeme talebi oluşturulur.",
+    "notice": "9 Ekim 2026 tarihli Rev.06 yönergesi esas alındı. İşletme bir kez yararlanabilir; 24 ay içinde kredi kullanmayan işletme yararlanmamış sayılır. Kurulca onaylı yeni makine, teçhizat, yazılım ve donanım desteklenir. EBRD sektör/faaliyet istisnaları ve son kredi vadesinden itibaren bir yıllık devir yasağı uygulanır. İncelenen belgelerde genel bir kapanış tarihi veya kesintisiz kabul taahhüdü bulunmadığından güncel kabul durumu KOSGEB sisteminden teyit edilmelidir.",
+    "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KOB%C4%B0%20Dijital%20Donusum%20DP/2026/2026.10.09/KOBI%CC%87DijitalDo%CC%88nu%CC%88s%CC%A7u%CC%88mDestekProgram%C4%B1Yo%CC%88nergesi.pdf",
+    "additionalEvidence": ["https://www.kosgeb.gov.tr/site/tr/genel/detay/9144/kobi-dijital-donusum-destek-programi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "application", "recordType", "notice"]
   },
   "tubitak-1513-tto": {
     "status": "unknown",

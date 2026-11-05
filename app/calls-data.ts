@@ -19,6 +19,7 @@ export type FundingCall = {
   status: CallStatus;
   openDate: string;
   deadline?: string;
+  calendarDateOnly?: boolean;
   deadlines?: string[];
   dateCheckedAt?: string;
   recordType?: "call" | "program";

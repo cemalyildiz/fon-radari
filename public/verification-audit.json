@@ -488,22 +488,21 @@
     {
       "id": "kosgeb-kobi-dijital-donusum",
       "title": "KOBİ Dijital Dönüşüm Destek Programı",
-      "source": "https://www.kosgeb.gov.tr/site/tr/genel/detay/9144/kobi-dijital-donusum-destek-programi",
+      "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KOB%C4%B0%20Dijital%20Donusum%20DP/2026/2026.10.09/KOBI%CC%87DijitalDo%CC%88nu%CC%88s%CC%A7u%CC%88mDestekProgram%C4%B1Yo%CC%88nergesi.pdf",
       "verifiedFields": [
         "applicants",
+        "companyScale",
         "fundingAmount",
         "fundingType",
         "supportRate",
         "duration",
+        "application",
+        "recordType",
         "notice"
       ],
-      "pendingFields": [
-        "companyScale",
-        "application",
-        "applicationType"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "kosgeb-yapay-zeka-kredi-2026",
@@ -515,16 +514,15 @@
         "supportRate",
         "duration",
         "applicants",
+        "companyScale",
+        "openDate",
+        "deadline",
         "application",
         "notice"
       ],
-      "pendingFields": [
-        "companyScale",
-        "openDate",
-        "deadline"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "sanayi-hit30-active",
@@ -608,5 +606,5 @@
     }
   ],
   "total": 29,
-  "complete": 6
+  "complete": 8
 }

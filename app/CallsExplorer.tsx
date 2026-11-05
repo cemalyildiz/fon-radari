@@ -593,7 +593,7 @@ export default function CallsExplorer({ calls }: Props) {
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
                 <article><span>Kimler için?</span><b>{selected.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</b></article>
-                <article><span>Başvuru dönemi · Türkiye saati</span><b>{selected.recordType === "program" ? "Program rehberi — alt çağrının takvimini kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, true)} – ${formatDate(selected.deadline, true)}`}</b></article>
+                <article><span>Başvuru dönemi{selected.calendarDateOnly ? "" : " · Türkiye saati"}</span><b>{selected.recordType === "program" ? "Program rehberi — güncel başvuru kabulünü resmî kaynaktan kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, !selected.calendarDateOnly)} – ${formatDate(selected.deadline, !selected.calendarDateOnly)}`}</b></article>
                 <article><span>Destek miktarı</span><b>{selected.fundingAmount}</b></article>
                 <article><span>Destek şekli</span><b>{selected.fundingType}</b></article>
                 <article><span>Destek oranı</span><b>{selected.supportRate ?? "Çağrı dokümanına göre"}</b></article>
