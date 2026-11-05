@@ -1,6 +1,38 @@
 {
   "records": [
     {
+      "id": "sbep-2026",
+      "title": "Sürdürülebilir Mavi Ekonomi Ortaklığı — 4. Ortak Çağrı",
+      "source": "https://ufukavrupa.org.tr/sites/default/files/users/user20730/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "eligibleCosts",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "dut-2026",
       "title": "Sürdürülebilir Kentlere Geçiş Ortaklığı — DUT 2026",
       "source": "https://ufukavrupa.org.tr/sites/default/files/users/user20728/DUT%202026_%C4%B0ki%20a%C5%9Famal%C4%B1_S%C3%BCre%C3%A7%20Dok%C3%BCman%C4%B1.pdf",
@@ -959,6 +991,6 @@
       "complete": true
     }
   ],
-  "total": 32,
-  "complete": 14
+  "total": 33,
+  "complete": 15
 }
