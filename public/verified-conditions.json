@@ -193,6 +193,18 @@
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
     "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
   },
+  "biodivfuture-2026": {
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "evidenceUrl": "https://ufukavrupa.org.tr/sites/default/files/users/user397/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf",
+    "additionalEvidence": ["https://www.biodiversa.eu/2026/06/09/2026-2027-joint-call/", "https://www.biodiversa.eu/wp-content/uploads/2026/09/BiodivFuture_Funding-Organisation_Rules_V1_09-09-2026.pdf", "https://ufukavrupa.org.tr/tr/haberler/biodiversa-2026-yili-yeni-ekosistemler-biyocesitlilik-sosyo-ekolojik-sonuclar-ve"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "eligibleCosts", "notice"]
+  },
+  "forestpathways-2026": {
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-09/FOREST_2026_Cagrisi_Ulusal_Basvuru_Kurallari.pdf",
+    "additionalEvidence": ["https://forest-partnership.eu/jointcall2026/", "https://forest-partnership.eu/wp-content/uploads/2026/09/260915_FOREST_JC2026_Call_Announcement_FINAL-1.pdf", "https://forest-partnership.eu/wp-content/uploads/2026/11/FOREST_JC2026_Annex_IV_Funder_Regulations.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "eligibleCosts", "notice"]
+  },
   "sbep-2026": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
     "evidenceUrl": "https://ufukavrupa.org.tr/sites/default/files/users/user20730/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf",

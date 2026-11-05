@@ -1,6 +1,70 @@
 {
   "records": [
     {
+      "id": "biodivfuture-2026",
+      "title": "BiodivFuture — Yeni Ekosistemler ve Biyoçeşitlilik",
+      "source": "https://ufukavrupa.org.tr/sites/default/files/users/user397/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "eligibleCosts",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "forestpathways-2026",
+      "title": "FORESTPathways — Sürdürülebilir Ormancılık ve Ahşap Ürünleri",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-09/FOREST_2026_Cagrisi_Ulusal_Basvuru_Kurallari.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "eligibleCosts",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "sbep-2026",
       "title": "Sürdürülebilir Mavi Ekonomi Ortaklığı — 4. Ortak Çağrı",
       "source": "https://ufukavrupa.org.tr/sites/default/files/users/user20730/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf",
@@ -991,6 +1055,6 @@
       "complete": true
     }
   ],
-  "total": 33,
-  "complete": 15
+  "total": 35,
+  "complete": 17
 }
