@@ -7,6 +7,20 @@ import { audienceOptions, matchesAudience, privateSectorPriority } from '../app/
 const reviews = JSON.parse(await readFile(new URL('../public/verified-conditions.json', import.meta.url), 'utf8'));
 const records = calls.map(call => ({ ...call, ...reviews[call.id] }));
 
+test('EIC thematic calls keep company eligibility and planned batches separate from unconfirmed opening', () => {
+  const topics = records.filter(call => /^eic-accelerator-challenge-.+-2027$/.test(call.id));
+  assert.equal(topics.length, 4);
+  assert.deepEqual(topics.map(call => Number(call.fundingAmount.match(/(\d+) milyon € konu bütçesidir/)?.[1])), [30, 50, 20, 50]);
+  for (const call of topics) {
+    assert.equal(matchesAudience(call, 'Özel sektör'), true);
+    assert.equal(call.status, 'unknown');
+    assert.equal(call.openDate, '');
+    assert.equal(call.deadlines.length, 4);
+    assert.ok(!call.verifiedFields.includes('openDate'));
+  }
+  assert.match(topics.find(call => call.id.includes('fusion')).notice, /THS 4–6/);
+});
+
 test('firm support and institutional TTO support appear in different audience views', () => {
   const industrial = records.find(call => call.id === 'tubitak-1507-2026-2');
   const tto = records.find(call => call.id === 'tubitak-1613-ttp');

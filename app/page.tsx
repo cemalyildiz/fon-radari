@@ -13,7 +13,7 @@ export default async function Home() {
   const evidence = await readFile('public/evidence-status.json', 'utf8').then(JSON.parse).catch(() => ({}));
   const updatedCalls = calls.map(c => {
     const review = verified[c.id];
-    const urls = review ? [review.evidenceUrl, ...(review.additionalEvidence ?? [])].filter(Boolean) : [];
+    const urls = [review?.evidenceUrl ?? c.evidenceUrl, ...(review?.additionalEvidence ?? c.additionalEvidence ?? [])].filter(Boolean);
     const alerts = evidenceAlerts(urls, evidence, snapshotTime);
     return {...c, ...review, evidenceAlerts: alerts, evidencePending: alerts.length > 0, sourceConditions: conditions[c.id]};
   });

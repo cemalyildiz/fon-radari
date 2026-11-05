@@ -58,7 +58,71 @@ export type FundingCall = {
   ttoEligibility?: string;
 };
 
+const eic2027Programme = "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf";
+const eicAccelerator2027Batches = ["2027-01-20T19:00:00+03:00", "2027-03-17T19:00:00+03:00", "2027-09-01T18:00:00+03:00", "2027-11-04T19:00:00+03:00"];
+
+const eicChallenges2027 = [
+  {
+    id: "ocean", section: "V.2.1", page: 92, budget: 30,
+    title: "Yerinde Okyanus Gözlem Teknolojileri",
+    summary: "Ölçeklenebilir, yüksek çözünürlüklü deniz izleme için derin teknoloji.",
+    objectives: ["En az bir önceliği karşılamak: otonom yerinde ölçüm, entegre haritalama veya gelişmiş deniz izleme ve veri altyapısı."],
+    activities: ["Deniz sensörleri, otonom araçlar ve sualtı haberleşmesi", "Birlikte çalışabilir veri sistemleri ve çevresel DNA gibi biyolojik izleme yöntemleri"],
+    notice: "Mevcut uygulamaya göre iyileşme, ölçüt ve referans değerle gösterilmeli. Sistemin ömrü ve kullanım sonu yönetimi de açıklanmalı.",
+    tags: ["Deniz İzleme", "Otonom Sistemler", "Biyoçeşitlilik"],
+  },
+  {
+    id: "cities", section: "V.2.2", page: 94, budget: 50,
+    title: "İklim Nötr ve Akıllı Şehirler",
+    summary: "Şehirlerin karbonsuzlaşması için ölçeklenebilir derin teknoloji çözümleri.",
+    objectives: ["Üç alandan birine odaklanmak: bina ve enerji, ulaşım ve hareketlilik veya döngüsel kaynak yönetimi."],
+    activities: ["Bina enerji verimliliği ve şebeke esnekliği", "Toplu taşımaya odaklanan hareketlilik", "Su, atık su ve kentsel atıkların döngüsel yönetimi"],
+    notice: "AB İklim Nötr ve Akıllı Şehirler Misyonu’ndaki bir şehirle çalışmak ve niyet mektubu almak kuvvetle tavsiye ediliyor; zorunlu bir başvuru belgesi olarak belirtilmiyor.",
+    tags: ["Akıllı Şehirler", "Döngüsel Ekonomi", "Su Yönetimi"],
+  },
+  {
+    id: "fusion", section: "V.2.3", page: 97, budget: 20,
+    title: "Füzyon Enerjisi ve Kritik Teknolojiler",
+    summary: "Ticarileşebilir füzyon reaktörleri ve bunların kritik bileşenleri.",
+    objectives: ["Füzyon değer zincirinde en az bir alanda teknoloji olgunluğunu ilerletmek veya kritik bir teknik ya da maliyet engelini çözmek."],
+    activities: ["Alternatif reaktör tasarımları", "İleri malzemeler, trityum yakıt döngüsü, lazerler, plazma ısıtma, mıknatıslar, dijital ikizler ve eylemsiz hapsin hedef bileşenleri"],
+    notice: "Başvuru anında THS 4–6 kabul edilebilir. Euratom katkısı nedeniyle 20 milyon €’luk gösterge bütçenin en az %50’sinin AB üyeleri veya hem Euratom hem Ufuk Avrupa’ya asosiye ülkelerdeki kuruluşlara gitmesi bekleniyor. Bu hüküm bütçe dağılımıyla ilgilidir; tek başına diğer ülkeler için başvuru yasağı değildir.",
+    tags: ["Füzyon", "Temiz Enerji", "Euratom"],
+  },
+  {
+    id: "carbon", section: "V.2.4", page: 100, budget: 50,
+    title: "Karbon Giderimi ve Kullanımı",
+    summary: "Kalıcı karbon giderimini ve yakalanan karbonun endüstriyel kullanımını ölçeklendiren derin teknoloji.",
+    objectives: ["En az bir önceliği ele almak: karbon giderimi, CO₂ yakalama ve kullanımı veya çevresel etkinin ölçümü, izlenmesi ve doğrulanması."],
+    activities: ["Kalıcı veya ürün içinde karbon depolama içeren giderim", "Yakalanan karbonun yakıt, kimyasal veya malzemeye dönüştürülmesi", "Çevresel etki ölçümü ve doğrulama teknolojileri"],
+    notice: "Yakalanan fosil CO₂’nin kimyasal dönüşüm olmadan gaz hâlinde depolanması ve hidrojen üretim teknolojileri kapsam dışı.",
+    tags: ["Karbon Giderimi", "Karbon Kullanımı", "CCU", "CDR"],
+  },
+].map((topic): FundingCall => ({
+  id: `eic-accelerator-challenge-${topic.id}-2027`,
+  scope: "international", code: `EIC Accelerator Challenges 2027 · ${topic.section}`,
+  title: `EIC Accelerator Challenges 2027 — ${topic.title}`,
+  institution: "European Innovation Council", institutionShort: "EIC",
+  status: "unknown", openDate: "", deadline: eicAccelerator2027Batches[0], deadlines: eicAccelerator2027Batches,
+  applicants: "Tema, AB’de veya Türkiye dâhil Ufuk Avrupa’ya asosiye bir ülkede kurulu tek KOBİ ve girişimleri hedefliyor; konsorsiyum başvurusu değil. Genel Accelerator kuralları 499 çalışana kadar small mid-cap’ler için yalnız yatırım veya hızlı ölçeklenmede istisnai karma finansman yolu öngörüyor; konuya özgü uygunluğu portal ilanından kontrol edin.",
+  applicantGroups: ["Özel sektör"], companyScale: ["KOBİ"],
+  fundingAmount: `Hibe bileşeni normalde en fazla 2.499.999 €; gerekçeli karma finansman istisnaları olabilir. Yatırım bileşeni 1–10 milyon €. ${topic.budget} milyon € konu bütçesidir, şirket başına destek değildir.`,
+  fundingType: "Götürü hibe, öz sermaye veya öz sermaye benzeri yatırım ya da bunların birleşimi",
+  supportRate: "Hibe bileşeninde uygun maliyetlerin en fazla %70’i; kalan %30 yararlanıcının öz kaynaklarından. Yatırım şartları şirket bazında belirlenir.",
+  duration: "Hibe kapsamındaki yenilik faaliyetleri normalde 24 ay; gerekçeli durumlarda daha uzun olabilir.",
+  summary: topic.summary, objectives: topic.objectives, eligibleCosts: topic.activities,
+  application: "Funding & Tenders Portal üzerinden önce kısa öneri, olumlu ön değerlendirmeden sonra tam öneri, ardından seçilen adaylar için jüri görüşmesi. Listelenen tarihler çalışma programındaki tam öneri değerlendirme kesimleridir; kısa önerinin son günü değildir.",
+  notice: `${topic.id === "fusion" ? "" : "Başvuruda ilgili ortamda teknoloji doğrulaması (en az THS 5 tamamlanmış) beklenir. "}${topic.notice} Konuya ait 2027 portal açılış tarihi henüz teyit edilmedi.`,
+  sourceUrl: `${eic2027Programme}#page=${topic.page}`,
+  sourceLabel: `EIC 2027 Çalışma Programı — ${topic.section}`,
+  evidenceUrl: eic2027Programme,
+  verifiedFields: ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "deadline", "eligibleCosts", "application", "notice"],
+  verifiedAt: "2026-11-05", tags: topic.tags,
+  themes: ["Ar-Ge ve Yenilik", "Yeşil Dönüşüm"], sectors: ["Sektörler Arası"],
+}));
+
 export const calls: FundingCall[] = [
+  ...eicChallenges2027,
   {
     id: "eic-pre-accelerator-2027", scope: "international", code: "HORIZON-WIDERA-2027-01-WIDENING-01",
     title: "EIC Pre-Accelerator 2027 — Derin Teknoloji KOBİ’leri",
@@ -107,8 +171,8 @@ export const calls: FundingCall[] = [
     id: "eic-accelerator-open-2027", scope: "international", code: "EIC Accelerator Open 2027",
     title: "EIC Accelerator Open — 2027 Hibe ve Yatırım",
     institution: "European Innovation Council", institutionShort: "EIC",
-    status: "unknown", openDate: "", deadline: "2027-01-20T19:00:00+03:00",
-    deadlines: ["2027-01-20T19:00:00+03:00", "2027-03-17T19:00:00+03:00", "2027-09-01T18:00:00+03:00", "2027-11-04T19:00:00+03:00"],
+    status: "unknown", openDate: "", deadline: eicAccelerator2027Batches[0],
+    deadlines: eicAccelerator2027Batches,
     applicants: "Türkiye dâhil bir Ufuk Avrupa asosiye ülkede veya AB’de kurulu tek KOBİ veya girişim. En fazla 499 çalışanlı küçük orta ölçekli şirketler yalnız yatırım veya hızlı ölçeklenmede istisnai olarak karma finansmana başvurabilir. Kurulacak şirket ve şirket adına başvuran yatırımcı için kılavuzdaki özel şartlar uygulanır.",
     companyScale: ["KOBİ", "Small Mid-cap"],
     fundingAmount: "Hibe bileşeni normalde en fazla 2.499.999 €; karma finansmanda iyi gerekçelendirilmiş istisnalar olabilir. Yatırım 1–10 milyon €. 2027 Accelerator Open gösterge bütçesi 428 milyon €; Challenges bütçesi ayrıdır.",
