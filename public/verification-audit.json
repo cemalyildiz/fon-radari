@@ -1,6 +1,34 @@
 {
   "records": [
     {
+      "id": "eurostars-call-12-2027",
+      "title": "Eurostars — Yenilikçi KOBİ’lerin Uluslararası Ar-Ge Çağrısı",
+      "source": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "duration",
+        "openDate",
+        "deadline",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "duration",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "application"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
       "id": "eit-urban-mobility-strategic-innovation-cutoff-4",
       "title": "EIT Urban Mobility — Stratejik İnovasyon, 4. Başvuru Dönemi",
       "source": "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Strategic-Innovation-Call-Manual_v5.2_27102026.pdf",
@@ -1310,6 +1338,6 @@
       "complete": true
     }
   ],
-  "total": 43,
+  "total": 44,
   "complete": 23
 }
