@@ -2,10 +2,32 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { calls } from "../app/calls-data.ts";
-import { realStatus, nextDeadline, matchesSector, matchesSearch, stale, mergeCalls, validateFeed } from "../app/call-utils.ts";
+import { realStatus, nextDeadline, matchesSector, matchesSearch, stale, mergeCalls, validateFeed, unreviewedAnnouncements } from "../app/call-utils.ts";
 import { parseResult, reconcile, collect } from "../scripts/update-live-calls.mjs";
+import { verificationCoverage } from "../app/verification-utils.ts";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("verification coverage separates documented fields, missing values and conflicting sources", async () => {
+  const data = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const reviewed = { ...base, ...data[base.id] };
+  assert.equal(verificationCoverage(reviewed).complete, true);
+  assert.deepEqual(verificationCoverage({ ...reviewed, deadline: "" }).pendingFields, ["deadline"]);
+  assert.equal(verificationCoverage({ ...reviewed, evidenceUrl: undefined }).complete, false);
+  const phd = calls.find(c => c.id === "tubitak-2244-sanayi-doktora-2026");
+  const check = verificationCoverage({ ...phd, ...data[phd.id] });
+  assert.deepEqual(check.pendingFields, ["application"]);
+  assert.equal(check.complete, false);
+});
+test("a reviewed national announcement replaces its metadata card without hiding other calls", async () => {
+  const feed = JSON.parse(await readFile(new URL("../public/national-calls.json", import.meta.url), "utf8"));
+  const reviewed = calls.find(c => c.id === "tubitak-2244-sanayi-doktora-2026");
+  const duplicate = { ...reviewed, id: "national-auto-2244", verification: "metadata" };
+  const other = { ...duplicate, id: "different-announcement", sourceUrl: "https://tubitak.gov.tr/tr/duyuru/another-announcement" };
+  assert.deepEqual(unreviewedAnnouncements([reviewed], [duplicate, other]), [other]);
+  assert.ok(unreviewedAnnouncements(calls, feed.calls).every(c => !calls.some(r => r.sourceUrl === c.sourceUrl)));
+  assert.equal(realStatus(reviewed, Date.parse("2026-11-05T12:00:00+03:00")), "open");
+  assert.equal(realStatus(reviewed, Date.parse("2026-12-22T17:30:00+03:00")), "archived");
+});
 test("TTO opportunities distinguish open support, closed rounds and service provision", () => {
   const date = Date.parse("2026-09-10T15:00:00Z");
   assert.equal(realStatus(calls.find(c => c.id === "tubitak-1613-ttp"), date), "open");

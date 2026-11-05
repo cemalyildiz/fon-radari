@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { FundingCall, CallScope, CallStatus } from "./calls-data";
 import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate, validateFeed, fundingCategory, type LiveFeed } from "./call-utils";
 import { audienceOptions, matchesAudience, privateSectorPriority, type AudienceFilter } from "./audience-utils";
+import { verificationCoverage, verificationFieldLabel } from "./verification-utils";
 
 type Props = { calls: FundingCall[] };
 type StatusFilter = "active" | CallStatus | "all";
@@ -28,9 +29,24 @@ const formatDate = (date?: string, time = false) => validDate(date) ? (time ? tr
 function freshness(call: FundingCall, now: number) {
   if (call.verificationIssues?.length) return "Resmî kaynaklar arasında çelişki var · ayrıntıları inceleyin";
   if (call.evidencePending) return "Dayanak değişti veya okunamadı · koşullar yeniden kontrol bekliyor";
-  if (call.verifiedFields?.length) return "Bazı alanlar belgeyle kontrol edildi · tam doğrulama sürüyor";
+  if (call.verifiedFields?.length) return verificationCoverage(call).complete
+    ? "Temel alanlar resmî belgelerle karşılaştırıldı"
+    : "Bazı alanlar belgeyle kontrol edildi · ayrıntıları inceleyin";
   if (call.verification === "metadata") return `${stale(call.sourceCheckedAt, now) ? "Kaynak verisi eski · " : ""}Otomatik aktarım · uygunluk kontrolü gerekli`;
   return stale(call.verifiedAt, now, 24 * 14) ? "Koşulların yeniden doğrulanması gerekiyor" : "Editoryal kayıt · başvuru öncesi kontrol edin";
+}
+
+function VerificationDetails({ call }: { call: FundingCall }) {
+  const { verifiedCore, pendingFields } = verificationCoverage(call);
+  const urls = [call.evidenceUrl, ...(call.additionalEvidence ?? [])].filter((url): url is string => Boolean(url));
+  return <div className="notice">
+    <b>Alan bazlı doğrulama</b>
+    {verifiedCore.length > 0 && <p>Belgeyle karşılaştırılan: {verifiedCore.map(verificationFieldLabel).join(", ")}.</p>}
+    {pendingFields.length > 0 && <p>Kontrol bekleyen: {pendingFields.map(verificationFieldLabel).join(", ")}.</p>}
+    {call.evidencePending && <p>En az bir dayanak değişti veya okunamadı. Önceki karşılaştırma güncel kabul edilmemeli.</p>}
+    <p><a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/verification-audit.json`} target="_blank" rel="noopener noreferrer">Alan bazlı kontrol dökümü</a></p>
+    {urls.map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">Resmî belge {index + 1}</a></p>)}
+  </div>;
 }
 
 function daysLeft(deadline: string, now: number) {
@@ -589,7 +605,7 @@ export default function CallsExplorer({ calls }: Props) {
               <div className="notice"><b>Veri durumu</b><p>{freshness(selected, now)}. Türkiye’den başvuru, firma ölçeği ve ortaklık koşullarını resmî kaynaktan teyit edin.</p></div>
               {selected.sourceConditions?.ok && <div className="notice"><b>Otomatik sayfa erişim kontrolü · {formatDate(selected.sourceConditions.checkedAt, true)}</b><p>Resmî sayfa okunabildi. Bu işlem destek koşullarının doğrulandığı anlamına gelmez; otomatik metin eşleşmeleri kesin başvuru koşulu olarak gösterilmez.</p></div>}
               {selected.verificationIssues?.map(issue => <div className="notice" key={issue.field}><b>Çözümlenmemiş kaynak çelişkisi</b><p>{issue.message}</p></div>)}
-              {selected.evidenceUrl && <div className="notice"><b>Doğrulama kaynakları</b><p>Bu kayıtta bazı alanlar belgeyle karşılaştırıldı. Bu kontrol kaydın tamamının doğrulandığı anlamına gelmez. <a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ''}/verification-audit.json`} target="_blank" rel="noopener noreferrer">Alan bazlı kontrol dökümü</a></p>{[selected.evidenceUrl, ...(selected.additionalEvidence ?? [])].map((url, index) => <p key={url}><a href={url} target="_blank" rel="noopener noreferrer">Resmî belge {index + 1}</a></p>)}</div>}
+              {selected.evidenceUrl && <VerificationDetails call={selected} />}
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
                 <article><span>Kimler için?</span><b>{selected.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</b></article>

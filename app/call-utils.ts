@@ -55,6 +55,10 @@ export function validateFeed(value: unknown): value is LiveFeed {
     (!c.deadline || validDate(c.deadline)) && (!c.deadlines || (Array.isArray(c.deadlines) && c.deadlines.every(validDate)))
   );
 }
+export function unreviewedAnnouncements(reviewed: Pick<FundingCall, "sourceUrl">[], discovered: FundingCall[]) {
+  const reviewedUrls = new Set(reviewed.map(call => call.sourceUrl));
+  return discovered.filter(call => !reviewedUrls.has(call.sourceUrl));
+}
 export function mergeCalls(curated: FundingCall[], feed: LiveFeed, now: number): FundingCall[] {
   const codes = new Set(curated.map(c => c.code.toLowerCase()));
   const seen = new Set<string>();
