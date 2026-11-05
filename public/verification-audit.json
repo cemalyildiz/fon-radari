@@ -1,6 +1,37 @@
 {
   "records": [
     {
+      "id": "eit-urban-mobility-strategic-innovation-cutoff-4",
+      "title": "EIT Urban Mobility — Stratejik İnovasyon, 4. Başvuru Dönemi",
+      "source": "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Strategic-Innovation-Call-Manual_v5.2_27102026.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "eit-urban-mobility-startups-2026-2028",
       "title": "EIT Urban Mobility — Kent Hareketliliği Girişimlerine Finansman",
       "source": "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Financial-Support-to-Startups_Call-Manual_FINAL_1.4.pdf",
@@ -1279,6 +1310,6 @@
       "complete": true
     }
   ],
-  "total": 42,
-  "complete": 22
+  "total": 43,
+  "complete": 23
 }
