@@ -1,523 +1,40 @@
 {
-  "https://tubitak.gov.tr/tr/duyuru/2244-sanayi-doktora-programi-2026-yili-cagrisi-acildi-0": {
-    "baselineHash": "d2c136cf97c038a00daa450eebfe80392f6d7703f5c25f5866c4b8d62482815e",
-    "hash": "d2c136cf97c038a00daa450eebfe80392f6d7703f5c25f5866c4b8d62482815e",
-    "baselineDocumentHash": "68e00bec8bf8bdd7790e783216c1975ab22d17e5ee7c3c9b424cd379427b7ef2",
-    "documentHash": "68e00bec8bf8bdd7790e783216c1975ab22d17e5ee7c3c9b424cd379427b7ef2",
-    "checkedAt": "2026-11-05T11:13:22.729Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/tr/burslar/lisansustu/egitim-burs-programlari/2244-sanayi-doktora-programi": {
-    "baselineHash": "d5356d436319e135bc49239fb36d6e923439cdde5a3d9e83e3dddc667052fdcb",
-    "hash": "d5356d436319e135bc49239fb36d6e923439cdde5a3d9e83e3dddc667052fdcb",
-    "baselineDocumentHash": "4ee6b0d3c1a3cc8f74ac57fa5c913743cf2456b8060e82d8b2fdab79c2db19b5",
-    "documentHash": "4ee6b0d3c1a3cc8f74ac57fa5c913743cf2456b8060e82d8b2fdab79c2db19b5",
-    "checkedAt": "2026-11-05T11:13:22.731Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-11/2244-Sanayi_Doktora_Programi_Sik_Sorulan_Sorular-Ekim_2026_0.pdf": {
-    "baselineHash": "b6a0e94c5c7d84d0ea021c428392095b88cffafd8a30b94a8555c1c3a37a0dae",
-    "hash": "b6a0e94c5c7d84d0ea021c428392095b88cffafd8a30b94a8555c1c3a37a0dae",
-    "checkedAt": "2026-11-05T11:13:22.732Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://arge.ssb.gov.tr/_layouts/15/CustomHttpHandler/FileDownload.ashx?dosyaId=6972&duyuruId=4921": {
-    "baselineHash": "5961ec447c6f36139ceba0ff12ffcce8a9c0a7130b4f656fceed1078e958e294",
-    "hash": "5961ec447c6f36139ceba0ff12ffcce8a9c0a7130b4f656fceed1078e958e294",
-    "checkedAt": "2026-11-05T11:13:23.368Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-cagrisi": {
-    "baselineHash": "ac5ab2168fe67e179c639df70e6b242bd8eab40b6fffba027a0fa09005050f51",
-    "hash": "ac5ab2168fe67e179c639df70e6b242bd8eab40b6fffba027a0fa09005050f51",
-    "baselineDocumentHash": "b862567302ed839eb8f08b4c2bb5ea993847ca1137540e2ea8916fdf83fc8858",
-    "documentHash": "b862567302ed839eb8f08b4c2bb5ea993847ca1137540e2ea8916fdf83fc8858",
-    "checkedAt": "2026-11-05T11:13:26.095Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi": {
-    "baselineHash": "f643e870c32a4266901d92013999f38358164d19317fe0e4b1a5b69bbb7f0a89",
-    "hash": "f643e870c32a4266901d92013999f38358164d19317fe0e4b1a5b69bbb7f0a89",
-    "baselineDocumentHash": "aa33b1747758a69f3f256b3fa17815643c261ff9d35f245fe3798ad23b493ede",
-    "documentHash": "aa33b1747758a69f3f256b3fa17815643c261ff9d35f245fe3798ad23b493ede",
-    "checkedAt": "2026-11-05T11:13:26.325Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://katalog.ssb.gov.tr/pybs-disportal/openpages/basvuruislemleridisportal/sagaGirisi.xhtml": {
-    "baselineHash": "a2f90876952edb075d39a6b3b31af00e9ba7d96059d06b9304fd5bdf359cb361",
-    "hash": "a2f90876952edb075d39a6b3b31af00e9ba7d96059d06b9304fd5bdf359cb361",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:23.377Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-08/Siparis_Ar-Ge_2026-3_Cagri_Dokumani.pdf": {
-    "baselineHash": "b5665606654f2033fe7e41f8e082f9112dc43e24b82b0e8691a2af569dbadc18",
-    "hash": "b5665606654f2033fe7e41f8e082f9112dc43e24b82b0e8691a2af569dbadc18",
-    "checkedAt": "2026-11-05T11:13:24.426Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://hit30.sanayi.gov.tr/cagrilar": {
-    "baselineHash": "51f62a98b4637564a5ad02a2f19a71e8881a1b250ae7c9f83d7c8495c8076e67",
-    "hash": "51f62a98b4637564a5ad02a2f19a71e8881a1b250ae7c9f83d7c8495c8076e67",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:27.390Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-07/Siparis_Ar-Ge_2026-2_Cagri_Dokumani-Guncellenmis.pdf": {
-    "baselineHash": "f601cef7357195df5e7075cffdc29953849eb96c580742f0e9977fe76de7587c",
-    "hash": "f601cef7357195df5e7075cffdc29953849eb96c580742f0e9977fe76de7587c",
-    "checkedAt": "2026-11-05T11:13:26.536Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.eurekanetwork.org/programmes-and-calls/network-projects/transnational-eureka-lightweighting-call-2026/": {
+  "https://www.eurekanetwork.org/programmes-and-calls/globalstars/globalstars-call-with-japan-2026/": {
     "ok": false,
-    "attemptedAt": "2026-11-05T11:13:28.781Z",
+    "attemptedAt": "2026-11-05T11:18:37.054Z",
     "error": "HTTP 403"
   },
-  "https://tubitak.gov.tr/sites/default/files/2026-06/Eureka_Network_Afetlerde_Direnclilik_Ulusal_Cagri_Metni-2026.pdf": {
-    "baselineHash": "147dbd503cfbf85743e290179bc5bd3cb725fcf5eca75813cebce070151313d5",
-    "hash": "147dbd503cfbf85743e290179bc5bd3cb725fcf5eca75813cebce070151313d5",
-    "checkedAt": "2026-11-05T11:13:28.835Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.eurekanetwork.org/programmes-and-calls/network-projects/eureka-call-for-disaster-resilience-response-and-recovery-projects-2026/": {
+  "https://www.nedo.go.jp/koubo/CA2_100541.html": {
     "ok": false,
-    "attemptedAt": "2026-11-05T11:13:30.268Z",
-    "error": "HTTP 403"
+    "attemptedAt": "2026-11-05T11:18:37.089Z",
+    "error": "fetch failed"
   },
-  "https://tubitak.gov.tr/sites/default/files/2026-10/2244_Cagri_Metni_2026.pdf": {
-    "baselineHash": "6c2fc92ad7e54be4445535b83c1d70d2fc1f9bdaa001ec9352f1ff9c0ea53c2f",
-    "hash": "6c2fc92ad7e54be4445535b83c1d70d2fc1f9bdaa001ec9352f1ff9c0ea53c2f",
-    "checkedAt": "2026-11-05T11:13:22.698Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://ticaret.gov.tr/dis-iliskiler/yesil-mutabakat/duyurular/yesil-donusum-programi-cagri-duyurusu": {
-    "baselineHash": "1f843c3992fd517849cdc52cbe9908ff60344c39bea3960df6fbebe072f49ec4",
-    "hash": "1f843c3992fd517849cdc52cbe9908ff60344c39bea3960df6fbebe072f49ec4",
+  "https://tubitak.gov.tr/tr/duyuru/eureka-globalstars-japonya-2026-cagrisi-acildi": {
+    "baselineHash": "0d6101f0d233cc3eef7623bcae4b46ded13f559096494d34d424ae7d275cc3c3",
+    "hash": "0d6101f0d233cc3eef7623bcae4b46ded13f559096494d34d424ae7d275cc3c3",
     "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:27.413Z",
+    "checkedAt": "2026-11-05T11:18:37.087Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
   },
-  "https://tubitak.gov.tr/sites/default/files/2026-05/Hafifletme_Teknolojileri_Ulusal_Cagrisi.pdf": {
-    "baselineHash": "2732d4970809689799d76a52fc0e1e748a996f06a9048a1758d84f50c453faea",
-    "hash": "2732d4970809689799d76a52fc0e1e748a996f06a9048a1758d84f50c453faea",
-    "checkedAt": "2026-11-05T11:13:28.181Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Yapay%20Zeka%20Kredi%20Programi/2026/2026.09.28/Yapay_Zeka_Kredi_Yo%CC%88nergesi_Rev.02.pdf": {
-    "baselineHash": "845b4b87bb892c2423103bb54b6afa42ba984dd892ffb2db330f61bb4a30ab26",
-    "hash": "845b4b87bb892c2423103bb54b6afa42ba984dd892ffb2db330f61bb4a30ab26",
-    "checkedAt": "2026-11-05T11:13:30.322Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9414/yapay-zek-kredi-programi": {
-    "baselineHash": "a30088a0d3f101ecd81ad0c18d7b940943a9b56cc43a34cefd3552e413a8cc9e",
-    "hash": "a30088a0d3f101ecd81ad0c18d7b940943a9b56cc43a34cefd3552e413a8cc9e",
-    "baselineDocumentHash": "382168690f7987f23575a78c00122e4b20cb23f0cfcfe9731e37a8b55f541509",
-    "documentHash": "382168690f7987f23575a78c00122e4b20cb23f0cfcfe9731e37a8b55f541509",
-    "checkedAt": "2026-11-05T11:13:31.238Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-widening-participation-and-spreading-excellence/hop-facility_en": {
-    "baselineHash": "805f154f1c5724f610a3b95ed369b664a9e314a1bc6bdf7cae97a6efd0b25ecb",
-    "hash": "805f154f1c5724f610a3b95ed369b664a9e314a1bc6bdf7cae97a6efd0b25ecb",
-    "baselineDocumentHash": "cbc87e6f4fb7db70fb5b13b495dccd67028ed791ed9eb40f7c07011468490d08",
-    "documentHash": "cbc87e6f4fb7db70fb5b13b495dccd67028ed791ed9eb40f7c07011468490d08",
-    "checkedAt": "2026-11-05T11:13:32.369Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9427/kosgebden-teknoloji-girisimlerine-yapay-zek-kredi-programi": {
-    "baselineHash": "5217977bedd336329225015b17566753770b0a5e519d090297d493400870b322",
-    "hash": "5217977bedd336329225015b17566753770b0a5e519d090297d493400870b322",
+  "https://apply-for-innovation-funding.service.gov.uk/competition/2586/overview/d9e61ae4-6e56-4f38-9206-5d91ef98c916": {
+    "baselineHash": "86fdc1cb1a149ac71c51cbe846b150d7ec81e2129369dad4d6d1f0236733f565",
+    "hash": "86fdc1cb1a149ac71c51cbe846b150d7ec81e2129369dad4d6d1f0236733f565",
     "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:31.626Z",
+    "checkedAt": "2026-11-05T11:18:37.136Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
   },
-  "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/life/guidance/list-3rd-country-participation_life_en.pdf": {
-    "baselineHash": "db4f3f8f7598c6149786cc77e79253bc68f498646201ae5ccebf1297b50294e0",
-    "hash": "db4f3f8f7598c6149786cc77e79253bc68f498646201ae5ccebf1297b50294e0",
-    "checkedAt": "2026-11-05T11:13:32.487Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027": {
-    "baselineHash": "68a3379f55dc7114e33910658bc919f2e029ebd276f28021546e438988a3ce0f",
-    "hash": "68a3379f55dc7114e33910658bc919f2e029ebd276f28021546e438988a3ce0f",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:33.114Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://cinea.ec.europa.eu/programmes/life/life-support-applicants_en": {
-    "baselineHash": "91ecbacf0c8f56dcc067394583f68844501aaaadf4f807e92b0a5074f1c92a7f",
-    "hash": "91ecbacf0c8f56dcc067394583f68844501aaaadf4f807e92b0a5074f1c92a7f",
-    "baselineDocumentHash": "6abbed05de727c9e6ae6cb8c5d303666342c57c2550fab28397e4545025f5f05",
-    "documentHash": "6abbed05de727c9e6ae6cb8c5d303666342c57c2550fab28397e4545025f5f05",
-    "checkedAt": "2026-11-05T11:13:32.530Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-11-widening-participation-and-strengthening-the-european-research-area_horizon-2026-2027_en.pdf": {
-    "baselineHash": "68a267d4318cd49057de21b7322685e33a8c2d2a1f513d6e52687acb13b8587b",
-    "hash": "68a267d4318cd49057de21b7322685e33a8c2d2a1f513d6e52687acb13b8587b",
-    "checkedAt": "2026-11-05T11:13:31.791Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eic.ec.europa.eu/eic-frequently-asked-questions/faqs-eic-pre-accelerator_en": {
-    "baselineHash": "3578c87b630a6457020d41c75d5a1491adb5ad30de1c937bb6e0606d91fc6d9b",
-    "hash": "3578c87b630a6457020d41c75d5a1491adb5ad30de1c937bb6e0606d91fc6d9b",
-    "baselineDocumentHash": "837448462bc705ee4f8bd7b431d0a9f22b0525e929979cc5ea60ca2b11e6e884",
-    "documentHash": "837448462bc705ee4f8bd7b431d0a9f22b0525e929979cc5ea60ca2b11e6e884",
-    "checkedAt": "2026-11-05T11:13:33.220Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pre-accelerator_en": {
-    "baselineHash": "35314a2ca743ec0fd8664e1b2a4d9d6e5ccd08253decc360f23a67df6947ba71",
-    "hash": "35314a2ca743ec0fd8664e1b2a4d9d6e5ccd08253decc360f23a67df6947ba71",
-    "baselineDocumentHash": "c0b299aac464e12b3ec52af25daffab8a72995e8152ce8b140e48ab7919c6352",
-    "documentHash": "c0b299aac464e12b3ec52af25daffab8a72995e8152ce8b140e48ab7919c6352",
-    "checkedAt": "2026-11-05T11:13:33.399Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/life/wp-call/2026/call-fiche_life-2026-sap-env_en.pdf": {
-    "baselineHash": "090e35a4bcc2c4e5606eb75a8f391ddbedecd10ca1ced971bca0769181a78550",
-    "hash": "090e35a4bcc2c4e5606eb75a8f391ddbedecd10ca1ced971bca0769181a78550",
-    "checkedAt": "2026-11-05T11:13:32.441Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en": {
-    "baselineHash": "dfce2da04e4ecfeec2d07c00e38081b7c6da24047ea3f4fd87a055d2c47357ee",
-    "hash": "8049fbd446e1b914d3e8a6e2626c94e2e498b7865539e0564ab95dfd5f751ead",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:34.056Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": true
-  },
-  "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf": {
-    "baselineHash": "598641508ab89d8cb2ecca3f32555c24ce200443df0a22ba33f96aeb02eb3d11",
-    "hash": "598641508ab89d8cb2ecca3f32555c24ce200443df0a22ba33f96aeb02eb3d11",
-    "checkedAt": "2026-11-05T11:13:34.045Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eic.ec.europa.eu/funding-opportunities_en": {
-    "baselineHash": "eb774585e3c6e25121bc53765e56e72d1b21451ec72c32f0ebee0768e2dc01a8",
-    "hash": "eb774585e3c6e25121bc53765e56e72d1b21451ec72c32f0ebee0768e2dc01a8",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:34.378Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://ec.europa.eu/transparency/documents-register/api/files/C%282025%298493_11/090166e526657dd7?rendition=false": {
-    "baselineHash": "6f9ed92f5876476ff2ac3e65da21889cb8dad7f2c640143d7e24a3f5925cbf90",
-    "hash": "6f9ed92f5876476ff2ac3e65da21889cb8dad7f2c640143d7e24a3f5925cbf90",
-    "checkedAt": "2026-11-05T11:13:33.187Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en": {
-    "baselineHash": "71bdcd85db4474dd66dbb95010e05d9408749a6616efe97d7851dc1a3371a92e",
-    "hash": "b629072e0bbd31b2136484d584548540a60da456f8e5323cbb106d0ef8ff97e1",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:34.718Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": true
-  },
-  "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf": {
-    "baselineHash": "f18562788ad0d72e1a7d0cd9791c4c3b4098a29bc05ed8843a70c1fa4cc4ba33",
-    "hash": "f18562788ad0d72e1a7d0cd9791c4c3b4098a29bc05ed8843a70c1fa4cc4ba33",
-    "checkedAt": "2026-11-05T11:13:33.995Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eic.ec.europa.eu/news/eic-selects-new-european-scale-ups-step-scale-investments-2026-07-28_en": {
-    "baselineHash": "5a9fe5391d7f96cf371c11e7f011f74d84c368c2070590340c9e065cfade4846",
-    "hash": "5a9fe5391d7f96cf371c11e7f011f74d84c368c2070590340c9e065cfade4846",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:34.617Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eic.ec.europa.eu/document/download/52598755-1351-4b54-b46b-e2682d0a3aec_en?filename=EIC-Work-Programme-2026.pdf": {
-    "baselineHash": "5ddb5d6b7e52ab578459c4795a166acb08394003eec5a702f7a5046a04ec9d3c",
-    "hash": "5ddb5d6b7e52ab578459c4795a166acb08394003eec5a702f7a5046a04ec9d3c",
-    "checkedAt": "2026-11-05T11:13:34.077Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KURESEL%20REKABETC%C4%B0L%C4%B0K/2026/2026.09.07/2026_Y%C4%B1l%C4%B1_1._Proje_Teklif_C%CC%A7ag%CC%86r%C4%B1s%C4%B1.pdf": {
-    "baselineHash": "bd0481ab8a8c3777cb57ed334df989b909f255a3f929f20b56387265fe01e279",
-    "hash": "bd0481ab8a8c3777cb57ed334df989b909f255a3f929f20b56387265fe01e279",
-    "checkedAt": "2026-11-05T11:13:35.526Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9206/kuresel-rekabetcilik-destek-programi": {
-    "baselineHash": "27a7ad485991139b08942a91d89d78ca6fd6515f4120ff63f55af4efc5876e51",
-    "hash": "27a7ad485991139b08942a91d89d78ca6fd6515f4120ff63f55af4efc5876e51",
-    "baselineDocumentHash": "0a6ef4dbc12f9652f7679b476825c6b41ca0d21dced5a72ea8d80f60f229f920",
-    "documentHash": "0a6ef4dbc12f9652f7679b476825c6b41ca0d21dced5a72ea8d80f60f229f920",
-    "checkedAt": "2026-11-05T11:13:35.904Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf": {
-    "baselineHash": "eb28448445dd3a281f4f9a5c800873ce4dfebc1e845209b59b2acccd42adfce7",
-    "hash": "eb28448445dd3a281f4f9a5c800873ce4dfebc1e845209b59b2acccd42adfce7",
-    "checkedAt": "2026-11-05T11:13:35.207Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-09/1711_YZE_2026_Cagri_Metni_Guncel.pdf": {
-    "baselineHash": "60d1d7043d13d9ae7245c9dc47cce3f9c0fdd0c8854bd24a02839a86bcd4863e",
-    "hash": "60d1d7043d13d9ae7245c9dc47cce3f9c0fdd0c8854bd24a02839a86bcd4863e",
-    "checkedAt": "2026-11-05T11:13:35.023Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KURESEL%20REKABETC%C4%B0L%C4%B0K/2026/2026.10.09/Ku%CC%88resel_Rekabetc%CC%A7ilik_Destek_Program%C4%B1_Yo%CC%88nergesi.pdf": {
-    "baselineHash": "ae01bae3847a9c22332faa37492b705a3334bafe60736bb4a89f5f75d5aa6c50",
-    "hash": "ae01bae3847a9c22332faa37492b705a3334bafe60736bb4a89f5f75d5aa6c50",
-    "checkedAt": "2026-11-05T11:13:36.398Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://kosgeb.gov.tr/site/tr/genel/destekdetay/9224/istihdami-koruma-destek-programi": {
-    "baselineHash": "f8dcc1510e28bd754f4f934d84fc1384800c178f5176dd26d65f70321dd294b1",
-    "hash": "f8dcc1510e28bd754f4f934d84fc1384800c178f5176dd26d65f70321dd294b1",
-    "baselineDocumentHash": "296844b0552f901b05193fd72aa257006e22dfff0ddbdce33048d19769e2abaa",
-    "documentHash": "296844b0552f901b05193fd72aa257006e22dfff0ddbdce33048d19769e2abaa",
-    "checkedAt": "2026-11-05T11:13:37.706Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://kosgeb.gov.tr/site/tr/genel/detay/9471/istihdami-koruma-destek-programinin-kapsami-genisletildi": {
-    "baselineHash": "6ad4d70fde7bc14f27ffbc4776676b1b9b15c96c3f3df41a312365ed10846cb3",
-    "hash": "6ad4d70fde7bc14f27ffbc4776676b1b9b15c96c3f3df41a312365ed10846cb3",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:37.887Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/": {
-    "ok": false,
-    "attemptedAt": "2026-11-05T11:13:38.807Z",
-    "error": "HTTP 403"
-  },
-  "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Strategic-Innovation-Call-Manual_v5.2_27102026.pdf": {
-    "baselineHash": "3c2693b059227e590ddf9176308317d2367913bf398d255f6a44bbbff28b9f1f",
-    "hash": "3c2693b059227e590ddf9176308317d2367913bf398d255f6a44bbbff28b9f1f",
-    "checkedAt": "2026-11-05T11:13:38.818Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Financial-Support-to-Startups_Call-Manual_FINAL_1.4.pdf": {
-    "baselineHash": "bb34521d20d68e224e5ec8069dd5b0f28b6b7eab0a21036c8127323fddd8d27c",
-    "hash": "bb34521d20d68e224e5ec8069dd5b0f28b6b7eab0a21036c8127323fddd8d27c",
-    "checkedAt": "2026-11-05T11:13:38.890Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/%C4%B0stihdam%C4%B1%20Koruma/2026/2026.09.01/00_I%CC%87stihdam%C4%B1_Koruma_Destek_Program%C4%B1_Yo%CC%88nergesi_01.09.26-763613.pdf": {
-    "baselineHash": "f601501b544be1d3f931d4d7fb1415afdffbf35026de51dea69bf379389f18fb",
-    "hash": "f601501b544be1d3f931d4d7fb1415afdffbf35026de51dea69bf379389f18fb",
-    "checkedAt": "2026-11-05T11:13:37.412Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Call-Manual_SME-Market-Expansion-Call-2027_final_v1.2_271026.pdf": {
-    "baselineHash": "4b9745897b4adc900644b0b89ce1f792b251c1a4fce073a69e755acea6e19f89",
-    "hash": "4b9745897b4adc900644b0b89ce1f792b251c1a4fce073a69e755acea6e19f89",
-    "checkedAt": "2026-11-05T11:13:38.971Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf": {
-    "baselineHash": "10f733d7f6a2d0f8e728c63bdc119392f4373693e0c900fb42110c5cde704563",
-    "hash": "10f733d7f6a2d0f8e728c63bdc119392f4373693e0c900fb42110c5cde704563",
-    "checkedAt": "2026-11-05T11:13:34.805Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.eiturbanmobility.eu/call-for-proposals/strategic-innovation-open-call/": {
-    "baselineHash": "a964b1b2b3bf89ac350baa9a1400659f3acbc1229a3b2472effd45c25ab3f4ff",
-    "hash": "a964b1b2b3bf89ac350baa9a1400659f3acbc1229a3b2472effd45c25ab3f4ff",
-    "baselineDocumentHash": "f0cc8287894cba2abf3597e9af327ee44b05de0b277df30fc3838ae2448f9ad9",
-    "documentHash": "f0cc8287894cba2abf3597e9af327ee44b05de0b277df30fc3838ae2448f9ad9",
-    "checkedAt": "2026-11-05T11:13:38.849Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.eiturbanmobility.eu/call-for-proposals/sme-market-expansion-open-call-2027/": {
-    "baselineHash": "3c948cf6a0b532db1e70d1564745721086cf888e02efab9fd89bcbe539991cec",
-    "hash": "3c948cf6a0b532db1e70d1564745721086cf888e02efab9fd89bcbe539991cec",
-    "baselineDocumentHash": "6df7452e2548c629efa5b41dd081c9d88a039dad8e2d444723a2a6b63c9fdd7b",
-    "documentHash": "6df7452e2548c629efa5b41dd081c9d88a039dad8e2d444723a2a6b63c9fdd7b",
-    "checkedAt": "2026-11-05T11:13:39.003Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.eiturbanmobility.eu/call-for-proposals/financial-support-to-startups-open-call-3/": {
-    "baselineHash": "545468306391521b06371bb752a9748c1be2214b731693ceae4e758ee2bd14bb",
-    "hash": "545468306391521b06371bb752a9748c1be2214b731693ceae4e758ee2bd14bb",
-    "baselineDocumentHash": "6a65e2d29517909a713277a3853f5f38f904fa4e8e5a72197f4f400c9c46a853",
-    "documentHash": "6a65e2d29517909a713277a3853f5f38f904fa4e8e5a72197f4f400c9c46a853",
-    "checkedAt": "2026-11-05T11:13:38.962Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://aenaon-project.eu/wp-content/uploads/2026/09/Annex-2-AENAON_Guidelines_for_Applicants_v.1.1-2.pdf": {
-    "baselineHash": "8178d7798eb53276ac5d5b97bb9a4d3e070d0582c1efc5507cfbe320b8458b10",
-    "hash": "8178d7798eb53276ac5d5b97bb9a4d3e070d0582c1efc5507cfbe320b8458b10",
-    "checkedAt": "2026-11-05T11:13:39.517Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://valleysproject.eu/wp-content/uploads/2026/10/VALLEYS_OC1_Guidelines-for-Applicants_FINAL.pdf": {
-    "baselineHash": "25f866a912933c9d7b6cf0c93b63abbd07c0071912020e8619ba998c6a966244",
-    "hash": "25f866a912933c9d7b6cf0c93b63abbd07c0071912020e8619ba998c6a966244",
-    "checkedAt": "2026-11-05T11:13:40.409Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/europe-world/international-cooperation/association-horizon-europe_en": {
-    "baselineHash": "c07bf304ae98473a529477fc259e28ad4d58aab0c888503e09205b7520f4b0ae",
-    "hash": "c07bf304ae98473a529477fc259e28ad4d58aab0c888503e09205b7520f4b0ae",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:42.400Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://valleysproject.eu/open-call-1/": {
-    "baselineHash": "c83337212c0491faa49487d870c7e8d09e25329041ccf62110ce24cf64ef4704",
-    "hash": "c83337212c0491faa49487d870c7e8d09e25329041ccf62110ce24cf64ef4704",
-    "baselineDocumentHash": "f87e33e543a6c4d839f28390fef3de99e98f1fd934034441714a139e39f44050",
-    "documentHash": "f87e33e543a6c4d839f28390fef3de99e98f1fd934034441714a139e39f44050",
-    "checkedAt": "2026-11-05T11:13:42.374Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://systemeuvalley.eu/open-call-for-fstp/": {
-    "baselineHash": "25cbc4f9a07c962ddedf8e0fe9e9858ee4de5489e6f12f4b4e6688d69355703a",
-    "hash": "25cbc4f9a07c962ddedf8e0fe9e9858ee4de5489e6f12f4b4e6688d69355703a",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:43.186Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eismea.ec.europa.eu/funding-opportunities/calls-proposals/systemeu-project-open-call-interregional-innovation-proposals-areas-digital-transformation_en": {
-    "baselineHash": "21134a81c4e7f8050bece65d27592abf69fa2ccc1c2207827cbd16ed7cd6d254",
-    "hash": "21134a81c4e7f8050bece65d27592abf69fa2ccc1c2207827cbd16ed7cd6d254",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:43.911Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi": {
-    "baselineHash": "6efe4d04c7196291764229f0c6e230836c1f4450019cbe7e1d1dcfb8813a14a9",
-    "hash": "6efe4d04c7196291764229f0c6e230836c1f4450019cbe7e1d1dcfb8813a14a9",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:44.687Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://opportunities.getonepass.eu/open-opportunities/systemeu/systemeu-fstpcall": {
-    "baselineHash": "3bd7558fd222ec0aa6f1297cc2dc41f637c6e0a1ad5187648c787f3d113c4673",
-    "hash": "3bd7558fd222ec0aa6f1297cc2dc41f637c6e0a1ad5187648c787f3d113c4673",
-    "baselineDocumentHash": "98872b7f1822819ce07e8c3f76cc1464a6e05b3654402ad0e2829bf243feaa01",
-    "documentHash": "98872b7f1822819ce07e8c3f76cc1464a6e05b3654402ad0e2829bf243feaa01",
-    "checkedAt": "2026-11-05T11:13:44.581Z",
+  "https://tubitak.gov.tr/tr/duyuru/1833-sayem-yesil-donusum-2026-1-cagrisi-2-asamasi-basvuruya-acildi": {
+    "baselineHash": "9cd7844be1ac4dbe030558f6491d8884734cf1072e8a93b19d5174b6eeec4c7e",
+    "hash": "9cd7844be1ac4dbe030558f6491d8884734cf1072e8a93b19d5174b6eeec4c7e",
+    "baselineDocumentHash": "2bb1ba024b082f14ca4210daf757de03fdfe6b4c43bfbb932e024595200bb8fc",
+    "documentHash": "2bb1ba024b082f14ca4210daf757de03fdfe6b4c43bfbb932e024595200bb8fc",
+    "checkedAt": "2026-11-05T11:18:37.617Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -527,7 +44,536 @@
     "hash": "04da841764710f7d3b5901e809da00ed9b170935c73068ccf7e5ed7c317476fa",
     "baselineDocumentHash": "af262b27aa93ba45d7854ec0379348202e55d31a4362fca39e5804cf6dce3f21",
     "documentHash": "af262b27aa93ba45d7854ec0379348202e55d31a4362fca39e5804cf6dce3f21",
-    "checkedAt": "2026-11-05T11:13:45.370Z",
+    "checkedAt": "2026-11-05T11:18:37.088Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/tr/duyuru/2244-sanayi-doktora-programi-2026-yili-cagrisi-acildi-0": {
+    "baselineHash": "d2c136cf97c038a00daa450eebfe80392f6d7703f5c25f5866c4b8d62482815e",
+    "hash": "d2c136cf97c038a00daa450eebfe80392f6d7703f5c25f5866c4b8d62482815e",
+    "baselineDocumentHash": "68e00bec8bf8bdd7790e783216c1975ab22d17e5ee7c3c9b424cd379427b7ef2",
+    "documentHash": "68e00bec8bf8bdd7790e783216c1975ab22d17e5ee7c3c9b424cd379427b7ef2",
+    "checkedAt": "2026-11-05T11:18:38.039Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/tr/burslar/lisansustu/egitim-burs-programlari/2244-sanayi-doktora-programi": {
+    "baselineHash": "d5356d436319e135bc49239fb36d6e923439cdde5a3d9e83e3dddc667052fdcb",
+    "hash": "d5356d436319e135bc49239fb36d6e923439cdde5a3d9e83e3dddc667052fdcb",
+    "baselineDocumentHash": "4ee6b0d3c1a3cc8f74ac57fa5c913743cf2456b8060e82d8b2fdab79c2db19b5",
+    "documentHash": "4ee6b0d3c1a3cc8f74ac57fa5c913743cf2456b8060e82d8b2fdab79c2db19b5",
+    "checkedAt": "2026-11-05T11:18:38.203Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-11/2244-Sanayi_Doktora_Programi_Sik_Sorulan_Sorular-Ekim_2026_0.pdf": {
+    "baselineHash": "b6a0e94c5c7d84d0ea021c428392095b88cffafd8a30b94a8555c1c3a37a0dae",
+    "hash": "b6a0e94c5c7d84d0ea021c428392095b88cffafd8a30b94a8555c1c3a37a0dae",
+    "checkedAt": "2026-11-05T11:18:38.363Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-10/2244_Cagri_Metni_2026.pdf": {
+    "baselineHash": "6c2fc92ad7e54be4445535b83c1d70d2fc1f9bdaa001ec9352f1ff9c0ea53c2f",
+    "hash": "6c2fc92ad7e54be4445535b83c1d70d2fc1f9bdaa001ec9352f1ff9c0ea53c2f",
+    "checkedAt": "2026-11-05T11:18:37.788Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-04/1833_SAYEM_Cagri_Duyurusu.pdf": {
+    "baselineHash": "4ed16ef736b1fd8f81b20c091355d22764c68a30dfd822181e29737c6d64189f",
+    "hash": "4ed16ef736b1fd8f81b20c091355d22764c68a30dfd822181e29737c6d64189f",
+    "checkedAt": "2026-11-05T11:18:37.456Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-08/Siparis_Ar-Ge_2026-3_Cagri_Dokumani.pdf": {
+    "baselineHash": "b5665606654f2033fe7e41f8e082f9112dc43e24b82b0e8691a2af569dbadc18",
+    "hash": "b5665606654f2033fe7e41f8e082f9112dc43e24b82b0e8691a2af569dbadc18",
+    "checkedAt": "2026-11-05T11:18:40.870Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-cagrisi": {
+    "baselineHash": "ac5ab2168fe67e179c639df70e6b242bd8eab40b6fffba027a0fa09005050f51",
+    "hash": "ac5ab2168fe67e179c639df70e6b242bd8eab40b6fffba027a0fa09005050f51",
+    "baselineDocumentHash": "b862567302ed839eb8f08b4c2bb5ea993847ca1137540e2ea8916fdf83fc8858",
+    "documentHash": "b862567302ed839eb8f08b4c2bb5ea993847ca1137540e2ea8916fdf83fc8858",
+    "checkedAt": "2026-11-05T11:18:41.694Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi": {
+    "baselineHash": "f643e870c32a4266901d92013999f38358164d19317fe0e4b1a5b69bbb7f0a89",
+    "hash": "f643e870c32a4266901d92013999f38358164d19317fe0e4b1a5b69bbb7f0a89",
+    "baselineDocumentHash": "aa33b1747758a69f3f256b3fa17815643c261ff9d35f245fe3798ad23b493ede",
+    "documentHash": "aa33b1747758a69f3f256b3fa17815643c261ff9d35f245fe3798ad23b493ede",
+    "checkedAt": "2026-11-05T11:18:41.856Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://arge.ssb.gov.tr/_layouts/15/CustomHttpHandler/FileDownload.ashx?dosyaId=6972&duyuruId=4921": {
+    "baselineHash": "5961ec447c6f36139ceba0ff12ffcce8a9c0a7130b4f656fceed1078e958e294",
+    "hash": "5961ec447c6f36139ceba0ff12ffcce8a9c0a7130b4f656fceed1078e958e294",
+    "checkedAt": "2026-11-05T11:18:39.293Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://katalog.ssb.gov.tr/pybs-disportal/openpages/basvuruislemleridisportal/sagaGirisi.xhtml": {
+    "baselineHash": "a2f90876952edb075d39a6b3b31af00e9ba7d96059d06b9304fd5bdf359cb361",
+    "hash": "a2f90876952edb075d39a6b3b31af00e9ba7d96059d06b9304fd5bdf359cb361",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:39.770Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-07/Siparis_Ar-Ge_2026-2_Cagri_Dokumani-Guncellenmis.pdf": {
+    "baselineHash": "f601cef7357195df5e7075cffdc29953849eb96c580742f0e9977fe76de7587c",
+    "hash": "f601cef7357195df5e7075cffdc29953849eb96c580742f0e9977fe76de7587c",
+    "checkedAt": "2026-11-05T11:18:42.034Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://hit30.sanayi.gov.tr/cagrilar": {
+    "baselineHash": "51f62a98b4637564a5ad02a2f19a71e8881a1b250ae7c9f83d7c8495c8076e67",
+    "hash": "51f62a98b4637564a5ad02a2f19a71e8881a1b250ae7c9f83d7c8495c8076e67",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:43.437Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eurekanetwork.org/programmes-and-calls/network-projects/transnational-eureka-lightweighting-call-2026/": {
+    "ok": false,
+    "attemptedAt": "2026-11-05T11:18:44.324Z",
+    "error": "HTTP 403"
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-05/Hafifletme_Teknolojileri_Ulusal_Cagrisi.pdf": {
+    "baselineHash": "2732d4970809689799d76a52fc0e1e748a996f06a9048a1758d84f50c453faea",
+    "hash": "2732d4970809689799d76a52fc0e1e748a996f06a9048a1758d84f50c453faea",
+    "checkedAt": "2026-11-05T11:18:44.067Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eurekanetwork.org/programmes-and-calls/network-projects/eureka-call-for-disaster-resilience-response-and-recovery-projects-2026/": {
+    "ok": false,
+    "attemptedAt": "2026-11-05T11:18:45.305Z",
+    "error": "HTTP 403"
+  },
+  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Yapay%20Zeka%20Kredi%20Programi/2026/2026.09.28/Yapay_Zeka_Kredi_Yo%CC%88nergesi_Rev.02.pdf": {
+    "baselineHash": "845b4b87bb892c2423103bb54b6afa42ba984dd892ffb2db330f61bb4a30ab26",
+    "hash": "845b4b87bb892c2423103bb54b6afa42ba984dd892ffb2db330f61bb4a30ab26",
+    "checkedAt": "2026-11-05T11:18:45.333Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-06/Eureka_Network_Afetlerde_Direnclilik_Ulusal_Cagri_Metni-2026.pdf": {
+    "baselineHash": "147dbd503cfbf85743e290179bc5bd3cb725fcf5eca75813cebce070151313d5",
+    "hash": "147dbd503cfbf85743e290179bc5bd3cb725fcf5eca75813cebce070151313d5",
+    "checkedAt": "2026-11-05T11:18:44.352Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9414/yapay-zek-kredi-programi": {
+    "baselineHash": "a30088a0d3f101ecd81ad0c18d7b940943a9b56cc43a34cefd3552e413a8cc9e",
+    "hash": "a30088a0d3f101ecd81ad0c18d7b940943a9b56cc43a34cefd3552e413a8cc9e",
+    "baselineDocumentHash": "382168690f7987f23575a78c00122e4b20cb23f0cfcfe9731e37a8b55f541509",
+    "documentHash": "382168690f7987f23575a78c00122e4b20cb23f0cfcfe9731e37a8b55f541509",
+    "checkedAt": "2026-11-05T11:18:46.858Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-05/1833_SAYEM_2026_CAGRISI_BILGILENDIRME_WEB_13.04.26_1.pdf": {
+    "baselineHash": "6ed60e75161f1080b2087dabfb02b7ab32ba7ccb24ea19a4256328b9d9803bf3",
+    "hash": "6ed60e75161f1080b2087dabfb02b7ab32ba7ccb24ea19a4256328b9d9803bf3",
+    "checkedAt": "2026-11-05T11:18:37.653Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://rea.ec.europa.eu/funding-and-grants/horizon-europe-widening-participation-and-spreading-excellence/hop-facility_en": {
+    "baselineHash": "805f154f1c5724f610a3b95ed369b664a9e314a1bc6bdf7cae97a6efd0b25ecb",
+    "hash": "805f154f1c5724f610a3b95ed369b664a9e314a1bc6bdf7cae97a6efd0b25ecb",
+    "baselineDocumentHash": "cbc87e6f4fb7db70fb5b13b495dccd67028ed791ed9eb40f7c07011468490d08",
+    "documentHash": "cbc87e6f4fb7db70fb5b13b495dccd67028ed791ed9eb40f7c07011468490d08",
+    "checkedAt": "2026-11-05T11:18:47.935Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9427/kosgebden-teknoloji-girisimlerine-yapay-zek-kredi-programi": {
+    "baselineHash": "5217977bedd336329225015b17566753770b0a5e519d090297d493400870b322",
+    "hash": "5217977bedd336329225015b17566753770b0a5e519d090297d493400870b322",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:47.699Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://ticaret.gov.tr/dis-iliskiler/yesil-mutabakat/duyurular/yesil-donusum-programi-cagri-duyurusu": {
+    "baselineHash": "1f843c3992fd517849cdc52cbe9908ff60344c39bea3960df6fbebe072f49ec4",
+    "hash": "1f843c3992fd517849cdc52cbe9908ff60344c39bea3960df6fbebe072f49ec4",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:43.535Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-11-widening-participation-and-strengthening-the-european-research-area_horizon-2026-2027_en.pdf": {
+    "baselineHash": "68a267d4318cd49057de21b7322685e33a8c2d2a1f513d6e52687acb13b8587b",
+    "hash": "68a267d4318cd49057de21b7322685e33a8c2d2a1f513d6e52687acb13b8587b",
+    "checkedAt": "2026-11-05T11:18:47.772Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://marie-sklodowska-curie-actions.ec.europa.eu/funding/msca-staff-exchanges-2027": {
+    "baselineHash": "68a3379f55dc7114e33910658bc919f2e029ebd276f28021546e438988a3ce0f",
+    "hash": "68a3379f55dc7114e33910658bc919f2e029ebd276f28021546e438988a3ce0f",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:48.745Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://cinea.ec.europa.eu/programmes/life/life-support-applicants_en": {
+    "baselineHash": "91ecbacf0c8f56dcc067394583f68844501aaaadf4f807e92b0a5074f1c92a7f",
+    "hash": "91ecbacf0c8f56dcc067394583f68844501aaaadf4f807e92b0a5074f1c92a7f",
+    "baselineDocumentHash": "6abbed05de727c9e6ae6cb8c5d303666342c57c2550fab28397e4545025f5f05",
+    "documentHash": "6abbed05de727c9e6ae6cb8c5d303666342c57c2550fab28397e4545025f5f05",
+    "checkedAt": "2026-11-05T11:18:48.618Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/life/guidance/list-3rd-country-participation_life_en.pdf": {
+    "baselineHash": "db4f3f8f7598c6149786cc77e79253bc68f498646201ae5ccebf1297b50294e0",
+    "hash": "db4f3f8f7598c6149786cc77e79253bc68f498646201ae5ccebf1297b50294e0",
+    "checkedAt": "2026-11-05T11:18:48.546Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/life/wp-call/2026/call-fiche_life-2026-sap-env_en.pdf": {
+    "baselineHash": "090e35a4bcc2c4e5606eb75a8f391ddbedecd10ca1ced971bca0769181a78550",
+    "hash": "090e35a4bcc2c4e5606eb75a8f391ddbedecd10ca1ced971bca0769181a78550",
+    "checkedAt": "2026-11-05T11:18:48.008Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf": {
+    "baselineHash": "f18562788ad0d72e1a7d0cd9791c4c3b4098a29bc05ed8843a70c1fa4cc4ba33",
+    "hash": "f18562788ad0d72e1a7d0cd9791c4c3b4098a29bc05ed8843a70c1fa4cc4ba33",
+    "checkedAt": "2026-11-05T11:18:49.069Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf": {
+    "baselineHash": "598641508ab89d8cb2ecca3f32555c24ce200443df0a22ba33f96aeb02eb3d11",
+    "hash": "598641508ab89d8cb2ecca3f32555c24ce200443df0a22ba33f96aeb02eb3d11",
+    "checkedAt": "2026-11-05T11:18:49.145Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en": {
+    "baselineHash": "dfce2da04e4ecfeec2d07c00e38081b7c6da24047ea3f4fd87a055d2c47357ee",
+    "hash": "8049fbd446e1b914d3e8a6e2626c94e2e498b7865539e0564ab95dfd5f751ead",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:49.363Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": true
+  },
+  "https://eic.ec.europa.eu/eic-frequently-asked-questions/faqs-eic-pre-accelerator_en": {
+    "baselineHash": "3578c87b630a6457020d41c75d5a1491adb5ad30de1c937bb6e0606d91fc6d9b",
+    "hash": "3578c87b630a6457020d41c75d5a1491adb5ad30de1c937bb6e0606d91fc6d9b",
+    "baselineDocumentHash": "837448462bc705ee4f8bd7b431d0a9f22b0525e929979cc5ea60ca2b11e6e884",
+    "documentHash": "837448462bc705ee4f8bd7b431d0a9f22b0525e929979cc5ea60ca2b11e6e884",
+    "checkedAt": "2026-11-05T11:18:48.873Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://eic.ec.europa.eu/eic-funding-opportunities/eic-pre-accelerator_en": {
+    "baselineHash": "35314a2ca743ec0fd8664e1b2a4d9d6e5ccd08253decc360f23a67df6947ba71",
+    "hash": "35314a2ca743ec0fd8664e1b2a4d9d6e5ccd08253decc360f23a67df6947ba71",
+    "baselineDocumentHash": "c0b299aac464e12b3ec52af25daffab8a72995e8152ce8b140e48ab7919c6352",
+    "documentHash": "c0b299aac464e12b3ec52af25daffab8a72995e8152ce8b140e48ab7919c6352",
+    "checkedAt": "2026-11-05T11:18:49.007Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://ec.europa.eu/transparency/documents-register/api/files/C%282025%298493_11/090166e526657dd7?rendition=false": {
+    "baselineHash": "6f9ed92f5876476ff2ac3e65da21889cb8dad7f2c640143d7e24a3f5925cbf90",
+    "hash": "6f9ed92f5876476ff2ac3e65da21889cb8dad7f2c640143d7e24a3f5925cbf90",
+    "checkedAt": "2026-11-05T11:18:48.866Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://eic.ec.europa.eu/eic-funding-opportunities/eic-accelerator_en": {
+    "baselineHash": "71bdcd85db4474dd66dbb95010e05d9408749a6616efe97d7851dc1a3371a92e",
+    "hash": "b629072e0bbd31b2136484d584548540a60da456f8e5323cbb106d0ef8ff97e1",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:49.703Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": true
+  },
+  "https://eic.ec.europa.eu/funding-opportunities_en": {
+    "baselineHash": "eb774585e3c6e25121bc53765e56e72d1b21451ec72c32f0ebee0768e2dc01a8",
+    "hash": "eb774585e3c6e25121bc53765e56e72d1b21451ec72c32f0ebee0768e2dc01a8",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:49.503Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://eic.ec.europa.eu/news/eic-selects-new-european-scale-ups-step-scale-investments-2026-07-28_en": {
+    "baselineHash": "5a9fe5391d7f96cf371c11e7f011f74d84c368c2070590340c9e065cfade4846",
+    "hash": "5a9fe5391d7f96cf371c11e7f011f74d84c368c2070590340c9e065cfade4846",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:49.505Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://eic.ec.europa.eu/document/download/52598755-1351-4b54-b46b-e2682d0a3aec_en?filename=EIC-Work-Programme-2026.pdf": {
+    "baselineHash": "5ddb5d6b7e52ab578459c4795a166acb08394003eec5a702f7a5046a04ec9d3c",
+    "hash": "5ddb5d6b7e52ab578459c4795a166acb08394003eec5a702f7a5046a04ec9d3c",
+    "checkedAt": "2026-11-05T11:18:49.371Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KURESEL%20REKABETC%C4%B0L%C4%B0K/2026/2026.09.07/2026_Y%C4%B1l%C4%B1_1._Proje_Teklif_C%CC%A7ag%CC%86r%C4%B1s%C4%B1.pdf": {
+    "baselineHash": "bd0481ab8a8c3777cb57ed334df989b909f255a3f929f20b56387265fe01e279",
+    "hash": "bd0481ab8a8c3777cb57ed334df989b909f255a3f929f20b56387265fe01e279",
+    "checkedAt": "2026-11-05T11:18:50.330Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9206/kuresel-rekabetcilik-destek-programi": {
+    "baselineHash": "27a7ad485991139b08942a91d89d78ca6fd6515f4120ff63f55af4efc5876e51",
+    "hash": "27a7ad485991139b08942a91d89d78ca6fd6515f4120ff63f55af4efc5876e51",
+    "baselineDocumentHash": "0a6ef4dbc12f9652f7679b476825c6b41ca0d21dced5a72ea8d80f60f229f920",
+    "documentHash": "0a6ef4dbc12f9652f7679b476825c6b41ca0d21dced5a72ea8d80f60f229f920",
+    "checkedAt": "2026-11-05T11:18:50.639Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf": {
+    "baselineHash": "eb28448445dd3a281f4f9a5c800873ce4dfebc1e845209b59b2acccd42adfce7",
+    "hash": "eb28448445dd3a281f4f9a5c800873ce4dfebc1e845209b59b2acccd42adfce7",
+    "checkedAt": "2026-11-05T11:18:49.914Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-09/1711_YZE_2026_Cagri_Metni_Guncel.pdf": {
+    "baselineHash": "60d1d7043d13d9ae7245c9dc47cce3f9c0fdd0c8854bd24a02839a86bcd4863e",
+    "hash": "60d1d7043d13d9ae7245c9dc47cce3f9c0fdd0c8854bd24a02839a86bcd4863e",
+    "checkedAt": "2026-11-05T11:18:49.906Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KURESEL%20REKABETC%C4%B0L%C4%B0K/2026/2026.10.09/Ku%CC%88resel_Rekabetc%CC%A7ilik_Destek_Program%C4%B1_Yo%CC%88nergesi.pdf": {
+    "baselineHash": "ae01bae3847a9c22332faa37492b705a3334bafe60736bb4a89f5f75d5aa6c50",
+    "hash": "ae01bae3847a9c22332faa37492b705a3334bafe60736bb4a89f5f75d5aa6c50",
+    "checkedAt": "2026-11-05T11:18:51.081Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://kosgeb.gov.tr/site/tr/genel/destekdetay/9224/istihdami-koruma-destek-programi": {
+    "baselineHash": "f8dcc1510e28bd754f4f934d84fc1384800c178f5176dd26d65f70321dd294b1",
+    "hash": "f8dcc1510e28bd754f4f934d84fc1384800c178f5176dd26d65f70321dd294b1",
+    "baselineDocumentHash": "296844b0552f901b05193fd72aa257006e22dfff0ddbdce33048d19769e2abaa",
+    "documentHash": "296844b0552f901b05193fd72aa257006e22dfff0ddbdce33048d19769e2abaa",
+    "checkedAt": "2026-11-05T11:18:51.741Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/": {
+    "ok": false,
+    "attemptedAt": "2026-11-05T11:18:52.852Z",
+    "error": "HTTP 403"
+  },
+  "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Strategic-Innovation-Call-Manual_v5.2_27102026.pdf": {
+    "baselineHash": "3c2693b059227e590ddf9176308317d2367913bf398d255f6a44bbbff28b9f1f",
+    "hash": "3c2693b059227e590ddf9176308317d2367913bf398d255f6a44bbbff28b9f1f",
+    "checkedAt": "2026-11-05T11:18:52.873Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf": {
+    "baselineHash": "10f733d7f6a2d0f8e728c63bdc119392f4373693e0c900fb42110c5cde704563",
+    "hash": "10f733d7f6a2d0f8e728c63bdc119392f4373693e0c900fb42110c5cde704563",
+    "checkedAt": "2026-11-05T11:18:49.727Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Financial-Support-to-Startups_Call-Manual_FINAL_1.4.pdf": {
+    "baselineHash": "bb34521d20d68e224e5ec8069dd5b0f28b6b7eab0a21036c8127323fddd8d27c",
+    "hash": "bb34521d20d68e224e5ec8069dd5b0f28b6b7eab0a21036c8127323fddd8d27c",
+    "checkedAt": "2026-11-05T11:18:52.934Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/%C4%B0stihdam%C4%B1%20Koruma/2026/2026.09.01/00_I%CC%87stihdam%C4%B1_Koruma_Destek_Program%C4%B1_Yo%CC%88nergesi_01.09.26-763613.pdf": {
+    "baselineHash": "f601501b544be1d3f931d4d7fb1415afdffbf35026de51dea69bf379389f18fb",
+    "hash": "f601501b544be1d3f931d4d7fb1415afdffbf35026de51dea69bf379389f18fb",
+    "checkedAt": "2026-11-05T11:18:51.625Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Call-Manual_SME-Market-Expansion-Call-2027_final_v1.2_271026.pdf": {
+    "baselineHash": "4b9745897b4adc900644b0b89ce1f792b251c1a4fce073a69e755acea6e19f89",
+    "hash": "4b9745897b4adc900644b0b89ce1f792b251c1a4fce073a69e755acea6e19f89",
+    "checkedAt": "2026-11-05T11:18:52.964Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://kosgeb.gov.tr/site/tr/genel/detay/9471/istihdami-koruma-destek-programinin-kapsami-genisletildi": {
+    "baselineHash": "6ad4d70fde7bc14f27ffbc4776676b1b9b15c96c3f3df41a312365ed10846cb3",
+    "hash": "6ad4d70fde7bc14f27ffbc4776676b1b9b15c96c3f3df41a312365ed10846cb3",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:52.293Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eiturbanmobility.eu/call-for-proposals/strategic-innovation-open-call/": {
+    "baselineHash": "a964b1b2b3bf89ac350baa9a1400659f3acbc1229a3b2472effd45c25ab3f4ff",
+    "hash": "a964b1b2b3bf89ac350baa9a1400659f3acbc1229a3b2472effd45c25ab3f4ff",
+    "baselineDocumentHash": "f0cc8287894cba2abf3597e9af327ee44b05de0b277df30fc3838ae2448f9ad9",
+    "documentHash": "f0cc8287894cba2abf3597e9af327ee44b05de0b277df30fc3838ae2448f9ad9",
+    "checkedAt": "2026-11-05T11:18:52.912Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eiturbanmobility.eu/call-for-proposals/financial-support-to-startups-open-call-3/": {
+    "baselineHash": "545468306391521b06371bb752a9748c1be2214b731693ceae4e758ee2bd14bb",
+    "hash": "545468306391521b06371bb752a9748c1be2214b731693ceae4e758ee2bd14bb",
+    "baselineDocumentHash": "6a65e2d29517909a713277a3853f5f38f904fa4e8e5a72197f4f400c9c46a853",
+    "documentHash": "6a65e2d29517909a713277a3853f5f38f904fa4e8e5a72197f4f400c9c46a853",
+    "checkedAt": "2026-11-05T11:18:52.961Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eiturbanmobility.eu/call-for-proposals/sme-market-expansion-open-call-2027/": {
+    "baselineHash": "3c948cf6a0b532db1e70d1564745721086cf888e02efab9fd89bcbe539991cec",
+    "hash": "3c948cf6a0b532db1e70d1564745721086cf888e02efab9fd89bcbe539991cec",
+    "baselineDocumentHash": "6df7452e2548c629efa5b41dd081c9d88a039dad8e2d444723a2a6b63c9fdd7b",
+    "documentHash": "6df7452e2548c629efa5b41dd081c9d88a039dad8e2d444723a2a6b63c9fdd7b",
+    "checkedAt": "2026-11-05T11:18:52.990Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://aenaon-project.eu/wp-content/uploads/2026/09/Annex-2-AENAON_Guidelines_for_Applicants_v.1.1-2.pdf": {
+    "baselineHash": "8178d7798eb53276ac5d5b97bb9a4d3e070d0582c1efc5507cfbe320b8458b10",
+    "hash": "8178d7798eb53276ac5d5b97bb9a4d3e070d0582c1efc5507cfbe320b8458b10",
+    "checkedAt": "2026-11-05T11:18:53.168Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://valleysproject.eu/wp-content/uploads/2026/10/VALLEYS_OC1_Guidelines-for-Applicants_FINAL.pdf": {
+    "baselineHash": "25f866a912933c9d7b6cf0c93b63abbd07c0071912020e8619ba998c6a966244",
+    "hash": "25f866a912933c9d7b6cf0c93b63abbd07c0071912020e8619ba998c6a966244",
+    "checkedAt": "2026-11-05T11:18:54.280Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://research-and-innovation.ec.europa.eu/strategy/strategy-research-and-innovation/europe-world/international-cooperation/association-horizon-europe_en": {
+    "baselineHash": "c07bf304ae98473a529477fc259e28ad4d58aab0c888503e09205b7520f4b0ae",
+    "hash": "c07bf304ae98473a529477fc259e28ad4d58aab0c888503e09205b7520f4b0ae",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:55.780Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://valleysproject.eu/open-call-1/": {
+    "baselineHash": "c83337212c0491faa49487d870c7e8d09e25329041ccf62110ce24cf64ef4704",
+    "hash": "c83337212c0491faa49487d870c7e8d09e25329041ccf62110ce24cf64ef4704",
+    "baselineDocumentHash": "f87e33e543a6c4d839f28390fef3de99e98f1fd934034441714a139e39f44050",
+    "documentHash": "f87e33e543a6c4d839f28390fef3de99e98f1fd934034441714a139e39f44050",
+    "checkedAt": "2026-11-05T11:18:55.024Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://eismea.ec.europa.eu/funding-opportunities/calls-proposals/systemeu-project-open-call-interregional-innovation-proposals-areas-digital-transformation_en": {
+    "baselineHash": "21134a81c4e7f8050bece65d27592abf69fa2ccc1c2207827cbd16ed7cd6d254",
+    "hash": "21134a81c4e7f8050bece65d27592abf69fa2ccc1c2207827cbd16ed7cd6d254",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:56.355Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://systemeuvalley.eu/open-call-for-fstp/": {
+    "baselineHash": "25cbc4f9a07c962ddedf8e0fe9e9858ee4de5489e6f12f4b4e6688d69355703a",
+    "hash": "25cbc4f9a07c962ddedf8e0fe9e9858ee4de5489e6f12f4b4e6688d69355703a",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:56.218Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://opportunities.getonepass.eu/open-opportunities/systemeu/systemeu-fstpcall": {
+    "baselineHash": "3bd7558fd222ec0aa6f1297cc2dc41f637c6e0a1ad5187648c787f3d113c4673",
+    "hash": "3bd7558fd222ec0aa6f1297cc2dc41f637c6e0a1ad5187648c787f3d113c4673",
+    "baselineDocumentHash": "98872b7f1822819ce07e8c3f76cc1464a6e05b3654402ad0e2829bf243feaa01",
+    "documentHash": "98872b7f1822819ce07e8c3f76cc1464a6e05b3654402ad0e2829bf243feaa01",
+    "checkedAt": "2026-11-05T11:18:56.918Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -537,7 +583,17 @@
     "hash": "a8342336c76937d97eba3e276d8b45f0637e5c4d62a0e047af913d7503463832",
     "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:45.349Z",
+    "checkedAt": "2026-11-05T11:18:57.499Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi": {
+    "baselineHash": "6efe4d04c7196291764229f0c6e230836c1f4450019cbe7e1d1dcfb8813a14a9",
+    "hash": "6efe4d04c7196291764229f0c6e230836c1f4450019cbe7e1d1dcfb8813a14a9",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:18:57.310Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -545,7 +601,7 @@
   "https://tubitak.gov.tr/sites/default/files/2026-03/EK_1509_5.3.2026_tarih_ve_908463_sayili_Baskanlik_Olur_u.pdf": {
     "baselineHash": "6575d7230e24555b5e9a2eeeb8f3c3d2ba2af816502a5e9d0f5096b1f5f2aacb",
     "hash": "6575d7230e24555b5e9a2eeeb8f3c3d2ba2af816502a5e9d0f5096b1f5f2aacb",
-    "checkedAt": "2026-11-05T11:13:45.684Z",
+    "checkedAt": "2026-11-05T11:18:58.098Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -555,7 +611,7 @@
     "hash": "2cebed0a26fe910c148b79298a153fd851094b55fd140493d82a27fdd2de193f",
     "baselineDocumentHash": "d06761336409e47da825416f76d44c9047c561bded661eb202f93d133a7d6d5b",
     "documentHash": "d06761336409e47da825416f76d44c9047c561bded661eb202f93d133a7d6d5b",
-    "checkedAt": "2026-11-05T11:13:40.074Z",
+    "checkedAt": "2026-11-05T11:18:54.200Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -565,7 +621,7 @@
     "hash": "62947725ae45e9d0f5475466b865733119f67e8ba27aef6a5d8a84e3148bb9b0",
     "baselineDocumentHash": "46774009e2cb306bc6d278932a230d4a37ea11780c87a6fa3db466a7f4e64b7f",
     "documentHash": "46774009e2cb306bc6d278932a230d4a37ea11780c87a6fa3db466a7f4e64b7f",
-    "checkedAt": "2026-11-05T11:13:48.654Z",
+    "checkedAt": "2026-11-05T11:19:02.185Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -573,7 +629,15 @@
   "https://www.biodiversa.eu/wp-content/uploads/2026/09/BiodivFuture_Funding-Organisation_Rules_V1_09-09-2026.pdf": {
     "baselineHash": "c8357b208ef89c0e410f06545abe373de493e9382373c318bc908c0162b1e42c",
     "hash": "c8357b208ef89c0e410f06545abe373de493e9382373c318bc908c0162b1e42c",
-    "checkedAt": "2026-11-05T11:13:49.500Z",
+    "checkedAt": "2026-11-05T11:19:02.679Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://ufukavrupa.org.tr/sites/default/files/users/user397/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf": {
+    "baselineHash": "d344f368d00b7a921d493e5fd602eb7c3133f3d371107e555f70662bb426ff57",
+    "hash": "d344f368d00b7a921d493e5fd602eb7c3133f3d371107e555f70662bb426ff57",
+    "checkedAt": "2026-11-05T11:19:00.514Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -583,23 +647,15 @@
     "hash": "4701b000f36667a0bbcc2c47563c799faf143354a0da4b350201e6614d5975a1",
     "baselineDocumentHash": "99ffac4b75e10b264b00a172bbc0cf1e3a3dd8876f72db08f585edc74d6b82b0",
     "documentHash": "99ffac4b75e10b264b00a172bbc0cf1e3a3dd8876f72db08f585edc74d6b82b0",
-    "checkedAt": "2026-11-05T11:13:50.258Z",
+    "checkedAt": "2026-11-05T11:19:03.191Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
   },
-  "https://ufukavrupa.org.tr/sites/default/files/users/user397/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf": {
-    "baselineHash": "d344f368d00b7a921d493e5fd602eb7c3133f3d371107e555f70662bb426ff57",
-    "hash": "d344f368d00b7a921d493e5fd602eb7c3133f3d371107e555f70662bb426ff57",
-    "checkedAt": "2026-11-05T11:13:48.480Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-09/FOREST_2026_Cagrisi_Ulusal_Basvuru_Kurallari.pdf": {
-    "baselineHash": "1dfaaafa0901b787e4a020dfa5df3100e4cc9d4b671d246d78ea09b3c3c86678",
-    "hash": "1dfaaafa0901b787e4a020dfa5df3100e4cc9d4b671d246d78ea09b3c3c86678",
-    "checkedAt": "2026-11-05T11:13:51.440Z",
+  "https://tubitak.gov.tr/sites/default/files/2026-07/1509_web_yeni_sunum.pdf": {
+    "baselineHash": "09998107e3e49d909b6295dddfc2887ad40ca01531feb0633dd94cecb9b4e830",
+    "hash": "09998107e3e49d909b6295dddfc2887ad40ca01531feb0633dd94cecb9b4e830",
+    "checkedAt": "2026-11-05T11:18:57.777Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -609,7 +665,7 @@
     "hash": "e19995385fcad825dc6453511ab5b8c471c15197ad0a7a0d42863cf074bdd866",
     "baselineDocumentHash": "299fa3d0277e2a02a5f94ce0dbb713ba4e1880b1a9507fffc9864c42a9725b92",
     "documentHash": "299fa3d0277e2a02a5f94ce0dbb713ba4e1880b1a9507fffc9864c42a9725b92",
-    "checkedAt": "2026-11-05T11:13:52.597Z",
+    "checkedAt": "2026-11-05T11:19:03.725Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -617,7 +673,7 @@
   "https://forest-partnership.eu/wp-content/uploads/2026/11/FOREST_JC2026_Annex_IV_Funder_Regulations.pdf": {
     "baselineHash": "ef8370ec5232ce6efadf20726b2fdeb1da90021d4bc503af7c40c5a1402563ce",
     "hash": "ef8370ec5232ce6efadf20726b2fdeb1da90021d4bc503af7c40c5a1402563ce",
-    "checkedAt": "2026-11-05T11:13:53.616Z",
+    "checkedAt": "2026-11-05T11:19:04.734Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -625,7 +681,7 @@
   "https://forest-partnership.eu/wp-content/uploads/2026/09/260915_FOREST_JC2026_Call_Announcement_FINAL-1.pdf": {
     "baselineHash": "dab92e98eb0970d8262a97066e946311d2b7aaf17cad6faf39da549d3c019d32",
     "hash": "dab92e98eb0970d8262a97066e946311d2b7aaf17cad6faf39da549d3c019d32",
-    "checkedAt": "2026-11-05T11:13:53.050Z",
+    "checkedAt": "2026-11-05T11:19:04.174Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -633,7 +689,7 @@
   "https://ufukavrupa.org.tr/sites/default/files/users/user20730/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf": {
     "baselineHash": "dc60f424fcb2bead0014ba947afa8a6ab8e716c549b583693ab492c76a2c9b12",
     "hash": "dc60f424fcb2bead0014ba947afa8a6ab8e716c549b583693ab492c76a2c9b12",
-    "checkedAt": "2026-11-05T11:13:54.640Z",
+    "checkedAt": "2026-11-05T11:19:05.490Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -641,7 +697,7 @@
   "https://bluepartnership.eu/sites/bluepartnership.eu/files/documents/2026-11/sbep_jtc_2026_4th_call_announcement_04112026.pdf": {
     "baselineHash": "d2f185979a7eb80bce607ead664a943e57ed2a699fa1aa8a46cfe491929be656",
     "hash": "d2f185979a7eb80bce607ead664a943e57ed2a699fa1aa8a46cfe491929be656",
-    "checkedAt": "2026-11-05T11:13:55.139Z",
+    "checkedAt": "2026-11-05T11:19:05.642Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -651,7 +707,15 @@
     "hash": "767f151a72d1ebb3afcbb4fbf535d4259d18f1047338ca72e2c8af9a440dd8b8",
     "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:13:56.457Z",
+    "checkedAt": "2026-11-05T11:19:07.083Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-09/FOREST_2026_Cagrisi_Ulusal_Basvuru_Kurallari.pdf": {
+    "baselineHash": "1dfaaafa0901b787e4a020dfa5df3100e4cc9d4b671d246d78ea09b3c3c86678",
+    "hash": "1dfaaafa0901b787e4a020dfa5df3100e4cc9d4b671d246d78ea09b3c3c86678",
+    "checkedAt": "2026-11-05T11:19:03.557Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -659,23 +723,7 @@
   "https://bluepartnership.eu/sites/bluepartnership.eu/files/documents/2026-11/annex_b_ncp_and_regulations_04112026.pdf": {
     "baselineHash": "df36526a1d418bfd699390324f1dcd6e97e70784ddd03aa874c76ec9cd2df07b",
     "hash": "df36526a1d418bfd699390324f1dcd6e97e70784ddd03aa874c76ec9cd2df07b",
-    "checkedAt": "2026-11-05T11:13:56.104Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-07/1509_web_yeni_sunum.pdf": {
-    "baselineHash": "09998107e3e49d909b6295dddfc2887ad40ca01531feb0633dd94cecb9b4e830",
-    "hash": "09998107e3e49d909b6295dddfc2887ad40ca01531feb0633dd94cecb9b4e830",
-    "checkedAt": "2026-11-05T11:13:45.643Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://ufukavrupa.org.tr/sites/default/files/users/user20728/DUT%202026_%C4%B0ki%20a%C5%9Famal%C4%B1_S%C3%BCre%C3%A7%20Dok%C3%BCman%C4%B1.pdf": {
-    "baselineHash": "b15b60f8e8a0e96900d428a7d98f699c41e315cd8c19b520f958193fbc4f4481",
-    "hash": "b15b60f8e8a0e96900d428a7d98f699c41e315cd8c19b520f958193fbc4f4481",
-    "checkedAt": "2026-11-05T11:13:56.688Z",
+    "checkedAt": "2026-11-05T11:19:06.596Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -685,15 +733,23 @@
     "hash": "9ee5f34187b6691240e24ab0b7e34bb30d4c42068fadd8d1fbe64a36f3835bfb",
     "baselineDocumentHash": "4042a6a6b8c8a4b4ef47f5a2b41ee6bfa13860e7e346851021259e514b914285",
     "documentHash": "4042a6a6b8c8a4b4ef47f5a2b41ee6bfa13860e7e346851021259e514b914285",
-    "checkedAt": "2026-11-05T11:13:58.431Z",
+    "checkedAt": "2026-11-05T11:19:07.950Z",
     "ok": true,
     "documentsChanged": false,
     "changed": true
   },
+  "https://ufukavrupa.org.tr/sites/default/files/users/user20728/DUT%202026_%C4%B0ki%20a%C5%9Famal%C4%B1_S%C3%BCre%C3%A7%20Dok%C3%BCman%C4%B1.pdf": {
+    "baselineHash": "b15b60f8e8a0e96900d428a7d98f699c41e315cd8c19b520f958193fbc4f4481",
+    "hash": "b15b60f8e8a0e96900d428a7d98f699c41e315cd8c19b520f958193fbc4f4481",
+    "checkedAt": "2026-11-05T11:19:07.270Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
   "https://dutpartnership.eu/sites/default/files/2026-10/DUT%20Call%202026_Call%20Text_0.pdf": {
     "baselineHash": "7fc35a64933c18ec08df7348c7f2cc9027e4d684b07b867087bfbf5d8de18e9a",
     "hash": "7fc35a64933c18ec08df7348c7f2cc9027e4d684b07b867087bfbf5d8de18e9a",
-    "checkedAt": "2026-11-05T11:13:57.893Z",
+    "checkedAt": "2026-11-05T11:19:07.907Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -703,7 +759,7 @@
     "hash": "5238ada5595c4d80fe700d187a3185acb72abb5152b01b8233477233639cfdbd",
     "baselineDocumentHash": "f1d9891ddaec6a859f0d772330d6d1f41a0c3d21c422a088aae0b93cfdb147e2",
     "documentHash": "f1d9891ddaec6a859f0d772330d6d1f41a0c3d21c422a088aae0b93cfdb147e2",
-    "checkedAt": "2026-11-05T11:13:59.459Z",
+    "checkedAt": "2026-11-05T11:19:08.893Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -713,7 +769,7 @@
     "hash": "e5c740a07ae54adac66d6e48147b21f248d5f68ffd2795f8b6d3098a1f1b306c",
     "baselineDocumentHash": "e2ed6044f9e37e4353e6ae7a1be2dc4800e190691e125c6030453622fad8fb61",
     "documentHash": "e2ed6044f9e37e4353e6ae7a1be2dc4800e190691e125c6030453622fad8fb61",
-    "checkedAt": "2026-11-05T11:14:00.153Z",
+    "checkedAt": "2026-11-05T11:19:09.857Z",
     "ok": true,
     "documentsChanged": false,
     "changed": true
@@ -721,7 +777,7 @@
   "https://tubitak.gov.tr/sites/default/files/2026-04/1832_2026-1_Cagri_Duyurusu.pdf": {
     "baselineHash": "fdf1aa9c4024420370dde0696b1ac3a6791a213415733c004f3e5d0a070fbd5d",
     "hash": "fdf1aa9c4024420370dde0696b1ac3a6791a213415733c004f3e5d0a070fbd5d",
-    "checkedAt": "2026-11-05T11:13:59.591Z",
+    "checkedAt": "2026-11-05T11:19:09.170Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -729,152 +785,130 @@
   "https://tubitak.gov.tr/sites/default/files/2026-09/1832_2026-2_Cagri_Duyurusu_revize_1.pdf": {
     "baselineHash": "2c8dd4195a5c835811a9c99b26c901f466a2ce8c1d598344acc7b65a89873ab8",
     "hash": "2c8dd4195a5c835811a9c99b26c901f466a2ce8c1d598344acc7b65a89873ab8",
-    "checkedAt": "2026-11-05T11:13:58.750Z",
+    "checkedAt": "2026-11-05T11:19:08.818Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
-  },
-  "https://samsun.gsb.gov.tr/Public/Edit/images/IM/70/%C3%87A%C4%9ERI%202022/SPOR%20KUL%C3%9CB%C3%9C%20BA%C5%9EVURULARI/32357%20%202Kas%C4%B1m%20Per%C5%9Fembe%20Resmi%20Gazete.pdf": {
-    "ok": false,
-    "attemptedAt": "2026-11-05T11:13:40.185Z",
-    "error": "The operation was aborted due to timeout"
-  },
-  "https://ticaret.gov.tr/data/63341ce713b8769ec0647ebe/30.06.2025%20PAZARA%20G%C4%B0R%C4%B0%C5%9E%20BELGES%C4%B0NE%20%C4%B0L%C4%B0%C5%9EK%C4%B0N%20GENELGE.pdf": {
-    "baselineHash": "0d129d0100620f0274de841e3f63d28af2b63885bb05d37ae986104e34976c24",
-    "hash": "0d129d0100620f0274de841e3f63d28af2b63885bb05d37ae986104e34976c24",
-    "checkedAt": "2026-11-05T11:08:20.674Z",
-    "ok": false,
-    "documentsChanged": false,
-    "changed": false,
-    "attemptedAt": "2026-11-05T11:14:00.364Z",
-    "error": "fetch failed"
   },
   "https://ticaret.gov.tr/destekler/ihracat-destekleri/5973-sayili-ihracat-destekleri-hakkinda-karara-iliskin-genelgeler/pazara-giris-belgesi-destegi": {
     "baselineHash": "89af1c0fc148a8198942194c3c00fc6876d114a91869d57bf08e369597fec77c",
     "hash": "89af1c0fc148a8198942194c3c00fc6876d114a91869d57bf08e369597fec77c",
     "baselineDocumentHash": "9c54232101a20d928b6e1d276ef9eeb64ea20abde7881b45a86532458a4934d6",
     "documentHash": "9c54232101a20d928b6e1d276ef9eeb64ea20abde7881b45a86532458a4934d6",
-    "checkedAt": "2026-11-05T11:08:21.412Z",
-    "ok": false,
+    "checkedAt": "2026-11-05T11:19:10.958Z",
+    "ok": true,
     "documentsChanged": false,
-    "changed": false,
-    "attemptedAt": "2026-11-05T11:14:02.264Z",
-    "error": "fetch failed"
+    "changed": false
   },
-  "https://ticaret.gov.tr/data/63c0063e13b8763b44f9df24/2026%20Destek%20%C3%9Cst%20Limitleri_Ur-GE%20ve%20Ye%C5%9Fil%20D%C3%B6n%C3%BC%C5%9F%C3%BCm%20Destekleri.pdf": {
-    "baselineHash": "7cba9f23bdcaa67c5481097fa949d8f15a93236ddd48bbba5bc697456e71312a",
-    "hash": "7cba9f23bdcaa67c5481097fa949d8f15a93236ddd48bbba5bc697456e71312a",
-    "checkedAt": "2026-11-05T11:08:22.676Z",
-    "ok": false,
+  "https://ticaret.gov.tr/data/63341ce713b8769ec0647ebe/30.06.2025%20PAZARA%20G%C4%B0R%C4%B0%C5%9E%20BELGES%C4%B0NE%20%C4%B0L%C4%B0%C5%9EK%C4%B0N%20GENELGE.pdf": {
+    "baselineHash": "0d129d0100620f0274de841e3f63d28af2b63885bb05d37ae986104e34976c24",
+    "hash": "0d129d0100620f0274de841e3f63d28af2b63885bb05d37ae986104e34976c24",
+    "checkedAt": "2026-11-05T11:19:10.093Z",
+    "ok": true,
     "documentsChanged": false,
-    "changed": false,
-    "attemptedAt": "2026-11-05T11:14:03.948Z",
-    "error": "fetch failed"
+    "changed": false
   },
   "https://ticaret.gov.tr/data/5b868a8d13b87818a009d3b0/20.5.5973.pdf": {
     "baselineHash": "f7191fec16281cd3630683cdcee84087d78a87cbe3fcbfac68c475c685d67122",
     "hash": "f7191fec16281cd3630683cdcee84087d78a87cbe3fcbfac68c475c685d67122",
-    "checkedAt": "2026-11-05T11:08:23.868Z",
-    "ok": false,
+    "checkedAt": "2026-11-05T11:19:15.404Z",
+    "ok": true,
     "documentsChanged": false,
-    "changed": false,
-    "attemptedAt": "2026-11-05T11:14:05.186Z",
-    "error": "fetch failed"
-  },
-  "https://ticaret.gov.tr/data/66a2407413b87634b8ce2b30/Ye%C5%9Fil%20Mutabakata%20Uyum%20Projesi%20Deste%C4%9Fine%20%C4%B0li%C5%9Fkin%20Genelge%2010082026.pdf": {
-    "baselineHash": "37c44e46d93cc0e120d9571b6693e03537e0e49a397df7d39d4ff4af48e2e1bd",
-    "hash": "37c44e46d93cc0e120d9571b6693e03537e0e49a397df7d39d4ff4af48e2e1bd",
-    "checkedAt": "2026-11-05T11:08:26.134Z",
-    "ok": false,
-    "documentsChanged": false,
-    "changed": false,
-    "attemptedAt": "2026-11-05T11:14:10.669Z",
-    "error": "fetch failed"
+    "changed": false
   },
   "https://ticaret.gov.tr/destekler/ihracat-destekleri/5973-sayili-ihracat-destekleri-hakkinda-karara-iliskin-genelgeler/yesil-mutabakata-uyum-projesi-destegi-responsible-programi": {
     "baselineHash": "7637bc2a8286e116e93671914c6a570077b09e22434b38ef73a599cbef6a4748",
     "hash": "7637bc2a8286e116e93671914c6a570077b09e22434b38ef73a599cbef6a4748",
     "baselineDocumentHash": "1d421688d40968cc666fa6de91662c8ec5dcfc53d680f3b6f1f248a6e7bb9c94",
     "documentHash": "1d421688d40968cc666fa6de91662c8ec5dcfc53d680f3b6f1f248a6e7bb9c94",
-    "checkedAt": "2026-11-05T11:08:27.264Z",
-    "ok": false,
+    "checkedAt": "2026-11-05T11:19:17.242Z",
+    "ok": true,
     "documentsChanged": false,
-    "changed": false,
-    "attemptedAt": "2026-11-05T11:14:12.668Z",
-    "error": "fetch failed"
+    "changed": false
   },
-  "https://tubitak.gov.tr/sites/default/files/2026-07/1709-EUREKA-EUROSTARS_CAGRI_DUYURUSU_20262.pdf": {
-    "baselineHash": "0f5159f6f65e6b29041792c6ff8d51462b749d4d78d1fac481b8d4fba5029fcb",
-    "hash": "0f5159f6f65e6b29041792c6ff8d51462b749d4d78d1fac481b8d4fba5029fcb",
-    "checkedAt": "2026-11-05T11:08:27.641Z",
-    "ok": false,
+  "https://ticaret.gov.tr/data/63c0063e13b8763b44f9df24/2026%20Destek%20%C3%9Cst%20Limitleri_Ur-GE%20ve%20Ye%C5%9Fil%20D%C3%B6n%C3%BC%C5%9F%C3%BCm%20Destekleri.pdf": {
+    "baselineHash": "7cba9f23bdcaa67c5481097fa949d8f15a93236ddd48bbba5bc697456e71312a",
+    "hash": "7cba9f23bdcaa67c5481097fa949d8f15a93236ddd48bbba5bc697456e71312a",
+    "checkedAt": "2026-11-05T11:19:11.604Z",
+    "ok": true,
     "documentsChanged": false,
-    "changed": false,
-    "attemptedAt": "2026-11-05T11:14:14.167Z",
-    "error": "fetch failed"
-  },
-  "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-for-projects-september-2026/": {
-    "ok": false,
-    "attemptedAt": "2026-11-05T11:14:21.163Z",
-    "error": "HTTP 403"
+    "changed": false
   },
   "https://tubitak.gov.tr/tr/duyuru/1709-eureka-eurostars-2026-yili-2-cagrisi-acildi": {
     "baselineHash": "9c7906a944970bac76ab6b54fd8c1422edfe86f7ac1037e62794143500dc6797",
     "hash": "433e7e380f64b3993d2d959b9b57d9f346edeb76b30c398397c627739c9e401c",
     "baselineDocumentHash": "28f2308b657b76d2b155a80b1d2926fad19512f4a6572b04bbf8bab3e58fd16e",
     "documentHash": "28f2308b657b76d2b155a80b1d2926fad19512f4a6572b04bbf8bab3e58fd16e",
-    "checkedAt": "2026-11-05T11:14:15.667Z",
+    "checkedAt": "2026-11-05T11:19:18.367Z",
     "ok": true,
     "documentsChanged": false,
     "changed": true
+  },
+  "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-for-projects-september-2026/": {
+    "ok": false,
+    "attemptedAt": "2026-11-05T11:19:19.139Z",
+    "error": "HTTP 403"
+  },
+  "https://samsun.gsb.gov.tr/Public/Edit/images/IM/70/%C3%87A%C4%9ERI%202022/SPOR%20KUL%C3%9CB%C3%9C%20BA%C5%9EVURULARI/32357%20%202Kas%C4%B1m%20Per%C5%9Fembe%20Resmi%20Gazete.pdf": {
+    "ok": false,
+    "attemptedAt": "2026-11-05T11:18:54.259Z",
+    "error": "The operation was aborted due to timeout"
+  },
+  "https://tubitak.gov.tr/sites/default/files/2023-09/1709_donemsel_izleme_raporu_-_kilavuz_0.pdf": {
+    "baselineHash": "ed4708d0c04cfcdae42b65db743faaa5e4e16747b9fef927a0a72ea38c94d006",
+    "hash": "ed4708d0c04cfcdae42b65db743faaa5e4e16747b9fef927a0a72ea38c94d006",
+    "checkedAt": "2026-11-05T11:19:19.167Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-07/1709-EUREKA-EUROSTARS_CAGRI_DUYURUSU_20262.pdf": {
+    "baselineHash": "0f5159f6f65e6b29041792c6ff8d51462b749d4d78d1fac481b8d4fba5029fcb",
+    "hash": "0f5159f6f65e6b29041792c6ff8d51462b749d4d78d1fac481b8d4fba5029fcb",
+    "checkedAt": "2026-11-05T11:19:17.418Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
   },
   "https://tubitak.gov.tr/tr/duyuru/eurostars-koordinatorluk-destegi-programi-2026-yili-2-ulusal-cagrisi-acildi": {
     "baselineHash": "fb555c4e2c27e55b35f7336e2678541c228539838e5528110e15686000e37c5e",
     "hash": "632efeaf4a9570e77a8d7833bc0dc6a25cd9131a83ad903796989415ec346ee1",
     "baselineDocumentHash": "92972dd692d9e7692450af226699af7d0fe91eb80da005721f564c79b96ef701",
     "documentHash": "92972dd692d9e7692450af226699af7d0fe91eb80da005721f564c79b96ef701",
-    "checkedAt": "2026-11-05T11:14:24.915Z",
+    "checkedAt": "2026-11-05T11:19:20.127Z",
     "ok": true,
     "documentsChanged": false,
     "changed": true
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-04/1719_Biyoteknoloji_Cagrisi_Ulusal_Cagri_Duyurusu_2026.pdf": {
+    "baselineHash": "e1d2378efdfce5db980abc08060f04b2e06a4fd0dcc9cdc9d0965fe16eb8119d",
+    "hash": "e1d2378efdfce5db980abc08060f04b2e06a4fd0dcc9cdc9d0965fe16eb8119d",
+    "checkedAt": "2026-11-05T11:19:20.155Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.eurekanetwork.org/programmes-and-calls/network-projects/biotech-call-september-2026/": {
+    "ok": false,
+    "attemptedAt": "2026-11-05T11:19:21.016Z",
+    "error": "HTTP 403"
   },
   "https://tubitak.gov.tr/tr/duyuru/1719-eureka-network-biyoteknoloji-2026-cagrisi-acildi": {
     "baselineHash": "9630e0af5b010f916b192d973442ab710e718b34a2a1522f70a22e8a355b5973",
     "hash": "6c8e078d86c64a282fe72ca4a4aea8386222063b7064944f8b7e2647c9111f32",
     "baselineDocumentHash": "47536d5c82ec5404db55e9a9fa95c43c64bdce424eee9d5c4bbd67326b67144e",
     "documentHash": "47536d5c82ec5404db55e9a9fa95c43c64bdce424eee9d5c4bbd67326b67144e",
-    "checkedAt": "2026-11-05T11:14:25.743Z",
+    "checkedAt": "2026-11-05T11:19:20.687Z",
     "ok": true,
     "documentsChanged": false,
     "changed": true
-  },
-  "https://www.eurekanetwork.org/programmes-and-calls/network-projects/biotech-call-september-2026/": {
-    "ok": false,
-    "attemptedAt": "2026-11-05T11:14:25.960Z",
-    "error": "HTTP 403"
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-04/1719_Biyoteknoloji_Cagrisi_Ulusal_Cagri_Duyurusu_2026.pdf": {
-    "baselineHash": "e1d2378efdfce5db980abc08060f04b2e06a4fd0dcc9cdc9d0965fe16eb8119d",
-    "hash": "e1d2378efdfce5db980abc08060f04b2e06a4fd0dcc9cdc9d0965fe16eb8119d",
-    "checkedAt": "2026-11-05T11:14:25.505Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-06/Eurostars_Koordinatorluk_Destegi_Programi_2026-2_Ulusal_Cagri_Duyurusu.pdf": {
-    "baselineHash": "9191812e78cc1c8ffa8ede86605fef861191f9af00831918fcc52670bd90daa1",
-    "hash": "9191812e78cc1c8ffa8ede86605fef861191f9af00831918fcc52670bd90daa1",
-    "checkedAt": "2026-11-05T11:14:24.660Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
   },
   "https://tubitak.gov.tr/tr/duyuru/eureka-xecs-2026-uygulamali-kuantum-teknolojileri-cagrisi-acildi": {
     "baselineHash": "fdaf1651533f3f41bebf7f9ebd37d7330d5e6218f46be00eae7925077ec3aece",
     "hash": "95790f3df33ebcea3a4edfe94a5afa41a170cd9c63292f2a11d7ea80f968e7e0",
     "baselineDocumentHash": "d03e19d2e9a6f7f0c17b81f197d0f54f5edbaba459420219a632a4a2cf2dd4be",
     "documentHash": "d03e19d2e9a6f7f0c17b81f197d0f54f5edbaba459420219a632a4a2cf2dd4be",
-    "checkedAt": "2026-11-05T11:14:27.180Z",
+    "checkedAt": "2026-11-05T11:19:21.052Z",
     "ok": true,
     "documentsChanged": false,
     "changed": true
@@ -882,7 +916,15 @@
   "https://tubitak.gov.tr/sites/default/files/2026-07/1719_Kuantum_Ulusal_Cagri_Metni.pdf": {
     "baselineHash": "af058c4a84fd7773a07083c8fc1987db37a5f44223faf915aaa4c4d9089d9c41",
     "hash": "af058c4a84fd7773a07083c8fc1987db37a5f44223faf915aaa4c4d9089d9c41",
-    "checkedAt": "2026-11-05T11:14:26.009Z",
+    "checkedAt": "2026-11-05T11:19:21.046Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-06/Eurostars_Koordinatorluk_Destegi_Programi_2026-2_Ulusal_Cagri_Duyurusu.pdf": {
+    "baselineHash": "9191812e78cc1c8ffa8ede86605fef861191f9af00831918fcc52670bd90daa1",
+    "hash": "9191812e78cc1c8ffa8ede86605fef861191f9af00831918fcc52670bd90daa1",
+    "checkedAt": "2026-11-05T11:19:19.260Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -892,7 +934,7 @@
     "hash": "43d48af404b0a3cae0a39e24e61a44e8b8d01aef85fe3888b5cd4de680ee4cbd",
     "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:14:27.333Z",
+    "checkedAt": "2026-11-05T11:19:21.415Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -902,27 +944,25 @@
     "hash": "0a7b61aa28a3855b52192384f52b2d2dd1f73bf10376be74f2a8b8c2a4185a81",
     "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:14:28.881Z",
+    "checkedAt": "2026-11-05T11:19:22.410Z",
     "ok": true,
     "documentsChanged": false,
     "changed": true
+  },
+  "https://ticaret.gov.tr/data/66a2407413b87634b8ce2b30/Ye%C5%9Fil%20Mutabakata%20Uyum%20Projesi%20Deste%C4%9Fine%20%C4%B0li%C5%9Fkin%20Genelge%2010082026.pdf": {
+    "baselineHash": "37c44e46d93cc0e120d9571b6693e03537e0e49a397df7d39d4ff4af48e2e1bd",
+    "hash": "37c44e46d93cc0e120d9571b6693e03537e0e49a397df7d39d4ff4af48e2e1bd",
+    "checkedAt": "2026-11-05T11:19:17.095Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
   },
   "https://eureka-xecs.com/eligibility-criteria/": {
     "baselineHash": "a8f6526346138e88ccbe24b9bcbe931b327f6d08979096cb6d9e92f94f36a041",
     "hash": "a8f6526346138e88ccbe24b9bcbe931b327f6d08979096cb6d9e92f94f36a041",
     "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:14:27.996Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://eureka-xecs.com/xecs-matchmaking-event-2026-vienna-highlights/": {
-    "baselineHash": "b9ad67dd65c077c5016c13ffa0c84cc92faa556a6ec977906c154e181154d446",
-    "hash": "b9ad67dd65c077c5016c13ffa0c84cc92faa556a6ec977906c154e181154d446",
-    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:14:28.265Z",
+    "checkedAt": "2026-11-05T11:19:22.168Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -932,23 +972,41 @@
     "hash": "dca2b720dbb0997df8539da8744f4d024dc11f0de21685e04def52d7ad6e6103",
     "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
     "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
-    "checkedAt": "2026-11-05T11:14:29.240Z",
+    "checkedAt": "2026-11-05T11:19:22.889Z",
     "ok": true,
     "documentsChanged": false,
     "changed": true
   },
-  "https://tubitak.gov.tr/sites/default/files/2023-09/1709_donemsel_izleme_raporu_-_kilavuz_0.pdf": {
-    "baselineHash": "ed4708d0c04cfcdae42b65db743faaa5e4e16747b9fef927a0a72ea38c94d006",
-    "hash": "ed4708d0c04cfcdae42b65db743faaa5e4e16747b9fef927a0a72ea38c94d006",
-    "checkedAt": "2026-11-05T11:14:23.161Z",
+  "https://eureka-xecs.com/xecs-matchmaking-event-2026-vienna-highlights/": {
+    "baselineHash": "b9ad67dd65c077c5016c13ffa0c84cc92faa556a6ec977906c154e181154d446",
+    "hash": "b9ad67dd65c077c5016c13ffa0c84cc92faa556a6ec977906c154e181154d446",
+    "baselineDocumentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "documentHash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "checkedAt": "2026-11-05T11:19:22.201Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
   },
-  "https://tubitak.gov.tr/sites/default/files/2023-09/15.06.2023_tarihli_438131_sayili_baskanlik_oluru_1509_islenmis_hali.pdf": {
-    "baselineHash": "a760f442c1c054e33bcaf1feaad6e3407581bc9c39318200b872a187f0bfa1d9",
-    "hash": "a760f442c1c054e33bcaf1feaad6e3407581bc9c39318200b872a187f0bfa1d9",
-    "checkedAt": "2026-11-05T11:14:29.094Z",
+  "https://www.smarteureka.com/wp-content/uploads/2026/09/SMART_PO_Proposers_Guide.pdf": {
+    "baselineHash": "fe41bc6af1b1f02b0a6237dc7ec596e2b7bdf532e4555165f0b5d2418e95b36a",
+    "hash": "fe41bc6af1b1f02b0a6237dc7ec596e2b7bdf532e4555165f0b5d2418e95b36a",
+    "checkedAt": "2026-11-05T11:19:23.099Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://www.smarteureka.com/wp-content/uploads/2026/07/SMART_10Call.pdf": {
+    "baselineHash": "835969b07bdcb9978c6c12cf3cf757999fbac58c3db80cc9ac308310dc746d4e",
+    "hash": "835969b07bdcb9978c6c12cf3cf757999fbac58c3db80cc9ac308310dc746d4e",
+    "checkedAt": "2026-11-05T11:19:23.090Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2026-07/1507_KOBI_Ar-Ge_Baslangic_Destek_Programlari_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf": {
+    "baselineHash": "3c4c2d391f251deb6c6408cb294ba7ca28ee85151fe8de119760251f3554bb46",
+    "hash": "3c4c2d391f251deb6c6408cb294ba7ca28ee85151fe8de119760251f3554bb46",
+    "checkedAt": "2026-11-05T11:19:23.117Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -958,31 +1016,7 @@
     "hash": "17e690748d1b5ec59867f2acbdc17d860ef35b30f162003d6ac26b0c78e7a813",
     "baselineDocumentHash": "16d9cf995fe9207e688597036129926cdc1436670daa0ad495bf5ee2e41332ea",
     "documentHash": "16d9cf995fe9207e688597036129926cdc1436670daa0ad495bf5ee2e41332ea",
-    "checkedAt": "2026-11-05T11:14:30.544Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.smarteureka.com/wp-content/uploads/2026/09/SMART_PO_Proposers_Guide.pdf": {
-    "baselineHash": "fe41bc6af1b1f02b0a6237dc7ec596e2b7bdf532e4555165f0b5d2418e95b36a",
-    "hash": "fe41bc6af1b1f02b0a6237dc7ec596e2b7bdf532e4555165f0b5d2418e95b36a",
-    "checkedAt": "2026-11-05T11:14:29.463Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://tubitak.gov.tr/sites/default/files/2026-07/1507_KOBI_Ar-Ge_Baslangic_Destek_Programlari_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf": {
-    "baselineHash": "3c4c2d391f251deb6c6408cb294ba7ca28ee85151fe8de119760251f3554bb46",
-    "hash": "3c4c2d391f251deb6c6408cb294ba7ca28ee85151fe8de119760251f3554bb46",
-    "checkedAt": "2026-11-05T11:14:29.897Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://www.smarteureka.com/wp-content/uploads/2026/07/SMART_10Call.pdf": {
-    "baselineHash": "835969b07bdcb9978c6c12cf3cf757999fbac58c3db80cc9ac308310dc746d4e",
-    "hash": "835969b07bdcb9978c6c12cf3cf757999fbac58c3db80cc9ac308310dc746d4e",
-    "checkedAt": "2026-11-05T11:14:29.409Z",
+    "checkedAt": "2026-11-05T11:19:24.340Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -992,7 +1026,15 @@
     "hash": "ca6a0bba9b57d77a6b927ada408a0ba4f0befcb3f29d5062c93d8606fb8042be",
     "baselineDocumentHash": "e3036d5b8c9c5c7d3bf44387a9ff0a7679473355d409da6d4f1b442f1ad9ec3d",
     "documentHash": "e3036d5b8c9c5c7d3bf44387a9ff0a7679473355d409da6d4f1b442f1ad9ec3d",
-    "checkedAt": "2026-11-05T11:14:31.186Z",
+    "checkedAt": "2026-11-05T11:19:24.704Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://tubitak.gov.tr/sites/default/files/2023-09/15.06.2023_tarihli_438131_sayili_baskanlik_oluru_1509_islenmis_hali.pdf": {
+    "baselineHash": "a760f442c1c054e33bcaf1feaad6e3407581bc9c39318200b872a187f0bfa1d9",
+    "hash": "a760f442c1c054e33bcaf1feaad6e3407581bc9c39318200b872a187f0bfa1d9",
+    "checkedAt": "2026-11-05T11:19:22.787Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -1002,23 +1044,15 @@
     "hash": "9e97ac64679ed3089bbfceed3ce573c585c0ea9b3078d8095ee81129062f6a17",
     "baselineDocumentHash": "7d70664183ede1ffedc5f1516748c73dfad0ef8f854c5abea2965460d2fb45ef",
     "documentHash": "7d70664183ede1ffedc5f1516748c73dfad0ef8f854c5abea2965460d2fb45ef",
-    "checkedAt": "2026-11-05T11:14:31.475Z",
+    "checkedAt": "2026-11-05T11:19:25.269Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
   },
-  "https://tubitak.gov.tr/sites/default/files/2026-10/1507_UE_25.09.2026_84YK_islenmis_hali_0.pdf": {
-    "baselineHash": "46d9e5fe0ad7ae974cea01926c8c2da782c13c88537e2c11b606d5f530350f50",
-    "hash": "46d9e5fe0ad7ae974cea01926c8c2da782c13c88537e2c11b606d5f530350f50",
-    "checkedAt": "2026-11-05T11:14:30.952Z",
-    "ok": true,
-    "documentsChanged": false,
-    "changed": false
-  },
-  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KOB%C4%B0%20Dijital%20Donusum%20DP/2026/2026.10.09/KOBI%CC%87DijitalDo%CC%88nu%CC%88s%CC%A7u%CC%88mDestekProgram%C4%B1Yo%CC%88nergesi.pdf": {
-    "baselineHash": "b65a6a69ebc1948d27049fa743d5d65cffb1ba2a74eec9b116eda0b22ed52d8d",
-    "hash": "b65a6a69ebc1948d27049fa743d5d65cffb1ba2a74eec9b116eda0b22ed52d8d",
-    "checkedAt": "2026-11-05T11:14:31.693Z",
+  "https://tubitak.gov.tr/sites/default/files/2024-03/1601-2023-1_cagri_duyurusu_v2.pdf": {
+    "baselineHash": "e474d639716364e504cb6f87862a28f9e2559602d5571c6616dcb4f97c2aff80",
+    "hash": "e474d639716364e504cb6f87862a28f9e2559602d5571c6616dcb4f97c2aff80",
+    "checkedAt": "2026-11-05T11:19:25.439Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -1028,7 +1062,15 @@
     "hash": "faac1df3e25b86a559d55822a22fc78afdcba161295266c101e96df07b5ff402",
     "baselineDocumentHash": "0c8b521b94445535815e6bc821bede12c3c18533f558f0bb7f0f0ae9f7df39d9",
     "documentHash": "0c8b521b94445535815e6bc821bede12c3c18533f558f0bb7f0f0ae9f7df39d9",
-    "checkedAt": "2026-11-05T11:14:32.637Z",
+    "checkedAt": "2026-11-05T11:19:26.421Z",
+    "ok": true,
+    "documentsChanged": false,
+    "changed": false
+  },
+  "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KOB%C4%B0%20Dijital%20Donusum%20DP/2026/2026.10.09/KOBI%CC%87DijitalDo%CC%88nu%CC%88s%CC%A7u%CC%88mDestekProgram%C4%B1Yo%CC%88nergesi.pdf": {
+    "baselineHash": "b65a6a69ebc1948d27049fa743d5d65cffb1ba2a74eec9b116eda0b22ed52d8d",
+    "hash": "b65a6a69ebc1948d27049fa743d5d65cffb1ba2a74eec9b116eda0b22ed52d8d",
+    "checkedAt": "2026-11-05T11:19:25.660Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -1038,15 +1080,15 @@
     "hash": "b41c4cbb1b3d69ff3880d71c5abeaf0586d0dfbd9746ca179dcdc54b05f3b1e7",
     "baselineDocumentHash": "553143f788fa5eefc93e7443881f424007da4747662b96c219d3a6771f68af2f",
     "documentHash": "553143f788fa5eefc93e7443881f424007da4747662b96c219d3a6771f68af2f",
-    "checkedAt": "2026-11-05T11:14:33.943Z",
+    "checkedAt": "2026-11-05T11:19:27.285Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
   },
-  "https://tubitak.gov.tr/sites/default/files/2024-03/1601-2023-1_cagri_duyurusu_v2.pdf": {
-    "baselineHash": "e474d639716364e504cb6f87862a28f9e2559602d5571c6616dcb4f97c2aff80",
-    "hash": "e474d639716364e504cb6f87862a28f9e2559602d5571c6616dcb4f97c2aff80",
-    "checkedAt": "2026-11-05T11:14:31.587Z",
+  "https://tubitak.gov.tr/sites/default/files/2026-10/1507_UE_25.09.2026_84YK_islenmis_hali_0.pdf": {
+    "baselineHash": "46d9e5fe0ad7ae974cea01926c8c2da782c13c88537e2c11b606d5f530350f50",
+    "hash": "46d9e5fe0ad7ae974cea01926c8c2da782c13c88537e2c11b606d5f530350f50",
+    "checkedAt": "2026-11-05T11:19:24.677Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
@@ -1054,7 +1096,7 @@
   "https://tubitak.gov.tr/sites/default/files/2024-05/1831_KOBI_BASVURU_KILAVUZU.pdf": {
     "baselineHash": "e3e1e331a69a9db3299bc2c175bd218f6d10e8db253492bff16da6192637c2b6",
     "hash": "e3e1e331a69a9db3299bc2c175bd218f6d10e8db253492bff16da6192637c2b6",
-    "checkedAt": "2026-11-05T11:14:31.392Z",
+    "checkedAt": "2026-11-05T11:19:24.719Z",
     "ok": true,
     "documentsChanged": false,
     "changed": false
