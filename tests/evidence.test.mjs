@@ -12,6 +12,14 @@ test('changed evidence remains pending across repeated hourly reads',()=>{
 test('an access denied page cannot replace a valid evidence fingerprint',()=>{
   assert.throws(()=>contentHash(new TextEncoder().encode('<main>Erişim engellendi</main>'),'text/html'));
 });
+test('an official Office document is monitored as a binary file, not as HTML',()=>{
+  const kind = 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+  const old = Uint8Array.of(0x50,0x4b,3,4,5);
+  const replacement = Uint8Array.of(0x50,0x4b,3,4,6);
+  assert.notEqual(contentHash(old,kind),contentHash(replacement,kind));
+  assert.equal(documentLinksHash(old,kind,'https://example.org/limits.xlsx'),undefined);
+  assert.throws(()=>contentHash(new TextEncoder().encode('<html>not a workbook</html>'),kind));
+});
 test('a replaced call document is detected even when the announcement text is unchanged',()=>{
   const page = path => new TextEncoder().encode(`<main><p>${'Resmî çağrı duyurusu. '.repeat(15)}</p><a href="${path}">Çağrı metni</a></main>`);
   const kind = 'text/html';

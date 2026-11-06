@@ -1,4 +1,16 @@
 {
+  "tubitak-1505-surekli": {
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/1505_uygulama_esaslari_29.12.2025_77YK_05.03.2026_907659_baskanlik_oluru_islenmis_hali_koprulu.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1505-universite-sanayi-isbirligi-destek-programi", "https://tubitak.gov.tr/sites/default/files/2024-03/teydeb_destek_programlari_ve_cagrilari_ust_limitleri%20%282%29.xlsx"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "applicationType", "eligibleCosts", "application", "notice"]
+  },
+  "tubitak-bigg-2026-2": {
+    "applicantGroups": ["Girişimci / Bireysel"],
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-09/1812-2026-2_Cagri_Duyurusu_v2.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/turkiyenin-ilk-yatirim-tabanli-girisimcilik-destek-programi-olan-bigg-yatirim-programinin-2026-2-cagrisi-acildi", "https://tubitak.gov.tr/sites/default/files/2026-03/1812-2026-2028_Yatirim_Plani_Tasnif_Disi_260225.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "kosgeb-is-gelistirme-2026-3": {
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Giri%C5%9Fimcilik/2026/2026.10.05/GDP_Yo%CC%88nergesi_%2815%29.pdf",
@@ -56,7 +68,7 @@
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-08/Siparis_Ar-Ge_2026-3_Cagri_Dokumani.pdf",
     "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-cagrisi", "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi"],
-    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "notice"]
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "preDeadline", "eligibleCosts", "application", "notice"]
   },
   "tubitak-1707-2026-2": {
     "applicantGroups": ["Özel sektör"],

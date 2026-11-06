@@ -7,6 +7,17 @@ import { audienceOptions, matchesAudience, privateSectorPriority } from '../app/
 const reviews = JSON.parse(await readFile(new URL('../public/verified-conditions.json', import.meta.url), 'utf8'));
 const records = calls.map(call => ({ ...call, ...reviews[call.id] }));
 
+test('BiGG individual eligibility does not appear as direct company eligibility', () => {
+  const bigg = records.find(call => call.id === 'tubitak-bigg-2026-2');
+  const partnership = records.find(call => call.id === 'tubitak-1505-surekli');
+  assert.equal(matchesAudience(bigg, 'Girişimci / Bireysel'), true);
+  assert.equal(matchesAudience(bigg, 'Özel sektör'), false);
+  assert.equal(bigg.deadline, '2026-09-30');
+  assert.match(bigg.followUpStages[0].schedule, /8–11 Aralık/);
+  assert.equal(matchesAudience(partnership, 'Özel sektör'), true);
+  assert.match(partnership.fundingAmount, /2\.300\.000 TL/);
+});
+
 test('reviewed Japan and SAYEM records distinguish international deadline and closed national round', () => {
   const japan = records.find(call => call.id === 'eureka-globalstars-japan-2026');
   const sayem = records.find(call => call.id === 'tubitak-1833-2026-1');

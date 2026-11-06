@@ -634,7 +634,7 @@ export default function CallsExplorer({ calls }: Props) {
               </div>
               {selected.followUpStages?.map(stage => <div className="application-note" key={stage.title}><span>{stage.title}</span><p>{stage.schedule}</p><p>{stage.access}</p></div>)}
               {((selected.preDeadline && !selected.followUpStages?.length) || selected.deadlines?.length || selected.dateCheckedAt) && <div className="application-note"><span>Başvuru takvimi · Türkiye saati</span>
-                {selected.preDeadline && !selected.followUpStages?.length && <p>Ön kayıt / ek ulusal işlem: {formatDate(selected.preDeadline, true)} — aşamanın açıklaması için önemli notları inceleyin.</p>}
+                {selected.preDeadline && !selected.followUpStages?.length && <p>Ön kayıt / ek ulusal işlem: {formatDate(selected.preDeadline, !dateOnly(selected.preDeadline))}{dateOnly(selected.preDeadline) ? " · saat duyurudan teyit edilmeli" : ""} — aşamanın açıklaması için önemli notları inceleyin.</p>}
                 {selected.deadlines?.map(date => <p key={date}>{formatDate(date, !dateOnly(date) && (selected.verification !== "metadata" || !utcMidnight(date)))} {dateOnly(date) ? "· saat duyurudan teyit edilmeli" : ""} {(selected.verification === "metadata" ? portalDeadlinePassed(date, now) : deadlinePassed(date, now)) ? "(geçti)" : ""}</p>)}
                 {selected.dateCheckedAt && <p>Takvim son kontrolü: {formatDate(selected.dateCheckedAt)}</p>}
               </div>}

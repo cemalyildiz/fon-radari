@@ -129,6 +129,68 @@
       "complete": false
     },
     {
+      "id": "tubitak-1505-surekli",
+      "title": "TÜBİTAK 1505 — Üniversite-Sanayi İşbirliği",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-04/1505_uygulama_esaslari_29.12.2025_77YK_05.03.2026_907659_baskanlik_oluru_islenmis_hali_koprulu.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "applicationType",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "applicationType"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "tubitak-bigg-2026-2",
+      "title": "TÜBİTAK BiGG 2026/2 — Tohum Öncesi Yatırım",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-09/1812-2026-2_Cagri_Duyurusu_v2.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "kosgeb-is-gelistirme-2026-3",
       "title": "KOSGEB Girişimci Destek Programı — İş Geliştirme 2026/3",
       "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Giri%C5%9Fimcilik/2026/2026.10.05/GDP_Yo%CC%88nergesi_%2815%29.pdf",
@@ -775,6 +837,8 @@
         "duration",
         "openDate",
         "deadline",
+        "preDeadline",
+        "eligibleCosts",
         "application",
         "notice"
       ],
@@ -1852,6 +1916,6 @@
       "complete": true
     }
   ],
-  "total": 60,
-  "complete": 31
+  "total": 62,
+  "complete": 33
 }

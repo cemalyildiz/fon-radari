@@ -1,6 +1,6 @@
 export type CallScope = "national" | "international";
 export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
-export type ApplicantGroup = "Özel sektör" | "Akademisyen" | "Üniversite / Araştırma" | "Kamu kurum / kuruluşu" | "TTO / Arayüz kuruluşu" | "STK";
+export type ApplicantGroup = "Özel sektör" | "Girişimci / Bireysel" | "Akademisyen" | "Üniversite / Araştırma" | "Kamu kurum / kuruluşu" | "TTO / Arayüz kuruluşu" | "STK";
 
 export type FundingCall = {
   applicantGroups?: ApplicantGroup[];
@@ -123,6 +123,45 @@ const eicChallenges2027 = [
 
 export const calls: FundingCall[] = [
   ...eicChallenges2027,
+  {
+    id: "tubitak-1505-surekli", scope: "national", code: "1505",
+    title: "TÜBİTAK 1505 — Üniversite-Sanayi İşbirliği",
+    institution: "TÜBİTAK TEYDEB", institutionShort: "TÜBİTAK",
+    status: "open", openDate: "", applicationType: "continuous",
+    applicants: "Türkiye’de yerleşik ve proje sonucunu Türkiye’de uygulamayı taahhüt eden bir sermaye şirketi müşteri kuruluş olur. Uygun üniversite, 6550 kapsamında yeterlikli araştırma altyapısı, eğitim ve araştırma hastanesi veya görevli kamu araştırma merkezi/enstitüsü yürütücü kuruluş olur. Şirket tek başına başvuramaz.",
+    companyScale: ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma", "Kamu"],
+    fundingAmount: "Resmî limit tablosunda proje bütçesinin TÜBİTAK tarafından karşılanan kısmı en fazla 2.300.000 TL. Bu, toplam proje bütçesi değildir. Proje teşvik ikramiyesi ve kurum hissesi ayrı hükümlere tabidir.",
+    fundingType: "TÜBİTAK’tan geri ödemesiz destek ve müşteri kuruluş eş finansmanı; ödemeler yürütücünün proje özel hesabına aktarılır.",
+    supportRate: "Müşteri KOBİ ise kabul edilen proje bütçesinin %75’i TÜBİTAK, %25’i müşteri; büyük işletme ise %60’ı TÜBİTAK, %40’ı müşteri tarafından karşılanır.",
+    duration: "Normal destek süresi en fazla 24 ay.",
+    summary: "Firmanın Ar-Ge ihtiyacını araştırma ortağıyla ürüne veya sürece dönüştürmesi için sürekli başvuru alan sanayi desteği.",
+    objectives: ["Araştırma bilgisini sanayiye aktarmak", "Yeni veya iyileştirilmiş ürün, süreç ya da üretim teknolojisini ticarileştirmek"],
+    eligibleCosts: ["Bursiyer, sözleşmeli personel, seyahat, teçhizat, yazılım, yayın, hizmet ve sarf", "Yönergede belirlenen proje teşvik ikramiyesi ve kurum hissesi"],
+    application: "Müşteri ve yürütücü önceden işbirliği sözleşmesi imzalar; ortak öneri ve proje sonuçları uygulama planı PRODİS’te sunulur. Yürütücü, altı aylık dönemlerde proje faaliyetlerini ve harcamalarını raporlar.",
+    notice: "Müşteriden alınan uygun hizmetler dönemsel bütçenin %10’unu aşamaz. Aynı proje için başka bir kamu hibesi alınamaz. Bütçe ve PTİ üst sınırlarında destek kararı yılı esas alınır.",
+    sourceUrl: "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1505-universite-sanayi-isbirligi-destek-programi", sourceLabel: "TÜBİTAK — 1505 programı ve limitler", verifiedAt: "2026-11-06",
+    tags: ["Üniversite-Sanayi", "Teknoloji Transferi", "Sürekli Başvuru"], themes: ["Ar-Ge ve Yenilik", "Teknoloji Transferi"], sectors: ["Sektörler Arası"],
+  },
+  {
+    id: "tubitak-bigg-2026-2", scope: "national", code: "1812 · 2026/2",
+    title: "TÜBİTAK BiGG 2026/2 — Tohum Öncesi Yatırım",
+    institution: "TÜBİTAK TEYDEB · BiGG Fonu", institutionShort: "TÜBİTAK",
+    status: "archived", openDate: "2026-08-31", openingDateOnly: true, deadline: "2026-09-30",
+    applicants: "Aşama 1 hızlandırmasını tamamlayan ve uygulayıcı kuruluşça onaylanan bireysel girişimciler. Aşama 1’e yükseköğretim öğrencisi veya mezunu başvurabilir. Daha önce Teknogirişim Sermayesi ya da 1512/1812 Aşama 2 desteği alanlar ve hızlandırmaya kabul tarihinde işletmede payı olanlar uygun değildir; halka açık paylar ve kitle fonlaması istisnadır. Mühür alan girişimci Türkiye’de kurucu ortağı olduğu bir anonim şirket kurar.",
+    companyScale: ["Bireysel girişimci / kurulacak anonim şirket"],
+    fundingAmount: "Şirket başına 1.350.000 TL ilk yatırım. GCIP kapsamında seçilen 3 temiz teknoloji girişiminin her birine ilk yatırım dâhil 2.250.000 TL mümkün. Belgeli koşullara bağlı devam yatırımı ayrıca en fazla 1.350.000 TL; otomatik değil.",
+    fundingType: "Hisse karşılığı tohum öncesi yatırım; hibe veya standart kredi değildir.",
+    supportRate: "İlk yatırımda %3 şirket payı; GCIP ek yatırımıyla toplam %5 pay. Devam yatırımı sonucunda BiGG Fonu payı en fazla %5.",
+    duration: "Aşama 2 faaliyetleri uzatmalar dâhil en fazla 18 ay.",
+    summary: "Teknoloji odaklı yeni şirketler için kapanmış yatırım dönemi; temiz teknolojiye özel ek yatırım imkânı bulunuyor.",
+    objectives: ["Yenilikçi iş fikrini doğrulamak ve ticarileştirmek"],
+    eligibleCosts: ["İş planı kapsamındaki tasarım, teknik ve ekonomik fizibilite, prototip ve teknoloji geliştirme", "Ürün veya hizmeti pazara taşıma çalışmaları"],
+    application: "Aşama 1’de uygulayıcı kuruluş üzerinden iş fikri, onaydan sonra Aşama 2’de PRODİS’ten iş planı sunulur. GCIP ek yatırım talebi de PRODİS üzerinden iletilir. Bu dönemin Aşama 2 başvurusu kapandı.",
+    followUpStages: [{title:"Değerlendirme ve sonuç",schedule:"Güncel çağrı metnine göre değerlendirme 12 Ekim–4 Aralık; planlanan sonuç aralığı 8–11 Aralık 2026.",access:"Yalnız bu döneme başvurmuş adaylar; sonuç PRODİS’ten."},{title:"Şirket kurulumu ve sözleşme",schedule:"31 Aralık 2026; planlanan destek başlangıcı 1 Ocak 2027.",access:"Yalnız Mükemmeliyet Mührü almaya hak kazananlar."}],
+    notice: "Güncel çağrı PDF’sinin 7. bölümü, ilk duyurudaki değerlendirme ve sonuç tarihlerini güncelliyor. 2026–2028 planındaki 25 Ocak–12 Şubat 2027 aralığı bir sonraki dönem için taslaktır; kesin ilan değildir.",
+    sourceUrl: "https://tubitak.gov.tr/tr/duyuru/turkiyenin-ilk-yatirim-tabanli-girisimcilik-destek-programi-olan-bigg-yatirim-programinin-2026-2-cagrisi-acildi", sourceLabel: "TÜBİTAK — 1812 2026/2 duyurusu", verifiedAt: "2026-11-06",
+    tags: ["BiGG", "Temiz Teknoloji", "GCIP", "Tohum Öncesi Yatırım"], themes: ["Ar-Ge ve Yenilik", "Yeşil Dönüşüm"], sectors: ["Sektörler Arası"],
+  },
   {
     id: "kosgeb-is-gelistirme-2026-3", scope: "national", code: "KOSGEB · İş Geliştirme · 2026/3",
     title: "KOSGEB Girişimci Destek Programı — İş Geliştirme 2026/3",
@@ -586,6 +625,7 @@ export const calls: FundingCall[] = [
     institution: "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu — TEYDEB", institutionShort: "TÜBİTAK",
     status: "open", openDate: "2026-09-01T00:00:00+03:00", openingDateOnly: true,
     deadline: "2026-11-13T23:59:00+03:00",
+    preDeadline: "2026-11-11",
     applicants: "Türkiye’de yerleşik sermaye şirketleri: bir KOBİ veya büyük müşteri şirket ile en az bir KOBİ tedarikçi birlikte başvurur. İlişkili kuruluşlar aynı projede müşteri ve tedarikçi olamaz; aynı fondan yatırım almak tek başına bu ilişkiyi oluşturmaz. Her iki tarafta göreve uygun lisans mezunu personel gerekir.",
     companyScale: ["KOBİ", "Büyük Ölçek"],
     fundingAmount: "Proje bütçesi en fazla 10.000.000 TL; bu tutar hibe miktarı değildir.",
@@ -594,9 +634,9 @@ export const calls: FundingCall[] = [
     duration: "Uzatma dâhil en fazla 24 ay",
     summary: "Müşteri ihtiyacına yönelik, KOBİ tedarikçinin geliştireceği ve ticarileştirme potansiyeli olan Ar-Ge projeleri.",
     objectives: ["KOBİ’nin müşteriyle birlikte yenilikçi ürün veya süreç geliştirmesi"],
-    eligibleCosts: ["Çağrı koşullarına uygun Ar-Ge harcamaları", "Müşteride yalnız çağrıda izin verilen sınırlı giderler"],
+    eligibleCosts: ["Tedarikçide uygun Ar-Ge personeli, seyahat, danışmanlık ve hizmet, ekipman, yazılım, yayın, malzeme ve mali müşavirlik", "Müşteride görevle ilgili personel (en fazla 18 adam-ay), şehirlerarası seyahat ve mali müşavirlik"],
     application: "Müşteri kuruluş PRODİS’te projeyi sunar ve tedarikçileri ortak ekler. Müşteri ve bütün tedarikçiler için kuruluş bazlı ön kayıt gerekir; mevcut onay tekrar alınmaz. Ön kayıt son günü 11 Kasım 2026 (çağrı PDF’sinde saat belirtilmiyor). İş birliği sözleşmesi ve ekonomik fizibilite raporu hazırlanır.",
-    notice: "Son başvuru 13 Kasım 2026, 23.59 TSİ. Bu dönemde Endüstride Teknolojik Sıçrama ve Dijital Liderlik konu başlıklarına değerlendirmede öncelik verilir.",
+    notice: "Son başvuru 13 Kasım 2026, 23.59 TSİ. Belirlenen Endüstride Teknolojik Sıçrama ve Dijital Liderlik başlıklarına (Yeşil Dönüşüm başlıkları hariç) +5 puan verilir; sektör ve konu kısıtı değildir. Ortaklar arası hizmet/danışmanlık ve ticarileşme giderleri kapsam dışıdır.",
     sourceUrl: "https://tubitak.gov.tr/tr/duyuru/1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi",
     sourceLabel: "TÜBİTAK 1707 2026/3 çağrı duyurusu",
     verifiedAt: "2026-11-05",
@@ -868,7 +908,7 @@ export const calls: FundingCall[] = [
     status: "open",
     openDate: "2026-07-20T00:00:00+03:00",
     deadline: "2026-11-11T23:59:00+03:00",
-    preDeadline: "2026-11-09T17:30:00+03:00",
+    preDeadline: "2026-11-09T23:59:00+03:00",
     applicants: "Ar-Ge projesi sunan Türkiye’de yerleşik KOBİ’ler",
     companyScale: ["KOBİ"],
     fundingAmount: "Çağrı dokümanındaki proje bütçesi ve üst limitler geçerlidir",

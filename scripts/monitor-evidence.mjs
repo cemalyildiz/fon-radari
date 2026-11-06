@@ -14,8 +14,13 @@ function mainContent(html) {
   const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i)?.[1] ?? html;
   return main.replace(/<(script|style|nav|footer)\b[^>]*>[\s\S]*?<\/\1>/gi,'');
 }
+const officeDocument = type => /application\/(?:vnd\.openxmlformats-officedocument\.[^;]+|vnd\.ms-excel\.sheet\.macroenabled\.12)(?:;|$)/i.test(type);
 export function contentHash(bytes, type) {
   if (type.includes('pdf')) return fingerprint(bytes);
+  if (officeDocument(type)) {
+    if (bytes[0] !== 0x50 || bytes[1] !== 0x4b || bytes[2] !== 0x03 || bytes[3] !== 0x04) throw new Error('Ofis belgesi okunamadı');
+    return fingerprint(bytes);
+  }
   const html = new TextDecoder().decode(bytes);
   if (/access denied|erişim engellendi|captcha challenge/i.test(html)) throw new Error('Kaynak erişim engeli');
   const stable = mainContent(html).replace(/<[^>]*>/g,' ').replace(/\s+/g,' ').trim();
@@ -23,7 +28,7 @@ export function contentHash(bytes, type) {
   return fingerprint(stable);
 }
 export function documentLinksHash(bytes, type, pageUrl) {
-  if (type.includes('pdf')) return undefined;
+  if (type.includes('pdf') || officeDocument(type)) return undefined;
   const documents = new Set();
   const html = mainContent(new TextDecoder().decode(bytes));
   for (const [, href] of html.matchAll(/<a\b[^>]*\s+href\s*=\s*["']([^"']+)["']/gi)) {
