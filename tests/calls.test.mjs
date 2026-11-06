@@ -9,6 +9,26 @@ import { matchesAudience } from "../app/audience-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("ENHANCER keeps SME bands distinct and 2508 separates announcement, opening and e-signature", async () => {
+  const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const [medium, micro, aris] = ["enhancer-pro-medium-2026", "enhancer-pro-scale-up-2026", "tubitak-aris-2508-2026"]
+    .map(id => ({...calls.find(c => c.id === id), ...verified[id]}));
+  assert.match(medium.fundingAmount, /70\.000–100\.000/);
+  assert.match(micro.fundingAmount, /40\.000–60\.000/);
+  assert.ok(!medium.companyScale.includes("Mikro işletme"));
+  assert.ok(!micro.companyScale.includes("Orta ölçekli KOBİ"));
+  assert.notEqual(micro.applicationLinks[0].url, medium.applicationLinks[0].url);
+  for (const call of [medium, micro]) {
+    assert.equal(matchesAudience(call, "Özel sektör"), true);
+    assert.equal(verificationCoverage(call).complete, true);
+    assert.equal(realStatus(call, Date.parse("2026-12-22T19:00:00+03:00")), "archived");
+  }
+  assert.equal(realStatus(aris, Date.parse("2026-11-08T23:59:59+03:00")), "upcoming");
+  assert.equal(realStatus(aris, Date.parse("2026-11-09T00:00:00+03:00")), "open");
+  assert.equal(realStatus(aris, Date.parse("2026-12-21T23:59:00+03:00")), "archived");
+  assert.match(aris.followUpStages[0].schedule, /28 Aralık/);
+  assert.deepEqual(verificationCoverage(aris).pendingFields, ["supportRate"]);
+});
 test("regional technical support separates application closing from the commitment signature deadline", async () => {
   const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const ids = ["dogaka-yesil-donusum-teknik-2026", "sanayi-yesil-donusum-programi-2026"];

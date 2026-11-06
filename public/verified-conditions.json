@@ -1,4 +1,22 @@
 {
+  "tubitak-aris-2508-2026": {
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma"],
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026_0.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/2508-tubitak-slovenya-arastirma-ve-yenilik-ajansi-aris-ikili-birligi-programi-2026-yili-cagrisi-acildi", "https://tubitak.gov.tr/sites/default/files/2026-03/1071_Usul_Ve_Esaslari_79_sayili_YK_Islenmis_Hali.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
+  "enhancer-pro-medium-2026": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://www.icmpd.org/file/download/69258/file/Guidelines%20for%20Grant%20Applicants_ENHANCER%20PRO_SME1_231026.pdf?inLanguage=eng-GB&version=1",
+    "additionalEvidence": ["https://www.icmpd.org/work-with-us/grants/calls-for-proposals", "https://enhancerpro.com.tr/ortaolcekliisletme-hibe-programi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
+  "enhancer-pro-scale-up-2026": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://www.icmpd.org/file/download/69248/file/Guidelines%20for%20Grant%20Applicants_ENHANCER%20PRO_ScaleUp_23102026.pdf?inLanguage=eng-GB&version=1",
+    "additionalEvidence": ["https://www.icmpd.org/work-with-us/grants/calls-for-proposals", "https://enhancerpro.com.tr/hizlandirma-hibe-programi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "dogaka-yesil-donusum-teknik-2026": {
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://www.dogaka.gov.tr/assets/upload/dosyalar/basvuru-rehberi-ve-ekler.zip",
