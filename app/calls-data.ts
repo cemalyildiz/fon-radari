@@ -213,9 +213,61 @@ const horizonDecemberEnergy = [
   };
 });
 
+const horizonCircularIndustry = [
+  {
+    id: "horizon-remanufacturing-2027", topic: "03", page: 50, title: "Söküm ve Yeniden İmalat için Fabrika Otomasyonu",
+    budget: "36", contribution: "5–6,5", projects: 6, action: "RIA",
+    summary: "Made in Europe ortaklığı: ürün ve bileşenlerin işlevini koruyarak yeniden kullanımını, onarımını ve yeniden imalatını sağlayan fabrika teknolojileri. Başlangıç THS 4–5, hedef THS 6.",
+    objectives: ["Beş kapsam alanından en az üçünü ele almak: parça durum analizi ve kestirimci bakım; yapay zekâ ve robotlu söküm; CAD ve dijital ikiz tabanlı sistemler; yerinde onarım veya yeniden imalat; gelen ürüne göre işlem sıralaması."],
+    eligibleCosts: ["Fabrika ölçeğinde Ar-Ge, otomasyon prototipi, test ve doğrulama iş paketleri."],
+    notice: "İş gerekçesi ve sonuçlardan yararlanma stratejisi teklifin parçasıdır. Yeniden imalatın işletme ve pazar koşullarında nasıl uygulanacağı açıklanmalı.",
+    tags: ["Yeniden İmalat", "Robotik", "Made in Europe"], sectors: ["İmalat", "Otomotiv ve Mobilite"],
+  },
+  {
+    id: "horizon-circular-advanced-materials-2027", topic: "06", page: 57, title: "Enerji ve İnşaat için Döngüsel İleri Malzemeler",
+    budget: "36", contribution: "5–6,5", projects: 7, action: "RIA",
+    summary: "Döngüsellik için tasarlanmış yeni ileri malzemeleri tasarımdan endüstriyel uygulamaya taşır. Başlangıç THS 4–5, hedef THS 6.",
+    objectives: ["Geri dönüştürülebilir polimer ve kompozitler, mıknatıslar veya eklemeli imalat alaşımları gibi ileri malzemeler geliştirmek", "Geri kazanım, ölçek büyütme ve ürüne entegrasyonu endüstriyel kullanım örnekleriyle göstermek; döngüsel iş modeli geliştirmek"],
+    eligibleCosts: ["İleri malzeme Ar-Ge’si, üretim entegrasyonu, geri kazanım ve endüstriyel demonstrasyon iş paketleri."],
+    notice: "Başvuruda ana alan enerji veya inşaat olarak belirtilmeli. Asgari değerlendirme eşiklerini geçen tekliflerden her alan için en az bir proje desteklenmesi hedefleniyor. Güvenli ve sürdürülebilir tasarım (SSbD) çerçevesi ve iş gerekçesi ele alınmalı.",
+    tags: ["İleri Malzemeler", "Döngüsel Tasarım", "SSbD", "Made in Europe"], sectors: ["İmalat", "Enerji", "İnşaat ve Yapı"],
+  },
+  {
+    id: "horizon-textile-circularity-2027", topic: "08", page: 60, title: "Tekstil Üretiminde Döngüsellik ve İleri İşleme",
+    budget: "16", contribution: "4–6", projects: 3, action: "IA",
+    summary: "Geri dönüştürülmüş, rejenere veya biyobazlı lifler ve daha sürdürülebilir kimyasallar için yenilikçi tekstil üretimi. Başlangıç THS 5, hedef THS 6–7.",
+    objectives: ["Eğirme, dokuma, örme, boyama veya terbiye gibi süreçlerde işlenebilirliği ve nihai ürünün dayanımını doğrulamak", "Biyoçeşitlilik etkisini ölçmek; maliyet ve risk paylaşımı ile ölçek büyütmeyi sağlayacak iş modelleri geliştirmek"],
+    eligibleCosts: ["Yenilikçi tekstil prosesleri, kalite ve fonksiyon testleri, biyoçeşitlilik ölçümü ve sanayi ölçeklendirmesi", "Ana proje bütçesinde KOBİ’lere üçüncü taraf hibeleri için ayrılan pay"],
+    notice: "Ana proje AB katkısının %10–25’i üçüncü taraf KOBİ hibelerine ayrılmalı; KOBİ başına en fazla 150.000 €. Bu, şu anda açık ayrı bir KOBİ alt çağrısı değildir. Büyük işletmeler ana konsorsiyuma katılabilir ama bu alt hibenin alıcısı olamaz. Mevcut teknolojileri yalnızca birleştirmek kapsam dışı; malzeme tedarikçileri, markalar ve üretimi ölçekleyebilecek sanayi ortakları etkin rol almalı.",
+    tags: ["Tekstil", "Döngüsel Ekonomi", "Tekstilden Tekstile Geri Dönüşüm", "Alt Hibe"], sectors: ["Tekstil", "İmalat"],
+  },
+].map((topic): FundingCall => {
+  const code = `HORIZON-CL4-2027-01-MAT-PROD-${topic.topic}`;
+  return {
+    id: topic.id, scope: "international", code, reviewedPortalIdentifier: code, title: `Ufuk Avrupa — ${topic.title}`,
+    institution: "Avrupa Komisyonu · Ufuk Avrupa Küme 4 / HaDEA", institutionShort: "Horizon Europe",
+    status: "open", openDate: "2026-10-13", openingDateOnly: true, deadline: "2027-02-02T19:00:00+03:00",
+    calendarSourceUrl: "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-industry-leadership-materials-and-production-europe_en",
+    applicants: "Türkiye dâhil Ufuk Avrupa’ya asosiye ülkelerde ve AB üyesi ülkelerde yerleşik uygun KOBİ’ler, büyük firmalar ve diğer tüzel kişiler. En az üç farklı ülkeden üç bağımsız yararlanıcı: en az biri AB üyesi ülkede, diğer ikisi AB üyesi veya asosiye ülkelerde yerleşik olmalı.",
+    applicantGroups: ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu", "STK"],
+    companyScale: ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
+    fundingAmount: `Gösterge konu bütçesi ${topic.budget} milyon €. Yaklaşık ${topic.projects} proje için proje başına ${topic.contribution} milyon € AB katkısı öngörülüyor; aralık kesin alt veya üst sınır değildir.`,
+    fundingType: `Götürü hibe (${topic.action})`,
+    supportRate: topic.action === "RIA" ? "Uygun maliyetlerin %100’üne kadar (RIA); oran götürü bütçenin hesabında uygulanır." : "Kâr amaçlı kuruluşlar için en fazla %70, uygun kâr amacı gütmeyen tüzel kişiler için %100’e kadar (IA); oran götürü bütçenin hesabında uygulanır.",
+    duration: "Konu metninde sabit süre yok; süre hibe sözleşmesinde ay olarak belirlenir (Genel Ek G).",
+    summary: topic.summary, objectives: topic.objectives, eligibleCosts: topic.eligibleCosts, notice: topic.notice,
+    application: "Koordinatör AB Funding & Tenders Portal’da tek aşamalı teklif sunar. İş gerekçesi ve sonuçlardan yararlanma stratejisi için Bölüm B sayfa sınırı genel kurala göre 3 sayfa artırılmıştır. Fiilî açılış 13 Ekim 2026; kapanış 2 Şubat 2027, 17.00 Brüksel / 19.00 Türkiye saati.",
+    applicationLinks: [{label:"Çalışma programı · konu koşulları", url:`https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-7-digital-industry-and-space_horizon-2026-2027_en.pdf#page=${topic.page}`}],
+    sourceUrl: `https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/${code}`,
+    sourceLabel: "Avrupa Komisyonu · resmî konu ve başvuru sayfası", verifiedAt: "2026-11-06",
+    tags: topic.tags, sectors: topic.sectors, themes: ["Yeşil Dönüşüm", "Ar-Ge ve Yenilik", "Kaynak Verimliliği"],
+  };
+});
+
 export const calls: FundingCall[] = [
   ...eicChallenges2027,
   ...horizonDecemberEnergy,
+  ...horizonCircularIndustry,
   {
     id: "horizon-industrial-solar-heat-2027", scope: "international", code: "HORIZON-CL5-2027-02-D3-07",
     reviewedPortalIdentifier: "HORIZON-CL5-2027-02-D3-07",

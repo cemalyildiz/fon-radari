@@ -11,6 +11,34 @@ import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/e
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("verified circular industry topics replace portal rows without confusing the textile subgrant", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const specs = [["03", "horizon-remanufacturing-2027", "RIA"], ["06", "horizon-circular-advanced-materials-2027", "RIA"], ["08", "horizon-textile-circularity-2027", "IA"]];
+  const close = Date.parse("2027-02-02T19:00:00+03:00");
+  for (const [topic, id, action] of specs) {
+    const code = `HORIZON-CL4-2027-01-MAT-PROD-${topic}`;
+    const reviewed = {...calls.find(c => c.id === id), ...reviews[id]};
+    const feed = {calls:[{identifier:code, sourceKind:"topic", startDate:"2026-10-13T00:00:00.000Z", deadline:"2027-02-02T00:00:00.000Z", sourceCheckedAt:"2027-02-02T12:00:00Z"}]};
+    const result = mergeCalls([reviewed], feed, close - 1);
+    assert.equal(result.length, 1);
+    const [call] = result;
+    assert.equal(call.code, code);
+    assert.equal(call.openDate, "2026-10-13");
+    assert.equal(Date.parse(call.deadline), close);
+    assert.equal(call.status, "open");
+    assert.equal(realStatus(call, close), "archived");
+    assert.equal(matchesAudience(call, "Özel sektör"), true);
+    assert.equal(verificationCoverage(call).complete, true);
+    assert.equal(call.fundingType, `Götürü hibe (${action})`);
+    if (topic === "08") {
+      assert.match(call.fundingAmount, /4–6 milyon/);
+      assert.match(call.notice, /%10–25.*150\.000 €.*açık ayrı bir KOBİ alt çağrısı değildir/);
+      assert.match(call.supportRate, /en fazla %70/);
+    } else {
+      assert.match(call.supportRate, /%100’üne kadar/);
+    }
+  }
+});
 test("verified KOSGEB rounds replace their news aliases, not unrelated future announcements", () => {
   const employment = calls.find(c => c.id === "kosgeb-istihdami-koruma-2026-2");
   const competition = calls.find(c => c.id === "kosgeb-kuresel-rekabetcilik-2026-1");
