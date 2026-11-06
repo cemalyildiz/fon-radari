@@ -155,14 +155,18 @@ const calendarDay = (value: string) => dateOnly(value) || utcMidnight(value) ? v
 const observedDate = new Intl.DateTimeFormat("tr-TR", { dateStyle: "long", timeStyle: "short", timeZone: "Europe/Istanbul" });
 
 function checkReviewedPortalCalendar(call: FundingCall, portal: LiveCall, now: number): FundingCall {
-  // Multi-stage/batch topics need stage-aware comparison; don't pair dates by guesswork.
   const checked = Date.parse(portal.sourceCheckedAt ?? "");
   const reviewedAt = Date.parse(call.verifiedAt);
-  if (call.deadlines?.length || call.followUpStages?.length || (portal.deadlines?.length ?? 0) > 1 ||
+  if (call.deadlines?.length ||
       !Number.isFinite(checked) || checked > now || (Number.isFinite(reviewedAt) && checked < reviewedAt)) return call;
+  // Only pair multi-stage rows explicitly tied to the portal, and only with a complete schedule.
+  const stages = call.followUpStages ?? [];
+  const portalDeadlines = [...new Set(portal.deadlines ?? [])].filter(validDate).sort((a,b) => Date.parse(a) - Date.parse(b));
+  if (stages.length ? stages.length !== 1 || !stages[0].portalDeadline || portalDeadlines.length !== 2 : portalDeadlines.length > 1) return call;
   const changes = ([
     ["openDate", "açılış", call.openDate, portal.startDate, call.openingDateOnly],
-    ["deadline", "kapanış", call.deadline, nextDeadline(portal, now), call.calendarDateOnly],
+    ["deadline", stages.length ? "ilk aşama kapanışı" : "kapanış", call.deadline, stages.length ? portalDeadlines[0] : nextDeadline(portal, now), call.calendarDateOnly],
+    ["followUpStages", "ikinci aşama kapanışı", stages[0]?.portalDeadline, portalDeadlines[1], false],
   ] as const).flatMap(([field, label, reviewed, observed, reviewedDateOnly]) => {
     if (!reviewed || !observed || !validDate(reviewed) || !validDate(observed) ||
         !call.verifiedFields?.includes(field) || call.verificationIssues?.some(issue => issue.field === field)) return [];
@@ -173,7 +177,11 @@ function checkReviewedPortalCalendar(call: FundingCall, portal: LiveCall, now: n
     const display = portalDateOnly ? `${calendarDay(observed)} (saat belirtilmemiş)` : `${observedDate.format(Date.parse(observed))} (TSİ)`;
     return [{field, message: `AB Funding & Tenders Portal taramasında ${label} ${display} olarak görünüyor; önceki resmî belgeyle uyuşmuyor. Yeni takvim başvuru ekranından ve çağrı belgesinden teyit edilmeli.`}];
   });
-  return changes.length ? { ...call, status: "unknown", verificationIssues: [...(call.verificationIssues ?? []), ...changes] } : call;
+  return changes.length ? {
+    ...call,
+    status: changes.some(issue => issue.field !== "followUpStages") ? "unknown" : call.status,
+    verificationIssues: [...(call.verificationIssues ?? []), ...changes],
+  } : call;
 }
 
 export function mergeCalls(curated: FundingCall[], feed: LiveFeed, now: number): FundingCall[] {

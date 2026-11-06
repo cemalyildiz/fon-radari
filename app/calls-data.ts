@@ -28,7 +28,7 @@ export type FundingCall = {
   deadline?: string;
   calendarDateOnly?: boolean;
   openingDateOnly?: boolean;
-  followUpStages?: { title: string; schedule: string; access: string }[];
+  followUpStages?: { title: string; schedule: string; access: string; portalDeadline?: string }[];
   deadlines?: string[];
   dateCheckedAt?: string;
   recordType?: "call" | "program";
@@ -213,9 +213,10 @@ const horizonDecemberEnergy = [
   };
 });
 
+const horizonIndustryProgramme = "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en";
 const horizonCircularIndustry = [
   {
-    id: "horizon-remanufacturing-2027", topic: "03", page: 50, title: "Söküm ve Yeniden İmalat için Fabrika Otomasyonu",
+    id: "horizon-remanufacturing-2027", topic: "03", page: 52, title: "Söküm ve Yeniden İmalat için Fabrika Otomasyonu",
     budget: "36", contribution: "5–6,5", projects: 6, action: "RIA",
     summary: "Made in Europe ortaklığı: ürün ve bileşenlerin işlevini koruyarak yeniden kullanımını, onarımını ve yeniden imalatını sağlayan fabrika teknolojileri. Başlangıç THS 4–5, hedef THS 6.",
     objectives: ["Beş kapsam alanından en az üçünü ele almak: parça durum analizi ve kestirimci bakım; yapay zekâ ve robotlu söküm; CAD ve dijital ikiz tabanlı sistemler; yerinde onarım veya yeniden imalat; gelen ürüne göre işlem sıralaması."],
@@ -224,7 +225,7 @@ const horizonCircularIndustry = [
     tags: ["Yeniden İmalat", "Robotik", "Made in Europe"], sectors: ["İmalat", "Otomotiv ve Mobilite"],
   },
   {
-    id: "horizon-circular-advanced-materials-2027", topic: "06", page: 57, title: "Enerji ve İnşaat için Döngüsel İleri Malzemeler",
+    id: "horizon-circular-advanced-materials-2027", topic: "06", page: 60, title: "Enerji ve İnşaat için Döngüsel İleri Malzemeler",
     budget: "36", contribution: "5–6,5", projects: 7, action: "RIA",
     summary: "Döngüsellik için tasarlanmış yeni ileri malzemeleri tasarımdan endüstriyel uygulamaya taşır. Başlangıç THS 4–5, hedef THS 6.",
     objectives: ["Geri dönüştürülebilir polimer ve kompozitler, mıknatıslar veya eklemeli imalat alaşımları gibi ileri malzemeler geliştirmek", "Geri kazanım, ölçek büyütme ve ürüne entegrasyonu endüstriyel kullanım örnekleriyle göstermek; döngüsel iş modeli geliştirmek"],
@@ -233,7 +234,7 @@ const horizonCircularIndustry = [
     tags: ["İleri Malzemeler", "Döngüsel Tasarım", "SSbD", "Made in Europe"], sectors: ["İmalat", "Enerji", "İnşaat ve Yapı"],
   },
   {
-    id: "horizon-textile-circularity-2027", topic: "08", page: 60, title: "Tekstil Üretiminde Döngüsellik ve İleri İşleme",
+    id: "horizon-textile-circularity-2027", topic: "08", page: 62, title: "Tekstil Üretiminde Döngüsellik ve İleri İşleme",
     budget: "16", contribution: "4–6", projects: 3, action: "IA",
     summary: "Geri dönüştürülmüş, rejenere veya biyobazlı lifler ve daha sürdürülebilir kimyasallar için yenilikçi tekstil üretimi. Başlangıç THS 5, hedef THS 6–7.",
     objectives: ["Eğirme, dokuma, örme, boyama veya terbiye gibi süreçlerde işlenebilirliği ve nihai ürünün dayanımını doğrulamak", "Biyoçeşitlilik etkisini ölçmek; maliyet ve risk paylaşımı ile ölçek büyütmeyi sağlayacak iş modelleri geliştirmek"],
@@ -257,7 +258,7 @@ const horizonCircularIndustry = [
     duration: "Konu metninde sabit süre yok; süre hibe sözleşmesinde ay olarak belirlenir (Genel Ek G).",
     summary: topic.summary, objectives: topic.objectives, eligibleCosts: topic.eligibleCosts, notice: topic.notice,
     application: "Koordinatör AB Funding & Tenders Portal’da tek aşamalı teklif sunar. İş gerekçesi ve sonuçlardan yararlanma stratejisi için Bölüm B sayfa sınırı genel kurala göre 3 sayfa artırılmıştır. Fiilî açılış 13 Ekim 2026; kapanış 2 Şubat 2027, 17.00 Brüksel / 19.00 Türkiye saati.",
-    applicationLinks: [{label:"Çalışma programı · konu koşulları", url:`https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-7-digital-industry-and-space_horizon-2026-2027_en.pdf#page=${topic.page}`}],
+    applicationLinks: [{label:"Güncel çalışma programı · konu koşulları", url:`${horizonIndustryProgramme}#page=${topic.page}`}],
     sourceUrl: `https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/${code}`,
     sourceLabel: "Avrupa Komisyonu · resmî konu ve başvuru sayfası", verifiedAt: "2026-11-06",
     tags: topic.tags, sectors: topic.sectors, themes: ["Yeşil Dönüşüm", "Ar-Ge ve Yenilik", "Kaynak Verimliliği"],
@@ -268,6 +269,32 @@ export const calls: FundingCall[] = [
   ...eicChallenges2027,
   ...horizonDecemberEnergy,
   ...horizonCircularIndustry,
+  {
+    id: "horizon-industrial-renewable-energy-2027", scope: "international", code: "HORIZON-CL4-2027-02-MAT-PROD-32-two-stage",
+    reviewedPortalIdentifier: "HORIZON-CL4-2027-02-MAT-PROD-32-two-stage",
+    title: "Ufuk Avrupa — Proses Sanayisinde Yenilenebilir Enerji ve Isı Yönetimi",
+    institution: "Avrupa Komisyonu · Ufuk Avrupa Küme 4 / HaDEA", institutionShort: "Horizon Europe",
+    status: "open", openDate: "2026-10-13", openingDateOnly: true, deadline: "2027-02-02T19:00:00+03:00",
+    calendarSourceUrl: "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-industry-leadership-materials-and-production-europe-two-stage_en",
+    followUpStages: [{title:"2. aşama · Tam teklif", schedule:"2 Eylül 2027, 18.00 TSİ (17.00 Brüksel)", access:"Yalnız birinci aşamayı geçip davet edilen konsorsiyumlar için. Yeni başvuru dönemi değildir.", portalDeadline:"2027-09-02T18:00:00+03:00"}],
+    applicants: "Türkiye dâhil asosiye ülkelerden ve AB üyesi ülkelerden uygun KOBİ’ler, büyük firmalar ve diğer tüzel kişiler. En az üç farklı ülkeden üç bağımsız yararlanıcı: biri AB üyesi ülkede, diğer ikisi farklı AB üyesi veya asosiye ülkelerde yerleşik olmalı.",
+    applicantGroups: ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu", "STK"],
+    companyScale: ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
+    fundingAmount: "Gösterge konu bütçesi 52,5 milyon €. Yaklaşık altı proje için proje başına 7–9 milyon € AB katkısı öngörülüyor; aralık kesin alt veya üst sınır değildir.",
+    fundingType: "Götürü hibe (IA · Yenilik Eylemi)",
+    supportRate: "Kâr amaçlı kuruluşlar için en fazla %70, uygun kâr amacı gütmeyen tüzel kişiler için %100’e kadar. Oran götürü bütçenin hesabında uygulanır.",
+    duration: "Konu metninde sabit süre yok; proje süresi hibe sözleşmesinde ay olarak belirlenir (Genel Ek G).",
+    summary: "Enerji yoğun proseslerde yenilenebilir enerji, elektrifikasyon, endüstriyel ısı depolama ve enerji entegrasyonu. CO₂ ayak izini en az %20 azaltmayı hedefler; başlangıç THS 4–5, hedef THS 6–7.",
+    objectives: ["100–500 °C veya 500 °C üstü proseslerde yenilenebilir enerji, hibrit ısıtma ve/veya yüksek sıcaklık depolaması geliştirmek", "Tercihen gerçek sanayi ortamında pilot demonstrasyonla sistemi doğrulamak; iş gerekçesi ve sonuçlardan yararlanma stratejisi hazırlamak"],
+    eligibleCosts: ["Enerji entegrasyonu, elektrifikasyon, ısı depolaması ve pilot doğrulama için uygun götürü iş paketleri."],
+    application: "Koordinatör ilk aşama teklifini 2 Şubat 2027 saat 19.00 TSİ’ye kadar Funding & Tenders Portal’dan sunar. Kör değerlendirme nedeniyle ilk teklif özeti ve Bölüm B’de kurum adı, kısaltma, logo veya personel adı açıklanmaz. Yalnız davetliler ikinci aşamada tam teklif sunar; iş gerekçesi ve sonuçlardan yararlanma stratejisi için ikinci aşama sayfa sınırı 3 sayfa artırılmıştır.",
+    applicationLinks: [{label:"29 Eylül 2026 çalışma programı · konu koşulları",url:`${horizonIndustryProgramme}#page=67`}],
+    sourceUrl: "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL4-2027-02-MAT-PROD-32-two-stage",
+    sourceLabel: "Avrupa Komisyonu · resmî konu ve başvuru sayfası", verifiedAt: "2026-11-06",
+    tags: ["Sanayide Karbonsuzlaşma", "Yenilenebilir Enerji", "Endüstriyel Isı", "Processes4Planet"],
+    themes: ["Yeşil Dönüşüm", "Enerji Verimliliği", "Ar-Ge ve Yenilik"], sectors: ["İmalat", "Enerji"],
+    notice: "29 Eylül 2026 tarihli değişiklik (C(2026) 6687/2) ve başvuru portalı bu konuyu IA olarak sınıflandırıyor; önceki çalışma programındaki RIA satırı güncel değil. Yalnız üretim planını yenilenebilir elektrik arzına göre kaydıran çözümler kapsam dışı.",
+  },
   {
     id: "horizon-industrial-solar-heat-2027", scope: "international", code: "HORIZON-CL5-2027-02-D3-07",
     reviewedPortalIdentifier: "HORIZON-CL5-2027-02-D3-07",

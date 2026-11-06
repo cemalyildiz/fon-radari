@@ -11,6 +11,33 @@ import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/e
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("process heat uses the corrected IA rate and tracks stage dates separately", async () => {
+  const id = "horizon-industrial-renewable-energy-2027";
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const c = {...calls.find(c => c.id === id), ...reviews[id]};
+  const now = Date.parse("2026-11-06T18:00:00Z");
+  const row = {identifier:c.code, sourceKind:"topic", startDate:"2026-10-13T00:00:00.000Z", sourceCheckedAt:"2026-11-06T12:00:00Z"};
+  const first = "2027-02-02T00:00:00.000Z";
+  const second = "2027-09-02T00:00:00.000Z";
+  const merge = deadlines => mergeCalls([c], {calls:[{...row,deadlines}]}, now);
+  const [normal] = merge([second, first]);
+  assert.equal(merge([first, second]).length, 1);
+  assert.equal(normal.status, "open");
+  assert.equal(verificationCoverage(normal).complete, true);
+  assert.match(normal.fundingType, /IA/);
+  assert.match(normal.supportRate, /en fazla %70/);
+  assert.match(normal.application, /Kör değerlendirme/);
+  assert.equal(realStatus(normal, Date.parse("2027-02-02T16:00:00Z")), "archived");
+  assert.equal(Date.parse(normal.followUpStages[0].portalDeadline), Date.parse("2027-09-02T15:00:00Z"));
+  assert.match(normal.followUpStages[0].access, /davet edilen/);
+  const [changedFirst] = merge(["2027-02-04T00:00:00.000Z", second]);
+  assert.equal(changedFirst.status, "unknown");
+  assert.equal(changedFirst.verificationIssues[0].field, "deadline");
+  const [changedSecond] = merge([first, "2027-09-02T16:00:00Z"]);
+  assert.equal(changedSecond.status, "open");
+  assert.equal(changedSecond.verificationIssues[0].field, "followUpStages");
+  assert.equal(merge([second])[0].verificationIssues, undefined);
+});
 test("verified circular industry topics replace portal rows without confusing the textile subgrant", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const specs = [["03", "horizon-remanufacturing-2027", "RIA"], ["06", "horizon-circular-advanced-materials-2027", "RIA"], ["08", "horizon-textile-circularity-2027", "IA"]];

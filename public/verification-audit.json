@@ -291,7 +291,7 @@
     {
       "id": "horizon-remanufacturing-2027",
       "title": "Ufuk Avrupa — Söküm ve Yeniden İmalat için Fabrika Otomasyonu",
-      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-7-digital-industry-and-space_horizon-2026-2027_en.pdf",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
       "verifiedFields": [
         "applicants",
         "companyScale",
@@ -323,7 +323,7 @@
     {
       "id": "horizon-circular-advanced-materials-2027",
       "title": "Ufuk Avrupa — Enerji ve İnşaat için Döngüsel İleri Malzemeler",
-      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-7-digital-industry-and-space_horizon-2026-2027_en.pdf",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
       "verifiedFields": [
         "applicants",
         "companyScale",
@@ -355,7 +355,7 @@
     {
       "id": "horizon-textile-circularity-2027",
       "title": "Ufuk Avrupa — Tekstil Üretiminde Döngüsellik ve İleri İşleme",
-      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-7-digital-industry-and-space_horizon-2026-2027_en.pdf",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
       "verifiedFields": [
         "applicants",
         "companyScale",
@@ -368,6 +368,39 @@
         "eligibleCosts",
         "application",
         "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "horizon-industrial-renewable-energy-2027",
+      "title": "Ufuk Avrupa — Proses Sanayisinde Yenilenebilir Enerji ve Isı Yönetimi",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice",
+        "followUpStages"
       ],
       "verifiedCore": [
         "applicants",
@@ -2822,6 +2855,6 @@
       "complete": true
     }
   ],
-  "total": 90,
-  "complete": 58
+  "total": 91,
+  "complete": 59
 }
