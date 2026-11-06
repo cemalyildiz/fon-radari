@@ -11,6 +11,26 @@ import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/e
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("verified KOSGEB rounds replace their news aliases, not unrelated future announcements", () => {
+  const employment = calls.find(c => c.id === "kosgeb-istihdami-koruma-2026-2");
+  const competition = calls.find(c => c.id === "kosgeb-kuresel-rekabetcilik-2026-1");
+  const employmentNews = {...employment, sourceUrl:"https://kosgeb.gov.tr/site/tr/genel/detay/9471/istihdami-koruma-destek-programinin-kapsami-genisletildi"};
+  const competitionNews = {...competition, sourceUrl:"https://kosgeb.gov.tr/site/tr/genel/detay/9476/kobilerin-kuresel-rekabet-gucunu-artiracak-destek-programina-basvurular-basladi"};
+  const future = {...employment, sourceUrl:"https://kosgeb.gov.tr/site/tr/genel/detay/9999/istihdami-koruma-yeni-destek-cagrisi"};
+  assert.deepEqual(unreviewedAnnouncements([employment, competition], [employmentNews, competitionNews, future]), [future]);
+  assert.equal(employment.deadline, "2026-11-30");
+});
+test("Jordan research call includes firms, distinct national budgets and separate e-signature", async () => {
+  const c = calls.find(c => c.id === "tubitak-ncrd-2572-2026");
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  assert.equal(verificationCoverage({...c,...reviews[c.id]}).complete, true);
+  assert.equal(matchesAudience(c, "Özel sektör"), true);
+  assert.match(c.fundingAmount, /3\.750\.000 TL.*35\.000 Ürdün dinarı/);
+  assert.match(c.supportRate, /kabul edilen bütçesinin %100/);
+  assert.equal(c.openDate, "2026-10-01");
+  assert.equal(realStatus(c, Date.parse("2027-01-01T00:00:00+03:00")), "archived");
+  assert.match(c.followUpStages[0].schedule, /8 Ocak 2027/);
+});
 test("the ministry archive supplements ENVER without duplicating verified calls", async () => {
   const eka = calls.find(c => c.id === "etkb-eka-2026");
   const archive = "https://duyuru.enerji.gov.tr/duyuru-detay?id=30623";

@@ -569,6 +569,39 @@
       "complete": true
     },
     {
+      "id": "tubitak-ncrd-2572-2026",
+      "title": "TÜBİTAK–Ürdün NCRD — Su Kıtlığı, Gıda Güvenliği ve İklim Direnci",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-10/TUBITAK-NCRD_Call_Text_Final_Clean_Version.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice",
+        "followUpStages"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "tubitak-aris-2508-2026",
       "title": "TÜBİTAK–Slovenya ARIS — İkili Araştırma İş Birliği",
       "source": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026_0.pdf",
@@ -2693,6 +2726,6 @@
       "complete": true
     }
   ],
-  "total": 86,
-  "complete": 54
+  "total": 87,
+  "complete": 55
 }

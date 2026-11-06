@@ -70,6 +70,11 @@
     "additionalEvidence": ["https://www.tkdk.gov.tr/Content/File/BasvuruFiles/BasvuruPaketiHazirlamaDokumanlari/BasvuruCagriRehberi/IPARDIII/11.0/103.pdf"],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application"]
   },
+  "tubitak-ncrd-2572-2026": {
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-10/TUBITAK-NCRD_Call_Text_Final_Clean_Version.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/sites/default/files/2024-08/1071_arastirma_projeleri_surec_dokumani.pdf", "https://tubitak.gov.tr/tr/duyuru/2572-tubitak-urdun-ulusal-arastirma-gelistirme-merkezi-ncrd-ikili-isbirligi-cagrisi-basvuruya-acildi", "https://tubitak.gov.tr/en/announcement/2572-tubitak-jordan-national-center-research-and-development-ncrd-bilateral-cooperation-call-open-applications-0"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice", "followUpStages"]
+  },
   "tubitak-aris-2508-2026": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma"],
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026_0.pdf",

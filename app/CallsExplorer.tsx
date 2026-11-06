@@ -27,6 +27,7 @@ const trDateTime = new Intl.DateTimeFormat("tr-TR", {
 
 const formatDate = (date?: string, time = false) => validDate(date) ? (time && !dateOnly(date) ? trDateTime : trDate).format(new Date(date!)) : "Tarih doğrulanmalı";
 const calendarDisputed = (call: FundingCall) => Boolean(call.calendarObservation?.conflict || call.verificationIssues?.some(issue => issue.field === "openDate" || issue.field === "deadline"));
+const closingDisputed = (call: FundingCall) => Boolean(call.calendarObservation?.conflict || call.verificationIssues?.some(issue => issue.field === "deadline"));
 function freshness(call: FundingCall, now: number) {
   if (call.calendarObservation?.conflict) return "Resmî takvim önceki kayıtla uyuşmuyor · tarih kontrolü gerekli";
   if (call.verificationIssues?.length) return "Resmî kaynaklar arasında çelişki var · ayrıntıları inceleyin";
@@ -489,7 +490,7 @@ export default function CallsExplorer({ calls }: Props) {
               <dl className="card-facts">
                 <div>
                   <dt>Son başvuru</dt>
-                  <dd>{call.recordType === "program" ? "Alt çağrıya göre" : call.applicationType === "continuous" ? "Sürekli başvuru" : calendarDisputed(call) ? "Takvim doğrulanmalı" : formatDate(call.deadline)}</dd>
+                  <dd>{call.recordType === "program" ? "Alt çağrıya göre" : call.applicationType === "continuous" ? "Sürekli başvuru" : closingDisputed(call) ? "Kapanış doğrulanmalı" : formatDate(call.deadline)}</dd>
                 </div>
                 <div>
                   <dt>Destek türü</dt>
