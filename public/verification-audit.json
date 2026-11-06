@@ -129,6 +129,68 @@
       "complete": false
     },
     {
+      "id": "kosgeb-is-gelistirme-2026-3",
+      "title": "KOSGEB Girişimci Destek Programı — İş Geliştirme 2026/3",
+      "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Giri%C5%9Fimcilik/2026/2026.10.05/GDP_Yo%CC%88nergesi_%2815%29.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "kosgeb-is-kurma-surekli",
+      "title": "KOSGEB Girişimci Destek Programı — Sürekli İş Kurma Desteği",
+      "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Giri%C5%9Fimcilik/2026/2026.10.05/GDP_Yo%CC%88nergesi_%2815%29.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "applicationType",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "applicationType"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "kosgeb-sel-taskin-2026",
       "title": "KOSGEB Acil Durumlar Desteği — Sel ve Taşkın 2026",
       "source": "https://kosgeb.gov.tr/site/tr/genel/detay/9505/kosgebden-sel-ve-taskin-felaketlerinden-etkilenen-kobilere-faizkr-payi-destegi",
@@ -1790,6 +1852,6 @@
       "complete": true
     }
   ],
-  "total": 58,
-  "complete": 29
+  "total": 60,
+  "complete": 31
 }

@@ -1,4 +1,16 @@
 {
+  "kosgeb-is-gelistirme-2026-3": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Giri%C5%9Fimcilik/2026/2026.10.05/GDP_Yo%CC%88nergesi_%2815%29.pdf",
+    "additionalEvidence": ["https://kosgeb.gov.tr/site/tr/genel/detay/9499/girisimci-destek-programi-yenilendi-girisimcilere-yeni-destek-modeli", "https://kosgeb.gov.tr/site/tr/genel/destekdetay/1231/girisimci-destek-programi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
+  "kosgeb-is-kurma-surekli": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/Giri%C5%9Fimcilik/2026/2026.10.05/GDP_Yo%CC%88nergesi_%2815%29.pdf",
+    "additionalEvidence": ["https://kosgeb.gov.tr/site/tr/genel/destekdetay/1231/girisimci-destek-programi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "applicationType", "eligibleCosts", "application", "notice"]
+  },
   "kosgeb-sel-taskin-2026": {
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://kosgeb.gov.tr/site/tr/genel/detay/9505/kosgebden-sel-ve-taskin-felaketlerinden-etkilenen-kobilere-faizkr-payi-destegi",

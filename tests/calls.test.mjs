@@ -8,6 +8,17 @@ import { verificationCoverage } from "../app/verification-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("KOSGEB startup programme separates closed development round from continuous establishment support", async () => {
+  const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const development = calls.find(c => c.id === "kosgeb-is-gelistirme-2026-3");
+  const establishment = calls.find(c => c.id === "kosgeb-is-kurma-surekli");
+  const afterTransition = Date.parse("2027-01-01T12:00:00+03:00");
+  assert.equal(realStatus(development, afterTransition), "archived");
+  assert.equal(realStatus(establishment, afterTransition), "open");
+  assert.equal(nextDeadline(establishment, afterTransition), undefined);
+  assert.equal(verificationCoverage({...establishment, ...verified[establishment.id]}).complete, true);
+  assert.match(development.fundingAmount, /2\.250\.000 TL/);
+});
 test("national discovery keeps application and extension notices, not result, training or menu pages", () => {
   const url = "https://tubitak.gov.tr/tr/duyuru/ilan";
   assert.equal(isNationalFundingCandidate("TEYDEB 1507 başvuru sonuçları açıklandı", url), false);
