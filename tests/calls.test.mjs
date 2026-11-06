@@ -18,8 +18,8 @@ test("the ministry archive supplements ENVER without duplicating verified calls"
     <a href="https://unknown.example/duyuru-detay?id=30623">Sahte duyuru</a>`, energyArchivePages[0]);
   assert.equal(rows.length, 1);
   assert.equal(rows[0][1], archive);
-  const alias = {...eka, sourceUrl:archive, title:rows[0][2]};
-  assert.equal(nationalAnnouncementKey(eka.sourceUrl), nationalAnnouncementKey(archive));
+  const alias = {...eka, sourceUrl:"https://enerjiverimliligi.enerji.gov.tr/Home/DuyuruDetay?id=1125", title:rows[0][2]};
+  assert.equal(nationalAnnouncementKey(eka.sourceUrl), nationalAnnouncementKey(alias.sourceUrl));
   assert.deepEqual(unreviewedAnnouncements([eka], [alias]), []);
   assert.equal(isNationalFundingCandidate("2027 Yılı Enerji Verimliliği Destek Bedelleri", "https://duyuru.enerji.gov.tr/duyuru-detay?id=32001"), true);
   assert.equal(isNationalFundingCandidate("Enerji Yöneticisi Sınavı Başvuruları", "https://duyuru.enerji.gov.tr/duyuru-detay?id=32002"), false);
