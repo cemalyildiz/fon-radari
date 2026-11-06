@@ -1,4 +1,11 @@
 {
+  "water4all-2026": {
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "reviewedPortalIdentifier": "cascade-44093037-15581",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-09/Water4All_Ortakligi_2026_Cagrisi_Ar-Ge_ve_Yenilik_Projeleri_Ulusal_Basvuru_Kurallari-final.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/ufuk-avrupa-programi-gezegen-icin-su-guvenligi-ortakligi-water4all-2026-cok-uluslu-ortak-cagrisi-basvuruya-acildi", "https://www.water4all-partnership.eu/joint-activities/water4all-2026-joint-transnational-call", "https://www.water4all-partnership.eu/sites/default/files/2026-09/Call_Announcement_Water4All_JTC2026_20260908.pdf", "https://www.water4all-partnership.eu/sites/default/files/2026-06/National_Regulations-Water4All_JTC2026.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "tubitak-1505-surekli": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/1505_uygulama_esaslari_29.12.2025_77YK_05.03.2026_907659_baskanlik_oluru_islenmis_hali_koprulu.pdf",

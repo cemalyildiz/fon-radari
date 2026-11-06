@@ -25,7 +25,7 @@ const trDateTime = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
 });
 
-const formatDate = (date?: string, time = false) => validDate(date) ? (time ? trDateTime : trDate).format(new Date(date!)) : "Tarih doğrulanmalı";
+const formatDate = (date?: string, time = false) => validDate(date) ? (time && !dateOnly(date) ? trDateTime : trDate).format(new Date(date!)) : "Tarih doğrulanmalı";
 function freshness(call: FundingCall, now: number) {
   if (call.calendarObservation?.conflict) return "Resmî takvim önceki kayıtla uyuşmuyor · tarih kontrolü gerekli";
   if (call.verificationIssues?.length) return "Resmî kaynaklar arasında çelişki var · ayrıntıları inceleyin";
@@ -652,6 +652,9 @@ export default function CallsExplorer({ calls }: Props) {
               <div className="application-note">
                 <span>Başvuru yöntemi</span>
                 <p>{selected.application}</p>
+                {selected.applicationLinks?.filter(link => link.url.startsWith("https://")).map(link => (
+                  <p key={link.url}><a href={link.url} target="_blank" rel="noopener noreferrer">{link.label} ↗</a></p>
+                ))}
               </div>
             </div>
             <div className="modal-footer">

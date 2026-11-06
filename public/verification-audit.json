@@ -129,6 +129,38 @@
       "complete": false
     },
     {
+      "id": "water4all-2026",
+      "title": "Water4All 2026 — Sürdürülebilir Su Yönetimi",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-09/Water4All_Ortakligi_2026_Cagrisi_Ar-Ge_ve_Yenilik_Projeleri_Ulusal_Basvuru_Kurallari-final.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "tubitak-1505-surekli",
       "title": "TÜBİTAK 1505 — Üniversite-Sanayi İşbirliği",
       "source": "https://tubitak.gov.tr/sites/default/files/2026-04/1505_uygulama_esaslari_29.12.2025_77YK_05.03.2026_907659_baskanlik_oluru_islenmis_hali_koprulu.pdf",
@@ -1916,6 +1948,6 @@
       "complete": true
     }
   ],
-  "total": 62,
-  "complete": 33
+  "total": 63,
+  "complete": 34
 }

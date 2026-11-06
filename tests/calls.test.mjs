@@ -8,6 +8,20 @@ import { verificationCoverage } from "../app/verification-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("Water4All national steps and invited full proposal do not extend initial application", async () => {
+  const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const call = {...calls.find(c => c.id === "water4all-2026"), ...verified["water4all-2026"]};
+  assert.equal(realStatus(call, Date.parse("2026-11-10T16:59:59+03:00")), "open");
+  assert.equal(realStatus(call, Date.parse("2026-11-10T17:00:00+03:00")), "archived");
+  assert.match(call.followUpStages[0].schedule, /16 Kasım.*19 Kasım/);
+  assert.match(call.followUpStages[1].schedule, /6 Nisan 2027, 16.00 TSİ/);
+  assert.equal(call.applicationLinks[0].url, "https://epss.proposals.ee/water4all/2026");
+  assert.equal(verificationCoverage(call).complete, true);
+  const duplicate = {identifier: call.reviewedPortalIdentifier, sourceKind: "cascade", title: call.title, deadline: "2026-11-10T15:00:00Z"};
+  const results = mergeCalls([call], {calls:[duplicate]}, Date.parse("2026-11-10T17:00:00+03:00"));
+  assert.equal(results.length, 1);
+  assert.equal(results[0].status, "archived");
+});
 test("KOSGEB startup programme separates closed development round from continuous establishment support", async () => {
   const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const development = calls.find(c => c.id === "kosgeb-is-gelistirme-2026-3");

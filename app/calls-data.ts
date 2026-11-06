@@ -48,6 +48,7 @@ export type FundingCall = {
   objectives: string[];
   eligibleCosts: string[];
   application: string;
+  applicationLinks?: { label: string; url: string }[];
   sourceUrl: string;
   sourceLabel: string;
   verifiedAt: string;
@@ -123,6 +124,32 @@ const eicChallenges2027 = [
 
 export const calls: FundingCall[] = [
   ...eicChallenges2027,
+  {
+    id: "water4all-2026", scope: "international", code: "Water4All · JTC 2026",
+    title: "Water4All 2026 — Sürdürülebilir Su Yönetimi",
+    institution: "Water4All Avrupa Ortaklığı · TÜBİTAK 1071", institutionShort: "Water4All / TÜBİTAK",
+    status: "open", openDate: "2026-09-08", openingDateOnly: true, deadline: "2026-11-10T17:00:00+03:00",
+    applicants: "Türkiye’de yerleşik, ticaret sicil belgeli sermaye şirketleri (KOBİ ve büyük işletme), uygun üniversiteler, eğitim ve araştırma hastaneleri, 6550 araştırma altyapıları ve kamu kurumları. Şahıs işletmesi, dernek, vakıf, kooperatif, birlik ve adi ortaklık kabul edilmez. Konsorsiyumda üç farklı katılımcı ülkeden fon isteyen en az üç uygun ortak, bunlar arasında iki farklı AB veya Ufuk Avrupa asosiye ülkesinden en az iki bağımsız tüzel kişi gerekir. Genel üst sınır yedi ortak; çağrı metninde belirli fonlayıcılar için sekizinci ortak istisnası var.",
+    companyScale: ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma", "Kamu"],
+    fundingAmount: "Türkiye ortaklarının bir proje için toplam TÜBİTAK katkısı en fazla 190.000 €; şirket başına 190.000 €, uygun üniversite/araştırma/kamu yürütücüsü başına 100.000 €. PTİ ve kurum hissesi bu tavanlara dâhil değil. Türkiye için toplam çağrı taahhüdü 500.000 €; yaklaşık 34 milyon € ise uluslararası çağrının toplam bütçesidir.",
+    fundingType: "Türkiye ortaklarının uygun giderlerine TÜBİTAK 1071 hibesi; proje sözleşmesi ve ödeme Türk lirası üzerinden.",
+    supportRate: "KOBİ %75, büyük şirket %60, uygun üniversite, araştırma altyapısı, eğitim ve araştırma hastanesi ve kamu kurumları %100; oranlar kabul edilen bütçeye uygulanır.",
+    duration: "36 ay",
+    summary: "Entegre su izleme, doğa temelli çözümler, akıllı su altyapıları ve dayanıklı su yönetişimi için uluslararası Ar-Ge çağrısı.",
+    objectives: ["Dört ana konudan en az birini ele almak", "Su kaynaklarının izlenmesini, korunmasını ve yönetimini iyileştirmek"],
+    eligibleCosts: ["Şirketlerde uygun proje personeli, seyahat, danışmanlık ve hizmet, ekipman, yazılım, yayın, sarf ve YMM denetim giderleri", "Konsorsiyum ortaklarından alınan danışmanlık ve hizmet desteklenmez; kurumlara özgü PTİ, kurum hissesi ve burs kuralları ayrıdır."],
+    application: "Koordinatör İngilizce ön teklifi güncel EPSS üzerinden gönderir. Türkiye ortakları ayrıca e-imzalı 1071 başvurusu yapar ve uluslararası formu PBS’ye yükler. Birden fazla Türkiye ortağı varsa tek ulusal başvuruda ayrı yürütücü olarak eklenir. Uluslararası tam öneri yalnız davet edilenler içindir.",
+    applicationLinks: [{label:"Güncel Water4All başvuru sistemi (EPSS)",url:"https://epss.proposals.ee/water4all/2026"},{label:"TÜBİTAK ulusal başvuru sistemi (PBS)",url:"https://uidb-pbs.tubitak.gov.tr/"}],
+    followUpStages: [
+      {title:"Türkiye · 1. aşama",schedule:"PBS onayı 16 Kasım 2026, 23.59 TSİ; e-imza 19 Kasım 2026, 23.59 TSİ.",access:"Yalnız uluslararası ön teklif sunmuş Türkiye ortakları; yeni uluslararası başvuru değildir."},
+      {title:"Uluslararası tam öneri",schedule:"6 Nisan 2027, 16.00 TSİ (15.00 CEST).",access:"Yalnız ön teklifi geçen ve davet alan konsorsiyumlar."},
+      {title:"Türkiye · 2. aşama",schedule:"Son tarih başarılı projelere TÜBİTAK tarafından ayrıca bildirilecek.",access:"Yalnız 2. aşama uluslararası değerlendirmesi olumlu projelerin Türkiye ortakları."},
+    ],
+    notice: "Türkiye düzenli çağrıyı fonluyor; Erken Kariyer Araştırmacıları (ECR) türünü fonlamıyor. Aşırı olaylar ve döngüsellik bu çağrının kapsamı dışında. Uluslararası başvuru bağlantısı 23 Ekim’de değişti. Tam önerideki saat için ortaklığın güncel CEST takvimi esas alındı; ulusal PDF’deki CET ifadesi kullanılmadı.",
+    sourceUrl: "https://tubitak.gov.tr/tr/duyuru/ufuk-avrupa-programi-gezegen-icin-su-guvenligi-ortakligi-water4all-2026-cok-uluslu-ortak-cagrisi-basvuruya-acildi", sourceLabel: "TÜBİTAK — Türkiye çağrı duyurusu", verifiedAt: "2026-11-06",
+    tags: ["Su Yönetimi", "Su Verimliliği", "Yeraltı Suyu", "1071"],
+    themes: ["Yeşil Dönüşüm", "Kaynak Verimliliği", "Ar-Ge ve Yenilik"], sectors: ["Çevre ve Su", "Sektörler Arası"],
+  },
   {
     id: "tubitak-1505-surekli", scope: "national", code: "1505",
     title: "TÜBİTAK 1505 — Üniversite-Sanayi İşbirliği",
