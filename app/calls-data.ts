@@ -494,7 +494,34 @@ const horizonBattery2027 = [
   };
 });
 
+const savtag1007Programme = "https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1007-kamu-kurumlari-arastirma-ve-gelistirme-projelerini-destekleme-programi";
+const savtag1007Calls = [
+  ["tubitak-1007-balistik-kiyafet-2026", "balistik-kiyafet-gelistirilmesi-projesi", "Balistik Kıyafet Geliştirilmesi", "Koruyucu kıyafet alanındaki kamu Ar-Ge ihtiyacına yönelik savunma sanayii çağrısı.", "2026-10-16", "2026-12-16", "Projede bağımsız kontrollü çalışma alanı gerekir. Personelin Kişi Güvenlik Belgesi numaralarını gösteren onaylı liste veya belge başvurusunun kanıtı öneriye eklenir."],
+  ["tubitak-1007-aromatik-poliamid-2026", "balistik-amacli-aromatik-poliamid-gelistirilmesi-projesi", "Balistik Amaçlı Aromatik Poliamid Geliştirilmesi", "Teknik tekstil ve ileri malzemeler alanındaki kamu Ar-Ge ihtiyacına yönelik savunma sanayii çağrısı.", "2026-10-16", "2026-12-16", "Projede bağımsız kontrollü çalışma alanı gerekir. Personelin Kişi Güvenlik Belgesi numaralarını gösteren onaylı liste veya belge başvurusunun kanıtı öneriye eklenir."],
+  ["tubitak-1007-alternatif-haberlesme-2026", "alternatif-haberlesme-sistemi-gelistirilmesi-projesi", "Alternatif Haberleşme Sistemi Geliştirilmesi", "Haberleşme alanındaki kamu Ar-Ge ihtiyacına yönelik savunma sanayii çağrısı.", "2026-10-09", "2026-12-14", "Tesis Güvenlik Belgesi ve projede çalışacak tüm firma personeli için Kişi Güvenlik Belgesi aranır; doküman teslimindeki yetkilendirilmiş kurye de koşula tabidir."],
+].map(([id, slug, title, summary, openDate, closeDate, security]): FundingCall => ({
+  id, scope: "national", code: "TÜBİTAK 1007 · SAVTAG · 2026",
+  title: `TÜBİTAK 1007 — ${title}`,
+  institution: "TÜBİTAK · ARDEB / SAVTAG", institutionShort: "TÜBİTAK",
+  status: "open", openDate, openingDateOnly: true, deadline: `${closeDate}T17:00:00+03:00`,
+  applicants: `Ar-Ge yeteneği uygun bulunan Türkiye’de yerleşik sermaye şirketleri proje yürütücüsü olarak başvurabilir. ${security}`,
+  applicantGroups: ["Özel sektör"], companyScale: [],
+  fundingAmount: "Kamuya açık duyuruda sayısal tavan belirtilmiyor. Bütçe için TÜBİTAK’tan çağrı dokümanını alın.",
+  fundingType: "TÜBİTAK 1007 proje gideri desteği. Şirketler için teminat karşılığı ön ödeme veya kabul ve mali inceleme sonrası gider ödemesi uygulanabilir.",
+  supportRate: "1007 genel kuralı: uygun Ar-Ge giderlerinde %100; şirketlerin seri üretimde de kullanabileceği makine ve teçhizatta en fazla %40. Çağrıya özgü kalemleri dokümandan teyit edin.",
+  duration: "1007 genel Ar-Ge süresi en fazla 48 ay; bu çağrının özel süresi kamuya açık duyuruda belirtilmiyor.",
+  summary, objectives: ["Duyuruda tanımlanan kamu Ar-Ge ihtiyacını karşılamak."],
+  eligibleCosts: ["Genel 1007 çerçevesinde uygun personel, teçhizat, sarf, hizmet ve seyahat. Çağrıya özel gider listesi ve sınırlar için çağrı dokümanı geçerlidir."],
+  application: "SAVTAG Çağrı Belgesi Teslim Tutanağı ile çağrı dokümanını temin edin. Bu çağrıda ilk aşama beklenmez: imzalı II. Aşama Proje Önerisi dokümandaki formatta elden teslim edilir.",
+  applicationLinks: [{label:"TÜBİTAK 1007 · teslim tutanağı ve II. aşama formları", url:savtag1007Programme}],
+  notice: "Hizmete Özel çağrı. Kamuya açık metin firma ölçeğini ve özel bütçe sınırını açıklamıyor; bu alanlar doğrulanmış sayılmadı. Firmanın başvuru rolü proje yürütücüsüdür; kamu kurumunun müşteri rolüyle aynı değildir.",
+  sourceUrl: `https://tubitak.gov.tr/tr/duyuru/1007-programi-${slug}-cagrisi-acildi`,
+  sourceLabel: "TÜBİTAK · resmî çağrı duyurusu", verifiedAt: "2026-11-06",
+  tags: ["1007", "SAVTAG", "Firma Başvurusu"], themes: ["Ar-Ge ve Yenilik"], sectors: ["Savunma ve Güvenlik"],
+}));
+
 export const calls: FundingCall[] = [
+  ...savtag1007Calls,
   ...horizonBattery2027,
   ...cleanIndustry2027,
   ...eicChallenges2027,
@@ -744,8 +771,8 @@ export const calls: FundingCall[] = [
     companyScale: ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
     fundingAmount: "Türkiye ortaklarına proje başına en fazla 2.000.000 TL. Slovenya tarafında ARIS en fazla 12.000 € verir; bu, Türkiye ortaklarının bütçesi değildir. Kurum hissesi ve PTİ ödenmez.",
     fundingType: "TÜBİTAK 1071 kapsamında çağrıya özgü uygun gider desteği; ARIS kendi ülke payını ayrı yürütür.",
-    supportRate: "Çağrı metninde özel kuruluşlar için yüzde belirtilmiyor; bütçe oluşturmadan önce çağrı özelindeki oranı TÜBİTAK’tan teyit edin.",
-    duration: "En fazla 24 ay; her bir yönde uluslararası ziyaretlerin toplamı proje başına yılda 60 günü aşamaz.",
+    supportRate: "Ortak çağrı metni firma bazında yüzde açıklamıyor. Türkiye ekibinin uygun ikili ziyaretlerinde gündelik 6245 sayılı Kanun’a göre ve uçak bileti ekonomi sınıfı üzerinden hesaplanır; sağlık sigortası katılımcıya aittir. Bütçe öncesinde çağrı özelindeki oranı TÜBİTAK’tan teyit edin.",
+    duration: "En fazla 24 ay; her bir yönde uluslararası ziyaretlerin toplamı proje başına yılda 60 günü aşamaz. Ortak çağrıdaki planlanan proje dönemi 1 Temmuz 2027–30 Haziran 2029.",
     summary: "Türkiye ve Slovenya ekiplerinin ortak araştırması ve karşılıklı bilimsel ziyaretleri. Temalar sağlık, BİT, gıda/tarım, inşaatta ileri malzemeler/teknolojiler ve temel bilimler.",
     objectives: ["Yeni bilimsel bilgi ve teknolojik çözüm üretmek", "Ortak altyapı, uzmanlık ve bilimsel çalışma ortamına erişmek"],
     eligibleCosts: ["Yurt içi saha çalışması ile uygun yurt içi/yurt dışı seyahatler ve ikili iş birliği ziyaretleri", "Bursiyer giderleri; temsil ve tanıtım giderleri en fazla 85.000 TL. Makine veya firma personel maaşı çağrının gider listesinde yer almıyor."],
@@ -1254,7 +1281,7 @@ export const calls: FundingCall[] = [
     summary: "Yenilikçi KOBİ liderliğinde ticarileştirilebilir ürün, süreç veya hizmet geliştiren uluslararası sivil Ar-Ge projeleri.",
     objectives: ["Uluslararası iş birliğiyle pazara dönük Ar-Ge yapmak"],
     eligibleCosts: ["Ülke ve fonlayıcı kurallarına göre belirlenir; Türkiye koşulları bekleniyor"],
-    application: "Uluslararası teklif Eureka proje platformunda sunulur. Geçici Türkiye notu ETEYDEB/PRODİS kaydı ile TÜBİTAK’a ulusal ön başvuru ve tam başvuru öngörüyor. Ayrı ulusal son tarih ve işlem sırası için bu dönemin TÜBİTAK takvimi beklenmeli.",
+    application: "Lider KOBİ, İngilizce ortak teklifi Eureka proje platformunda açar ve sunar. İmzalı taahhüt formu ve KOBİ beyanı eklenir. Eureka’nın geçici Türkiye notu, proje alanında en az bir lisans mezunu ve ETEYDEB/PRODİS kaydı arıyor; ulusal ön başvurunun uluslararası kapanışla aynı zamanda yapılmasını öngörüyor. Kesin ulusal ön ve tam başvuru takvimi için 12. çağrıya özel TÜBİTAK ilanını bekleyin; ön başvuruyu uluslararası sonuç sonrasına bırakmayın.",
     applicationLinks: [{label:"Eurostars proje platformu", url:"https://myeurekaproject.org/"},{label:"TÜBİTAK 1709 ulusal duyuruları",url:"https://tubitak.gov.tr/tr/destekler/sanayi/uluslararasi-ortakli-destek-programlari/1709-eureka-eurostars"}],
     notice: "Eurostars ülkelerindeki KOBİ’lerin taşeronluk hariç bütçesi toplam proje maliyetinin en az %50’si olmalı. Bir ortak veya ülke toplam bütçenin %70’ini aşamaz. Uluslararası son saat 4 Mart 14.00 Brüksel (16.00 TSİ). Eureka, ülke koşullarının çağrı açılmadan önce değişebileceğini belirtiyor. 2026/2 ulusal takvimi ve tavanı bu çağrıya uygulanmaz.",
     sourceUrl: "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
@@ -1419,7 +1446,7 @@ export const calls: FundingCall[] = [
     fundingAmount: "Türkiye’de 1509 ulusal proje bütçesi tavanı: tek Türk kuruluş için 25 milyon TL; birden fazla Türk ortak varsa toplam 80 milyon TL ve Türk ortak başına 25 milyon TL. Bunlar hibe tutarı değil, bütçe tavanlarıdır.",
     fundingType: "Türkiye’de TÜBİTAK 1509 kapsamında geri ödemesiz Ar-Ge desteği",
     supportRate: "1509’da desteklenen ilk beş projede KOBİ %75, büyük firma %60; altıncı ve sonrasında KOBİ %60, büyük firma %40. 1 Ocak 2020’den itibaren sözleşmesi imzalanmış 1509 projelerinde yürütücü ve ortak rollerindeki destekler sayılır.",
-    duration: "Türkiye’de 1509 Madde 6 uyarınca destek süresi, TÜBİTAK’ın kabul ettiği faaliyet takvimine göre belirlenir ve varsa uluslararası üst sınırı aşamaz. Bu ikili çağrıda bağlayıcı sayısal azami süre teyit edilmedi.",
+    duration: "Türkiye’de 1509 Madde 6 uyarınca TÜBİTAK’ın kabul ettiği faaliyet takvimi geçerli. İspanyol ortağın CDTI uluslararası iş birliği Ar-Ge finansmanında genel süre 12–36 ay. Bu aralığı iki taraf için ortak bir çağrı sınırı olarak varsaymayın.",
     summary: "Sivil amaçlı ve ticarileşebilir yeni ürün, süreç veya hizmet geliştirmeye yönelik uluslararası Ar-Ge. Sektör kısıtı yok; akıllı imalat, enerji, hareketlilik ve tarım-gıda örnek alanlardır.",
     objectives: ["Türk ve İspanyol firmaları arasında pazara dönük Ar-Ge iş birliği"],
     eligibleCosts: ["1509 kapsamında uygun personel, seyahat ve ekipman", "Yazılım, malzeme, danışmanlık ve Ar-Ge hizmet alımları"],
@@ -1428,7 +1455,7 @@ export const calls: FundingCall[] = [
       { title: "Türkiye — 1509 ön başvuru ve ulusal başvuru", schedule: "Takvim TÜBİTAK tarafından e-postayla bildirilir.", access: "Türk katılımcılara yönelik ulusal süreç; uluslararası son tarihin yerine geçmez." },
       { title: "İspanya — CDTI ulusal başvurusu", schedule: "CDTI’nin duyurusuna göre 10 Mart 2027’den önce.", access: "İspanyol şirket veya İspanyol konsorsiyum koordinatörü başvurur." },
     ],
-    notice: "Uluslararası son saat 17.00 CET, Türkiye saatiyle 19.00. İspanyol ortak CDTI’ye ayrıca başvurur; CDTI duyurusu bu işlemin 10 Mart 2027’den önce tamamlanmasını ister.",
+    notice: "Uluslararası son saat 17.00 CET, Türkiye saatiyle 19.00. İspanyol ortak CDTI’ye ayrıca başvurur. Eureka 10 Mart 2027’ye kadar, CDTI ise 10 Mart’tan önce diyor; İspanyol ortak erken tarihi esas almalı. İspanya’da şirket başına en az 175.000 € uygun bütçe ve %85’e kadar kısmen geri ödemeli finansman bilgisi Türkiye hibesinden ayrıdır.",
     sourceUrl: "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi",
     sourceLabel: "TÜBİTAK — Türkiye–İspanya resmî çağrı duyurusu",
     verifiedAt: "2026-11-05",

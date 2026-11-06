@@ -1,4 +1,19 @@
 {
+  "tubitak-1007-balistik-kiyafet-2026": {
+    "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/1007-programi-balistik-kiyafet-gelistirilmesi-projesi-cagrisi-acildi",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1007-kamu-kurumlari-arastirma-ve-gelistirme-projelerini-destekleme-programi", "https://tubitak.gov.tr/sites/default/files/2026-01/1007_Usul_ve_Esaslari_77_YK_islenmis_hali_SON.pdf"],
+    "verifiedFields": ["applicants", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "notice"]
+  },
+  "tubitak-1007-aromatik-poliamid-2026": {
+    "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/1007-programi-balistik-amacli-aromatik-poliamid-gelistirilmesi-projesi-cagrisi-acildi",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1007-kamu-kurumlari-arastirma-ve-gelistirme-projelerini-destekleme-programi", "https://tubitak.gov.tr/sites/default/files/2026-01/1007_Usul_ve_Esaslari_77_YK_islenmis_hali_SON.pdf"],
+    "verifiedFields": ["applicants", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "notice"]
+  },
+  "tubitak-1007-alternatif-haberlesme-2026": {
+    "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/1007-programi-alternatif-haberlesme-sistemi-gelistirilmesi-projesi-cagrisi-acildi",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1007-kamu-kurumlari-arastirma-ve-gelistirme-projelerini-destekleme-programi", "https://tubitak.gov.tr/sites/default/files/2026-01/1007_Usul_ve_Esaslari_77_YK_islenmis_hali_SON.pdf"],
+    "verifiedFields": ["applicants", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "notice"]
+  },
   "horizon-battery-recycling-flexibility-2027": {
     "evidenceUrl": "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en",
     "additionalEvidence": ["https://research-and-innovation.ec.europa.eu/document/download/7318fc15-13a4-484b-a74e-7c403f88fee2_en?prefLang=sv", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
@@ -568,8 +583,8 @@
     "applicantGroups": ["Özel sektör"],
     "reviewedEvidence": {"https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi": {"scope":"tubitak-announcement","hash":"2103b29a831a608a38001e858971f93fc916aea3557161b4938cb3f68d36c83c","documentHash":"2d7376c0ea19a109190f7b5effa8346f6ad358563148aba3d7dc04be9f60412b"}},
     "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi",
-    "additionalEvidence": ["https://www.cdti.es/en/node/26454", "https://tubitak.gov.tr/tr/destekler/sanayi/uluslararasi-ortakli-destek-programlari/1509-tubitak-uluslararasi-sanayi-ar-ge-projeleri-destekleme-programi", "https://tubitak.gov.tr/sites/default/files/2026-07/1509_web_yeni_sunum.pdf", "https://tubitak.gov.tr/sites/default/files/2026-03/EK_1509_5.3.2026_tarih_ve_908463_sayili_Baskanlik_Olur_u.pdf"],
-    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "openDate", "deadline", "application", "eligibleCosts", "notice"]
+    "additionalEvidence": ["https://www.cdti.es/en/node/26454", "https://www.cdti.es/en/ayudas/rd-projects", "https://www.eurekanetwork.org/programmes-and-calls/network-projects/spain-and-turkiye-bilateral-call-2026/", "https://tubitak.gov.tr/tr/destekler/sanayi/uluslararasi-ortakli-destek-programlari/1509-tubitak-uluslararasi-sanayi-ar-ge-projeleri-destekleme-programi", "https://tubitak.gov.tr/sites/default/files/2026-07/1509_web_yeni_sunum.pdf", "https://tubitak.gov.tr/sites/default/files/2026-03/EK_1509_5.3.2026_tarih_ve_908463_sayili_Baskanlik_Olur_u.pdf", "https://tubitak.gov.tr/sites/default/files/2024-11/25.10.2024_tarihli_Baskanlik_Olur_u_1509_islenmis_hali.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "eligibleCosts", "notice"]
   },
   "biodivfuture-2026": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],

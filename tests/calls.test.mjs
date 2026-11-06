@@ -11,6 +11,23 @@ import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/e
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("public SAVTAG announcements verify firm applications without inventing restricted budget or scale", async () => {
+  const data = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const ids = ["tubitak-1007-balistik-kiyafet-2026", "tubitak-1007-aromatik-poliamid-2026", "tubitak-1007-alternatif-haberlesme-2026"];
+  const reviewed = ids.map(id => ({...calls.find(c => c.id === id), ...data[id]}));
+  for (const [i, c] of reviewed.entries()) {
+    assert.equal(matchesAudience(c, "Özel sektör"), true);
+    assert.equal(matchesAudience(c, "Kamu kurum / kuruluşu"), false);
+    assert.deepEqual(verificationCoverage(c).pendingFields, ["companyScale", "fundingAmount"]);
+    assert.match(c.application, /II\. Aşama.*elden teslim/);
+    assert.equal(c.deadline, `2026-12-${i === 2 ? 14 : 16}T17:00:00+03:00`);
+    assert.equal(realStatus(c, Date.parse(c.deadline)), "archived");
+  }
+  assert.match(reviewed[2].applicants, /Tesis Güvenlik Belgesi/);
+  const feed = JSON.parse(await readFile(new URL("../public/national-calls.json", import.meta.url), "utf8"));
+  const discovered = unreviewedAnnouncements(reviewed, feed.calls);
+  assert.ok(discovered.every(c => !reviewed.some(r => r.sourceUrl === c.sourceUrl)));
+});
 test("Clean Industrial Deal confirms Turkish consortium participation without assuming Turkish site eligibility", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   for (const [suffix, budget] of [["01", 125], ["02", 140]]) {

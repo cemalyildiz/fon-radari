@@ -1,6 +1,96 @@
 {
   "records": [
     {
+      "id": "tubitak-1007-balistik-kiyafet-2026",
+      "title": "TÜBİTAK 1007 — Balistik Kıyafet Geliştirilmesi",
+      "source": "https://tubitak.gov.tr/tr/duyuru/1007-programi-balistik-kiyafet-gelistirilmesi-projesi-cagrisi-acildi",
+      "verifiedFields": [
+        "applicants",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingAmount"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1007-aromatik-poliamid-2026",
+      "title": "TÜBİTAK 1007 — Balistik Amaçlı Aromatik Poliamid Geliştirilmesi",
+      "source": "https://tubitak.gov.tr/tr/duyuru/1007-programi-balistik-amacli-aromatik-poliamid-gelistirilmesi-projesi-cagrisi-acildi",
+      "verifiedFields": [
+        "applicants",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingAmount"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
+      "id": "tubitak-1007-alternatif-haberlesme-2026",
+      "title": "TÜBİTAK 1007 — Alternatif Haberleşme Sistemi Geliştirilmesi",
+      "source": "https://tubitak.gov.tr/tr/duyuru/1007-programi-alternatif-haberlesme-sistemi-gelistirilmesi-projesi-cagrisi-acildi",
+      "verifiedFields": [
+        "applicants",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "companyScale",
+        "fundingAmount"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
       "id": "horizon-battery-recycling-flexibility-2027",
       "title": "Ufuk Avrupa — Batarya Geri Dönüşümünde Esneklik ve Verimlilik",
       "source": "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en",
@@ -2183,6 +2273,7 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "openDate",
         "deadline",
         "application",
@@ -2195,15 +2286,14 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "application",
         "openDate",
         "deadline"
       ],
-      "pendingFields": [
-        "duration"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "tubitak-1707-2026-3",
@@ -3309,6 +3399,6 @@
       "complete": true
     }
   ],
-  "total": 105,
-  "complete": 74
+  "total": 108,
+  "complete": 75
 }
