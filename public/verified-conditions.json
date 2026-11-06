@@ -1,4 +1,15 @@
 {
+  "etkb-eka-2026": {
+    "evidenceUrl": "https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//Enerji_ve_Karbon_Azaltim_%28EKA%29_Destek_Programi_hakkinda_Uygulama_Usul_ve_Esaslari_202606291644.pdf",
+    "additionalEvidence": ["https://enerjiverimliligi.enerji.gov.tr/Home/DuyuruDetay?id=1125", "https://duyuru.enerji.gov.tr/duyuru-detay?id=30623", "https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//EKA_Hesaplama_Yontemi_202606291644.docx"],
+    "verificationIssues": [{"field":"supportRate","message":"Duyuru hedefe ulaşma oranı için “%70’in üzerinde” derken hesaplama yönteminin formülü ve kademe tablosu tam %70’i de kapsıyor. Yöntemde, yüksek enerji gideri örneğindeki ara kademe ödemeleri de basit oran × gider, sonra tavan uygulamasıyla aynı sonucu vermiyor. Tam eşik ve tavanın uygulanışını Bakanlıktan teyit edin."}],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "duration", "openDate", "deadline", "eligibleCosts", "application", "followUpStages"]
+  },
+  "etkb-eps-2026": {
+    "evidenceUrl": "https://enerji.gov.tr/Media/Dizin/HIGM/tr/Mevzuat/Enerji_Verimliligi/ENERJI_PERFORMANS_SOZLESMELERI_ILE_UYGULANACAK_PROJELERIN_DESTEKLENMESINE_ILISKIN_USUL_VE_ESASLAR.pdf",
+    "additionalEvidence": ["https://enerjiverimliligi.enerji.gov.tr/Home/DuyuruDetay?id=1109", "https://duyuru.enerji.gov.tr/duyuru-detay?id=30601", "https://enerji.gov.tr/haber-detay?id=31732"],
+    "verifiedFields": ["recordType", "applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "eligibleCosts", "application", "notice"]
+  },
   "etkb-vap-2026": {
     "evidenceUrl": "https://duyuru.enerji.gov.tr/duyuru-detay?id=30609",
     "additionalEvidence": ["https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//2026_Yili_Enerji_Verimliligi_Destek_Bedelleri_202512311640.docx", "https://duyuru.enerji.gov.tr/duyuru-detay?id=30596", "https://evdes.enerji.gov.tr/Bildirim/Duyuru_Dosya_Getir?fileName=ETKB-EYS-USLE-011+Rev00.pdf", "https://duyuru.enerji.gov.tr/haber-detay?id=31866"],

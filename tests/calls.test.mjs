@@ -10,6 +10,20 @@ import { enverAnnouncementLinks, isNationalFundingCandidate } from "../app/natio
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("EKA archive and EPS programme replace their discovery cards without inventing open windows", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const records = calls.filter(c => ["etkb-eka-2026", "etkb-eps-2026"].includes(c.id)).map(c=>({...c,...reviews[c.id]}));
+  const [eka, eps] = records;
+  const today = Date.parse("2026-11-06T12:00:00+03:00");
+  assert.equal(realStatus(eka, today), "archived");
+  assert.equal(eka.deadline, "2026-09-30");
+  assert.match(eka.followUpStages[0].schedule, /Temmuz 2027 sonuna kadar/);
+  assert.deepEqual(verificationCoverage(eka).pendingFields, ["supportRate"]);
+  assert.equal(realStatus(eps, today), "unknown");
+  assert.match(eps.applicants, /enerji hizmet şirketidir \(ESCO\)/);
+  assert.equal(matchesAudience(eps, "Kamu kurum / kuruluşu"), false);
+  assert.deepEqual(unreviewedAnnouncements(records, records.map(c=>({...c, id:`national-auto-${c.id}`}))), []);
+});
 test("Karacadağ technical assistance is non-cash; VAP rates do not imply a verified open window", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const lookup = id => ({...calls.find(c => c.id === id), ...reviews[id]});

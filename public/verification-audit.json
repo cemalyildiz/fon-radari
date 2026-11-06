@@ -129,6 +129,73 @@
       "complete": false
     },
     {
+      "id": "etkb-eka-2026",
+      "title": "Enerji ve Karbon Azaltım Desteği — 2026 Dönemi",
+      "source": "https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//Enerji_ve_Karbon_Azaltim_%28EKA%29_Destek_Programi_hakkinda_Uygulama_Usul_ve_Esaslari_202606291644.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "followUpStages"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "supportRate"
+      ],
+      "issues": [
+        {
+          "field": "supportRate",
+          "message": "Duyuru hedefe ulaşma oranı için “%70’in üzerinde” derken hesaplama yönteminin formülü ve kademe tablosu tam %70’i de kapsıyor. Yöntemde, yüksek enerji gideri örneğindeki ara kademe ödemeleri de basit oran × gider, sonra tavan uygulamasıyla aynı sonucu vermiyor. Tam eşik ve tavanın uygulanışını Bakanlıktan teyit edin."
+        }
+      ],
+      "complete": false
+    },
+    {
+      "id": "etkb-eps-2026",
+      "title": "Enerji Performans Sözleşmeleri (EPS) Hibe Desteği",
+      "source": "https://enerji.gov.tr/Media/Dizin/HIGM/tr/Mevzuat/Enerji_Verimliligi/ENERJI_PERFORMANS_SOZLESMELERI_ILE_UYGULANACAK_PROJELERIN_DESTEKLENMESINE_ILISKIN_USUL_VE_ESASLAR.pdf",
+      "verifiedFields": [
+        "recordType",
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "recordType"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "etkb-vap-2026",
       "title": "Verimlilik Artırıcı Proje (VAP) Desteği",
       "source": "https://duyuru.enerji.gov.tr/duyuru-detay?id=30609",
@@ -2434,6 +2501,6 @@
       "complete": true
     }
   ],
-  "total": 78,
-  "complete": 48
+  "total": 80,
+  "complete": 49
 }
