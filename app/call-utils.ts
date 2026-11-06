@@ -31,6 +31,7 @@ export function nextDeadline(call: Pick<FundingCall, "deadline" | "deadlines">, 
 export function realStatus(call: FundingCall, now: number): CallStatus {
   if (call.recordType === "program") return "unknown";
   if (call.hit30Topic && call.status === "open" && stale(call.hit30CheckedAt, now)) return "unknown";
+  if (call.id === "tubitak-1831-continuous" && call.status === "open" && stale(call.mentoring1831CheckedAt, now)) return "unknown";
   if (call.status === "unknown") {
     const deadline = nextDeadline(call, now);
     const confirmed = call.verifiedFields?.includes("deadline") && !call.calendarObservation?.conflict &&
@@ -100,6 +101,11 @@ export type NationalCalendarRow = {
   key: string; title: string; sourceUrl: string; openDate: string; deadline: string; checkedAt: string;
   notCurrent?: boolean;
 };
+export function mergeMentoring1831Intake(call: FundingCall, observation: {ok?:boolean; listed?:boolean; checkedAt?:string} | undefined, now: number): FundingCall {
+  if (call.id !== "tubitak-1831-continuous" || call.status === "archived") return call;
+  const open = observation?.ok === true && observation.listed === true && !stale(observation.checkedAt, now);
+  return {...call, status:open ? "open" : "unknown", mentoring1831CheckedAt:open ? observation.checkedAt : undefined};
+}
 export function mergeNationalCalendars(calls: FundingCall[], observations: NationalCalendarRow[], now: number) {
   const byKey = new Map(observations.filter(row =>
     /^\d{4}-20\d\d-\d{1,2}$/.test(row.key) &&

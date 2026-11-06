@@ -8,6 +8,7 @@ export type ApplicantGroup = "Özel sektör" | "Girişimci / Bireysel" | "Akadem
 export type FundingCall = {
   hit30Topic?: "vehicles" | "battery" | "wind";
   hit30CheckedAt?: string;
+  mentoring1831CheckedAt?: string;
   applicantGroups?: ApplicantGroup[];
   verificationIssues?: { field: string; message: string }[];
   evidencePending?: boolean;
@@ -2383,17 +2384,19 @@ export const calls: FundingCall[] = [
     ttoEligibility: "GTÜ Teknoloji Transfer Ofisi A.Ş., TÜBİTAK’ın çözüm ortakları listesinde yer alıyor. Başvuru sahibi ve hibe yararlanıcısı KOBİ’dir; TTO onaylı hizmet sağlayıcı olarak gelir elde edebilir. Bu, TTO’ya doğrudan kurum hibesi değildir.",
     scope: "national",
     code: "1831 · Yeşil Mentörlük",
-    title: "Yeşil İnovasyon Teknoloji Mentörlük Çağrısı",
+    title: "TÜBİTAK 1831 — Yeşil İnovasyon Teknoloji Mentörlüğü",
     institution: "Türkiye Bilimsel ve Teknolojik Araştırma Kurumu",
     institutionShort: "TÜBİTAK",
-    status: "open",
-    openDate: "2024-05-16T00:00:00+03:00",
-    recordType: "program",
+    status: "unknown",
+    openDate: "2024-05-16",
+    openingDateOnly: true,
+    applicationType: "continuous",
+    calendarSourceUrl: "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
     applicants: "Sermaye şirketi niteliğindeki KOBİ’ler",
     companyScale: ["KOBİ"],
     themes: ["Yeşil Dönüşüm", "Karbon Yönetimi", "Kaynak Verimliliği", "Mentörlük"],
     sectors: ["İmalat", "Sektörler Arası"],
-    fundingAmount: "Proje bütçesi üst limiti 310.000 TL",
+    fundingAmount: "Güncel program sayfası 310.000 TL, ayrı çağrı sayfası 280.000 TL bütçe tavanı gösteriyor. Başvuru tarihinde geçerli KDV hariç TL hizmet tavanını TÜBİTAK’tan teyit edin.",
     fundingType: "Geri ödemesiz hibe",
     supportRate: "Uzman kuruluş hizmet bedelinin %90’ı",
     duration: "3–6 ay",
@@ -2413,7 +2416,7 @@ export const calls: FundingCall[] = [
     sourceUrl:
       "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
     sourceLabel: "Resmî TÜBİTAK 1831 program sayfası",
-    verifiedAt: "2026-09-10T16:48:00+03:00",
+    verifiedAt: "2026-11-06",
     tags: ["Yeşil Dönüşüm", "Mentörlük", "KOBİ", "Yol Haritası"],
     featured: true,
     notice: "KOBİ başvuru kabul durumu ve çözüm ortağı sözleşme koşulları başvuru öncesi teyit edilmelidir.",

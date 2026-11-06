@@ -542,8 +542,10 @@
     "duration": "1 Temmuz 2026’dan başlayan 12 ay; uzatılamaz",
     "application": "PRODİS başvuruları 13 Nisan–8 Mayıs 2026. Proje bazlı ön kayıt evrak giriş son tarihi 4 Mayıs, eksik belge tamamlama 15 Mayıs 2026. Çağrı ilanı 6 Nisan 2026’dır; başvuru almaya başlama tarihiyle farklıdır.",
     "notice": "Ödül için yalnız danışmanlık/yönlendirme yeterli değil: aktif proje geliştirme ve girişim onaylı vaka analizi gerekir. 1707 yolunda en az üç müşteri görüşmesi ve geçerli başvuru; 1832 yolunda geçerli başvuru gerekir. Eksik bilgi nedeniyle değerlendirmeye alınmayan öneriler için ödeme yapılmaz. Bu başvuru dönemi kapanmıştır.",
-    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
-    "verifiedFields": ["applicants", "fundingAmount", "duration", "application", "notice"]
+    "supportRate": "Yüzde oranı uygulanmıyor; uygun çıktı başına sabit ödül arayüz kuruluşuna ödeniyor. Girişim, bu ödülün doğrudan yararlanıcısı değildir.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-04/1601-2026-1_GCIP_Cagri_Metni.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/1601-kuresel-temiz-teknolojiler-girisimcilik-programi-teknoloji-olcekleme-ve-ticarilestirme-destegi-cagrisi-acildi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
   },
   "kosgeb-kuresel-rekabetcilik-2026-1": {
     "applicantGroups": ["Özel sektör"],
@@ -821,21 +823,17 @@
   "tubitak-1831-continuous": {
     "applicantGroups": ["Özel sektör"],
     "companyScale": ["KOBİ"],
-    "status": "unknown",
-    "recordType": "program",
-    "openDate": "",
-    "applicationType": "fixed",
-    "applicants": "Sermaye şirketi niteliğindeki KOBİ’ler; mentörlük hizmeti TÜBİTAK’ın çözüm ortağı kuruluşlarından alınır",
-    "fundingAmount": "Proje bütçesi üst limiti 310.000 TL; bu tutarın %90’ı desteklenir",
-    "fundingType": "Mentörlük hizmeti için geri ödemesiz hibe",
-    "supportRate": "%90",
+    "applicants": "Türkiye’de yerleşik KOBİ niteliğindeki sermaye şirketleri tek başına başvurur. Ortaklı başvuru kabul edilmez; onaylı çözüm ortağı başvuru ortağı değil hizmet sağlayıcıdır. KOBİ en fazla üç proje desteği alabilir ve aynı çözüm ortağıyla en fazla iki proje başvurusu yapabilir.",
+    "fundingType": "Mentörlük hizmeti için geri ödemesiz hibe; TÜBİTAK payı doğrudan çözüm ortağına ödenir.",
+    "supportRate": "Uygun KDV hariç hizmet bedelinin %90’ını TÜBİTAK çözüm ortağına öder. KOBİ %10’u ve KDV’nin tamamını karşılar.",
     "duration": "En az 3, en fazla 6 ay",
-    "application": "Resmî Mayıs 2024 KOBİ kılavuzuna göre: kuruluş bazlı ön kayıt tamamlanır; PRODİS’e Firma kullanıcısı rolüyle girilip Çözüm Ortağı Desteği Çağrıları Başvuru İşlemleri üzerinden öneri hazırlanır. Onaylı çözüm ortağı seçilir; kuruluş yetkilisi kabul ve taahhütleri elektronik imzayla onaylar. M015 Hizmet Alımları bütçesi ve ekler tamamlanıp TÜBİTAK’a gönderilir. Kılavuzdaki çağrı kodu 1831-2024-01’dir; güncel kabul durumu ayrıca teyit edilmelidir.",
-    "notice": "Bu kayıt program rehberidir; güncel başvuru kabul takvimi doğrulanmadığı için sürekli açık çağrı olarak gösterilmez. Çözüm ortağı niyet beyanı duyuruları KOBİ hizmet alımı başvurusundan farklıdır. Program sayfasının doğruladığı 310.000 TL bütçenin %90’ı en fazla 279.000 TL hibe karşılığıdır; bütçe ile hibe aynı tutar değildir. Mayıs 2024 kılavuzu başvuru yöntemini açıklar, 2026’da kabulün açık olduğunu kanıtlamaz.",
-    "ttoEligibility": "GTÜ Teknoloji Transfer Ofisi A.Ş. resmî 2023-01 çözüm ortakları listesinde yer alıyor. Hizmet alıcısı başvuru sahibi KOBİ’dir.",
-    "evidenceUrl": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
-    "additionalEvidence": ["https://tubitak.gov.tr/sites/default/files/2024-05/1831_KOBI_BASVURU_KILAVUZU.pdf"],
-    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "application", "recordType", "notice", "ttoEligibility"]
+    "application": "Başvurudan önce TÜBİTAK listesinden çözüm ortağını seçin. Ön kayıt ve yetki işlemlerinden sonra PRODİS’te Çözüm Ortağı Desteği Çağrıları bölümünde M015 hizmet bütçesi, iş planı ve ekleri tamamlayıp e-imzayla gönderin. İş birliği sözleşmesi istenebilir. Geçerli hizmet tavanı için yesilsanayi.mentor@tubitak.gov.tr adresinden yazılı teyit alın.",
+    "notice": "Başvuru 16 Mayıs 2024’te açıldı. Resmî çağrı metni ayrı duyuruya veya bütçe tükenmesine kadar kabul öngörür. Açık Çağrılar listesindeki 2030 tarihi kesin son başvuru tarihi olarak kullanılmıyor. 1831 hizmeti almak 1832 başvurusu için ön koşul değildir. Dönem raporu bitişi izleyen ikinci ayın sonuna kadar teknik rapor, fatura ve KOBİ payı/KDV dekontuyla sunulur.",
+    "ttoEligibility": "GTÜ Teknoloji Transfer Ofisi A.Ş. güncellenen 1831-2024-1 metninin çözüm ortakları listesinde yer alıyor. Başvuru sahibi KOBİ, TTO ise hizmet sağlayıcı ve TÜBİTAK payının ödeme alıcısıdır.",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2025-05/1831_2024-1_Cagri_Duyurusu15052025_tarihli_guncelleme.pdf",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi", "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi", "https://tubitak.gov.tr/sites/default/files/2024-05/1831_KOBI_BASVURU_KILAVUZU.pdf"],
+    "verificationIssues": [{"field":"fundingAmount","message":"Program sayfasında 310.000 TL, ayrı çağrı sayfasında 280.000 TL yazıyor. İmzalı çağrı metnindeki 250.000 TL yalnız 2025’in ilk yarısı için. Kasım 2026 başvurusunda geçerli TL tavanı yazılı olarak teyit edilmeden bütçeye alınmamalı."}],
+    "verifiedFields": ["applicants", "companyScale", "fundingType", "supportRate", "duration", "application", "openDate", "applicationType", "notice", "ttoEligibility"]
   },
   "tubitak-1613-ttp": {
     "applicantGroups": ["TTO / Arayüz kuruluşu", "Üniversite / Araştırma"],

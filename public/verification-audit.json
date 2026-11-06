@@ -2680,29 +2680,34 @@
     {
       "id": "tubitak-1601-2026-gcip",
       "title": "Temiz Teknoloji Girişimlerine Teknik Yardım — Arayüz Kuruluşları",
-      "source": "https://tubitak.gov.tr/sites/default/files/2026-04/Call_Text_for_1601-2026-1_GCIP.pdf",
+      "source": "https://tubitak.gov.tr/sites/default/files/2026-04/1601-2026-1_GCIP_Cagri_Metni.pdf",
       "verifiedFields": [
         "applicants",
+        "companyScale",
         "fundingAmount",
+        "fundingType",
+        "supportRate",
         "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
         "application",
         "notice"
       ],
       "verifiedCore": [
         "applicants",
-        "fundingAmount",
-        "duration",
-        "application"
-      ],
-      "pendingFields": [
         "companyScale",
+        "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
+        "application",
         "openDate",
         "deadline"
       ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "msca-staff-exchanges-2027-tto",
@@ -3198,33 +3203,39 @@
     },
     {
       "id": "tubitak-1831-continuous",
-      "title": "Yeşil İnovasyon Teknoloji Mentörlük Çağrısı",
-      "source": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
+      "title": "TÜBİTAK 1831 — Yeşil İnovasyon Teknoloji Mentörlüğü",
+      "source": "https://tubitak.gov.tr/sites/default/files/2025-05/1831_2024-1_Cagri_Duyurusu15052025_tarihli_guncelleme.pdf",
       "verifiedFields": [
         "applicants",
         "companyScale",
-        "fundingAmount",
         "fundingType",
         "supportRate",
         "duration",
         "application",
-        "recordType",
+        "openDate",
+        "applicationType",
         "notice",
         "ttoEligibility"
       ],
       "verifiedCore": [
         "applicants",
         "companyScale",
-        "fundingAmount",
         "fundingType",
         "supportRate",
         "duration",
         "application",
-        "recordType"
+        "applicationType"
       ],
-      "pendingFields": [],
-      "issues": [],
-      "complete": true
+      "pendingFields": [
+        "fundingAmount"
+      ],
+      "issues": [
+        {
+          "field": "fundingAmount",
+          "message": "Program sayfasında 310.000 TL, ayrı çağrı sayfasında 280.000 TL yazıyor. İmzalı çağrı metnindeki 250.000 TL yalnız 2025’in ilk yarısı için. Kasım 2026 başvurusunda geçerli TL tavanı yazılı olarak teyit edilmeden bütçeye alınmamalı."
+        }
+      ],
+      "complete": false
     },
     {
       "id": "sanayi-yesil-donusum-programi-2026",

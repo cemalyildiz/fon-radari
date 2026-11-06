@@ -2,7 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { calls } from '../app/calls-data.ts';
 import { enverAnnouncementLinks, isNationalFundingCandidate, nationalAnnouncementKey } from '../app/national-announcements.mjs';
-import { calendarIndex, confirmCalendarDetail, extractCalendarIndex } from './tubitak-calendar.mjs';
+import { calendarIndex, confirmCalendarDetail, extractCalendarIndex, listedMentoring1831 } from './tubitak-calendar.mjs';
 import { extractTkdkCallLinks } from './tkdk-calls.mjs';
 import { energyArchiveLinks, energyArchivePages, fetchEnver } from './etkb-announcements.mjs';
 
@@ -30,10 +30,14 @@ const reviewed = new Set(calls.flatMap(c => [c.sourceUrl, c.calendarSourceUrl]).
 const records = new Map(previous.calls.filter(c => !reviewed.has(nationalAnnouncementKey(c.sourceUrl)) && isNationalFundingCandidate(c.title, c.sourceUrl)).map(c => [nationalAnnouncementKey(c.sourceUrl), c]));
 const state = { ...previous.sources };
 let calendars = previous.calendars ?? [];
+let mentoring1831 = {ok:false, listed:false, checkedAt:now};
 try {
   const response = await fetch(calendarIndex, {signal: AbortSignal.timeout(20000)});
   if (!response.ok || response.url !== calendarIndex) throw new Error(`Takvim sayfası okunamadı (${response.status})`);
-  const rows = extractCalendarIndex(await response.text());
+  const html = await response.text();
+  const rows = extractCalendarIndex(html);
+  const listed = listedMentoring1831(html, Date.parse(now));
+  mentoring1831 = {ok: rows.length > 0 || listed, listed, checkedAt:now};
   if (!rows.length) throw new Error('Doğrulanabilir kod ve takvim içeren satır bulunamadı');
   const checked = await Promise.all(rows.map(async row => {
     try {
@@ -117,4 +121,4 @@ for (const [institution, url] of sources) {
     console.warn(`${institution}: ${error.message}`);
   }
 }
-await writeFile(path, JSON.stringify({ attemptedAt: now, sources: state, calls: [...records.values()], calendars }, null, 2) + '\n');
+await writeFile(path, JSON.stringify({ attemptedAt: now, sources: state, calls: [...records.values()], calendars, mentoring1831 }, null, 2) + '\n');

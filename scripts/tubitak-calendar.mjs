@@ -14,7 +14,7 @@ export function calendarDetailUrl(value) {
   }
 }
 
-function dateRange(html) {
+function dateRange(html, maxDays = 366) {
   const tags = [...html.matchAll(/<time\b[^>]*\bdatetime=["']([^"']+)["'][^>]*>([\s\S]*?)<\/time>/gi)];
   if (tags.length !== 2) return;
   const dates = tags.map(([, raw, label]) => {
@@ -28,7 +28,20 @@ function dateRange(html) {
   if (dates.some(d => !d)) return;
   const [openDate, deadline] = dates;
   const duration = Date.parse(deadline) - Date.parse(openDate);
-  if (duration > 0 && duration <= 366 * 86400000) return {openDate, deadline};
+  if (duration > 0 && duration <= maxDays * 86400000) return {openDate, deadline};
+}
+
+export function listedMentoring1831(html, now) {
+  const target = `${origin}/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi`;
+  const matches = html.split(/<div\s+class=["']views-row["'][^>]*>/i).slice(1).filter(row => {
+    const head = row.match(/<div class="c-baslik">\s*<a\s+href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/i);
+    return head && calendarDetailUrl(head[1]) === target && text(head[2]).startsWith('1831 Yeşil İnovasyon Teknoloji Mentörlük Çağrısı');
+  });
+  if (matches.length !== 1) return false;
+  const block = matches[0].match(/<span class="views-label views-label-field-basvuru-araligi">Başvuru aralığı<\/span>\s*<div class="field-content">([\s\S]*?)<\/div>/i)?.[1];
+  const range = block && dateRange(block, 365 * 10);
+  // The list proves current presence; the distant end value is not an editorial deadline.
+  return Boolean(range && Date.parse(range.openDate) <= now && Date.parse(range.deadline) > now);
 }
 
 export function extractCalendarIndex(html) {
