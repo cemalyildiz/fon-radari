@@ -19,7 +19,7 @@ export function isNationalFundingCandidate(title, url) {
   const path = address.pathname;
   const slug = normalized(path.split("/").at(-1) ?? "");
   const hints = `${name} ${slug}`;
-  if (!/\b(?:cagri\w*|basvur\w*|destek\w*|hibe\w*|finansman\w*)\b/.test(hints)) return false;
+  if (!/\b(?:cagri\w*|basvur\w*|deste[kg]\w*|hibe\w*|finansman\w*)\b/.test(hints)) return false;
 
   const newApplication = /\b(?:basvuru\w*|cagri\w*)\s+(?:acildi|basladi|alimi basladi|basvuruya acildi)\b/.test(name);
   const results = /\b(?:sonuclandi|sonuc\w*\s+(?:aciklandi|belli oldu|ilan edildi|yayimlandi|yayinlandi)|desteklenmeye hak kazananlar)\b/;
@@ -28,5 +28,7 @@ export function isNationalFundingCandidate(title, url) {
   // Focus on unmistakable non-funding announcements, not grants that fund training as an expense.
   if (/\b(?:kis okulu|yaz okulu|ihracat surecleri ve devlet destekleri egitim programi|bilgilendirme (?:toplantisi|webinari)|kangal yarismasi)\b/.test(hints)) return false;
   if (/^(?:www\.)?kosgeb\.gov\.tr$/.test(address.hostname) && !/^\/site\/tr\/genel\/(?:detay|duyurudetay)\/\d+\//i.test(path)) return false;
+  if (/^(?:www\.)?dogaka\.gov\.tr$/.test(address.hostname) &&
+      (!/^\/(?:tr\/)?duyuru\/[^/]+\/\d+\/?$/i.test(path) || /\b(?:personel|staj|ihale)\b/.test(name))) return false;
   return true;
 }

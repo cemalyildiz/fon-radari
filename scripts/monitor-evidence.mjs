@@ -15,10 +15,13 @@ function mainContent(html) {
   return main.replace(/<(script|style|nav|footer)\b[^>]*>[\s\S]*?<\/\1>/gi,'');
 }
 const officeDocument = type => /application\/(?:vnd\.openxmlformats-officedocument\.[^;]+|vnd\.ms-excel\.sheet\.macroenabled\.12)(?:;|$)/i.test(type);
-export function contentHash(bytes, type) {
+const zipDocument = (type, url = '') =>
+  /^application\/(?:zip|x-zip-compressed)(?:;|$)/i.test(type) ||
+  (/^application\/octet-stream(?:;|$)/i.test(type) && /\.zip(?:[?#]|$)/i.test(url));
+export function contentHash(bytes, type, pageUrl) {
   if (type.includes('pdf')) return fingerprint(bytes);
-  if (officeDocument(type)) {
-    if (bytes[0] !== 0x50 || bytes[1] !== 0x4b || bytes[2] !== 0x03 || bytes[3] !== 0x04) throw new Error('Ofis belgesi okunamadı');
+  if (officeDocument(type) || zipDocument(type, pageUrl)) {
+    if (bytes[0] !== 0x50 || bytes[1] !== 0x4b || bytes[2] !== 0x03 || bytes[3] !== 0x04) throw new Error('Sıkıştırılmış belge okunamadı');
     return fingerprint(bytes);
   }
   const html = new TextDecoder().decode(bytes);
@@ -28,7 +31,7 @@ export function contentHash(bytes, type) {
   return fingerprint(stable);
 }
 export function documentLinksHash(bytes, type, pageUrl) {
-  if (type.includes('pdf') || officeDocument(type)) return undefined;
+  if (type.includes('pdf') || officeDocument(type) || zipDocument(type, pageUrl)) return undefined;
   const documents = new Set();
   const html = mainContent(new TextDecoder().decode(bytes));
   for (const [, href] of html.matchAll(/<a\b[^>]*\s+href\s*=\s*["']([^"']+)["']/gi)) {
@@ -65,7 +68,8 @@ async function run() {
         if(!response.ok) throw new Error(`HTTP ${response.status}`);
         const bytes = new Uint8Array(await response.arrayBuffer());
         const type = response.headers.get('content-type') ?? '';
-        result[url] = evidenceState(previous[url],contentHash(bytes,type),attemptedAt,documentLinksHash(bytes,type,response.url || url));
+        const finalUrl = response.url || url;
+        result[url] = evidenceState(previous[url],contentHash(bytes,type,finalUrl),attemptedAt,documentLinksHash(bytes,type,finalUrl));
       } catch(error) { result[url] = {...previous[url],ok:false,attemptedAt,error:error.message}; }
     }
   }));

@@ -129,6 +129,38 @@
       "complete": false
     },
     {
+      "id": "dogaka-yesil-donusum-teknik-2026",
+      "title": "DOĞAKA 2026 — Yeşil Dönüşüm Teknik Desteği",
+      "source": "https://www.dogaka.gov.tr/assets/upload/dosyalar/basvuru-rehberi-ve-ekler.zip",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "eit-creative-tech-spark-2026",
       "title": "Spark — Yaratıcı Teknolojide Yeni Girişimler",
       "source": "https://eit-culture-creativity.eu/sites/default/files/2026-10/Open%20Call_New%20Ventures%20in%20Creative%20Tech_Spark_v3.pdf",
@@ -1824,28 +1856,35 @@
     },
     {
       "id": "sanayi-yesil-donusum-programi-2026",
-      "title": "Sanayi ve Teknoloji Bakanlığı Yeşil Dönüşüm Programı",
-      "source": "https://ticaret.gov.tr/dis-iliskiler/yesil-mutabakat/duyurular/yesil-donusum-programi-cagri-duyurusu",
+      "title": "Yeşil Dönüşüm Programı — 2024–2026 Yatırım Çağrısı",
+      "source": "https://yesildonusum.sanayi.gov.tr/File/DownloadPublic/CallAnnouncement/YDPCagriDuyurusu.pdf",
       "verifiedFields": [
-        "status",
-        "deadline",
-        "application"
-      ],
-      "verifiedCore": [
-        "application",
-        "deadline"
-      ],
-      "pendingFields": [
         "applicants",
         "companyScale",
         "fundingAmount",
         "fundingType",
         "supportRate",
         "duration",
-        "openDate"
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
       ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "ticaret-responsible-programi",
@@ -2108,6 +2147,6 @@
       "complete": true
     }
   ],
-  "total": 68,
-  "complete": 39
+  "total": 69,
+  "complete": 41
 }

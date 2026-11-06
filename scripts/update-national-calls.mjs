@@ -10,6 +10,7 @@ const now = new Date().toISOString();
 const sources = [
   ['TÜBİTAK', 'https://tubitak.gov.tr/tr/duyuru'],
   ['KOSGEB', 'https://kosgeb.gov.tr/site/tr/genel/liste/4/haber'],
+  ['DOĞAKA', 'https://www.dogaka.gov.tr/duyurular'],
   ['Ticaret Bakanlığı', 'https://ticaret.gov.tr/duyurular'],
   ['HIT-30', 'https://hit30.sanayi.gov.tr/cagrilar'],
   ['SSB', 'https://arge.ssb.gov.tr/'],
@@ -64,6 +65,7 @@ for (const [institution, url] of sources) {
       const source = new URL(url);
       if (institution === 'KOSGEB' && link.hostname === 'www.kosgeb.gov.tr') link.hostname = source.hostname;
       if (link.origin !== source.origin) continue;
+      if (institution === 'DOĞAKA' && link.pathname.startsWith('/duyuru/')) link.pathname = '/tr' + link.pathname;
       link.hash = '';
       const sourceUrl = link.href;
       if (!isNationalFundingCandidate(title, sourceUrl)) continue;

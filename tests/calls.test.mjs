@@ -9,6 +9,22 @@ import { matchesAudience } from "../app/audience-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("regional technical support separates application closing from the commitment signature deadline", async () => {
+  const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const ids = ["dogaka-yesil-donusum-teknik-2026", "sanayi-yesil-donusum-programi-2026"];
+  const [dogaka, ydp] = ids.map(id => ({...calls.find(c => c.id === id), ...verified[id]}));
+  assert.match(dogaka.applicants, /Hatay, Kahramanmaraş veya Osmaniye/);
+  assert.match(dogaka.fundingAmount, /nakit ödeme yapılmaz/);
+  assert.equal(realStatus(dogaka, Date.parse("2026-12-31T23:58:59+03:00")), "open");
+  assert.equal(realStatus(dogaka, Date.parse("2026-12-31T23:59:00+03:00")), "archived");
+  assert.match(dogaka.followUpStages[0].schedule, /8 Ocak 2027/);
+  assert.equal(ydp.deadline, "2026-08-14T23:59:00+03:00");
+  assert.equal(realStatus(ydp, Date.parse("2026-11-06T10:00:00+03:00")), "archived");
+  assert.ok([dogaka, ydp].every(call => verificationCoverage(call).complete));
+  assert.equal(isNationalFundingCandidate(dogaka.title, dogaka.sourceUrl), true);
+  assert.equal(isNationalFundingCandidate("Yeşil Dönüşüm Teknik Destek Programı Sonuçları İlan Edildi", "https://www.dogaka.gov.tr/duyuru/sonuclar/847"), false);
+  assert.equal(isNationalFundingCandidate("Teknik Destek Programı", "https://www.dogaka.gov.tr/destekler/teknik-destek-programi"), false);
+});
 test("EIT Urban Mobility remains open for its next submission round after the November cut-off", () => {
   const call = calls.find(c => c.id === "eit-urban-mobility-startups-2026-2028");
   const cutoff = Date.parse("2026-11-16T19:00:00+03:00");

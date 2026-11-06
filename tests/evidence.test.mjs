@@ -37,6 +37,16 @@ test('a replaced call document is detected even when the announcement text is un
   assert.equal(evidenceState(changed,text,'2026-11-07',documentLinksHash(revised,kind,url)).changed,true);
   assert.equal(evidenceState(changed,text,'2026-11-08',documentLinksHash(original,kind,url)).changed,false);
 });
+test('a ZIP application guide changed at the same URL triggers a source warning',()=>{
+  const url = 'https://example.org/guide.zip';
+  const old = Uint8Array.of(0x50,0x4b,3,4,5);
+  const next = Uint8Array.of(0x50,0x4b,3,4,6);
+  const initial = evidenceState(undefined,contentHash(old,'application/zip',url),'2026-11-05');
+  const revised = evidenceState(initial,contentHash(next,'application/octet-stream',url),'2026-11-06');
+  assert.equal(revised.changed,true);
+  assert.equal(documentLinksHash(next,'application/octet-stream',url),undefined);
+  assert.throws(()=>contentHash(new TextEncoder().encode('<html>maintenance</html>'),'application/zip',url));
+});
 test('document link tracking ignores fragments, marketing parameters, repeated links and navigation',()=>{
   const digest = html => documentLinksHash(new TextEncoder().encode(html),'text/html','https://example.org/calls/');
   const clean = digest('<main><a href="../docs/call.pdf?rev=2">Metin</a></main>');

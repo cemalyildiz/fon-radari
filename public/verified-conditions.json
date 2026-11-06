@@ -1,4 +1,10 @@
 {
+  "dogaka-yesil-donusum-teknik-2026": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://www.dogaka.gov.tr/assets/upload/dosyalar/basvuru-rehberi-ve-ekler.zip",
+    "additionalEvidence": ["https://www.dogaka.gov.tr/tr/duyuru/2026-yili-yesil-donusum-teknik-destek-programi-ilani/833"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "eit-creative-tech-spark-2026": {
     "applicantGroups": ["Girişimci / Bireysel"],
     "reviewedPortalIdentifier": "cascade-48939704-16461",
@@ -134,11 +140,10 @@
     "verifiedFields": ["recordType", "application", "notice"]
   },
   "sanayi-yesil-donusum-programi-2026": {
-    "status": "archived",
-    "deadline": "2026-07-31T23:59:00+03:00",
-    "application": "Ticaret Bakanlığının 23 Haziran 2026 resmî duyurusu, Sanayi ve Teknoloji Bakanlığı programı için 31 Temmuz 2026 son tarihini bildiriyor ve yesildonusum.sanayi.gov.tr adresine yönlendiriyor. Bu duyuru dönemi kapanmıştır; yeni dönem aynı kayıtla açık kabul edilmez.",
-    "evidenceUrl": "https://ticaret.gov.tr/dis-iliskiler/yesil-mutabakat/duyurular/yesil-donusum-programi-cagri-duyurusu",
-    "verifiedFields": ["status", "deadline", "application"]
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://yesildonusum.sanayi.gov.tr/File/DownloadPublic/CallAnnouncement/YDPCagriDuyurusu.pdf",
+    "additionalEvidence": ["https://ticaret.gov.tr/dis-iliskiler/yesil-mutabakat/duyurular/yesil-donusum-programi-cagri-duyurusu", "https://www.resmigazete.gov.tr/eskiler/2026/05/20260508-15.htm", "https://sanayi.gov.tr/assets/pdf/mevzuat/YatirimlardaDevletYardimlariHakkindaKarar9903.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
   },
   "eureka-lightweighting-2026": {
     "openDate": "2026-05-06T00:00:00+02:00",
