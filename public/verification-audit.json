@@ -1,6 +1,70 @@
 {
   "records": [
     {
+      "id": "horizon-battery-recycling-flexibility-2027",
+      "title": "Ufuk Avrupa — Batarya Geri Dönüşümünde Esneklik ve Verimlilik",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "horizon-battery-cell-production-2027",
+      "title": "Ufuk Avrupa — Sürdürülebilir Lityum-İyon ve Sodyum-İyon Hücre Üretimi",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "horizon-clean-industry-decarbonisation-2027",
       "title": "Ufuk Avrupa — Enerji Yoğun Sanayinin Karbonsuzlaşması",
       "source": "https://research-and-innovation.ec.europa.eu/document/download/01964d0c-a8eb-4f23-baa4-87d96812dca6_en",
@@ -804,13 +868,14 @@
     {
       "id": "horizon-industrial-solar-heat-2027",
       "title": "Ufuk Avrupa — Sanayi Prosesleri için Yoğunlaştırılmış Güneş Isısı",
-      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en",
       "verifiedFields": [
         "applicants",
         "companyScale",
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "openDate",
         "deadline",
         "eligibleCosts",
@@ -823,15 +888,14 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "application",
         "openDate",
         "deadline"
       ],
-      "pendingFields": [
-        "duration"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "etkb-eka-2026",
@@ -1734,6 +1798,7 @@
         "fundingType",
         "supportRate",
         "duration",
+        "openDate",
         "application",
         "notice"
       ],
@@ -1744,16 +1809,16 @@
         "fundingType",
         "supportRate",
         "duration",
-        "application"
+        "application",
+        "openDate"
       ],
       "pendingFields": [
-        "openDate",
         "deadline"
       ],
       "issues": [
         {
           "field": "deadline",
-          "message": "5 Kasım tarihli 2027 çalışma programı özet tablosunda 14 Eylül 2027, Bölüm III başvuru metninde 16 Eylül 2027 saat 17.00 Brüksel yazıyor. Başvuru portalında yıl ve çağrı bazında tek bir tarih teyit edilene kadar kesin kapanış gösterilmiyor."
+          "message": "EIC çağrı sayfası ve çalışma programı özeti 14 Eylül 2027, Bölüm III başvuru metni 16 Eylül 2027 diyor; her iki kaynakta saat 18.00 TSİ. Portal teyidine kadar kesin kapanış gösterilmiyor."
         }
       ],
       "complete": false
@@ -1800,7 +1865,7 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
-        "deadline",
+        "duration",
         "application",
         "notice"
       ],
@@ -1810,14 +1875,19 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
-        "application",
-        "deadline"
+        "duration",
+        "application"
       ],
       "pendingFields": [
-        "duration",
-        "openDate"
+        "openDate",
+        "deadline"
       ],
-      "issues": [],
+      "issues": [
+        {
+          "field": "deadline",
+          "message": "İlk üç kesim iki resmî kaynakta eşleşiyor. Dördüncü kesim için çalışma programı 24 Kasım, EIC SSS 22 Kasım 2027 diyor. Son kesim portal teyidine kadar gösterilmiyor."
+        }
+      ],
       "complete": false
     },
     {
@@ -3239,6 +3309,6 @@
       "complete": true
     }
   ],
-  "total": 103,
-  "complete": 71
+  "total": 105,
+  "complete": 74
 }

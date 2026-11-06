@@ -1,4 +1,4 @@
-import { cleanIndustryProgramme, cluster4Programme as horizonIndustryProgramme } from "./programme-revision.mjs";
+import { cleanIndustryProgramme, cluster4Programme as horizonIndustryProgramme, cluster5Programme } from "./programme-revision.mjs";
 
 export type CallScope = "national" | "international";
 export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
@@ -454,7 +454,48 @@ const cleanIndustry2027 = [
   };
 });
 
+const horizonBattery2027 = [
+  {
+    topic: "05", page: 96, id: "horizon-battery-recycling-flexibility-2027",
+    title: "Batarya Geri Dönüşümünde Esneklik ve Verimlilik",
+    budget: "18,8", contribution: "9,4",
+    summary: "Mevcut batarya geri dönüşüm süreçlerinde üretim hurdası ve farklı lityum-iyon kimyalarının birlikte işlenmesi. Proje sonu hedefi THS 6–7.",
+    objectives: ["Karışık girdiler ve siyah kütleden batarya kalitesinde malzeme geri kazanımını pilot ölçekte göstermek", "Hidro ve/veya pirometalurjiyi iyileştirmek; AB batarya mevzuatındaki geri kazanım hedeflerine uyumu, enerji ve çevre performansını yaşam döngüsü ve tekno-ekonomik analizlerle göstermek"],
+    costs: ["Pilot proses iyileştirme, ayırma ve ön işlem, malzeme geri kazanımı ve doğrulama için sözleşmede uygun bulunan giderler."],
+  },
+  {
+    topic: "06", page: 98, id: "horizon-battery-cell-production-2027",
+    title: "Sürdürülebilir Lityum-İyon ve Sodyum-İyon Hücre Üretimi",
+    budget: "37,8", contribution: "18,9",
+    summary: "Hücre üretiminde enerji, yatırım ve işletme maliyetlerini düşüren esnek pilot hatlar. Proje sonu hedefi THS 6–7.",
+    objectives: ["Lityum-iyon ve sodyum-iyon kimyaları arasında geçiş yapabilen modüler pilot ekipmanı göstermek", "Karıştırma, elektrot üretimi, kuru oda montajı ve hücre formasyonunu iyileştirmek; hat içi kalite kontrolü, yaşam döngüsü ve tekno-ekonomik analizleri tamamlamak"],
+    costs: ["Pilot üretim makineleri ve süreçlerinin geliştirilmesi, entegrasyonu, dijital kalite kontrolü ve doğrulanması için sözleşmede uygun bulunan giderler."],
+  },
+].map((topic): FundingCall => {
+  const code = `HORIZON-CL5-2027-02-D2-${topic.topic}`;
+  return {
+    id: topic.id, scope: "international", code, reviewedPortalIdentifier: code, title: `Ufuk Avrupa — ${topic.title}`,
+    institution: "Avrupa Komisyonu · Ufuk Avrupa Küme 5 / BATT4EU", institutionShort: "Horizon Europe",
+    status: "upcoming", openDate: "2026-12-03", openingDateOnly: true, deadline: "2027-03-31T18:00:00+03:00",
+    applicants: "Türkiye dâhil asosiye ülkelerde veya AB’de kurulu KOBİ’ler, büyük işletmeler ve diğer uygun tüzel kişiler. Üç farklı ülkede yerleşik en az üç bağımsız yararlanıcı: en az biri AB üyesinde, diğer ikisi farklı AB üyesi veya asosiye ülkelerde. Çin veya Çin’de yerleşik tüzel kişilerin doğrudan ya da dolaylı kontrolündeki kuruluşlar katılamaz.",
+    applicantGroups: ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"], companyScale: ["KOBİ", "Büyük Ölçek"],
+    fundingAmount: `Gösterge konu bütçesi ${topic.budget} milyon €. Yaklaşık iki proje için proje başına ${topic.contribution} milyon € AB katkısı öngörülüyor; bu tutar kesin tavan değildir.`,
+    fundingType: "Uygun maliyetlere dayalı hibe (IA · Yenilik Eylemi)",
+    supportRate: "Kâr amaçlı kuruluşlarda uygun maliyetlerin en fazla %70’i; uygun kâr amacı gütmeyen tüzel kişilerde %100’e kadar.",
+    duration: "Konu metninde sabit proje süresi yok; süre hibe sözleşmesinde belirlenir (Genel Ek G).",
+    summary: topic.summary, objectives: topic.objectives, eligibleCosts: topic.costs,
+    application: "Koordinatör tek aşamalı teklifi AB Funding & Tenders Portal’da sunar. Ürün, süreç veya hizmet ticarileşecekse sonuçlardan yararlanma stratejisi gerekir; ön ölçeklenme ve ticarileşme planı ile muhtemel finansman kaynakları açıklanmalı.",
+    notice: "Başlangıç için sabit THS belirtilmiyor. JRC başvurunun hazırlanmasına katılmaz; seçilen projede sıfır fonlu yararlanıcı veya ilişkili ortak olabilir. Uydu verisi kullanılıyorsa ilgili Copernicus/Galileo/EGNOS koşulu uygulanır.",
+    applicationLinks: [{label:"29 Eylül 2026 çalışma programı · konu koşulları", url:`${cluster5Programme}#page=${topic.page}`}],
+    sourceUrl: `https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/${code}`,
+    sourceLabel: "Avrupa Komisyonu · resmî konu ve başvuru sayfası", verifiedAt: "2026-11-06",
+    tags: ["Batarya", "BATT4EU", topic.topic === "05" ? "Geri Dönüşüm" : "Hücre Üretimi"],
+    sectors: ["İmalat", "Enerji"], themes: ["Yeşil Dönüşüm", "Ar-Ge ve Yenilik"],
+  };
+});
+
 export const calls: FundingCall[] = [
+  ...horizonBattery2027,
   ...cleanIndustry2027,
   ...eicChallenges2027,
   ...horizonDecemberEnergy,
@@ -491,13 +532,13 @@ export const calls: FundingCall[] = [
     reviewedPortalIdentifier: "HORIZON-CL5-2027-02-D3-07",
     title: "Ufuk Avrupa — Sanayi Prosesleri için Yoğunlaştırılmış Güneş Isısı",
     institution: "Avrupa Komisyonu · Ufuk Avrupa Küme 5", institutionShort: "Horizon Europe",
-    status: "upcoming", openDate: "2026-12-03", deadline: "2027-03-31", calendarDateOnly: true,
+    status: "upcoming", openDate: "2026-12-03", openingDateOnly: true, deadline: "2027-03-31T18:00:00+03:00",
     applicants: "Türkiye dâhil Ufuk Avrupa asosiye ülkeleri ve AB ülkelerindeki uygun kuruluşlar. En az üç farklı ülkeden üç bağımsız yararlanıcı; en az biri AB üyesi ülkede, diğer ikisi AB üyesi veya asosiye ülkede yerleşik olmalı. Çin veya Çin’de yerleşik bir tüzel kişi tarafından doğrudan ya da dolaylı kontrol edilen kuruluşlar, uygun bir ülkede kurulmuş olsalar bile katılamaz.",
     applicantGroups: ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"], companyScale: ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
     fundingAmount: "Konu bütçesi 12 milyon €. İki proje için yaklaşık 6 milyon € AB katkısı öngörülüyor; 6 milyon € kesin tavan veya garanti değildir.",
     fundingType: "Götürü hibe (Innovation Action).",
     supportRate: "Kâr amaçlı kuruluşlara en fazla %70; uygun kâr amacı gütmeyen tüzel kişilere %100’e kadar.",
-    duration: "Konu metninde genel azami proje süresi belirtilmemiş. Demonstrasyon kesintisiz en az 6 ay sürmeli.",
+    duration: "Konu metninde sabit proje süresi yok; proje süresi hibe sözleşmesinde belirlenir. Demonstrasyon kesintisiz en az 6 ay sürmeli.",
     summary: "Mevcut endüstriyel proseslerde 150–400 °C aralığında depolamayla entegre yoğunlaştırılmış güneş ısısı. Yıllık güneş payı hedefi en az %50; proje sonunda THS 7 bekleniyor.",
     objectives: ["Isıyı mevcut endüstriyel ısıtma veya soğutma prosesine entegre etmek", "Sistemin ısı maliyetini, çevresel etkisini ve başka tesislere uygulanabilirliğini göstermek"],
     eligibleCosts: ["Götürü bütçeye esas uygun iş paketleri: mühendislik, depolama entegrasyonu, demonstrasyon ve doğrulama"],
@@ -505,7 +546,8 @@ export const calls: FundingCall[] = [
     sourceUrl: "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/HORIZON-CL5-2027-02-D3-07",
     sourceLabel: "Avrupa Komisyonu · resmî konu sayfası", verifiedAt: "2026-11-06",
     tags: ["Sanayide Karbonsuzlaşma", "Güneş Isısı", "Isı Depolama"], themes: ["Yeşil Dönüşüm", "Enerji Verimliliği"], sectors: ["Enerji", "İmalat"],
-    notice: "Uydu tabanlı gözlem, konumlama, navigasyon veya zamanlama kullanılıyorsa Copernicus ve/veya Galileo/EGNOS kullanılmalı. Portal ve çalışma programı tarihleri eşleşiyor; kesin kapanış saatini başvuru ekranından kontrol edin.",
+    notice: "Uydu tabanlı gözlem, konumlama, navigasyon veya zamanlama kullanılıyorsa Copernicus ve/veya Galileo/EGNOS kullanılmalı. EU-SOLARIS altyapısı teşvik ediliyor; zorunlu değil.",
+    applicationLinks: [{label:"29 Eylül 2026 çalışma programı · konu koşulları",url:`${cluster5Programme}#page=127`}],
   },
   {
     id: "etkb-eka-2026", scope: "national", code: "ETKB · EKA 2026",
@@ -1087,18 +1129,18 @@ export const calls: FundingCall[] = [
     id: "eic-transition-open-2027", scope: "international", code: "EIC Transition Open 2027",
     title: "EIC Transition Open 2027 — Araştırma Sonucundan Pazara",
     institution: "European Innovation Council", institutionShort: "EIC",
-    status: "unknown", openDate: "",
+    status: "upcoming", openDate: "2027-04-30", openingDateOnly: true,
     applicants: "Türkiye dâhil AB üyesi veya Ufuk Avrupa asosiye ülkede yerleşik tek KOBİ, girişim veya araştırma yürüten kuruluş (ör. üniversite). Büyük şirket tek başına başvuramaz. Teklif, çalışma programının uygun saydığı önceki bir fonlu projenin sonucuna dayanmalı.",
     companyScale: ["KOBİ", "Üniversite / Araştırma"],
     fundingAmount: "500.000 €’nun üzerinde ve 2,5 milyon €’nun altında AB katkısı uygun görülüyor; 2027 gösterge çağrı bütçesi 92 milyon €.",
     fundingType: "Araştırma ve Yenilik Eylemi kapsamında götürü hibe",
     supportRate: "Uygun giderlerin %100’ü.",
     duration: "1–3 yıl",
-    summary: "Uygun önceki proje sonuçlarını teknoloji doğrulamasına ve ticarileşmeye taşımak için destek.",
+    summary: "Uygun önceki proje sonuçlarını THS 4’ten THS 5–6’ya ve ticarileşmeye taşımak için tek yararlanıcılı destek.",
     objectives: ["Önceki proje sonucunu olgunlaştırmak", "Pazar yolunu doğrulamak"],
     eligibleCosts: ["Teknoloji doğrulama ve iş geliştirme için uygun proje faaliyetleri"],
-    application: "Funding & Tenders üzerinden, uygun kaynak projeye atıf ve gerekli hak/taahhüt belgeleriyle başvurulur. EIC Pathfinder, ERC Proof of Concept ve kılavuzda sayılan belirli araştırma ve yenilik eylemleri kaynak olabilir; önceki EIC Transition projesi kaynak olamaz. Özgün projede yer almayan başvuru sahibi, sonuç sahibinden adil erişim için müzakere taahhüdü sunmalı.",
-    notice: "Devam eden kaynak projede başlangıç, kesimden 18 aydan fazla önce olmalı; ERC Proof of Concept için 6 aydan fazla. Tamamlanmış kaynak proje için bitiş, kesimden 24 aydan az önce olmalı. Çalışma programında kapanış için iki farklı tarih bulundu; kesin başvuru tarihi ilan edilene kadar takvim doğrulama bekliyor.",
+    application: "Funding & Tenders üzerinden başvurulur. Bölüm B’nin kapak ve 1–3. bölümleri toplam en fazla 22 sayfa; 3–5 dakikalık video ve potansiyel müşteri veya kullanıcı gibi en az bir ilgili üçüncü taraftan niyet mektubu zorunlu. EIC Pathfinder, ERC Proof of Concept ve kılavuzda sayılan belirli araştırma ve yenilik eylemleri kaynak olabilir; önceki EIC Transition projesi kaynak olamaz. Özgün projede yer almayan başvuru sahibi, sonuç sahibinden adil erişim için müzakere taahhüdü sunmalı. İlk yılın ölçülebilir hedeflerini ve kilometre taşlarını tanımlayın.",
+    notice: "30 Nisan 2027 çalışma programındaki planlanan açılış; portalda teyit edin. EIC çağrı sayfası 14 Eylül, çalışma programı Bölüm III ise 16 Eylül 2027’yi kapanış olarak veriyor. Kesinleşene kadar erken tarihi esas alarak hazırlanın. Devam eden kaynak proje kesimden 18 aydan fazla önce başlamalı; ERC Proof of Concept için 6 aydan fazla. Tamamlanmış kaynak proje kesimden 24 aydan az önce bitmiş olmalı.",
     sourceUrl: "https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en",
     sourceLabel: "EIC — Transition programı",
     verifiedAt: "2026-11-05",
@@ -1133,7 +1175,7 @@ export const calls: FundingCall[] = [
     title: "EIC STEP Scale Up — 2027 Öz Sermaye Yatırımı",
     institution: "European Innovation Council", institutionShort: "EIC / STEP",
     status: "unknown", openDate: "", deadline: "2027-01-28T19:00:00+03:00",
-    deadlines: ["2027-01-28T19:00:00+03:00", "2027-04-29T18:00:00+03:00", "2027-09-06T18:00:00+03:00", "2027-11-24T19:00:00+03:00"],
+    deadlines: ["2027-01-28T19:00:00+03:00", "2027-04-29T18:00:00+03:00", "2027-09-06T18:00:00+03:00"],
     applicants: "Türkiye dâhil uygun bir Ufuk Avrupa asosiye ülkesinde veya AB’de kurulu tek KOBİ ya da en fazla 499 çalışanlı küçük orta ölçekli şirket. Birleşik Krallık bu öz sermaye çağrısına uygun değil. Önceden anlaşma varsa yatırımcı şirket adına başvurabilir. Tek nitelikli yatırımcıdan hedef turun en az %20’si için öz sermaye ön taahhüdü gerekir; farklı yatırımcıların küçük taahhütleri birleştirilemez.",
     companyScale: ["KOBİ", "Small Mid-cap"],
     fundingAmount: "Şirket başına 10–30 milyon € öz sermaye yatırımı; 2027 gösterge bütçesi 290 milyon €. Hedef yatırım turu 50–150 milyon € veya daha büyük olabilir; çalışma programındaki EIC katkısı çarpanı şartı ayrıca uygulanır.",
@@ -1144,7 +1186,7 @@ export const calls: FundingCall[] = [
     objectives: ["Kritik teknolojilerde ölçeklenmeyi ve büyük yatırım turlarını desteklemek"],
     eligibleCosts: ["Hibe tipi gider geri ödemesi yok; yatırımın kullanımı ve ölçeklenme planı sözleşmeye bağlı"],
     application: "2027 çalışma programı Funding & Tenders Portal’da sürekli gönderim ve bütçeye bağlı dört değerlendirme kesimi öngörüyor. İlk kesim 28 Ocak 2027, 19.00 TSİ. İş planı, sunum, tek yatırımcı öz sermaye ön taahhüdü, finansal plan, faaliyet serbestisi analizi/açıklaması ve kilit ekip özgeçmişleri gerekir.",
-    notice: "5 Kasım 2026 tarihli 2027 çalışma programı yayımlandı; 2027’ye özgü başvuru ekranının açılış tarihi henüz teyit edilmedi. Aynı anda EIC Accelerator, STEP Scale Up ve STEP Defence başvurusu yapılamaz; birden fazla gönderimde yalnız en son gönderilen değerlendirilir.",
+    notice: "2027 başvuru ekranının açılış tarihi henüz teyit edilmedi. Dördüncü değerlendirme kesimi çalışma programında 24 Kasım, EIC SSS’de 22 Kasım 2027; kesinleşene kadar listelenmiyor. Aynı anda EIC Accelerator, STEP Scale Up ve STEP Defence başvurusu yapılamaz; birden fazla gönderimde yalnız en son gönderilen değerlendirilir.",
     sourceUrl: "https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en",
     sourceLabel: "EIC — 2027 STEP Scale Up programı ve başvuru",
     verifiedAt: "2026-11-05",

@@ -2,9 +2,12 @@ export const cluster4Programme = "https://research-and-innovation.ec.europa.eu/d
 export const cluster4ProgrammeIndex = "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/cluster-4-digital-industry-and-space_en";
 export const cleanIndustryProgramme = "https://research-and-innovation.ec.europa.eu/document/download/01964d0c-a8eb-4f23-baa4-87d96812dca6_en";
 export const horizontalProgrammeIndex = "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/horizon-europe-work-programmes_en";
+export const cluster5Programme = "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en";
+export const cluster5ProgrammeIndex = "https://research-and-innovation.ec.europa.eu/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe/cluster-5-climate-energy-and-mobility_en";
 const programmes = [
   { index: cluster4ProgrammeIndex, pdf: cluster4Programme, section: "Cluster 4" },
   { index: horizontalProgrammeIndex, pdf: cleanIndustryProgramme, section: "Horizontal activities" },
+  { index: cluster5ProgrammeIndex, pdf: cluster5Programme, section: "Cluster 5" },
 ];
 
 export function revisionIndexFor(evidenceUrl) {

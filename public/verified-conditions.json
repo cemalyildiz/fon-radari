@@ -1,4 +1,14 @@
 {
+  "horizon-battery-recycling-flexibility-2027": {
+    "evidenceUrl": "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en",
+    "additionalEvidence": ["https://research-and-innovation.ec.europa.eu/document/download/7318fc15-13a4-484b-a74e-7c403f88fee2_en?prefLang=sv", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
+  "horizon-battery-cell-production-2027": {
+    "evidenceUrl": "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en",
+    "additionalEvidence": ["https://research-and-innovation.ec.europa.eu/document/download/7318fc15-13a4-484b-a74e-7c403f88fee2_en?prefLang=sv", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "horizon-clean-industry-decarbonisation-2027": {
     "evidenceUrl": "https://research-and-innovation.ec.europa.eu/document/download/01964d0c-a8eb-4f23-baa4-87d96812dca6_en",
     "additionalEvidence": ["https://hadea.ec.europa.eu/calls-proposals/horizon-europe-industry-ri-support-clean-industrial-deal_en", "https://research-and-innovation.ec.europa.eu/document/download/7318fc15-13a4-484b-a74e-7c403f88fee2_en?prefLang=sv", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
@@ -105,9 +115,9 @@
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
   },
   "horizon-industrial-solar-heat-2027": {
-    "evidenceUrl": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
-    "additionalEvidence": ["https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-15-general-annexes_horizon-2026-2027_en.pdf", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
-    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+    "evidenceUrl": "https://research-and-innovation.ec.europa.eu/document/download/1e480813-74f9-4ebf-a189-3c743de95e7e_en",
+    "additionalEvidence": ["https://research-and-innovation.ec.europa.eu/document/download/7318fc15-13a4-484b-a74e-7c403f88fee2_en?prefLang=sv", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
   },
   "etkb-eka-2026": {
     "evidenceUrl": "https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//Enerji_ve_Karbon_Azaltim_%28EKA%29_Destek_Programi_hakkinda_Uygulama_Usul_ve_Esaslari_202606291644.pdf",
@@ -417,9 +427,9 @@
   "eic-transition-open-2027": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma"],
     "evidenceUrl": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
-    "additionalEvidence": ["https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
-    "verificationIssues": [{"field":"deadline","message":"5 Kasım tarihli 2027 çalışma programı özet tablosunda 14 Eylül 2027, Bölüm III başvuru metninde 16 Eylül 2027 saat 17.00 Brüksel yazıyor. Başvuru portalında yıl ve çağrı bazında tek bir tarih teyit edilene kadar kesin kapanış gösterilmiyor."}],
-    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "application", "notice"]
+    "additionalEvidence": ["https://eic.ec.europa.eu/eic-funding-opportunities/eic-transition_en", "https://eic.ec.europa.eu/eic-frequently-asked-questions/faqs-eic-transition_en", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verificationIssues": [{"field":"deadline","message":"EIC çağrı sayfası ve çalışma programı özeti 14 Eylül 2027, Bölüm III başvuru metni 16 Eylül 2027 diyor; her iki kaynakta saat 18.00 TSİ. Portal teyidine kadar kesin kapanış gösterilmiyor."}],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "application", "notice"]
   },
   "eic-accelerator-open-2027": {
     "applicantGroups": ["Özel sektör"],
@@ -430,8 +440,9 @@
   "eic-step-scaleup-2027": {
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
-    "additionalEvidence": ["https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
-    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "deadline", "application", "notice"]
+    "additionalEvidence": ["https://eic.ec.europa.eu/eic-funding-opportunities/step-scale_en", "https://eic.ec.europa.eu/eic-frequently-asked-questions/faqs-eic-strategic-technologies-europe-platform-step-scale-call_en", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verificationIssues": [{"field":"deadline","message":"İlk üç kesim iki resmî kaynakta eşleşiyor. Dördüncü kesim için çalışma programı 24 Kasım, EIC SSS 22 Kasım 2027 diyor. Son kesim portal teyidine kadar gösterilmiyor."}],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "deadline", "application", "notice"]
   },
   "eic-step-scaleup-2026": {
     "applicantGroups": ["Özel sektör"],

@@ -196,13 +196,33 @@ test("EKA archive and EPS programme replace their discovery cards without invent
   assert.equal(matchesAudience(eps, "Kamu kurum / kuruluşu"), false);
   assert.deepEqual(unreviewedAnnouncements(records, records.map(c=>({...c, id:`national-auto-${c.id}`}))), []);
 });
-test("industrial solar heat keeps firm eligibility and current work programme restrictions", () => {
+test("industrial solar heat keeps firm eligibility, exact closing time and demonstration duration", async () => {
   const call = calls.find(c=>c.id === "horizon-industrial-solar-heat-2027");
   assert.equal(realStatus(call, Date.parse("2026-11-06")), "upcoming");
   assert.equal(matchesAudience(call, "Özel sektör"), true);
   assert.match(call.applicants, /Çin.*doğrudan ya da dolaylı kontrol/);
   assert.match(call.duration, /en az 6 ay/);
-  assert.equal(call.deadline, "2027-03-31");
+  assert.equal(call.deadline, "2027-03-31T18:00:00+03:00");
+  assert.equal(realStatus(call, Date.parse(call.deadline) - 1), "open");
+  assert.equal(realStatus(call, Date.parse(call.deadline)), "archived");
+  const data = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  assert.equal(verificationCoverage({...call,...data[call.id]}).complete, true);
+});
+test("BATT4EU proposals use the actual-cost IA scheme, and replace the corresponding portal placeholders", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  for (const [suffix, contribution] of [["05", "9,4"], ["06", "18,9"]]) {
+    const code = `HORIZON-CL5-2027-02-D2-${suffix}`;
+    const card = calls.find(c => c.code === code);
+    const feed = { calls: [{identifier:code, sourceKind:"topic", startDate:"2026-12-03T00:00:00.000Z", deadline:"2027-03-31T00:00:00.000Z", sourceCheckedAt:"2026-11-06T18:00:00Z"}] };
+    const rows = mergeCalls([{...card,...reviews[card.id]}], feed, Date.parse("2026-11-06T18:30:00Z"));
+    assert.equal(rows.length,1);
+    assert.equal(rows[0].status,"upcoming");
+    assert.equal(rows[0].deadline,"2027-03-31T18:00:00+03:00");
+    assert.equal(verificationCoverage(rows[0]).complete,true);
+    assert.equal(matchesAudience(rows[0],"Özel sektör"),true);
+    assert.match(rows[0].fundingType,/Uygun maliyetlere dayalı/);
+    assert.ok(rows[0].fundingAmount.includes(`proje başına ${contribution} milyon`));
+  }
 });
 test("verified December energy topics replace portal placeholders and close at 19:00 Türkiye time", async () => {
   const read = name => readFile(new URL(`../public/${name}.json`, import.meta.url), "utf8").then(JSON.parse);
@@ -508,8 +528,15 @@ test("EIC 2027 publishes the confirmed WIDERA schedule without assigning a contr
   const id = "eic-transition-open-2027";
   const transition = {...calls.find(c => c.id === id), ...data[id]};
   const checked = verificationCoverage(transition);
-  assert.deepEqual(checked.pendingFields, ["openDate", "deadline"]);
+  assert.deepEqual(checked.pendingFields, ["deadline"]);
+  assert.equal(transition.openDate,"2027-04-30");
+  assert.equal(realStatus(transition,Date.parse("2027-04-30T12:00:00+03:00")),"unknown");
+  assert.match(transition.application,/3–5 dakikalık video.*niyet mektubu zorunlu/);
   assert.equal(nextDeadline(transition,now),undefined);
+  const step = calls.find(c => c.id === "eic-step-scaleup-2027");
+  assert.equal(step.deadlines.length,3);
+  assert.match(step.notice,/24 Kasım.*22 Kasım/);
+  assert.equal(realStatus({...step,...data[step.id]},Date.parse("2027-09-07")),"unknown");
   const pre = calls.find(c => c.id === "eic-pre-accelerator-2027");
   assert.equal(realStatus(pre,Date.parse("2026-11-05T12:00:00+03:00")),"upcoming");
   assert.equal(realStatus(pre,Date.parse("2027-11-18T19:00:00+03:00")),"archived");
