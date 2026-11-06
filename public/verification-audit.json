@@ -129,6 +129,102 @@
       "complete": false
     },
     {
+      "id": "horizon-agri-offshore-pv-2026",
+      "title": "Ufuk Avrupa — Tarım ve Deniz Üstü Fotovoltaik Sistemler",
+      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "duration"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
+      "id": "horizon-biofuel-chp-2026",
+      "title": "Ufuk Avrupa — Katı Biyoyakıtla Yüksek Verimli Kojenerasyon",
+      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "duration"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
+      "id": "horizon-deep-geothermal-2026",
+      "title": "Ufuk Avrupa — Derin Jeotermal Rezervuarlarda Kaynak Değerlendirmesi",
+      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "duration"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
       "id": "horizon-industrial-solar-heat-2027",
       "title": "Ufuk Avrupa — Sanayi Prosesleri için Yoğunlaştırılmış Güneş Isısı",
       "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
@@ -2533,6 +2629,6 @@
       "complete": true
     }
   ],
-  "total": 81,
+  "total": 84,
   "complete": 49
 }
