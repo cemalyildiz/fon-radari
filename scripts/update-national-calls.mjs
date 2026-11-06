@@ -1,9 +1,10 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { calls } from '../app/calls-data.ts';
-import { enverAnnouncementLinks, isNationalFundingCandidate } from '../app/national-announcements.mjs';
+import { enverAnnouncementLinks, isNationalFundingCandidate, nationalAnnouncementKey } from '../app/national-announcements.mjs';
 import { calendarIndex, confirmCalendarDetail, extractCalendarIndex } from './tubitak-calendar.mjs';
 import { extractTkdkCallLinks } from './tkdk-calls.mjs';
+import { energyArchiveLinks, energyArchivePages, fetchEnver } from './etkb-announcements.mjs';
 
 const path = 'public/national-calls.json';
 const previous = await readFile(path, 'utf8').then(JSON.parse).catch(() => ({ calls: [], sources: {} }));
@@ -19,13 +20,14 @@ const sources = [
   ['TKDK çağrı ilanları', 'https://www.tkdk.gov.tr/ProjeIslemleri/CagriIlanArsiv'],
   ['Karacadağ Kalkınma Ajansı', 'https://www.karacadag.gov.tr/duyurular/1/duyurular/'],
   ['ETKB · Enerji Verimliliği', 'https://enerjiverimliligi.enerji.gov.tr/Home/GetirDuyurularGuncel'],
+  ['ETKB · Bakanlık Duyuru Arşivi', energyArchivePages[0]],
 ];
 const clean = value => value.replace(/<[^>]*>/g, ' ').replace(/&#(x[0-9a-f]+|\d+);/gi, (_, entity) => {
   const point = entity[0].toLowerCase() === 'x' ? parseInt(entity.slice(1), 16) : Number(entity);
   return point > 0 && point <= 0x10ffff ? String.fromCodePoint(point) : ' ';
 }).replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-const reviewed = new Set(calls.flatMap(c => [c.sourceUrl, c.calendarSourceUrl]).filter(Boolean));
-const records = new Map(previous.calls.filter(c => !reviewed.has(c.sourceUrl) && isNationalFundingCandidate(c.title, c.sourceUrl)).map(c => [c.sourceUrl, c]));
+const reviewed = new Set(calls.flatMap(c => [c.sourceUrl, c.calendarSourceUrl]).filter(Boolean).map(nationalAnnouncementKey));
+const records = new Map(previous.calls.filter(c => !reviewed.has(nationalAnnouncementKey(c.sourceUrl)) && isNationalFundingCandidate(c.title, c.sourceUrl)).map(c => [nationalAnnouncementKey(c.sourceUrl), c]));
 const state = { ...previous.sources };
 let calendars = previous.calendars ?? [];
 try {
@@ -57,15 +59,34 @@ try {
 }
 for (const [institution, url] of sources) {
   try {
-    const response = await fetch(url, { signal: AbortSignal.timeout(45000), headers: { 'User-Agent': 'FonRadari/1.0 official funding announcement monitor' } });
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const isEnver = institution === 'ETKB · Enerji Verimliliği';
-    const html = isEnver ? '' : await response.text();
-    if (!isEnver && (html.length < 1000 || /captcha|access denied/i.test(html))) throw new Error('Kaynak okunamadı');
+    const isEnergyArchive = url === energyArchivePages[0];
+    let failedPages = 0;
+    let anchors;
+    if (isEnergyArchive) {
+      const pages = await Promise.allSettled(energyArchivePages.map(async page => {
+        const response = await fetch(page, {signal:AbortSignal.timeout(12000)});
+        if (!response.ok || new URL(response.url).origin !== new URL(page).origin) throw new Error(`HTTP ${response.status}`);
+        return energyArchiveLinks(await response.text(), page);
+      }));
+      failedPages = pages.filter(page => page.status === 'rejected').length;
+      if (failedPages === pages.length) throw new Error('Bakanlık duyuru arşivine erişilemedi');
+      anchors = pages.flatMap(page => page.status === 'fulfilled' ? page.value : []);
+    } else {
+      const response = isEnver ? await fetchEnver(url) :
+        await fetch(url, { signal: AbortSignal.timeout(45000), headers: { 'User-Agent': 'FonRadari/1.0 official funding announcement monitor' } });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      if (isEnver) {
+        if (response.url !== url) throw new Error('ENVER adresi değişti');
+        anchors = enverAnnouncementLinks(await response.json());
+      } else {
+        const html = await response.text();
+        if (html.length < 1000 || /captcha|access denied/i.test(html)) throw new Error('Kaynak okunamadı');
+        anchors = institution === 'TKDK çağrı ilanları' ? extractTkdkCallLinks(html) :
+          html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi);
+      }
+    }
     let found = 0;
-    const anchors = isEnver ? enverAnnouncementLinks(await response.json()) :
-      institution === 'TKDK çağrı ilanları' ? extractTkdkCallLinks(html) :
-      html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi);
     for (const match of anchors) {
       const title = clean(match[2]);
       if (title.length < 25) continue;
@@ -74,20 +95,23 @@ for (const [institution, url] of sources) {
       const source = new URL(url);
       if (institution === 'KOSGEB' && link.hostname === 'www.kosgeb.gov.tr') link.hostname = source.hostname;
       if (institution.startsWith('TKDK') && link.hostname === 'tkdk.gov.tr') link.hostname = source.hostname;
-      if (link.origin !== source.origin) continue;
+      if (!isEnergyArchive && link.origin !== source.origin) continue;
       if (institution === 'DOĞAKA' && link.pathname.startsWith('/duyuru/')) link.pathname = '/tr' + link.pathname;
       link.hash = '';
       const sourceUrl = link.href;
       if (!isNationalFundingCandidate(title, sourceUrl)) continue;
       if (institution === 'Karacadağ Kalkınma Ajansı' && found >= 25) break;
       found++;
-      if (reviewed.has(sourceUrl)) continue;
-      const old = records.get(sourceUrl);
+      const key = nationalAnnouncementKey(sourceUrl);
+      if (reviewed.has(key)) continue;
+      const old = records.get(key);
       const issuer = institution.startsWith('TKDK') ? 'TKDK' : institution;
-      records.set(sourceUrl, { ...old, id: old?.id ?? `national-auto-${createHash('sha256').update(sourceUrl).digest('hex').slice(0,16)}`, scope: 'national', code: 'Resmî duyuru', title, institution: issuer, institutionShort: issuer, status: 'unknown', openDate: '', recordType: 'program', verification: 'metadata', sourceCheckedAt: now, verifiedAt: '', applicants: 'Resmî çağrı metninden doğrulanmalı', companyScale: [], fundingAmount: 'Resmî çağrı metninden doğrulanmalı', fundingType: 'Doğrulanmalı', summary: 'Resmî kurum sayfasında otomatik keşfedilen duyuru. Başvuru takvimi, uygunluk ve destek koşulları kaynak metinden kontrol edilmelidir.', objectives: [], eligibleCosts: [], application: 'Kaynak bağlantısından güncel çağrı metnini inceleyin.', sourceUrl, sourceLabel: 'Resmî kurum duyurusu', tags: ['Otomatik keşif'], notice: 'Duyurunun bulunması başvurunun açık olduğu anlamına gelmez.' });
+      records.set(key, { ...old, id: old?.id ?? `national-auto-${createHash('sha256').update(key).digest('hex').slice(0,16)}`, scope: 'national', code: 'Resmî duyuru', title, institution: issuer, institutionShort: issuer, status: 'unknown', openDate: '', recordType: 'program', verification: 'metadata', sourceCheckedAt: now, verifiedAt: '', applicants: 'Resmî çağrı metninden doğrulanmalı', companyScale: [], fundingAmount: 'Resmî çağrı metninden doğrulanmalı', fundingType: 'Doğrulanmalı', summary: 'Resmî kurum sayfasında otomatik keşfedilen duyuru. Başvuru takvimi, uygunluk ve destek koşulları kaynak metinden kontrol edilmelidir.', objectives: [], eligibleCosts: [], application: 'Kaynak bağlantısından güncel çağrı metnini inceleyin.', sourceUrl, sourceLabel: 'Resmî kurum duyurusu', tags: ['Otomatik keşif'], notice: 'Duyurunun bulunması başvurunun açık olduğu anlamına gelmez.' });
     }
-    if (!found) throw new Error('Uygun duyuru bağlantısı bulunamadı; sayfa yapısı kontrol edilmeli');
-    state[institution] = { url, checkedAt: now, attemptedAt: now, ok: true, found };
+    if (!found && !isEnergyArchive) throw new Error('Uygun duyuru bağlantısı bulunamadı; sayfa yapısı kontrol edilmeli');
+    state[institution] = failedPages
+      ? {...state[institution], url, attemptedAt: now, ok: false, found, error: `${failedPages} arşiv sayfası okunamadı`}
+      : { url, checkedAt: now, attemptedAt: now, ok: true, found };
   } catch (error) {
     state[institution] = { ...state[institution], url, attemptedAt: now, ok: false, error: error.message };
     console.warn(`${institution}: ${error.message}`);

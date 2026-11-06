@@ -6,10 +6,31 @@ import { realStatus, nextDeadline, matchesSector, matchesSearch, stale, mergeCal
 import { parseResult, reconcile, collect, migrateLegacy } from "../scripts/update-live-calls.mjs";
 import { verificationCoverage } from "../app/verification-utils.ts";
 import { matchesAudience } from "../app/audience-utils.ts";
-import { enverAnnouncementLinks, isNationalFundingCandidate } from "../app/national-announcements.mjs";
+import { enverAnnouncementLinks, isNationalFundingCandidate, nationalAnnouncementKey } from "../app/national-announcements.mjs";
+import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/etkb-announcements.mjs";
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("the ministry archive supplements ENVER without duplicating verified calls", async () => {
+  const eka = calls.find(c => c.id === "etkb-eka-2026");
+  const archive = "https://duyuru.enerji.gov.tr/duyuru-detay?id=30623";
+  const rows = energyArchiveLinks(`<a href = 'duyuru-detay?id=30623'><span>Enerji ve Karbon Azaltım Desteği Başvuruları</span></a>
+    <a href="https://unknown.example/duyuru-detay?id=30623">Sahte duyuru</a>`, energyArchivePages[0]);
+  assert.equal(rows.length, 1);
+  assert.equal(rows[0][1], archive);
+  const alias = {...eka, sourceUrl:archive, title:rows[0][2]};
+  assert.equal(nationalAnnouncementKey(eka.sourceUrl), nationalAnnouncementKey(archive));
+  assert.deepEqual(unreviewedAnnouncements([eka], [alias]), []);
+  assert.equal(isNationalFundingCandidate("2027 Yılı Enerji Verimliliği Destek Bedelleri", "https://duyuru.enerji.gov.tr/duyuru-detay?id=32001"), true);
+  assert.equal(isNationalFundingCandidate("Enerji Yöneticisi Sınavı Başvuruları", "https://duyuru.enerji.gov.tr/duyuru-detay?id=32002"), false);
+  assert.throws(() => energyArchiveLinks("<h1>Bakım</h1>", energyArchivePages[0]));
+  let attempts = 0;
+  await fetchEnver(eka.sourceUrl, async () => {
+    if (++attempts === 1) throw new TypeError("fetch failed", {cause:{code:"ECONNRESET"}});
+    return new Response("[]");
+  });
+  assert.equal(attempts, 2);
+});
 test("EKA archive and EPS programme replace their discovery cards without inventing open windows", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const records = calls.filter(c => ["etkb-eka-2026", "etkb-eps-2026"].includes(c.id)).map(c=>({...c,...reviews[c.id]}));

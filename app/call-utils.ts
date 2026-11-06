@@ -1,7 +1,7 @@
 import type { FundingCall, CallStatus } from "./calls-data.ts";
 import { destinationIdentifier, officialDestination } from "./live-source.mjs";
 import { officialConditionDocument, validBudgetRow } from "./live-evidence.mjs";
-import { isNationalFundingCandidate } from "./national-announcements.mjs";
+import { isNationalFundingCandidate, nationalAnnouncementKey } from "./national-announcements.mjs";
 
 type PortalBudget = { action: string; yearly: Record<string, number>; min: number | null; max: number | null; grants: number | null };
 
@@ -87,8 +87,13 @@ export function validateFeed(value: unknown): value is LiveFeed {
   });
 }
 export function unreviewedAnnouncements(reviewed: Pick<FundingCall, "sourceUrl">[], discovered: FundingCall[]) {
-  const reviewedUrls = new Set(reviewed.map(call => call.sourceUrl));
-  return discovered.filter(call => !reviewedUrls.has(call.sourceUrl) && isNationalFundingCandidate(call.title, call.sourceUrl));
+  const seen = new Set(reviewed.map(call => nationalAnnouncementKey(call.sourceUrl)));
+  return discovered.filter(call => {
+    const key = nationalAnnouncementKey(call.sourceUrl);
+    if (seen.has(key) || !isNationalFundingCandidate(call.title, call.sourceUrl)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 export type NationalCalendarRow = {
   key: string; title: string; sourceUrl: string; openDate: string; deadline: string; checkedAt: string;

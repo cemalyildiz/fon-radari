@@ -9,6 +9,24 @@ function normalized(value) {
     .trim();
 }
 
+const etkbMirrors = new Map([["1109", "30601"], ["1114", "30609"], ["1125", "30623"]]);
+export function nationalAnnouncementKey(url) {
+  try {
+    const parsed = new URL(url);
+    if (parsed.protocol !== "https:" || parsed.username || parsed.password || parsed.port) return url;
+    const id = parsed.searchParams.get("id") ?? "";
+    if (!/^\d+$/.test(id) || parsed.searchParams.size !== 1) return url;
+    if (parsed.hostname === "enerjiverimliligi.enerji.gov.tr" &&
+        parsed.pathname.toLowerCase() === "/home/duyurudetay" && etkbMirrors.has(id)) {
+      return `https://duyuru.enerji.gov.tr/duyuru-detay?id=${etkbMirrors.get(id)}`;
+    }
+    if (/^(?:duyuru\.|www\.)?enerji\.gov\.tr$/.test(parsed.hostname) && parsed.pathname === "/duyuru-detay") {
+      return `https://duyuru.enerji.gov.tr/duyuru-detay?id=${id}`;
+    }
+  } catch { /* Keep unrecognised links unchanged. */ }
+  return url;
+}
+
 // This is only a discovery gate. An accepted link still proves no eligibility or open status.
 /** @param {string} title @param {string} url */
 export function isNationalFundingCandidate(title, url) {
@@ -33,9 +51,11 @@ export function isNationalFundingCandidate(title, url) {
   if (/^(?:www\.)?karacadag\.gov\.tr$/.test(address.hostname) &&
       (!/^\/duyuru\/\d+\/[a-z0-9-]+\/?$/i.test(path) ||
         /\b(?:sonuclar\w*|ihale|personel|staj|proje hazirlama egitim\w*)\b/.test(name))) return false;
-  if (address.hostname === "enerjiverimliligi.enerji.gov.tr" &&
-      (!/^\/Home\/DuyuruDetay$/i.test(path) || !/^\d+$/.test(address.searchParams.get("id") ?? "") ||
-        !/\b(?:vap|eka|eps|verimlilik artirici proje|enerji ve karbon azaltim|enerji performans sozlesme\w*)\b/.test(name) ||
+  const enver = address.hostname === "enerjiverimliligi.enerji.gov.tr";
+  if ((enver || /^(?:duyuru\.|www\.)?enerji\.gov\.tr$/.test(address.hostname)) &&
+      (!(enver ? /^\/Home\/DuyuruDetay$/i : /^\/duyuru-detay$/i).test(path) ||
+        !/^\d+$/.test(address.searchParams.get("id") ?? "") ||
+        !/\b(?:vap|eka|eps|verimlilik artirici proje|enerji ve karbon azaltim|enerji performans sozlesme\w*|enerji verimliligi destek bedelleri)\b/.test(name) ||
         /\b(?:sinav\w*|sonuclar\w*|egitim kaydi)\b/.test(name))) return false;
   if (/^(?:www\.)?tkdk\.gov\.tr$/.test(address.hostname)) {
     if (/^\/Dokuman\/ipard-iii-\d+-basvuru-cagri-ilani(?:-[a-z0-9]+)*-\d+$/i.test(path)) return true;
