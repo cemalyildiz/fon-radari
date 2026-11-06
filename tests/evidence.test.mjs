@@ -1,6 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { evidenceState, contentHash, documentLinksHash } from '../scripts/monitor-evidence.mjs';
+import { approvedEvidence, evidenceState, contentHash, documentLinksHash } from '../scripts/monitor-evidence.mjs';
+import { readFile } from 'node:fs/promises';
 import { evidenceAlerts } from '../app/verification-utils.ts';
 test('changed evidence remains pending across repeated hourly reads',()=>{
   const baseline = evidenceState(undefined,'original','2026-11-04');
@@ -8,6 +9,28 @@ test('changed evidence remains pending across repeated hourly reads',()=>{
   assert.equal(changed.changed,true);
   assert.equal(evidenceState(changed,'revision','2026-11-06').changed,true);
   assert.equal(evidenceState(changed,'original','2026-11-06').changed,false);
+});
+test('reviewed TÜBİTAK announcements ignore neighbouring headlines but detect a new deadline or application link', async()=>{
+  const url = 'https://tubitak.gov.tr/tr/duyuru/eureka-smart-kumesi-10-cagrisi-acildi';
+  const scope = 'tubitak-announcement';
+  const kind = 'text/html';
+  const snapshot = (headline, date, link) => {
+    const bytes = new TextEncoder().encode(`<main><h1>SMART</h1><article><p>${'Başvuru koşulu. '.repeat(20)}Kapanış: ${date}</p><a href="${link}">Başvuru</a></article><aside><a href="/other.pdf">${headline}</a></aside></main>`);
+    return {scope, hash:contentHash(bytes,kind,url,scope), documentHash:documentLinksHash(bytes,kind,url,scope)};
+  };
+  const review = snapshot('Komşu haber A','26 Ocak','/apply');
+  assert.deepEqual(snapshot('Komşu haber B','26 Ocak','/apply'),review);
+  const old = { baselineHash:'old-page', baselineDocumentHash:'old-links' };
+  const accepted = evidenceState(old,review.hash,'2026-11-06',review.documentHash,review);
+  assert.equal(accepted.changed,false);
+  const revised = snapshot('Komşu haber A','30 Ocak','/apply');
+  assert.equal(evidenceState(accepted,revised.hash,'2026-11-07',revised.documentHash,review).changed,true);
+  const replacement = snapshot('Komşu haber A','26 Ocak','/new-apply');
+  assert.equal(evidenceState(accepted,replacement.hash,'2026-11-07',replacement.documentHash,review).documentsChanged,true);
+  assert.throws(()=>contentHash(new TextEncoder().encode('<main><h1>SMART</h1></main>'),kind,url,scope));
+  assert.throws(()=>approvedEvidence({wrong:{evidenceUrl:'https://other.example',reviewedEvidence:{[url]:review}}}));
+  const config = JSON.parse(await readFile(new URL('../public/verified-conditions.json',import.meta.url),'utf8'));
+  assert.ok(approvedEvidence(config).has(url));
 });
 test('an access denied page cannot replace a valid evidence fingerprint',()=>{
   assert.throws(()=>contentHash(new TextEncoder().encode('<main>Erişim engellendi</main>'),'text/html'));

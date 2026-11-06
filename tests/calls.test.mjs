@@ -9,6 +9,20 @@ import { matchesAudience } from "../app/audience-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("Xecs and SMART classify direct Turkish applicants and preserve invited-only deadlines", async () => {
+  const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  for (const [id, closing, followup] of [
+    ["eureka-xecs-call-6-2026", "2027-01-21T19:00:00+03:00", "18.00 TSİ"],
+    ["eureka-smart-call-10-2026", "2027-01-26T13:00:00+03:00", "12.00 TSİ"],
+  ]) {
+    const call = {...calls.find(c => c.id === id), ...verified[id]};
+    assert.equal(matchesAudience(call,"Özel sektör"),true);
+    assert.equal(matchesAudience(call,"Üniversite / Araştırma"),false);
+    assert.equal(realStatus(call,Date.parse(closing)),"archived");
+    assert.ok(call.followUpStages[0].schedule.includes(followup));
+    assert.match(call.followUpStages[0].access,/davet edilen/);
+  }
+});
 test("ENHANCER keeps SME bands distinct and 2508 separates announcement, opening and e-signature", async () => {
   const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const [medium, micro, aris] = ["enhancer-pro-medium-2026", "enhancer-pro-scale-up-2026", "tubitak-aris-2508-2026"]

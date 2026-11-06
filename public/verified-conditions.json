@@ -95,7 +95,7 @@
   },
   "kosgeb-kapasite-gelistirme-2026-3": {
     "applicantGroups": ["Özel sektör"],
-    "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KAPAS%C4%B0TE%20GEL%C4%B0ST%C4%B0RME/2026/2026.05.12/00-Kapasite_Gelis%CC%A7tirme_Destek_Program%C4%B1_Y%C3%B6nergesi_11.05.26.pdf",
+    "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KAPAS%C4%B0TE%20GEL%C4%B0ST%C4%B0RME/2026/2026.10.12/00-Kapasite_Gelis%CC%A7tirme_Destek_Program%C4%B1_Yo%CC%88nergesi_12.10.26.pdf",
     "additionalEvidence": ["https://kosgeb.gov.tr/site/tr/genel/detay/9467/kobilerin-buyumesine-guclu-destek-yeni-basvuru-donemi-basladi", "https://kosgeb.gov.tr/site/tr/genel/destekdetay/9200/kapasite-gelistirme-destek-programi"],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
   },
@@ -393,6 +393,7 @@
   },
   "eureka-turkiye-ispanya-2026": {
     "applicantGroups": ["Özel sektör"],
+    "reviewedEvidence": {"https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi": {"scope":"tubitak-announcement","hash":"2103b29a831a608a38001e858971f93fc916aea3557161b4938cb3f68d36c83c","documentHash":"2d7376c0ea19a109190f7b5effa8346f6ad358563148aba3d7dc04be9f60412b"}},
     "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/eureka-network-turkiye-ispanya-2026-yili-cagrisi-acildi",
     "additionalEvidence": ["https://www.cdti.es/en/node/26454", "https://tubitak.gov.tr/tr/destekler/sanayi/uluslararasi-ortakli-destek-programlari/1509-tubitak-uluslararasi-sanayi-ar-ge-projeleri-destekleme-programi", "https://tubitak.gov.tr/sites/default/files/2026-07/1509_web_yeni_sunum.pdf", "https://tubitak.gov.tr/sites/default/files/2026-03/EK_1509_5.3.2026_tarih_ve_908463_sayili_Baskanlik_Olur_u.pdf"],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "openDate", "deadline", "application", "eligibleCosts", "notice"]
@@ -556,7 +557,8 @@
     "verifiedFields": ["applicants","fundingAmount","supportRate","duration","preDeadline","application","notice","companyScale","fundingType","openDate","deadline","followUpStages"]
   },
   "eureka-xecs-call-6-2026": {
-    "applicantGroups": ["Özel sektör","Üniversite / Araştırma"],
+    "applicantGroups": ["Özel sektör"],
+    "reviewedEvidence": {"https://tubitak.gov.tr/tr/duyuru/eureka-xecs-6-cagrisi-acildi": {"scope":"tubitak-announcement","hash":"4d50384c1be89dab31b88353faacc7b79b5aac649e9491288147ad1b43c12be8","documentHash":"61eb642b77b92968cde59a32358168bffe9734c0395c88b1c22f6794f98b52d7"}},
     "companyScale": ["KOBİ", "Büyük Ölçek"],
     "fundingType": "Geri ödemesiz hibe; uygun harcamaların değerlendirilmesi sonrası ödeme",
     "fundingAmount": "1509’un güncel program tablosu ve Ağustos 2026 sunumuna göre ulusal proje bütçesi: tek Türk kuruluşla en fazla 25 milyon TL; ortaklı ulusal projede toplam en fazla 80 milyon TL ve her Türk ortak için en fazla 25 milyon TL. Bunlar hibe tutarı veya uluslararası konsorsiyumun toplam bütçesi değildir.",
@@ -573,7 +575,8 @@
     "verifiedFields": ["applicants", "application", "companyScale", "fundingType", "fundingAmount", "supportRate", "openDate", "deadline", "notice"]
   },
   "eureka-smart-call-10-2026": {
-    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma"],
+    "applicantGroups": ["Özel sektör"],
+    "reviewedEvidence": {"https://tubitak.gov.tr/tr/duyuru/eureka-smart-kumesi-10-cagrisi-acildi": {"scope":"tubitak-announcement","hash":"660cb21c416b9072625f8988b7e1169c5b46bd3231c0ceb7b4ee1193e339dc6c","documentHash":"f23faf7d0ca42c7d2b28e81b429e70e4eccc5ac9d509ced3b25e0762a28a0620"}},
     "applicants": "Çağrıya katılan iki farklı ülkeden en az iki sanayi şirketi içeren konsorsiyum. Sivil amaçlı, yenilikçi, pazar odaklı ileri imalat projesi gerekir. Bir ülkenin ortakları toplam bütçenin %70 veya fazlasını üstlenemez. Üniversite/araştırma kuruluşları uluslararası konsorsiyumda yer alabilir; Türkiye’de doğrudan 1509 fon başvurusu yerleşik sermaye şirketlerinden alınır ve firmada proje konusuyla ilgili en az bir lisans mezunu personel gerekir.",
     "companyScale": ["KOBİ", "Büyük Ölçek"],
     "fundingType": "Geri ödemesiz hibe; uygun harcamaların değerlendirilmesi sonrası ödeme",
