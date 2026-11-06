@@ -2,7 +2,7 @@
   "eureka-innowwide-5-2026": {
     "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/yenilikci-kobiler-icin-avrupa-ortakligi-innowwide-5-cagrisi-acildi",
     "reviewedEvidence": {"https://tubitak.gov.tr/tr/duyuru/yenilikci-kobiler-icin-avrupa-ortakligi-innowwide-5-cagrisi-acildi": {"scope":"tubitak-announcement","hash":"cb8e05247fdce7f67dd9954a726f39efdba075012c0df86f5bccabe68dcd70d4","documentHash":"c6f9a415dad7905014fe2b9fbeb4d02a710e41bac98c4b1fa9aa2e4108c949fb"}},
-    "additionalEvidence": ["https://www.eurekanetwork.org/programmes-and-calls/innowwide/5th-innowwide-call-for-market-feasibility-projects-autumn-2026/", "https://www.eurekanetwork.org/programme-resources/innowwide-call-5-guidelines/", "https://www.eurekanetwork.org/programme-resources/innowwide-frequently-asked-questions/"],
+    "additionalEvidence": ["https://www.nif.government.bg/en/news/85", "https://www.eurekanetwork.org/programmes-and-calls/innowwide/5th-innowwide-call-for-market-feasibility-projects-autumn-2026/", "https://www.eurekanetwork.org/wp-content/uploads/2026/09/Innowwide-call-5-guidelines.pdf", "https://www.eurekanetwork.org/programme-resources/innowwide-frequently-asked-questions/"],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
   },
   "tkdk-ipard-m7-2026": {

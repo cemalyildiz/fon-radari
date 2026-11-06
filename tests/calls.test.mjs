@@ -32,6 +32,19 @@ test("Innowwide is a verified Turkish SME opportunity and closes at 16:00 Turkey
   assert.match(call.applicants, /1 Aralık 2024/);
   assert.equal(realStatus(call, Date.parse("2026-12-01T15:59:59+03:00")), "open");
   assert.equal(realStatus(call, Date.parse("2026-12-01T16:00:01+03:00")), "archived");
+  assert.ok(call.additionalEvidence.includes("https://www.nif.government.bg/en/news/85"));
+  const time = Date.parse("2026-11-06T12:00:00+03:00");
+  const portal = {
+    identifier:"cascade-44087099-15323", title:"European Partnership on Innovative SMEs/Innowwide CALL 5",
+    sourceKind:"cascade", sourceRecordId:"15323",
+    url:"https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/competitive-calls-cs/44087099",
+    deadline:"2026-12-01T02:00:00.000Z", status:"unknown",
+    sourceWarning:"AB verisinde kapanış ve son başvuru alanları farklı.",
+  };
+  const visible = mergeCalls([call], {calls:[portal, {...portal,identifier:"cascade-44087099-15342",sourceRecordId:"15342",title:"Eurostars Call 12"}]}, time);
+  assert.equal(visible.length, 2);
+  assert.equal(visible.find(item => item.id === id).deadline, "2026-12-01T16:00:00+03:00");
+  assert.equal(visible.filter(item => /innowwide/i.test(item.title)).length, 1);
 });
 test("Eureka disaster call preserves the international time discrepancy and the separate PRODİS stage", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));

@@ -3,6 +3,33 @@ import assert from 'node:assert/strict';
 import { approvedEvidence, evidenceState, contentHash, documentLinksHash } from '../scripts/monitor-evidence.mjs';
 import { readFile } from 'node:fs/promises';
 import { evidenceAlerts } from '../app/verification-utils.ts';
+import { refreshConditions } from '../scripts/check-conditions.mjs';
+test('condition checks reuse shared pages, isolate failed sources, and process distinct hosts in parallel', async () => {
+  const shared = 'https://www.one.example/conditions';
+  const second = 'https://one.example/other';
+  const failed = 'https://two.example/notice';
+  const seen = [];
+  let release;
+  const gate = new Promise(resolve => { release = resolve; });
+  const result = await refreshConditions(
+    [{id:'a',sourceUrl:shared}, {id:'b',sourceUrl:shared}, {id:'c',sourceUrl:second}, {id:'d',sourceUrl:failed}],
+    {b:{hash:'old'}, d:{checkedAt:'old',excerpts:['retained']}},
+    async url => {
+      seen.push(url);
+      if (url === failed) {
+        release();
+        return new Response('', {status:403});
+      }
+      if (url === shared) await gate;
+      return new Response('<main><p>Başvuru koşullarını açıklayan ayrıntılı resmî metin</p><p>Uygun giderleri açıklayan çağrı metni ve kılavuzu</p></main>', {headers:{'content-type':'text/html'}});
+    },
+  );
+  assert.deepEqual(seen, [shared, failed, second]);
+  assert.equal(result.a.hash, result.b.hash);
+  assert.equal(result.a.changed, false);
+  assert.equal(result.b.changed, true);
+  assert.deepEqual(result.d, {ok:false,error:'HTTP 403',checkedAt:'old',excerpts:['retained']});
+});
 test('changed evidence remains pending across repeated hourly reads',()=>{
   const baseline = evidenceState(undefined,'original','2026-11-04');
   const changed = evidenceState(baseline,'revision','2026-11-05');

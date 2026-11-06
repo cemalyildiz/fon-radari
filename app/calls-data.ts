@@ -139,6 +139,7 @@ export const calls: FundingCall[] = [
   ...eicChallenges2027,
   {
     id: "eureka-innowwide-5-2026", scope: "international", code: "Innowwide · 5. Çağrı",
+    reviewedPortalIdentifier: "cascade-44087099-15323",
     title: "Eureka Innowwide — KOBİ’ler için Uluslararası Pazar Fizibilitesi",
     institution: "Eureka Network · Avrupa Birliği", institutionShort: "Eureka",
     status: "open", openDate: "2026-10-01T00:00:00+02:00", openingDateOnly: true, deadline: "2026-12-01T16:00:00+03:00",
@@ -156,7 +157,7 @@ export const calls: FundingCall[] = [
     sourceUrl: "https://www.eurekanetwork.org/programmes-and-calls/innowwide/5th-innowwide-call-for-market-feasibility-projects-autumn-2026/",
     sourceLabel: "Eureka · resmî 5. çağrı", verifiedAt: "2026-11-06",
     tags: ["KOBİ", "Pazar Fizibilitesi", "Uluslararasılaşma"], themes: ["Ar-Ge ve Yenilik"], sectors: ["Sektörler Arası"],
-    notice: "TÜBİTAK duyurusuna göre inovasyon başlangıçta en az THS 4 olmalı, fizibilite sonunda hedef pazardaki THS 8’i aşmamalı. Yalnız sivil uygulamalar desteklenir. Son saat 14.00 CET / 16.00 TSİ.",
+    notice: "İnovasyon başlangıçta en az THS 4 olmalı, fizibilite sonunda hedef pazardaki THS 8’i aşmamalı. Yalnız sivil uygulamalar desteklenir. AB portalı aktarımındaki saat alanları uyuşmadığından Eureka, TÜBİTAK ve Bulgaristan Ulusal İnovasyon Fonu’nun ortak yayımladığı son saat esas alındı: 14.00 CET / 16.00 TSİ.",
   },
   {
     id: "tkdk-ipard-m7-2026", scope: "national", code: "IPARD III · M7",
