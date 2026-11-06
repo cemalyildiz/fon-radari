@@ -30,6 +30,13 @@ export function isNationalFundingCandidate(title, url) {
   if (/^(?:www\.)?kosgeb\.gov\.tr$/.test(address.hostname) && !/^\/site\/tr\/genel\/(?:detay|duyurudetay)\/\d+\//i.test(path)) return false;
   if (/^(?:www\.)?dogaka\.gov\.tr$/.test(address.hostname) &&
       (!/^\/(?:tr\/)?duyuru\/[^/]+\/\d+\/?$/i.test(path) || /\b(?:personel|staj|ihale)\b/.test(name))) return false;
+  if (/^(?:www\.)?karacadag\.gov\.tr$/.test(address.hostname) &&
+      (!/^\/duyuru\/\d+\/[a-z0-9-]+\/?$/i.test(path) ||
+        /\b(?:sonuclar\w*|ihale|personel|staj)\b/.test(name))) return false;
+  if (address.hostname === "enerjiverimliligi.enerji.gov.tr" &&
+      (!/^\/Home\/DuyuruDetay$/i.test(path) || !/^\d+$/.test(address.searchParams.get("id") ?? "") ||
+        !/\b(?:vap|eka|eps|verimlilik artirici proje|enerji ve karbon azaltim|enerji performans sozlesme\w*)\b/.test(name) ||
+        /\b(?:sinav\w*|sonuclar\w*|egitim kaydi)\b/.test(name))) return false;
   if (/^(?:www\.)?tkdk\.gov\.tr$/.test(address.hostname)) {
     if (/^\/Dokuman\/ipard-iii-\d+-basvuru-cagri-ilani(?:-[a-z0-9]+)*-\d+$/i.test(path)) return true;
     if (!/^\/Duyuru\/[a-z0-9-]+-\d+$/i.test(path) ||

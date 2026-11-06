@@ -1,4 +1,14 @@
 {
+  "etkb-vap-2026": {
+    "evidenceUrl": "https://duyuru.enerji.gov.tr/duyuru-detay?id=30609",
+    "additionalEvidence": ["https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//2026_Yili_Enerji_Verimliligi_Destek_Bedelleri_202512311640.docx", "https://duyuru.enerji.gov.tr/duyuru-detay?id=30596", "https://evdes.enerji.gov.tr/Bildirim/Duyuru_Dosya_Getir?fileName=ETKB-EYS-USLE-011+Rev00.pdf", "https://duyuru.enerji.gov.tr/haber-detay?id=31866"],
+    "verifiedFields": ["recordType", "applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "eligibleCosts", "application", "notice"]
+  },
+  "karacadag-agyd-2026": {
+    "evidenceUrl": "https://www.karacadag.gov.tr/Destek/Dosya/PM5R20KF_2026_yili_imalat_sektorlerinde_donusum_teknik_destek_programi.pdf",
+    "additionalEvidence": ["https://www.karacadag.gov.tr/duyuru/27466/2026-yili-imalat-sektorlerinde-donusum-teknik-destek-programi-basvurulari-basladi/"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice", "followUpStages"]
+  },
   "eureka-innowwide-5-2026": {
     "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/yenilikci-kobiler-icin-avrupa-ortakligi-innowwide-5-cagrisi-acildi",
     "reviewedEvidence": {"https://tubitak.gov.tr/tr/duyuru/yenilikci-kobiler-icin-avrupa-ortakligi-innowwide-5-cagrisi-acildi": {"scope":"tubitak-announcement","hash":"cb8e05247fdce7f67dd9954a726f39efdba075012c0df86f5bccabe68dcd70d4","documentHash":"c6f9a415dad7905014fe2b9fbeb4d02a710e41bac98c4b1fa9aa2e4108c949fb"}},

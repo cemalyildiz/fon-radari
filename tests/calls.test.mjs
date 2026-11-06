@@ -10,6 +10,24 @@ import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("Karacadağ technical assistance is non-cash; VAP rates do not imply a verified open window", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const lookup = id => ({...calls.find(c => c.id === id), ...reviews[id]});
+  const technical = lookup("karacadag-agyd-2026");
+  assert.equal(matchesAudience(technical, "Özel sektör"), true);
+  assert.match(technical.fundingAmount, /300\.000 TL/);
+  assert.match(technical.fundingType, /nakit ödeme yapılmaz/);
+  assert.equal(realStatus(technical, Date.parse("2026-12-31T23:59:01+03:00")), "archived");
+  assert.match(technical.followUpStages[0].schedule, /7 Ocak 2027/);
+  assert.equal(verificationCoverage(technical).complete, true);
+  const vap = lookup("etkb-vap-2026");
+  assert.equal(realStatus(vap, now), "unknown");
+  assert.match(vap.fundingAmount, /27\.092\.663 TL/);
+  assert.match(vap.supportRate, /2027.*%30.*%25/);
+  assert.ok(isNationalFundingCandidate(technical.title, technical.sourceUrl));
+  assert.equal(isNationalFundingCandidate("2026 Yılı Teknik Destek Programı Başvuru Sonuçları", "https://www.karacadag.gov.tr/duyuru/27469/basvuru-sonuclari/"), false);
+  assert.ok(isNationalFundingCandidate("Enerji ve Karbon Azaltım (EKA) Destek Programı Başvuruları", "https://enerjiverimliligi.enerji.gov.tr/Home/DuyuruDetay?id=1125"));
+});
 test("Eurostars draft national rates are visible but not verified; ARIS e-signature does not change first deadline", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const reviewed = id => ({...calls.find(c => c.id === id), ...reviews[id]});

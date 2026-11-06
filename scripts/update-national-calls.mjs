@@ -17,6 +17,8 @@ const sources = [
   ['SSB', 'https://arge.ssb.gov.tr/'],
   ['TKDK', 'https://www.tkdk.gov.tr/'],
   ['TKDK çağrı ilanları', 'https://www.tkdk.gov.tr/ProjeIslemleri/CagriIlanArsiv'],
+  ['Karacadağ Kalkınma Ajansı', 'https://www.karacadag.gov.tr/duyurular/1/duyurular/'],
+  ['ETKB · Enerji Verimliliği', 'https://enerjiverimliligi.enerji.gov.tr/'],
 ];
 const clean = value => value.replace(/<[^>]*>/g, ' ').replace(/&#(x[0-9a-f]+|\d+);/gi, (_, entity) => {
   const point = entity[0].toLowerCase() === 'x' ? parseInt(entity.slice(1), 16) : Number(entity);

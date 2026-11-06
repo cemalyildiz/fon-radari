@@ -129,6 +129,69 @@
       "complete": false
     },
     {
+      "id": "etkb-vap-2026",
+      "title": "Verimlilik Artırıcı Proje (VAP) Desteği",
+      "source": "https://duyuru.enerji.gov.tr/duyuru-detay?id=30609",
+      "verifiedFields": [
+        "recordType",
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "recordType"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "karacadag-agyd-2026",
+      "title": "Karacadağ — İmalat Sektörlerinde Ar-Ge ve Yeşil Dönüşüm Teknik Desteği",
+      "source": "https://www.karacadag.gov.tr/Destek/Dosya/PM5R20KF_2026_yili_imalat_sektorlerinde_donusum_teknik_destek_programi.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice",
+        "followUpStages"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "eureka-innowwide-5-2026",
       "title": "Eureka Innowwide — KOBİ’ler için Uluslararası Pazar Fizibilitesi",
       "source": "https://tubitak.gov.tr/tr/duyuru/yenilikci-kobiler-icin-avrupa-ortakligi-innowwide-5-cagrisi-acildi",
@@ -2371,6 +2434,6 @@
       "complete": true
     }
   ],
-  "total": 76,
-  "complete": 46
+  "total": 78,
+  "complete": 48
 }
