@@ -545,6 +545,166 @@
       "complete": true
     },
     {
+      "id": "horizon-proof-of-market-2027",
+      "title": "Ufuk Avrupa — Ufuk Avrupa Ar-Ge Sonuçları için Pazar Doğrulama",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "horizon-technology-infrastructure-access-2027",
+      "title": "Ufuk Avrupa — Teknoloji Altyapısı İşletmecileri için KOBİ Erişim Pilotu",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "horizon-academic-assets-2027",
+      "title": "Ufuk Avrupa — Akademik Patentlerin ve Fikrî Varlıkların Sanayiye Aktarılması",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "horizon-venture-builders-network-2027",
+      "title": "Ufuk Avrupa — Araştırma Kuruluşları için Girişim Geliştirme Ağı",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "horizon-critical-raw-materials-network-2027",
+      "title": "Ufuk Avrupa — Kritik Hammaddeler Uzman Ağı",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "horizon-industrial-renewable-energy-2027",
       "title": "Ufuk Avrupa — Proses Sanayisinde Yenilenebilir Enerji ve Isı Yönetimi",
       "source": "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en",
@@ -3015,6 +3175,6 @@
       "complete": true
     }
   ],
-  "total": 96,
-  "complete": 64
+  "total": 101,
+  "complete": 69
 }

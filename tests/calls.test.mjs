@@ -11,6 +11,26 @@ import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/e
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("all eleven single-stage Cluster 4 industry topics are verified without treating services as direct SME grants", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const ids = ["02", "03", "06", "08", "16", "17", "22", "42", "47", "49", "50"];
+  const byTopic = Object.fromEntries(ids.map(id => {
+    const code = `HORIZON-CL4-2027-01-MAT-PROD-${id}`;
+    const c = calls.find(c => c.code === code);
+    const reviewed = {...c,...reviews[c.id]};
+    assert.equal(verificationCoverage(reviewed).complete, true);
+    assert.equal(reviewed.deadline, "2027-02-02T19:00:00+03:00");
+    assert.equal(reviewed.reviewedPortalIdentifier, code);
+    return [id,reviewed];
+  }));
+  assert.match(byTopic["49"].fundingAmount, /yaklaşık 200\.000 €.*kesin tavan değildir/);
+  assert.match(byTopic["49"].application, /10 sayfa.*taahhüt mektubu/);
+  assert.match(byTopic["47"].fundingAmount, /firma başına destek değildir/);
+  assert.match(byTopic["47"].notice, /doğrudan nakit hibe açıklamıyor/);
+  assert.equal(matchesAudience(byTopic["50"], "Özel sektör"), false);
+  assert.equal(matchesAudience(byTopic["50"], "TTO / Arayüz kuruluşu"), true);
+  assert.match(byTopic["17"].applicants, /doğrudan ya da dolaylı kontrol/);
+});
 test("industrial fast-track RIA calls have a firm funding cap and six-participant limit", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   for (const id of ["horizon-fast-track-industry-2027", "horizon-fast-track-chemicals-2027"]) {

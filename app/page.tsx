@@ -4,6 +4,7 @@ import { readFile } from "node:fs/promises";
 import type { FundingCall } from "./calls-data";
 import { mergeNationalCalendars, unreviewedAnnouncements } from "./call-utils";
 import { evidenceAlerts } from "./verification-utils";
+import { revisionIndexFor } from "./programme-revision.mjs";
 
 const snapshotTime = Date.now();
 
@@ -13,9 +14,14 @@ export default async function Home() {
   const evidence = await readFile('public/evidence-status.json', 'utf8').then(JSON.parse).catch(() => ({}));
   const updatedCalls = calls.map(c => {
     const review = verified[c.id];
-    const urls = [review?.evidenceUrl ?? c.evidenceUrl, ...(review?.additionalEvidence ?? c.additionalEvidence ?? [])].filter(Boolean);
+    const evidenceUrl = review?.evidenceUrl ?? c.evidenceUrl;
+    const additionalEvidence = [...new Set<string>([
+      ...(review?.additionalEvidence ?? c.additionalEvidence ?? []),
+      ...[revisionIndexFor(evidenceUrl)].filter((url): url is string => Boolean(url)),
+    ])];
+    const urls = [evidenceUrl, ...additionalEvidence].filter(Boolean);
     const alerts = evidenceAlerts(urls, evidence, snapshotTime);
-    return {...c, ...review, evidenceAlerts: alerts, evidencePending: alerts.length > 0, sourceConditions: conditions[c.id]};
+    return {...c, ...review, additionalEvidence, evidenceAlerts: alerts, evidencePending: alerts.length > 0, sourceConditions: conditions[c.id]};
   });
   const feed = await readFile('public/national-calls.json', 'utf8').then(JSON.parse).catch(() => ({ calls: [] }));
   const calendars = mergeNationalCalendars(updatedCalls, feed.calendars ?? [], snapshotTime);

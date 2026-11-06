@@ -1,3 +1,5 @@
+import { cluster4Programme as horizonIndustryProgramme } from "./programme-revision.mjs";
+
 export type CallScope = "national" | "international";
 export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
 export type ApplicantGroup = "Özel sektör" | "Girişimci / Bireysel" | "Akademisyen" | "Üniversite / Araştırma" | "Kamu kurum / kuruluşu" | "TTO / Arayüz kuruluşu" | "STK";
@@ -213,7 +215,6 @@ const horizonDecemberEnergy = [
   };
 });
 
-const horizonIndustryProgramme = "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en";
 const rawMaterialsCountryRules = "Katılım, AB üyesi ve asosiye ülkeler, OECD ülkeleri, Afrika Birliği, MERCOSUR, CARIFORUM ve And Topluluğu üyeleri ile AB’nin ilgili hammadde ortaklığı veya hammadde iş birliği hükümleri içeren anlaşması bulunan ülkelerle sınırlı. Uygun olmayan ülkede yerleşik kuruluş içeren teklifler uygun değildir. Uygun ülkede kurulmuş olsa bile uygun olmayan bir ülke veya o ülkedeki bir kuruluş tarafından doğrudan ya da dolaylı kontrol edilen tüzel kişiler de katılamaz. Katılım izni tek başına AB finansmanı hakkı vermez.";
 const horizonCircularIndustry = [
   {
@@ -315,10 +316,95 @@ const horizonCircularIndustry = [
   };
 });
 
+const horizonKnowledgeIndustry = [
+  {
+    id: "horizon-proof-of-market-2027", topic: "49", page: 86, title: "Ufuk Avrupa Ar-Ge Sonuçları için Pazar Doğrulama",
+    applicants: "Türkiye dâhil asosiye ülkeler ve AB üyesi ülkelerden, öncelikle girişim, akademik spin-off ve KOBİ’lerden oluşan küçük konsorsiyumlar. Genel Ek B’ye göre en az üç farklı ülkeden bağımsız üç yararlanıcı; biri AB üyesi ülkede, diğer ikisi AB üyesi veya asosiye ülkede. Çin veya Çin’de yerleşik bir tüzel kişi tarafından doğrudan ya da dolaylı kontrol edilen kuruluşlar katılamaz.",
+    groups: ["Özel sektör"], scales: ["KOBİ", "Girişim / Spin-off"],
+    amount: "4,7 milyon € gösterge konu bütçesi. Yaklaşık 24 proje için proje başına yaklaşık 200.000 € AB katkısı öngörülüyor; tutar kesin tavan değildir.",
+    type: "Uygun maliyet esaslı hibe (IA)", rate: "Kâr amaçlı kuruluşlar için en fazla %70; uygun kâr amacı gütmeyen tüzel kişiler için %100’e kadar.",
+    summary: "Daha önce Küme 4 veya Ufuk 2020 LEIT kapsamında fonlanan RIA/IA projelerinde elde edilen sonuçların AB pazar potansiyelini doğrulamak için.",
+    objectives: ["Teknolojiyi potansiyel müşteriyle test etmek, rekabeti incelemek ve ticarileşme yolunu göstermek"],
+    costs: ["Teknoloji testi ve pilotu, pazar analizi, uygunluk ve sertifikasyon çalışmaları, fikrî hakların düzenlenmesi"],
+    application: "Tek aşamalı teklif en fazla 10 sayfa. Sonucun üretildiği projenin hibe numarası ve kısa adı yazılmalı. En az bir başvuru sahibinin proje süresince yeterli ticarileştirme hakkı olduğunu doğrulayın veya hak sahibinin adil, makul ve ayrımcı olmayan erişimi müzakere etmeye hazır olduğuna dair taahhüt mektubu ekleyin.",
+    notice: "Önceki projenin ortağı olmak şart değil; geçerli sonuç ve hak veya taahhüt şartı geçerli. İş ortağı katılımı öngörülmeli. Kalite eşiğini geçen tekliflerin bir bölümü için çalışma programında kısmi rastgele sıralama öngörülüyor.",
+    tags: ["Pazar Doğrulama", "Fikrî Mülkiyet", "Ticarileştirme"],
+  },
+  {
+    id: "horizon-technology-infrastructure-access-2027", topic: "47", page: 82, title: "Teknoloji Altyapısı İşletmecileri için KOBİ Erişim Pilotu",
+    applicants: "Teknoloji altyapısı işletmecileri ve sanayi kullanıcılarını bir araya getiren pilot erişim projesi. Türkiye ve diğer asosiye ülkeler ile AB üyesi ülkelerdeki uygun tüzel kişiler Genel Ek B kapsamındaki CSA kurallarıyla katılabilir; özel altyapı işletmecileri ve projede somut rol üstlenen sanayi kullanıcıları da değerlendirilebilir.",
+    groups: ["Özel sektör", "Üniversite / Araştırma", "TTO / Arayüz kuruluşu"], scales: ["Ana başvuruda rol belirleyici; kullanıcı hedefi yenilikçi KOBİ"],
+    amount: "5 milyon € gösterge konu bütçesi; yaklaşık iki pilot proje için proje başına 1,5–2,5 milyon € öngörülüyor. Bu tutar altyapıyı kullanacak firma başına destek değildir.",
+    type: "Pilot erişim projesine götürü hibe (CSA); firmalara altyapı hizmeti", rate: "Ana CSA projesi için %100’e kadar. KOBİ kullanıcılarına bu ilanda bireysel destek oranı verilmemiş.",
+    summary: "İleri malzeme, temiz enerji, sağlık veya biyoteknoloji gibi alanlarda laboratuvar, test ve ölçek büyütme altyapısına ortak erişim sağlamak için.",
+    objectives: ["Mevcut test ağı veya ortak erişim noktasından yararlanarak çok merkezli, merkezi yönetilen bir erişim pilotu kurmak"],
+    costs: ["Erişim programı ve destek hizmetleri, ortak süreç ve sözleşme modeli, kullanıcı erişimi ve ağ iş birliği"],
+    application: "Ana pilot önerisi tek aşamada Funding & Tenders Portal’a sunulur. Sadece altyapı hizmeti almak isteyen şirketler, seçilecek pilotun erişim duyurularını takip etmeli.",
+    notice: "2 Şubat ana proje son tarihidir; bir KOBİ erişim çağrısının son tarihi değildir. KOBİ hizmet koşulları, başvuru yolu ve ülke kapsamı pilotlar duyurulunca kontrol edilmeli. Bu ilan şirket başına doğrudan nakit hibe açıklamıyor.",
+    tags: ["Teknoloji Altyapısı", "Test ve Ölçek Büyütme", "KOBİ Hizmeti"],
+  },
+  {
+    id: "horizon-academic-assets-2027", topic: "42", page: 72, title: "Akademik Patentlerin ve Fikrî Varlıkların Sanayiye Aktarılması",
+    applicants: "Üniversite ve kamu araştırma kuruluşlarının fikrî varlıklarını değerlendirecek uygun tüzel kişiler. Türkiye dâhil asosiye ülkeler ve AB üyesi ülkelerde Genel Ek B’deki CSA kuralları geçerli. Sanayi kuruluşları teknoloji kullanıcısı ve proje ortağı olarak rol alabilir; bireysel araştırmacı veya firma başına ayrı hibe ilanı değildir.",
+    groups: ["Özel sektör", "Üniversite / Araştırma", "TTO / Arayüz kuruluşu"], scales: ["Kuruluş rolü belirleyici; KOBİ ve girişimler teknoloji kullanıcısı olabilir"],
+    amount: "2 milyon € gösterge konu bütçesi; yaklaşık iki proje için proje başına yaklaşık 1 milyon €. Bu tutar firma başına ayrılmış değildir.",
+    type: "Götürü hibe (CSA)", rate: "Ana CSA projesinin götürü bütçesi hesabında uygun maliyetlerin %100’üne kadar.",
+    summary: "Kullanılmayan akademik patentleri yeşil ve dijital teknolojiye dönüştürmek için üniversite–sanayi iş birliği.",
+    objectives: ["Akademik fikrî varlıkların KOBİ ve girişimlerce kullanımı için lisanslama ve aktarım modelleri denemek", "Öğrenci, araştırmacı ve potansiyel sanayi kullanıcılarını pilotlara katmak"],
+    costs: ["Patent erişim modeli, çalıştay ve pilot uygulama, fikrî varlık yönetimi ve kapsayıcılık faaliyetleri"],
+    application: "Uygun kuruluşlar ana CSA teklifini tek aşamada Funding & Tenders Portal’da sunar. Teklifte akademik fikrî varlıkların değerlendirilmesi ve potansiyel sanayi kullanıcılarının katılımı açıklanmalı.",
+    notice: "Bir firmanın kendi Ar-Ge yatırımına doğrudan hibe çağrısı değildir. Yeşil ve dijital teknolojinin sanayi tarafından benimsenmesini sağlayan ortak pilotlara odaklanır.",
+    tags: ["Patent", "Teknoloji Transferi", "Üniversite–Sanayi"],
+  },
+  {
+    id: "horizon-venture-builders-network-2027", topic: "50", page: 89, title: "Araştırma Kuruluşları için Girişim Geliştirme Ağı",
+    applicants: "Üniversite, araştırma ve teknoloji kuruluşları ile araştırma/teknoloji altyapıları gibi araştırma yürüten kuruluşlara yönelik ağ projesi. Türkiye dâhil asosiye ülkeler ve AB üyesi ülkelerdeki uygun tüzel kişiler için Genel Ek B’nin CSA kuralları geçerli. Kuluçka ve girişim geliştirme arayüzleri proje rolüyle katılabilir.",
+    groups: ["Üniversite / Araştırma", "TTO / Arayüz kuruluşu"], scales: ["Öncelik araştırma kuruluşları ve ilgili arayüzler"],
+    amount: "Gösterge konu bütçesi 1 milyon €. Bir ağ projesi için yaklaşık 1 milyon € öngörülüyor; girişim başına bir destek değildir.",
+    type: "Götürü hibe (CSA)", rate: "Ana CSA projesinin götürü bütçesi hesabında uygun maliyetlerin %100’üne kadar.",
+    summary: "Araştırma sonuçlarından spin-off ve startup kurma yetkinliğini artıracak kurumlar arası girişim geliştirme ağı.",
+    objectives: ["Araştırma kuruluşlarında girişim geliştirme işlevleri kurmak veya büyütmek; uzmanlık, yöntem ve kaynakları ağ içinde paylaşmak"],
+    costs: ["Ağ koordinasyonu, yetkinlik geliştirme, girişim geliştirme yöntemleri ve kapsayıcılık çalışmaları"],
+    application: "Araştırma kuruluşlarının girişim geliştirme kapasitesini artıran ana ağ teklifi tek aşamada Funding & Tenders Portal’da sunulur.",
+    notice: "Girişimcilere bireysel yatırım veya doğrudan hibe başvurusu değildir. Kadın girişimcilerin karşılaştığı engeller dâhil kapsayıcılık ve cinsiyet duyarlı yaklaşım ele alınmalı.",
+    tags: ["Girişim Geliştirme", "Spin-off", "Teknoloji Transferi"],
+  },
+  {
+    id: "horizon-critical-raw-materials-network-2027", topic: "17", page: 104, title: "Kritik Hammaddeler Uzman Ağı",
+    applicants: `Türkiye dâhil uygun ülkelerdeki hammadde uzmanlığı olan sanayi, araştırma ve kamu kuruluşları proje rolüyle katılabilir. Ana proje kritik hammaddeler değer zinciri boyunca uzman ağı kurmalı. Genel Ek B’nin CSA kuralları geçerli. ${rawMaterialsCountryRules}`,
+    groups: ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"], scales: ["Ölçek değil, değer zinciri uzmanlığı belirleyici"],
+    amount: "Gösterge konu bütçesi 3 milyon €. Bir uzman ağı projesi için yaklaşık 3 milyon € AB katkısı öngörülüyor.",
+    type: "Götürü hibe (CSA)", rate: "Ana CSA projesinin götürü bütçesi hesabında uygun maliyetlerin %100’üne kadar.",
+    summary: "AB’nin kritik hammadde değerlendirmesi için tedarik, talep ve çevresel ayak izi verileri ile uzmanlık ağı oluşturur.",
+    objectives: ["Arz riski, malzeme akışı, geri dönüşüm ve ikame verilerini derlemek", "2029 sonuna kadar bilgi föylerini tamamlamak ve uzman doğrulama çalıştayları düzenlemek"],
+    costs: ["Ağ koordinasyonu, veri derleme ve analizi, uzman çalıştayları ve proje kümelenmesi"],
+    application: "Ana uzman ağı projesi için tek aşamalı teklif Funding & Tenders Portal’da sunulur. Kapsam, 2027 değerlendirmesinde incelenen hammaddelerin tamamını içermeli.",
+    notice: "Şirket başına yatırım desteği değil. Üretilen veri ve bilgiler Komisyonla ücretsiz paylaşılır; 2029 bilgi föyü takvimi proje süresinin üst sınırı değildir.",
+    tags: ["Kritik Hammadde", "Uzman Ağı", "Tedarik Riski"],
+  },
+].map((topic): FundingCall => {
+  const code = `HORIZON-CL4-2027-01-MAT-PROD-${topic.topic}`;
+  return {
+    id: topic.id, scope: "international", code, reviewedPortalIdentifier: code, title: `Ufuk Avrupa — ${topic.title}`,
+    institution: "Avrupa Komisyonu · Ufuk Avrupa Küme 4 / HaDEA", institutionShort: "Horizon Europe",
+    status: "open", openDate: "2026-10-13", openingDateOnly: true, deadline: "2027-02-02T19:00:00+03:00",
+    calendarSourceUrl: "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-industry-leadership-materials-and-production-europe_en",
+    applicants: topic.applicants, applicantGroups: topic.groups as ApplicantGroup[], companyScale: topic.scales,
+    fundingAmount: topic.amount, fundingType: topic.type, supportRate: topic.rate,
+    duration: "Konu metninde sabit proje süresi yok; süre hibe sözleşmesinde belirlenir (Genel Ek G).",
+    summary: topic.summary, objectives: topic.objectives, eligibleCosts: topic.costs, application: topic.application, notice: topic.notice,
+    applicationLinks: [{label:"Güncel çalışma programı · konu koşulları", url:`${horizonIndustryProgramme}#page=${topic.page}`}],
+    sourceUrl: `https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/${code}`,
+    sourceLabel: "Avrupa Komisyonu · resmî konu ve başvuru sayfası", verifiedAt: "2026-11-06",
+    tags: topic.tags, sectors: topic.topic === "17" ? ["Madencilik", "İmalat"] : ["Sektörler Arası"], themes: ["Ar-Ge ve Yenilik"],
+  };
+});
+
 export const calls: FundingCall[] = [
   ...eicChallenges2027,
   ...horizonDecemberEnergy,
   ...horizonCircularIndustry,
+  ...horizonKnowledgeIndustry,
   {
     id: "horizon-industrial-renewable-energy-2027", scope: "international", code: "HORIZON-CL4-2027-02-MAT-PROD-32-two-stage",
     reviewedPortalIdentifier: "HORIZON-CL4-2027-02-MAT-PROD-32-two-stage",
