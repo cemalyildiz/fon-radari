@@ -1,4 +1,10 @@
 {
+  "eureka-innowwide-5-2026": {
+    "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/yenilikci-kobiler-icin-avrupa-ortakligi-innowwide-5-cagrisi-acildi",
+    "reviewedEvidence": {"https://tubitak.gov.tr/tr/duyuru/yenilikci-kobiler-icin-avrupa-ortakligi-innowwide-5-cagrisi-acildi": {"scope":"tubitak-announcement","hash":"cb8e05247fdce7f67dd9954a726f39efdba075012c0df86f5bccabe68dcd70d4","documentHash":"c6f9a415dad7905014fe2b9fbeb4d02a710e41bac98c4b1fa9aa2e4108c949fb"}},
+    "additionalEvidence": ["https://www.eurekanetwork.org/programmes-and-calls/innowwide/5th-innowwide-call-for-market-feasibility-projects-autumn-2026/", "https://www.eurekanetwork.org/programme-resources/innowwide-call-5-guidelines/", "https://www.eurekanetwork.org/programme-resources/innowwide-frequently-asked-questions/"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "tkdk-ipard-m7-2026": {
     "evidenceUrl": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-m7-ciftlik-faaliyetlerinin-cesitlendirilmesi-ve-is-gelistirme-tedbiri-cagri-ilani-tarihinde-degisiklik-yapilmasina-iliskin-duyuru-13179",
     "verifiedFields": ["recordType", "application", "notice"]
@@ -196,9 +202,12 @@
     "verifiedFields": ["fundingAmount","duration","supportRate","applicants","application","notice","companyScale","fundingType","openDate","deadline","followUpStages"]
   },
   "eureka-disaster-resilience-2026": {
+    "reviewedEvidence": {"https://tubitak.gov.tr/tr/duyuru/eureka-network-afetlerde-direnclilik-2026-cagrisi-acildi": {"scope":"tubitak-announcement","hash":"2cc789febbb6a2c8d6655a2855d4470668d6b007def2e1e2efe1d344a6b1c471","documentHash":"9061993c217507e27d28ef303ffa30c2d1cfc44cb47a8c45035a7d01bade9e78"}},
     "openDate": "2026-06-08T00:00:00+02:00",
-    "deadline": "2026-10-26T17:00:00+01:00",
+    "deadline": "2026-10-26T17:00:00+03:00",
     "openingDateOnly": true,
+    "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "applicants": "En az iki katılımcı Eureka ülkesinden bağımsız kuruluşlar. Türkiye’de yürütücü sermaye şirketi olmalıdır. Yükseköğretim kurumları, kamu araştırma merkez ve enstitüleri, eğitim ve araştırma hastaneleri ile 6550 kapsamındaki altyapılar tek başına başvuramaz; Türkiye’deki bir sermaye şirketiyle ortak katılabilir. Her şirkette ilgili alanda en az lisans mezunu bir proje personeli, üniversite ve eğitim-araştırma hastanesinde ise doktora veya tıpta uzmanlık dereceli en az bir proje personeli gerekir.",
     "companyScale": ["KOBİ","Büyük Ölçek","Üniversite / Araştırma","Kamu"],
     "fundingType": "TÜBİTAK uygun gider desteği; şirketlere harcama sonrası ödeme, uygun kurumlara yönergeye göre dönem başı aktarım",
     "followUpStages": [{"title":"Türkiye · PRODİS aşaması","schedule":"26 Ekim–16 Aralık 2026; kuruluş ön kaydı 15 Aralık 23.59, proje başvurusu 16 Aralık 23.59.","access":"Yeni uluslararası başvuru değildir. Ulusal metnin 14.1 maddesindeki çağrı adı tutarsızlığı için TÜBİTAK teyidi gerekir."}],
@@ -208,8 +217,9 @@
     "application": "Uluslararası son tarih 26 Ekim 2026. Ulusal ön kayıt 15 Aralık, proje başvurusu 16 Aralık 2026 saat 23.59; Türk ortaklar birlikte tek ulusal başvuru yapar. Ulusal aşama yeni uluslararası başvuru hakkı sağlamaz.",
     "notice": "Resmî PDF’nin 14.1 maddesinde Hafifletme ve Kuantum çağrılarının adları geçiyor; belge içi tutarsızlık nedeniyle bu madde TÜBİTAK’tan teyit edilmeden kesin yorumlanmamalı. Bütçe, süre, oran ve takvim ayrı maddelerden kontrol edildi. Şirketlere harcama sonrası; yönerge/teminat şartıyla en fazla bütçenin %30’u ön ödeme uygulanır.",
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-06/Eureka_Network_Afetlerde_Direnclilik_Ulusal_Cagri_Metni-2026.pdf",
-    "additionalEvidence": ["https://www.eurekanetwork.org/programmes-and-calls/network-projects/eureka-call-for-disaster-resilience-response-and-recovery-projects-2026/"],
-    "verifiedFields": ["fundingAmount","duration","supportRate","application","notice","companyScale","fundingType","openDate","deadline","followUpStages"]
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/eureka-network-afetlerde-direnclilik-2026-cagrisi-acildi", "https://www.eurekanetwork.org/programmes-and-calls/network-projects/eureka-call-for-disaster-resilience-response-and-recovery-projects-2026/"],
+    "verificationIssues": [{"field":"deadline","message":"İki kaynak 26 Ekim 2026 tarihinde aynı. TÜBİTAK duyurusu 14.00 CEST (17.00 TSİ), Eureka sayfası 17.00 CET (19.00 TSİ) yayımlıyor. Arşivde erken saat gösterildi. Aralık PRODİS tarihleri yeni uluslararası başvuru için geçerli değildir."}],
+    "verifiedFields": ["applicants","fundingAmount","duration","supportRate","application","notice","companyScale","fundingType","openDate","followUpStages"]
   },
   "kosgeb-yapay-zeka-kredi-2026": {
     "applicantGroups": ["Özel sektör"],

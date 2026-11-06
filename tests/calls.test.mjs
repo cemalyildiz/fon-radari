@@ -10,6 +10,26 @@ import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("Innowwide is a verified Turkish SME opportunity and closes at 16:00 Turkey time", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const id = "eureka-innowwide-5-2026";
+  const call = {...calls.find(c => c.id === id), ...reviews[id]};
+  assert.equal(verificationCoverage(call).complete, true);
+  assert.equal(matchesAudience(call, "Özel sektör"), true);
+  assert.deepEqual(call.companyScale, ["KOBİ"]);
+  assert.match(call.applicants, /1 Aralık 2024/);
+  assert.equal(realStatus(call, Date.parse("2026-12-01T15:59:59+03:00")), "open");
+  assert.equal(realStatus(call, Date.parse("2026-12-01T16:00:01+03:00")), "archived");
+});
+test("Eureka disaster call preserves the international time discrepancy and the separate PRODİS stage", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const id = "eureka-disaster-resilience-2026";
+  const call = {...calls.find(c => c.id === id), ...reviews[id]};
+  assert.deepEqual(verificationCoverage(call).pendingFields, ["deadline"]);
+  assert.match(call.verificationIssues[0].message, /17\.00 TSİ.*19\.00 TSİ/);
+  assert.match(call.followUpStages[0].schedule, /16 Aralık/);
+  assert.equal(realStatus(call, Date.parse("2026-11-06T12:00:00+03:00")), "archived");
+});
 test("Xecs and SMART classify direct Turkish applicants and preserve invited-only deadlines", async () => {
   const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   for (const [id, closing, followup] of [

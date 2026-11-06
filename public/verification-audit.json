@@ -129,6 +129,38 @@
       "complete": false
     },
     {
+      "id": "eureka-innowwide-5-2026",
+      "title": "Eureka Innowwide — KOBİ’ler için Uluslararası Pazar Fizibilitesi",
+      "source": "https://tubitak.gov.tr/tr/duyuru/yenilikci-kobiler-icin-avrupa-ortakligi-innowwide-5-cagrisi-acildi",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "tkdk-ipard-m7-2026",
       "title": "Çiftlik Faaliyetlerinin Çeşitlendirilmesi ve İş Geliştirme — İlanı ertelendi",
       "source": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-m7-ciftlik-faaliyetlerinin-cesitlendirilmesi-ve-is-gelistirme-tedbiri-cagri-ilani-tarihinde-degisiklik-yapilmasina-iliskin-duyuru-13179",
@@ -1884,6 +1916,7 @@
       "title": "Eureka Network Afetlerde Dirençlilik 2026",
       "source": "https://tubitak.gov.tr/sites/default/files/2026-06/Eureka_Network_Afetlerde_Direnclilik_Ulusal_Cagri_Metni-2026.pdf",
       "verifiedFields": [
+        "applicants",
         "fundingAmount",
         "duration",
         "supportRate",
@@ -1892,23 +1925,27 @@
         "companyScale",
         "fundingType",
         "openDate",
-        "deadline",
         "followUpStages"
       ],
       "verifiedCore": [
+        "applicants",
         "companyScale",
         "fundingAmount",
         "fundingType",
         "supportRate",
         "duration",
         "application",
-        "openDate",
-        "deadline"
+        "openDate"
       ],
       "pendingFields": [
-        "applicants"
+        "deadline"
       ],
-      "issues": [],
+      "issues": [
+        {
+          "field": "deadline",
+          "message": "İki kaynak 26 Ekim 2026 tarihinde aynı. TÜBİTAK duyurusu 14.00 CEST (17.00 TSİ), Eureka sayfası 17.00 CET (19.00 TSİ) yayımlıyor. Arşivde erken saat gösterildi. Aralık PRODİS tarihleri yeni uluslararası başvuru için geçerli değildir."
+        }
+      ],
       "complete": false
     },
     {
@@ -2329,6 +2366,6 @@
       "complete": true
     }
   ],
-  "total": 75,
-  "complete": 45
+  "total": 76,
+  "complete": 46
 }
