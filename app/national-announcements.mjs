@@ -30,5 +30,11 @@ export function isNationalFundingCandidate(title, url) {
   if (/^(?:www\.)?kosgeb\.gov\.tr$/.test(address.hostname) && !/^\/site\/tr\/genel\/(?:detay|duyurudetay)\/\d+\//i.test(path)) return false;
   if (/^(?:www\.)?dogaka\.gov\.tr$/.test(address.hostname) &&
       (!/^\/(?:tr\/)?duyuru\/[^/]+\/\d+\/?$/i.test(path) || /\b(?:personel|staj|ihale)\b/.test(name))) return false;
+  if (/^(?:www\.)?tkdk\.gov\.tr$/.test(address.hostname)) {
+    if (/^\/Dokuman\/ipard-iii-\d+-basvuru-cagri-ilani(?:-[a-z0-9]+)*-\d+$/i.test(path)) return true;
+    if (!/^\/Duyuru\/[a-z0-9-]+-\d+$/i.test(path) ||
+        !/\bipard iii\b/.test(hints) ||
+        /\b(?:desteklenmek uzere secilen|siralama kriteri puanlari|yatirim uygulama sureleri|belgelendirme egitimi|referans fiyat)\b/.test(hints)) return false;
+  }
   return true;
 }

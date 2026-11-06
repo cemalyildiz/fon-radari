@@ -3,6 +3,7 @@ import { createHash } from 'node:crypto';
 import { calls } from '../app/calls-data.ts';
 import { isNationalFundingCandidate } from '../app/national-announcements.mjs';
 import { calendarIndex, confirmCalendarDetail, extractCalendarIndex } from './tubitak-calendar.mjs';
+import { extractTkdkCallLinks } from './tkdk-calls.mjs';
 
 const path = 'public/national-calls.json';
 const previous = await readFile(path, 'utf8').then(JSON.parse).catch(() => ({ calls: [], sources: {} }));
@@ -14,6 +15,8 @@ const sources = [
   ['Ticaret Bakanlığı', 'https://ticaret.gov.tr/duyurular'],
   ['HIT-30', 'https://hit30.sanayi.gov.tr/cagrilar'],
   ['SSB', 'https://arge.ssb.gov.tr/'],
+  ['TKDK', 'https://www.tkdk.gov.tr/'],
+  ['TKDK çağrı ilanları', 'https://www.tkdk.gov.tr/ProjeIslemleri/CagriIlanArsiv'],
 ];
 const clean = value => value.replace(/<[^>]*>/g, ' ').replace(/&#(x[0-9a-f]+|\d+);/gi, (_, entity) => {
   const point = entity[0].toLowerCase() === 'x' ? parseInt(entity.slice(1), 16) : Number(entity);
@@ -57,13 +60,16 @@ for (const [institution, url] of sources) {
     const html = await response.text();
     if (html.length < 1000 || /captcha|access denied/i.test(html)) throw new Error('Kaynak okunamadı');
     let found = 0;
-    for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
+    const anchors = institution === 'TKDK çağrı ilanları' ? extractTkdkCallLinks(html) :
+      html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi);
+    for (const match of anchors) {
       const title = clean(match[2]);
       if (title.length < 25) continue;
       let link;
       try { link = new URL(match[1], url); } catch { continue; }
       const source = new URL(url);
       if (institution === 'KOSGEB' && link.hostname === 'www.kosgeb.gov.tr') link.hostname = source.hostname;
+      if (institution.startsWith('TKDK') && link.hostname === 'tkdk.gov.tr') link.hostname = source.hostname;
       if (link.origin !== source.origin) continue;
       if (institution === 'DOĞAKA' && link.pathname.startsWith('/duyuru/')) link.pathname = '/tr' + link.pathname;
       link.hash = '';
@@ -72,7 +78,8 @@ for (const [institution, url] of sources) {
       found++;
       if (reviewed.has(sourceUrl)) continue;
       const old = records.get(sourceUrl);
-      records.set(sourceUrl, { ...old, id: old?.id ?? `national-auto-${createHash('sha256').update(sourceUrl).digest('hex').slice(0,16)}`, scope: 'national', code: 'Resmî duyuru', title, institution, institutionShort: institution, status: 'unknown', openDate: '', recordType: 'program', verification: 'metadata', sourceCheckedAt: now, verifiedAt: '', applicants: 'Resmî çağrı metninden doğrulanmalı', companyScale: [], fundingAmount: 'Resmî çağrı metninden doğrulanmalı', fundingType: 'Doğrulanmalı', summary: 'Resmî kurum sayfasında otomatik keşfedilen duyuru. Başvuru takvimi, uygunluk ve destek koşulları kaynak metinden kontrol edilmelidir.', objectives: [], eligibleCosts: [], application: 'Kaynak bağlantısından güncel çağrı metnini inceleyin.', sourceUrl, sourceLabel: 'Resmî kurum duyurusu', tags: ['Otomatik keşif'], notice: 'Duyurunun bulunması başvurunun açık olduğu anlamına gelmez.' });
+      const issuer = institution.startsWith('TKDK') ? 'TKDK' : institution;
+      records.set(sourceUrl, { ...old, id: old?.id ?? `national-auto-${createHash('sha256').update(sourceUrl).digest('hex').slice(0,16)}`, scope: 'national', code: 'Resmî duyuru', title, institution: issuer, institutionShort: issuer, status: 'unknown', openDate: '', recordType: 'program', verification: 'metadata', sourceCheckedAt: now, verifiedAt: '', applicants: 'Resmî çağrı metninden doğrulanmalı', companyScale: [], fundingAmount: 'Resmî çağrı metninden doğrulanmalı', fundingType: 'Doğrulanmalı', summary: 'Resmî kurum sayfasında otomatik keşfedilen duyuru. Başvuru takvimi, uygunluk ve destek koşulları kaynak metinden kontrol edilmelidir.', objectives: [], eligibleCosts: [], application: 'Kaynak bağlantısından güncel çağrı metnini inceleyin.', sourceUrl, sourceLabel: 'Resmî kurum duyurusu', tags: ['Otomatik keşif'], notice: 'Duyurunun bulunması başvurunun açık olduğu anlamına gelmez.' });
     }
     if (!found) throw new Error('Uygun duyuru bağlantısı bulunamadı; sayfa yapısı kontrol edilmeli');
     state[institution] = { url, checkedAt: now, attemptedAt: now, ok: true, found };

@@ -129,6 +129,92 @@
       "complete": false
     },
     {
+      "id": "tkdk-ipard-m7-2026",
+      "title": "Çiftlik Faaliyetlerinin Çeşitlendirilmesi ve İş Geliştirme — İlanı ertelendi",
+      "source": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-m7-ciftlik-faaliyetlerinin-cesitlendirilmesi-ve-is-gelistirme-tedbiri-cagri-ilani-tarihinde-degisiklik-yapilmasina-iliskin-duyuru-13179",
+      "verifiedFields": [
+        "recordType",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "application",
+        "recordType"
+      ],
+      "pendingFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
+      "id": "tkdk-ipard-12-m1-2026",
+      "title": "Tarımsal İşletmelerin Fiziki Varlıklarına Yönelik Yatırımlar",
+      "source": "https://www.tkdk.gov.tr/Dokuman/ipard-iii-12-basvuru-cagri-ilani-1612",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "tkdk-ipard-11-m3-2026",
+      "title": "Tarım ve Balıkçılık Ürünlerinin İşlenmesi ve Pazarlanması Yatırımları",
+      "source": "https://www.tkdk.gov.tr/Dokuman/ipard-iii-11-basvuru-cagri-ilani-1605",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "tubitak-aris-2508-2026",
       "title": "TÜBİTAK–Slovenya ARIS — İkili Araştırma İş Birliği",
       "source": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026_0.pdf",
@@ -2243,6 +2329,6 @@
       "complete": true
     }
   ],
-  "total": 72,
-  "complete": 43
+  "total": 75,
+  "complete": 45
 }

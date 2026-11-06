@@ -1,4 +1,18 @@
 {
+  "tkdk-ipard-m7-2026": {
+    "evidenceUrl": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-m7-ciftlik-faaliyetlerinin-cesitlendirilmesi-ve-is-gelistirme-tedbiri-cagri-ilani-tarihinde-degisiklik-yapilmasina-iliskin-duyuru-13179",
+    "verifiedFields": ["recordType", "application", "notice"]
+  },
+  "tkdk-ipard-12-m1-2026": {
+    "evidenceUrl": "https://www.tkdk.gov.tr/Dokuman/ipard-iii-12-basvuru-cagri-ilani-1612",
+    "additionalEvidence": ["https://www.tkdk.gov.tr/Content/File/BasvuruFiles/BasvuruPaketiHazirlamaDokumanlari/BasvuruCagriRehberi/IPARDIII/12.0/101.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application"]
+  },
+  "tkdk-ipard-11-m3-2026": {
+    "evidenceUrl": "https://www.tkdk.gov.tr/Dokuman/ipard-iii-11-basvuru-cagri-ilani-1605",
+    "additionalEvidence": ["https://www.tkdk.gov.tr/Content/File/BasvuruFiles/BasvuruPaketiHazirlamaDokumanlari/BasvuruCagriRehberi/IPARDIII/11.0/103.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application"]
+  },
   "tubitak-aris-2508-2026": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma"],
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026_0.pdf",

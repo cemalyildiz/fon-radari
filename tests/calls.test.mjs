@@ -7,6 +7,7 @@ import { parseResult, reconcile, collect, migrateLegacy } from "../scripts/updat
 import { verificationCoverage } from "../app/verification-utils.ts";
 import { matchesAudience } from "../app/audience-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
+import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
 test("Xecs and SMART classify direct Turkish applicants and preserve invited-only deadlines", async () => {
@@ -146,6 +147,34 @@ test("national discovery keeps application and extension notices, not result, tr
   assert.equal(isNationalFundingCandidate("Kapasite Geliştirme Destek Programı", "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9200/program"), false);
   assert.equal(isNationalFundingCandidate("1832 Sanayide Yeşil Dönüşüm Çağrısı Süre Uzatımı", url), true);
   assert.equal(isNationalFundingCandidate("Proje çağrısı", "not a URL"), false);
+});
+test("TKDK discovery reads the latest IPARD III archive entry and excludes decisions on old applications", () => {
+  const origin = "https://www.tkdk.gov.tr";
+  const html = `
+    <h4>IPARD III 12.Başvuru Çağrı İlanı</h4><a target="_blank" href="/Dokuman/ipard-iii-12-basvuru-cagri-ilani-1612">İndir</a>
+    <h4>IPARD III 13. Başvuru Çağrı İlanı</h4><a href="/Dokuman/ipard-iii-13-basvuru-cagri-ilani-1620">İndir</a>
+    <h4>IPARD II 15. Başvuru Çağrı İlanı</h4><a href="/Dokuman/ipard-ii-15-basvuru-cagri-ilani-1500">İndir</a>`;
+  const links = extractTkdkCallLinks(html);
+  assert.equal(links.length, 1);
+  assert.match(links[0][2], /III 13/);
+  assert.equal(isNationalFundingCandidate(links[0][2], origin + links[0][1]), true);
+  assert.equal(isNationalFundingCandidate("IPARD III M7 Çağrı İlanı Tarihinde Değişiklik", origin + "/Duyuru/ipard-iii-m7-cagri-ilani-13179"), true);
+  assert.equal(isNationalFundingCandidate("IPARD III 12. Çağrı Dönemi Başvurularının Sıralama Kriteri Puanları Açıklanmıştır", origin + "/Duyuru/ipard-iii-12-cagri-puanlari-13175"), false);
+});
+test("TKDK M7 has no confirmed application calendar; M1 and M3 close before their document delivery stage", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const lookup = id => ({...calls.find(call => call.id === id), ...reviews[id]});
+  const pending = lookup("tkdk-ipard-m7-2026");
+  assert.equal(realStatus(pending, Date.parse("2026-11-06")), "unknown");
+  assert.equal(pending.deadline, undefined);
+  for (const [id, cutoff] of [["tkdk-ipard-12-m1-2026", "2026-08-31T18:00:00+03:00"], ["tkdk-ipard-11-m3-2026", "2026-07-13T18:00:00+03:00"]]) {
+    const record = lookup(id);
+    assert.equal(record.deadline, cutoff);
+    assert.equal(realStatus(record, Date.parse(cutoff) + 1), "archived");
+    assert.equal(matchesAudience(record, "Özel sektör"), true);
+    assert.match(record.followUpStages[0].title, /dosya teslimi/);
+    assert.equal(verificationCoverage(record).complete, true);
+  }
 });
 test("an unconfirmed opening does not make a call open or prevent archive after verified closing", async () => {
   const data = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));

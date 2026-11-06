@@ -1,6 +1,6 @@
 # Fon Radarı
 
-Ulusal ve uluslararası sanayi çağrılarını tarih, destek türü, başvuru koşulları, tema ve sektör bilgileriyle sunan web sitesi. Kapsamda Sanayi ve Teknoloji Bakanlığı, Ticaret Bakanlığı, SSB, TÜBİTAK, KOSGEB, EUREKA, Eurostars, Horizon Europe, LIFE ve EIC fırsatları bulunur.
+Ulusal ve uluslararası sanayi çağrılarını tarih, destek türü, başvuru koşulları, tema ve sektör bilgileriyle sunan web sitesi. Kapsamda Sanayi ve Teknoloji Bakanlığı, Ticaret Bakanlığı, SSB, TÜBİTAK, KOSGEB, TKDK (IPARD), EUREKA, Eurostars, Horizon Europe, LIFE ve EIC fırsatları bulunur.
 
 ## Yerel geliştirme
 
