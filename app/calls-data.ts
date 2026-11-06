@@ -214,6 +214,7 @@ const horizonDecemberEnergy = [
 });
 
 const horizonIndustryProgramme = "https://research-and-innovation.ec.europa.eu/document/download/87a8c19b-2643-49ec-8d07-37781ceb516e_en";
+const rawMaterialsCountryRules = "Katılım, AB üyesi ve asosiye ülkeler, OECD ülkeleri, Afrika Birliği, MERCOSUR, CARIFORUM ve And Topluluğu üyeleri ile AB’nin ilgili hammadde ortaklığı veya hammadde iş birliği hükümleri içeren anlaşması bulunan ülkelerle sınırlı. Uygun olmayan ülkede yerleşik kuruluş içeren teklifler uygun değildir. Uygun ülkede kurulmuş olsa bile uygun olmayan bir ülke veya o ülkedeki bir kuruluş tarafından doğrudan ya da dolaylı kontrol edilen tüzel kişiler de katılamaz. Katılım izni tek başına AB finansmanı hakkı vermez.";
 const horizonCircularIndustry = [
   {
     id: "horizon-remanufacturing-2027", topic: "03", page: 52, title: "Söküm ve Yeniden İmalat için Fabrika Otomasyonu",
@@ -242,22 +243,71 @@ const horizonCircularIndustry = [
     notice: "Ana proje AB katkısının %10–25’i üçüncü taraf KOBİ hibelerine ayrılmalı; KOBİ başına en fazla 150.000 €. Bu, şu anda açık ayrı bir KOBİ alt çağrısı değildir. Büyük işletmeler ana konsorsiyuma katılabilir ama bu alt hibenin alıcısı olamaz. Mevcut teknolojileri yalnızca birleştirmek kapsam dışı; malzeme tedarikçileri, markalar ve üretimi ölçekleyebilecek sanayi ortakları etkin rol almalı.",
     tags: ["Tekstil", "Döngüsel Ekonomi", "Tekstilden Tekstile Geri Dönüşüm", "Alt Hibe"], sectors: ["Tekstil", "İmalat"],
   },
+  {
+    id: "horizon-critical-material-substitution-2027", topic: "22", page: 41, title: "Kritik Hammadde Bağımlılığını Azaltan İleri Malzemeler ve Prosesler",
+    budget: "36", contribution: "6–7,5", projects: 6, action: "IA", actualCosts: true,
+    eligibility: rawMaterialsCountryRules,
+    summary: "Kritik ve stratejik hammaddelerin kısmen veya tamamen ikamesi ya da üretimde daha verimli kullanılması. Başlangıç THS 5, hedef THS 7.",
+    objectives: ["Enerji, ulaşım, inşaat, elektronik, tıbbi cihaz veya kimya gibi alanlarda alternatif malzeme ya da üretim prosesi geliştirmek", "İkame engellerini, uygulama örneğini ve pazar potansiyelini göstermek; güvenli ve sürdürülebilir tasarımı (SSbD) geliştirme boyunca uygulamak"],
+    eligibleCosts: ["İleri malzeme tasarımı ve testleri, proses geliştirme ve mevcut üretime entegrasyon için Genel Ek G’ye göre uygun proje maliyetleri."],
+    notice: "Malzeme ikamesi, hammadde tüketimini azaltan üretim prosesi veya malzeme ile prosesin birlikte geliştirilmesi ele alınabilir. İlgili durumlarda AB yenilik ve ikame merkezleriyle iş birliği bekleniyor.",
+    tags: ["Kritik Hammadde", "Malzeme İkamesi", "SSbD", "Processes4Planet"], sectors: ["İmalat", "Enerji", "İnşaat ve Yapı", "Kimya"],
+  },
+  {
+    id: "horizon-raw-material-processing-2027", topic: "16", page: 101, title: "Hammaddelerin Yenilikçi İşlenmesi ve Rafine Edilmesi",
+    budget: "49", contribution: "10–12,5", projects: 4, action: "IA", actualCosts: true,
+    eligibility: rawMaterialsCountryRules,
+    summary: "Düşük tenörlü veya karmaşık cevherlerden ve maden çıkarma atıklarından mineral ve metal kazanımını artıran işleme teknolojileri. Başlangıç THS 5, hedef THS 7.",
+    objectives: ["İşleme ve rafinasyon teknolojilerini AB’de bulunan bir pilot tesiste entegre edip doğrulamak", "Su ve enerji tüketimini, atığı ve kirliliği azaltmak; elde edilen malzemeyi kullanacak sanayi ortaklarıyla ölçeklendirme yolunu göstermek"],
+    eligibleCosts: ["Pilot ölçekli işleme, rafinasyon, proses kontrolü, test ve doğrulama için Genel Ek G’ye göre uygun proje maliyetleri."],
+    notice: "Türkiye’den uygun şirketler konsorsiyuma katılabilir; pilot tesis AB’de olmalı. Kullanım ömrünü tamamlamış ürünlerin geri dönüşümü kapsam dışı. İlgili projelerle ortak çalışmaya iş paketi veya görev ve kaynak ayrılmalı.",
+    tags: ["Kritik Hammadde", "Mineral İşleme", "Maden Atığı", "Kaynak Verimliliği"], sectors: ["Madencilik", "İmalat"],
+  },
+  {
+    id: "horizon-key-products-manufacturing-2027", topic: "02", page: 50, title: "Kilit Ürünler için İleri İmalat Teknolojileri",
+    budget: "36", contribution: "6–8", projects: 6, action: "IA", actualCosts: true,
+    eligibility: "Çin’in veya Çin’de yerleşik bir tüzel kişinin doğrudan ya da dolaylı kontrolündeki kuruluşlar, uygun ülkede kurulmuş olsalar bile katılamaz.",
+    summary: "Kilit bileşen ve ürünleri daha az ithal veya kritik hammaddeyle üretebilen makineler ve ileri imalat teknolojileri. Başlangıç THS 5, hedef THS 7.",
+    objectives: ["Eklemeli veya hibrit imalat, fotonik, ileri birleştirme, kompozit üretimi, yüzey işlemleri veya hat içi test gibi yöntemlerle imalat kabiliyetini geliştirmek", "Uygun olduğunda ikincil hammaddeler, biyobazlı girdiler veya yeniden değerlendirilen bileşenlerle kaynak verimliliğini artırmak"],
+    eligibleCosts: ["İmalat teknolojisi ve makine geliştirme, süreç uyarlaması, test ve doğrulama için Genel Ek G’ye göre uygun proje maliyetleri."],
+    notice: "Odak ileri malzemenin kendisini geliştirmek değil, imalat teknolojisidir. Otomotiv uygulamaları değerlendirilebilir; batarya üretimi kapsam dışı. Japonya veya Tayvan’la iş birliği teşvik ediliyor, zorunlu değil.",
+    tags: ["İleri İmalat", "Kritik Hammadde", "Made in Europe"], sectors: ["İmalat", "Otomotiv ve Mobilite"],
+  },
+  {
+    id: "horizon-fast-track-industry-2027", topic: "61", page: 74, title: "Sanayi Teknolojilerinde Çığır Açan Ar-Ge — Hızlı Süreç",
+    budget: "20", contribution: "2,5", projects: 8, action: "RIA", actualCosts: true, fastTrack: true,
+    summary: "THS 4’e kadar erken aşama çığır açıcı sanayi teknolojileri. Made in Europe, Processes4Planet, Clean Steel, IAM4EU ve Textiles for the Future ortaklıklarının araştırma gündemleri kapsamda.",
+    objectives: ["En az bir ilgili stratejik araştırma ve yenilik hedefiyle bağlantıyı açıklamak", "Erken aşama teknoloji sonucunun sanayide beklenen etkiye nasıl dönüşeceğini göstermek"],
+    eligibleCosts: ["Erken aşama Ar-Ge, kavram kanıtı ve laboratuvar doğrulaması için Genel Ek G’ye göre uygun proje maliyetleri."],
+    notice: "Süreç hızlandırılmıştır; ilan edilen gösterge takviminde sonuç bildirimi son başvurudan en çok 4 ay, hibe sözleşmesi imzası en çok 6 ay sonrasıdır. Bunlar proje süresi değildir.",
+    tags: ["Hızlı Ar-Ge", "Sanayi Teknolojileri", "FTRI"], sectors: ["İmalat", "Tekstil", "Kimya"],
+  },
+  {
+    id: "horizon-fast-track-chemicals-2027", topic: "62", page: 75, title: "Kimya Sanayisinde Karbonsuzlaşma ve Güvenli İkame — Hızlı Ar-Ge",
+    budget: "13,6", contribution: "2,5", projects: 6, action: "RIA", actualCosts: true, fastTrack: true,
+    summary: "Kimya Sanayisi Eylem Planı kapsamında THS 4’ten başlayan yenilikler: enerji yoğun sanayide karbonsuzlaşma, döngüsellik, yeni üretim teknolojileri veya endişe yaratan maddelere alternatifler.",
+    objectives: ["Yeni üretim teknolojisi, kimyasal madde veya ileri malzemeyle sanayide benimsenebilecek bir çözüm geliştirmek", "Uygun durumlarda güvenli ve sürdürülebilir tasarım (SSbD) çerçevesini ele almak"],
+    eligibleCosts: ["Karbonsuzlaşma prosesi veya ikame çözümünün araştırılması ve doğrulanması için Genel Ek G’ye göre uygun proje maliyetleri."],
+    notice: "Başlığındaki “Innovation” ifadesine rağmen destek türü Araştırma ve Yenilik Eylemi (RIA). Gösterge takviminde sonuç en çok 4 ay, sözleşme imzası en çok 6 ay sonradır; bunlar proje süresi değildir.",
+    tags: ["Kimya Sanayisi", "Karbonsuzlaşma", "Madde İkamesi", "FTRI"], sectors: ["Kimya", "İmalat"],
+  },
 ].map((topic): FundingCall => {
   const code = `HORIZON-CL4-2027-01-MAT-PROD-${topic.topic}`;
   return {
     id: topic.id, scope: "international", code, reviewedPortalIdentifier: code, title: `Ufuk Avrupa — ${topic.title}`,
     institution: "Avrupa Komisyonu · Ufuk Avrupa Küme 4 / HaDEA", institutionShort: "Horizon Europe",
     status: "open", openDate: "2026-10-13", openingDateOnly: true, deadline: "2027-02-02T19:00:00+03:00",
-    calendarSourceUrl: "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-industry-leadership-materials-and-production-europe_en",
-    applicants: "Türkiye dâhil Ufuk Avrupa’ya asosiye ülkelerde ve AB üyesi ülkelerde yerleşik uygun KOBİ’ler, büyük firmalar ve diğer tüzel kişiler. En az üç farklı ülkeden üç bağımsız yararlanıcı: en az biri AB üyesi ülkede, diğer ikisi AB üyesi veya asosiye ülkelerde yerleşik olmalı.",
+    calendarSourceUrl: topic.fastTrack ? "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-industry-leadership-materials-and-production-europe-horizon-cl4-2027-06_en" : "https://hadea.ec.europa.eu/calls-proposals/horizon-europe-industry-leadership-materials-and-production-europe_en",
+    applicants: ["Türkiye dâhil Ufuk Avrupa’ya asosiye ülkelerde ve AB üyesi ülkelerde yerleşik uygun KOBİ’ler, büyük firmalar ve diğer tüzel kişiler. Asgari konsorsiyum üç farklı ülkeden üç bağımsız yararlanıcıdan oluşur: en az biri AB üyesi ülkede, diğer ikisi AB üyesi veya asosiye ülkelerde yerleşik olmalı.", topic.fastTrack ? "Konsorsiyumda en fazla 6 bağımsız ve uygun katılımcı olabilir." : topic.eligibility].filter(Boolean).join(" "),
     applicantGroups: ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu", "STK"],
     companyScale: ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
-    fundingAmount: `Gösterge konu bütçesi ${topic.budget} milyon €. Yaklaşık ${topic.projects} proje için proje başına ${topic.contribution} milyon € AB katkısı öngörülüyor; aralık kesin alt veya üst sınır değildir.`,
-    fundingType: `Götürü hibe (${topic.action})`,
-    supportRate: topic.action === "RIA" ? "Uygun maliyetlerin %100’üne kadar (RIA); oran götürü bütçenin hesabında uygulanır." : "Kâr amaçlı kuruluşlar için en fazla %70, uygun kâr amacı gütmeyen tüzel kişiler için %100’e kadar (IA); oran götürü bütçenin hesabında uygulanır.",
+    fundingAmount: topic.fastTrack ? `Gösterge konu bütçesi ${topic.budget} milyon €. Proje başına AB katkısı en fazla ${topic.contribution} milyon €; yaklaşık ${topic.projects} proje öngörülüyor.`
+      : `Gösterge konu bütçesi ${topic.budget} milyon €. Yaklaşık ${topic.projects} proje için proje başına ${topic.contribution} milyon € AB katkısı öngörülüyor; aralık kesin alt veya üst sınır değildir.`,
+    fundingType: `${topic.actualCosts ? "Uygun maliyet esaslı hibe" : "Götürü hibe"} (${topic.action})`,
+    supportRate: (topic.action === "RIA" ? "Uygun maliyetlerin %100’üne kadar (RIA)." : "Kâr amaçlı kuruluşlar için en fazla %70, uygun kâr amacı gütmeyen tüzel kişiler için %100’e kadar (IA).") + (topic.actualCosts ? "" : " Oran götürü bütçenin hesabında uygulanır."),
     duration: "Konu metninde sabit süre yok; süre hibe sözleşmesinde ay olarak belirlenir (Genel Ek G).",
     summary: topic.summary, objectives: topic.objectives, eligibleCosts: topic.eligibleCosts, notice: topic.notice,
-    application: "Koordinatör AB Funding & Tenders Portal’da tek aşamalı teklif sunar. İş gerekçesi ve sonuçlardan yararlanma stratejisi için Bölüm B sayfa sınırı genel kurala göre 3 sayfa artırılmıştır. Fiilî açılış 13 Ekim 2026; kapanış 2 Şubat 2027, 17.00 Brüksel / 19.00 Türkiye saati.",
+    application: `Koordinatör AB Funding & Tenders Portal’da tek aşamalı teklif sunar. ${topic.fastTrack ? "Teklif hızlı Ar-Ge ve yenilik usulüyle (FTRI) değerlendirilir." : "İş gerekçesi ve sonuçlardan yararlanma stratejisi için Bölüm B sayfa sınırı genel kurala göre 3 sayfa artırılmıştır."} Fiilî açılış 13 Ekim 2026; kapanış 2 Şubat 2027, 17.00 Brüksel / 19.00 Türkiye saati.`,
     applicationLinks: [{label:"Güncel çalışma programı · konu koşulları", url:`${horizonIndustryProgramme}#page=${topic.page}`}],
     sourceUrl: `https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/${code}`,
     sourceLabel: "Avrupa Komisyonu · resmî konu ve başvuru sayfası", verifiedAt: "2026-11-06",

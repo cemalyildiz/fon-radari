@@ -11,6 +11,43 @@ import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/e
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("industrial fast-track RIA calls have a firm funding cap and six-participant limit", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  for (const id of ["horizon-fast-track-industry-2027", "horizon-fast-track-chemicals-2027"]) {
+    const c = {...calls.find(c => c.id === id), ...reviews[id]};
+    assert.equal(verificationCoverage(c).complete, true);
+    assert.equal(matchesAudience(c, "Özel sektör"), true);
+    assert.equal(c.deadline, "2027-02-02T19:00:00+03:00");
+    assert.match(c.calendarSourceUrl, /horizon-cl4-2027-06/);
+    assert.match(c.applicants, /en fazla 6 bağımsız/);
+    assert.match(c.fundingAmount, /en fazla 2,5 milyon €/);
+    assert.equal(c.fundingType, "Uygun maliyet esaslı hibe (RIA)");
+    assert.match(c.supportRate, /%100/);
+    assert.doesNotMatch(c.application, /3 sayfa/);
+  }
+});
+test("industrial material topics distinguish country/control eligibility, EU pilot location and actual costs", async () => {
+  const ids = ["horizon-critical-material-substitution-2027", "horizon-raw-material-processing-2027", "horizon-key-products-manufacturing-2027"];
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const [substitute, process, manufacturing] = ids.map(id => ({...calls.find(c => c.id === id), ...reviews[id]}));
+  for (const call of [substitute, process, manufacturing]) {
+    const now = Date.parse("2026-11-06T18:00:00Z");
+    const feed = {calls:[{identifier:call.code, sourceKind:"topic", sourceCheckedAt:"2026-11-06T17:00:00Z", startDate:"2026-10-13T00:00:00.000Z", deadline:"2027-02-02T00:00:00.000Z"}]};
+    const rows = mergeCalls([call], feed, now);
+    assert.equal(rows.length, 1);
+    assert.equal(rows[0].status, "open");
+    assert.equal(verificationCoverage(rows[0]).complete, true);
+    assert.equal(matchesAudience(rows[0], "Özel sektör"), true);
+    assert.equal(rows[0].deadline, "2027-02-02T19:00:00+03:00");
+    assert.equal(call.fundingType, "Uygun maliyet esaslı hibe (IA)");
+    assert.match(call.supportRate, /en fazla %70/);
+  }
+  assert.match(substitute.applicants, /OECD.*doğrudan ya da dolaylı kontrol/);
+  assert.match(substitute.applicants, /Katılım izni tek başına AB finansmanı hakkı vermez/);
+  assert.match(process.notice, /pilot tesis AB’de olmalı/);
+  assert.match(manufacturing.applicants, /Çin’in.*doğrudan ya da dolaylı kontrol/);
+  assert.match(manufacturing.notice, /batarya üretimi kapsam dışı/);
+});
 test("process heat uses the corrected IA rate and tracks stage dates separately", async () => {
   const id = "horizon-industrial-renewable-energy-2027";
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
