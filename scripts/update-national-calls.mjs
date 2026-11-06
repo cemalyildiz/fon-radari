@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { calls } from '../app/calls-data.ts';
-import { isNationalFundingCandidate } from '../app/national-announcements.mjs';
+import { enverAnnouncementLinks, isNationalFundingCandidate } from '../app/national-announcements.mjs';
 import { calendarIndex, confirmCalendarDetail, extractCalendarIndex } from './tubitak-calendar.mjs';
 import { extractTkdkCallLinks } from './tkdk-calls.mjs';
 
@@ -18,7 +18,7 @@ const sources = [
   ['TKDK', 'https://www.tkdk.gov.tr/'],
   ['TKDK çağrı ilanları', 'https://www.tkdk.gov.tr/ProjeIslemleri/CagriIlanArsiv'],
   ['Karacadağ Kalkınma Ajansı', 'https://www.karacadag.gov.tr/duyurular/1/duyurular/'],
-  ['ETKB · Enerji Verimliliği', 'https://enerjiverimliligi.enerji.gov.tr/'],
+  ['ETKB · Enerji Verimliliği', 'https://enerjiverimliligi.enerji.gov.tr/Home/GetirDuyurularGuncel'],
 ];
 const clean = value => value.replace(/<[^>]*>/g, ' ').replace(/&#(x[0-9a-f]+|\d+);/gi, (_, entity) => {
   const point = entity[0].toLowerCase() === 'x' ? parseInt(entity.slice(1), 16) : Number(entity);
@@ -59,10 +59,12 @@ for (const [institution, url] of sources) {
   try {
     const response = await fetch(url, { signal: AbortSignal.timeout(45000), headers: { 'User-Agent': 'FonRadari/1.0 official funding announcement monitor' } });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const html = await response.text();
-    if (html.length < 1000 || /captcha|access denied/i.test(html)) throw new Error('Kaynak okunamadı');
+    const isEnver = institution === 'ETKB · Enerji Verimliliği';
+    const html = isEnver ? '' : await response.text();
+    if (!isEnver && (html.length < 1000 || /captcha|access denied/i.test(html))) throw new Error('Kaynak okunamadı');
     let found = 0;
-    const anchors = institution === 'TKDK çağrı ilanları' ? extractTkdkCallLinks(html) :
+    const anchors = isEnver ? enverAnnouncementLinks(await response.json()) :
+      institution === 'TKDK çağrı ilanları' ? extractTkdkCallLinks(html) :
       html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi);
     for (const match of anchors) {
       const title = clean(match[2]);
@@ -77,6 +79,7 @@ for (const [institution, url] of sources) {
       link.hash = '';
       const sourceUrl = link.href;
       if (!isNationalFundingCandidate(title, sourceUrl)) continue;
+      if (institution === 'Karacadağ Kalkınma Ajansı' && found >= 25) break;
       found++;
       if (reviewed.has(sourceUrl)) continue;
       const old = records.get(sourceUrl);

@@ -32,7 +32,7 @@ export function isNationalFundingCandidate(title, url) {
       (!/^\/(?:tr\/)?duyuru\/[^/]+\/\d+\/?$/i.test(path) || /\b(?:personel|staj|ihale)\b/.test(name))) return false;
   if (/^(?:www\.)?karacadag\.gov\.tr$/.test(address.hostname) &&
       (!/^\/duyuru\/\d+\/[a-z0-9-]+\/?$/i.test(path) ||
-        /\b(?:sonuclar\w*|ihale|personel|staj)\b/.test(name))) return false;
+        /\b(?:sonuclar\w*|ihale|personel|staj|proje hazirlama egitim\w*)\b/.test(name))) return false;
   if (address.hostname === "enerjiverimliligi.enerji.gov.tr" &&
       (!/^\/Home\/DuyuruDetay$/i.test(path) || !/^\d+$/.test(address.searchParams.get("id") ?? "") ||
         !/\b(?:vap|eka|eps|verimlilik artirici proje|enerji ve karbon azaltim|enerji performans sozlesme\w*)\b/.test(name) ||
@@ -44,4 +44,10 @@ export function isNationalFundingCandidate(title, url) {
         /\b(?:desteklenmek uzere secilen|siralama kriteri puanlari|yatirim uygulama sureleri|belgelendirme egitimi|referans fiyat)\b/.test(hints)) return false;
   }
   return true;
+}
+
+export function enverAnnouncementLinks(data) {
+  if (!Array.isArray(data)) throw new Error("Enerji Bakanlığı duyuru listesi okunamadı");
+  return data.flatMap(row => /^\d+$/.test(String(row?.id)) && typeof row?.duyuruBaslik === "string"
+    ? [[null, `/Home/DuyuruDetay?id=${row.id}`, row.duyuruBaslik]] : []);
 }

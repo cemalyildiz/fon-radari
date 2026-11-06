@@ -153,7 +153,7 @@ export const calls: FundingCall[] = [
     eligibleCosts: ["Uygun yeni ekipman ve ilgili yatırım giderleri", "Projeye dahil enerji izleme sistemi"],
     application: "Projeyi yetkili enerji verimliliği danışmanlık şirketine veya etüt-proje sertifikalı mühendise hazırlatıp, Bakanlığın güncel formuyla EVDES üzerinden sunun. Kesin dönem ve başvuru kabulü EVDES’ten teyit edilmeli.",
     applicationLinks: [{label:"EVDES başvuru sistemi",url:"https://evdes.enerji.gov.tr/"}],
-    sourceUrl: "https://duyuru.enerji.gov.tr/duyuru-detay?id=30609", sourceLabel: "ETKB · 12 Mart 2026 değişikliği",
+    sourceUrl: "https://enerjiverimliligi.enerji.gov.tr/Home/DuyuruDetay?id=1114", sourceLabel: "ETKB · 12 Mart 2026 değişikliği",
     verifiedAt: "2026-11-06", tags: ["VAP", "Enerji Verimliliği", "Yeşil Dönüşüm"], themes: ["Enerji Verimliliği", "Yeşil Dönüşüm"], sectors: ["Enerji", "Sektörler Arası"],
     notice: "Başlamış işler, ikinci el ekipman, yeni tesis ve yenilenebilir kaynakla elektrik üretimine yönelik projeler kapsam dışıdır. Son denetimden bir yıl sonra gerçekleşen değerleri içeren rapor Bakanlığa sunulur. 2026 hibe tavanı güncel Bakanlık tablosundan alınmıştır; 15 milyon TL, eski baz tutarla karıştırılmamalıdır.",
   },
