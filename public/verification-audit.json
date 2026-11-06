@@ -129,6 +129,38 @@
       "complete": false
     },
     {
+      "id": "horizon-industrial-solar-heat-2027",
+      "title": "Ufuk Avrupa — Sanayi Prosesleri için Yoğunlaştırılmış Güneş Isısı",
+      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [
+        "duration"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
       "id": "etkb-eka-2026",
       "title": "Enerji ve Karbon Azaltım Desteği — 2026 Dönemi",
       "source": "https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//Enerji_ve_Karbon_Azaltim_%28EKA%29_Destek_Programi_hakkinda_Uygulama_Usul_ve_Esaslari_202606291644.pdf",
@@ -2501,6 +2533,6 @@
       "complete": true
     }
   ],
-  "total": 80,
+  "total": 81,
   "complete": 49
 }

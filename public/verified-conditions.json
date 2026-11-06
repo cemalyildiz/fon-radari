@@ -1,4 +1,9 @@
 {
+  "horizon-industrial-solar-heat-2027": {
+    "evidenceUrl": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
+    "additionalEvidence": ["https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-15-general-annexes_horizon-2026-2027_en.pdf", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "etkb-eka-2026": {
     "evidenceUrl": "https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//Enerji_ve_Karbon_Azaltim_%28EKA%29_Destek_Programi_hakkinda_Uygulama_Usul_ve_Esaslari_202606291644.pdf",
     "additionalEvidence": ["https://enerjiverimliligi.enerji.gov.tr/Home/DuyuruDetay?id=1125", "https://duyuru.enerji.gov.tr/duyuru-detay?id=30623", "https://enerji.gov.tr/Media/Dizin/BHIM/tr/Duyurular//EKA_Hesaplama_Yontemi_202606291644.docx"],

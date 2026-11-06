@@ -24,6 +24,14 @@ test("EKA archive and EPS programme replace their discovery cards without invent
   assert.equal(matchesAudience(eps, "Kamu kurum / kuruluşu"), false);
   assert.deepEqual(unreviewedAnnouncements(records, records.map(c=>({...c, id:`national-auto-${c.id}`}))), []);
 });
+test("industrial solar heat keeps firm eligibility and current work programme restrictions", () => {
+  const call = calls.find(c=>c.id === "horizon-industrial-solar-heat-2027");
+  assert.equal(realStatus(call, Date.parse("2026-11-06")), "upcoming");
+  assert.equal(matchesAudience(call, "Özel sektör"), true);
+  assert.match(call.applicants, /Çin.*doğrudan ya da dolaylı kontrol/);
+  assert.match(call.duration, /en az 6 ay/);
+  assert.equal(call.deadline, "2027-03-31");
+});
 test("Karacadağ technical assistance is non-cash; VAP rates do not imply a verified open window", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const lookup = id => ({...calls.find(c => c.id === id), ...reviews[id]});
