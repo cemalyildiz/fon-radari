@@ -9,6 +9,19 @@ import { matchesAudience } from "../app/audience-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("DUT and SBEP keep the organisers' closing times instead of conflicting portal copies", async () => {
+  const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const examples = [["dut-2026", "2026-11-17T15:00:00+03:00"], ["sbep-2026", "2026-11-16T17:00:00+03:00"]];
+  for (const [id, deadline] of examples) {
+    const call = {...calls.find(c => c.id === id), ...verified[id]};
+    const portal = {identifier:call.reviewedPortalIdentifier, sourceKind:"cascade", title:call.title, deadline:"2026-11-17T17:00:00Z"};
+    const result = mergeCalls([call], {calls:[portal]}, Date.parse(deadline));
+    assert.equal(result.length, 1);
+    assert.equal(result[0].deadline, deadline);
+    assert.equal(result[0].status, "archived");
+  }
+  assert.deepEqual(verified["dut-2026"].verificationIssues.map(issue => issue.field), ["supportRate"]);
+});
 test("I3FLOAT retains the verified Turkish cluster route while NACHIP requires EU establishment", async () => {
   const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const reviewed = ["i3float-2026-1", "nachip-2026-2"].map(id => ({...calls.find(c => c.id === id), ...verified[id]}));

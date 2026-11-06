@@ -374,14 +374,16 @@
   },
   "sbep-2026": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "reviewedPortalIdentifier": "cascade-44092120-15721",
     "evidenceUrl": "https://ufukavrupa.org.tr/sites/default/files/users/user20730/Ulusal%20Ba%C5%9Fvuru%20Kurallar%C4%B1.pdf",
     "additionalEvidence": ["https://bluepartnership.eu/sites/bluepartnership.eu/files/documents/2026-11/sbep_jtc_2026_4th_call_announcement_04112026.pdf", "https://bluepartnership.eu/sites/bluepartnership.eu/files/documents/2026-11/annex_b_ncp_and_regulations_04112026.pdf", "https://ufukavrupa.org.tr/tr/acik-cagri/sbep-ortakligi-2026-yili-cok-uluslu-ortak-cagrisi"],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "eligibleCosts", "notice"]
   },
   "dut-2026": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
+    "reviewedPortalIdentifier": "cascade-44121492-15122",
     "evidenceUrl": "https://ufukavrupa.org.tr/sites/default/files/users/user20728/DUT%202026_%C4%B0ki%20a%C5%9Famal%C4%B1_S%C3%BCre%C3%A7%20Dok%C3%BCman%C4%B1.pdf",
-    "additionalEvidence": ["https://dutpartnership.eu/sites/default/files/2026-10/DUT%20Call%202026_Call%20Text_0.pdf", "https://ufukavrupa.org.tr/tr/ortakliklar/kentsel-gecisleri-surdurulebilir-bir-gelecege-yonlendirme-ortakligi-dut"],
+    "additionalEvidence": ["https://dutpartnership.eu/sites/default/files/2026-10/DUT%20Call%202026_Call%20Text_0.pdf", "https://ufukavrupa.org.tr/tr/ortakliklar/kentsel-gecisleri-surdurulebilir-bir-gelecege-yonlendirme-ortakligi-dut", "https://tubitak.gov.tr/tr/duyuru/ufuk-avrupa-programi-kentsel-gecisleri-surdurulebilir-bir-gelecege-yonlendirme-ortakligi-dut-2026-cagrisi-acildi"],
     "verificationIssues": [{"field": "supportRate", "message": "Firma oranları iki belgede de aynı: KOBİ %75, büyük işletme %60. Türkiye ulusal kuralları kamu kurumları için %100 belirtirken, uluslararası çağrı metnindeki Türkiye ekinde ‘Public authorities’ satırı %60 gösteriyor. Kamu otoritesinin oranı için bütçe hazırlamadan önce TÜBİTAK’tan teyit alın."}],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "duration", "openDate", "deadline", "application", "eligibleCosts", "notice"]
   },

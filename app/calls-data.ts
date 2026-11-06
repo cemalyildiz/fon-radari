@@ -835,7 +835,8 @@ export const calls: FundingCall[] = [
     summary: "Döngüsel kent ekonomileri, pozitif enerji bölgeleri ve 15 dakikalık şehirler için uluslararası Ar-Ge ve yenilik projeleri.",
     objectives: ["Kentlerde döngüsel üretim ve kaynak kullanımı", "Yerel enerji sistemleri ve sürdürülebilir hareketlilik"],
     eligibleCosts: ["Özel kuruluşlarda uygun personel ve seyahat", "Makine, ekipman, yazılım ve sarf malzemeleri", "Danışmanlık, hizmet alımı ve uygun mali müşavir giderleri"],
-    application: "Koordinatör ön teklifi UDiManager’da sunar. Türkiye ortakları aynı uluslararası teklif için UİDB PBS’de yürütücü kuruluşları ekleyerek tek ulusal başvuru yapar. Ulusal onay ve e-imza ayrı işlemlerdir.",
+    application: "Koordinatör ön teklifi UDiManager’da sunar. Türkiye ortakları UİDB PBS’de DUT_2026_1 altında yürütücü kuruluşları ekleyerek tek ulusal başvuru yapar. Ulusal onay ve e-imza ayrı işlemlerdir.",
+    applicationLinks: [{label:"DUT uluslararası başvuru (UDiManager)",url:"https://www.uefiscdi-direct.ro/"},{label:"TÜBİTAK ulusal başvuru (PBS)",url:"https://uidb-pbs.tubitak.gov.tr/"}],
     followUpStages: [
       { title: "Türkiye — 1. aşama PBS onayı", schedule: "20 Kasım 2026, 23.59 (TSİ)", access: "Uluslararası ön başvurusu yapılmış projelerin Türkiye ortakları için." },
       { title: "Türkiye — 1. aşama e-imza", schedule: "24 Kasım 2026, 23.59 (TSİ)", access: "Ulusal başvuru onayından sonra imzalar tamamlanır." },
