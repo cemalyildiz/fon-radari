@@ -129,6 +129,38 @@
       "complete": false
     },
     {
+      "id": "fierce-financing-2026-2",
+      "title": "FIERCE — KOBİ’ler İçin Uydu Verisiyle Yeşil Dönüşüm",
+      "source": "https://2nd-financing.project-fierce.eu/wp-content/uploads/2025/03/FIERCE_2nd-Open-Call_Financial-Support-Program_Guide-for-Applicants_20261015_FINAL-v2.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "water4all-2026",
       "title": "Water4All 2026 — Sürdürülebilir Su Yönetimi",
       "source": "https://tubitak.gov.tr/sites/default/files/2026-09/Water4All_Ortakligi_2026_Cagrisi_Ar-Ge_ve_Yenilik_Projeleri_Ulusal_Basvuru_Kurallari-final.pdf",
@@ -1948,6 +1980,6 @@
       "complete": true
     }
   ],
-  "total": 63,
-  "complete": 34
+  "total": 64,
+  "complete": 35
 }

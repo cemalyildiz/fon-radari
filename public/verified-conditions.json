@@ -1,4 +1,11 @@
 {
+  "fierce-financing-2026-2": {
+    "applicantGroups": ["Özel sektör"],
+    "reviewedPortalIdentifier": "cascade-45705096-15162",
+    "evidenceUrl": "https://2nd-financing.project-fierce.eu/wp-content/uploads/2025/03/FIERCE_2nd-Open-Call_Financial-Support-Program_Guide-for-Applicants_20261015_FINAL-v2.pdf",
+    "additionalEvidence": ["https://2nd-financing.project-fierce.eu/", "https://ufukavrupa.org.tr/tr/haberler/fierce-2-acik-cagrisi-kobilere-uzay-verisi-temelli-yesil-ve-dijital-donusum-icin-50000"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "water4all-2026": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu"],
     "reviewedPortalIdentifier": "cascade-44093037-15581",
