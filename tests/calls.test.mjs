@@ -11,6 +11,25 @@ import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/e
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("Clean Industrial Deal confirms Turkish consortium participation without assuming Turkish site eligibility", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  for (const [suffix, budget] of [["01", 125], ["02", 140]]) {
+    const code = `HORIZON-CID-2027-01-${suffix}`;
+    const c = calls.find(c => c.code === code);
+    const feed = {calls:[{identifier:code, sourceKind:"topic", sourceCheckedAt:"2026-11-06T18:00:00Z", startDate:"2027-01-12T00:00:00.000Z", deadline:"2027-09-15T00:00:00.000Z"}]};
+    const rows = mergeCalls([c], feed, Date.parse("2026-11-06T18:30:00Z"));
+    assert.equal(rows.length, 1);
+    const [row] = rows;
+    assert.equal(row.status, "upcoming");
+    assert.equal(row.deadline, "2027-09-15T18:00:00+03:00");
+    assert.equal(verificationCoverage({...row, ...reviews[c.id]}).complete, true);
+    assert.equal(matchesAudience(row, "Özel sektör"), true);
+    assert.match(row.applicants, /Türkiye.*üç bağımsız.*Çin/);
+    assert.match(row.notice, /Türkiye’deki.*teyit/);
+    assert.match(row.fundingAmount, new RegExp(`${budget} milyon`));
+    assert.match(row.supportRate, /%70/);
+  }
+});
 test("all eleven single-stage Cluster 4 industry topics are verified without treating services as direct SME grants", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const ids = ["02", "03", "06", "08", "16", "17", "22", "42", "47", "49", "50"];

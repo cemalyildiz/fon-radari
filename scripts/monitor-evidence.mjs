@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
-import { cluster4Programme, cluster4ProgrammeIndex, listedCluster4Programme, revisionIndexFor } from '../app/programme-revision.mjs';
+import { listedProgramme, programmeAtIndex, revisionIndexFor } from '../app/programme-revision.mjs';
 
 const fingerprint = value => createHash('sha256').update(value).digest('hex');
 
@@ -75,9 +75,9 @@ export function approvedEvidence(reviews) {
   }
   return result;
 }
-export function cluster4RevisionState(bytes, checkedAt) {
-  const observed = listedCluster4Programme(new TextDecoder().decode(bytes));
-  return { ...evidenceState(undefined, fingerprint(observed), checkedAt, undefined, {hash:fingerprint(cluster4Programme)}), observedProgrammeUrl: observed };
+export function programmeRevisionState(bytes, checkedAt, programme) {
+  const observed = listedProgramme(new TextDecoder().decode(bytes), programme);
+  return { ...evidenceState(undefined, fingerprint(observed), checkedAt, undefined, {hash:fingerprint(programme.pdf)}), observedProgrammeUrl: observed };
 }
 async function run() {
   const reviews = JSON.parse(await readFile('public/verified-conditions.json','utf8'));
@@ -97,8 +97,9 @@ async function run() {
         const response = await fetch(url,{signal:AbortSignal.timeout(25000)});
         if(!response.ok) throw new Error(`HTTP ${response.status}`);
         const bytes = new Uint8Array(await response.arrayBuffer());
-        if (url === cluster4ProgrammeIndex) {
-          result[url] = cluster4RevisionState(bytes, attemptedAt);
+        const programme = programmeAtIndex(url);
+        if (programme) {
+          result[url] = programmeRevisionState(bytes, attemptedAt, programme);
           continue;
         }
         const type = response.headers.get('content-type') ?? '';

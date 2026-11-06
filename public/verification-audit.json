@@ -1,6 +1,70 @@
 {
   "records": [
     {
+      "id": "horizon-clean-industry-decarbonisation-2027",
+      "title": "Ufuk Avrupa — Enerji Yoğun Sanayinin Karbonsuzlaşması",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/01964d0c-a8eb-4f23-baa4-87d96812dca6_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "horizon-clean-industry-climate-tech-2027",
+      "title": "Ufuk Avrupa — İklim için Temiz Teknolojiler",
+      "source": "https://research-and-innovation.ec.europa.eu/document/download/01964d0c-a8eb-4f23-baa4-87d96812dca6_en",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "eic-accelerator-challenge-ocean-2027",
       "title": "EIC Accelerator Challenges 2027 — Yerinde Okyanus Gözlem Teknolojileri",
       "source": "https://eic.ec.europa.eu/document/download/ed9ab103-1ffb-4d5f-a6ad-168ac3b36900_en?filename=EIC-2027-Work-Programme.pdf",
@@ -3175,6 +3239,6 @@
       "complete": true
     }
   ],
-  "total": 101,
-  "complete": 69
+  "total": 103,
+  "complete": 71
 }

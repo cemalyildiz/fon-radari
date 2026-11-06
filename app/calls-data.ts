@@ -1,4 +1,4 @@
-import { cluster4Programme as horizonIndustryProgramme } from "./programme-revision.mjs";
+import { cleanIndustryProgramme, cluster4Programme as horizonIndustryProgramme } from "./programme-revision.mjs";
 
 export type CallScope = "national" | "international";
 export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
@@ -400,7 +400,62 @@ const horizonKnowledgeIndustry = [
   };
 });
 
+const cleanIndustry2027 = [
+  {
+    topic: "01", page: 36, agency: "HaDEA", budget: 125,
+    id: "horizon-clean-industry-decarbonisation-2027",
+    title: "Enerji Yoğun Sanayinin Karbonsuzlaşması",
+    summary: "Çelik, çimento ve kimya gibi enerji yoğun sektörlerde endüstriyel gösterim. Teknoloji olgunluğu THS 6’dan 7–8’e ilerlemeli.",
+    objectives: [
+      "Bir ana alan seç: CO₂/CO yakalama ve kullanım/depolama, üretimde temiz enerji veya döngüsellik ve kaynak verimliliği.",
+      "Karbon yakalamada ton başına enerji girdisinde %30 düşüş; döngüsellik ve kaynak verimliliğinde 2035’e kadar %30 iyileşme ilgili alanların hedefleridir. Çözümün yaşam döngüsü etkisi olumlu, ticari uygulanabilirliği gösterilmiş olmalı.",
+    ],
+    costs: ["Karbon yakalama, proses elektrifikasyonu, atık ısı ve kaynak verimliliği çözümlerinin endüstriyel gösterimi için sözleşmede uygun bulunan proje giderleri."],
+    location: "Beklenen sonuç Avrupa’da ilk örnek bir gösterim tesisi veya yeni kurulmuş bir sanayi çözümünün iyileştirilmesi. Türk ortağın uygunluğu, Türkiye’deki bir sahanın uygunluğunu tek başına doğrulamaz; saha ve AB’de yaygınlaşma planını teklif öncesinde çağrı birimiyle teyit edin.",
+    tags: ["Sanayide Karbonsuzlaşma", "Kaynak Verimliliği", "Processes4Planet", "Clean Steel"],
+  },
+  {
+    topic: "02", page: 40, agency: "CINEA", budget: 140,
+    id: "horizon-clean-industry-climate-tech-2027",
+    title: "İklim için Temiz Teknolojiler",
+    summary: "Temiz enerji teknolojilerini sanayi, enerji ve ulaşım sektörlerinde pazara yaklaştıran gösterim projeleri. Teknoloji olgunluğu THS 6’dan 8’e ilerlemeli.",
+    objectives: [
+      "Bir ana alan seç: bütünleşik net sıfır enerji sistemleri, sıfır emisyonlu enerji üretimi veya depolama, yenilenebilir yakıtlar ve karbon yakalama/kullanımı.",
+      "Sera gazı ve rekabetçilik etkisini ölçülebilir biçimde göster; döngüsel malzeme kullanımı ve seviyelendirilmiş enerji maliyeti için gerçekçi başlangıç değerleri kullan.",
+    ],
+    costs: ["Şebeke ve temiz enerji teknolojileri, depolama, yenilenebilir yakıtlar veya karbon yakalama/kullanımının entegrasyonu ve gösterimi için sözleşmede uygun bulunan proje giderleri."],
+    location: "AB sektörlerinde yaygınlaşma planı bekleniyor. Konu metni tüm gösterim sahalarını AB üyesi ülkelerle sınırlayan açık bir hüküm içermiyor; Türkiye’deki saha için çağrı biriminden teyit alın. NZIA kapsamında belirli bileşenler için AB veya asosiye ülkelerden tedarik beklentisi ayrıca incelenmeli.",
+    tags: ["Temiz Teknolojiler", "Net Sıfır", "Enerji Depolama", "Yenilenebilir Yakıtlar"],
+  },
+].map((topic): FundingCall => {
+  const code = `HORIZON-CID-2027-01-${topic.topic}`;
+  return {
+    id: topic.id, scope: "international", code, reviewedPortalIdentifier: code,
+    title: `Ufuk Avrupa — ${topic.title}`,
+    institution: `Avrupa Komisyonu · Ufuk Avrupa / ${topic.agency}`, institutionShort: "Horizon Europe",
+    status: "upcoming", openDate: "2027-01-12", openingDateOnly: true, deadline: "2027-09-15T18:00:00+03:00",
+    applicants: "Türkiye dâhil asosiye ülkelerden ve AB üyesi ülkelerden KOBİ’ler, büyük işletmeler ve diğer uygun tüzel kişiler. Sanayi öncülüğünde, üç farklı ülkede yerleşik en az üç bağımsız yararlanıcı gerekli; biri AB üyesinde, diğer ikisi farklı AB üyesi veya asosiye ülkelerde olmalı. Çin’in veya Çin’de yerleşik bir tüzel kişinin doğrudan ya da dolaylı kontrolündeki kuruluşlar, uygun bir ülkede yerleşik olsalar da katılamaz.",
+    applicantGroups: ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu", "STK"],
+    companyScale: ["KOBİ", "Büyük Ölçek"],
+    fundingAmount: `Gösterge konu bütçesi ${topic.budget} milyon €. Yaklaşık sekiz proje için proje başına 15–25 milyon € AB katkısı öngörülüyor; aralık kesin alt veya üst sınır değildir.`,
+    fundingType: "Uygun maliyetlere dayalı hibe (IA · Yenilik Eylemi)",
+    supportRate: "Kâr amaçlı kuruluşlarda uygun maliyetlerin en fazla %70’i; uygun kâr amacı gütmeyen tüzel kişilerde %100’e kadar (Genel Ek G).",
+    duration: "Konu metninde sabit proje süresi yok; süre hibe sözleşmesinde belirlenir (Genel Ek G).",
+    summary: topic.summary, objectives: topic.objectives, eligibleCosts: topic.costs,
+    application: "Koordinatör tek aşamalı teklifi Funding & Tenders Portal’dan sunar. Bölüm B en fazla 60 sayfa. İş planı ve pazara hazırlık stratejisi zorunlu. Gösterim aşaması öncesinde teknik planlar, tekno-ekonomik değerlendirme ve izinlerle desteklenen bir devam/etmeme karar noktası planlanmalı.",
+    notice: topic.location,
+    applicationLinks: [
+      {label: "Güncel çalışma programı · konu koşulları", url: `${cleanIndustryProgramme}#page=${topic.page}`},
+      {label: "Güncel çalışma programı · başvuru takvimi", url: `${cleanIndustryProgramme}#page=7`},
+    ],
+    sourceUrl: `https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/${code}`,
+    sourceLabel: "Avrupa Komisyonu · resmî konu ve başvuru sayfası", verifiedAt: "2026-11-06",
+    tags: topic.tags, sectors: ["İmalat", "Enerji"], themes: ["Yeşil Dönüşüm", "Ar-Ge ve Yenilik"],
+  };
+});
+
 export const calls: FundingCall[] = [
+  ...cleanIndustry2027,
   ...eicChallenges2027,
   ...horizonDecemberEnergy,
   ...horizonCircularIndustry,

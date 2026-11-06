@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { approvedEvidence, evidenceState, contentHash, documentLinksHash, cluster4RevisionState } from '../scripts/monitor-evidence.mjs';
-import { cluster4Programme, cluster4ProgrammeIndex, revisionIndexFor } from '../app/programme-revision.mjs';
+import { approvedEvidence, evidenceState, contentHash, documentLinksHash, programmeRevisionState } from '../scripts/monitor-evidence.mjs';
+import { cluster4Programme, cluster4ProgrammeIndex, cleanIndustryProgramme, horizontalProgrammeIndex, programmeAtIndex, revisionIndexFor } from '../app/programme-revision.mjs';
 import { readFile } from 'node:fs/promises';
 import { evidenceAlerts } from '../app/verification-utils.ts';
 import { refreshConditions } from '../scripts/check-conditions.mjs';
@@ -9,7 +9,7 @@ test('the programme index detects a newly listed edition before the pinned PDF c
   const another = 'https://research-and-innovation.ec.europa.eu/document/download/11111111-2222-3333-4444-555555555555_en';
   const enc = new TextEncoder();
   const anchor = (href, year = '2026-27') => `<a href="${href}" data-untranslated-label="Horizon Europe Work programme (${year}) - Cluster 4">Download</a>`;
-  const result = html => cluster4RevisionState(enc.encode(html), '2026-11-06T18:00:00Z');
+  const result = html => programmeRevisionState(enc.encode(html), '2026-11-06T18:00:00Z', programmeAtIndex(cluster4ProgrammeIndex));
   assert.equal(revisionIndexFor(cluster4Programme), cluster4ProgrammeIndex);
   assert.equal(revisionIndexFor(another), undefined);
   assert.equal(result(anchor(another, '2025') + anchor(new URL(cluster4Programme).pathname + '?prefLang=de')).changed, false);
@@ -17,6 +17,11 @@ test('the programme index detects a newly listed edition before the pinned PDF c
   assert.equal(result(anchor(another)).observedProgrammeUrl, another);
   assert.throws(() => result(anchor(another) + anchor(cluster4Programme)));
   assert.throws(() => result(anchor(another.replace('ec.europa.eu', 'invalid.example'))));
+  const horizontal = href => `<a href="${href}" data-untranslated-label="Horizon Europe Work programme (2026-27) - Horizontal activities">Download</a>`;
+  const horizontalResult = html => programmeRevisionState(enc.encode(html), '2026-11-06T18:00:00Z', programmeAtIndex(horizontalProgrammeIndex));
+  assert.equal(revisionIndexFor(cleanIndustryProgramme), horizontalProgrammeIndex);
+  assert.equal(horizontalResult(anchor(another) + horizontal(cleanIndustryProgramme)).changed, false);
+  assert.equal(horizontalResult(horizontal(another)).changed, true);
 });
 test('condition checks reuse shared pages, isolate failed sources, and process distinct hosts in parallel', async () => {
   const shared = 'https://www.one.example/conditions';
