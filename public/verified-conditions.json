@@ -1,4 +1,24 @@
 {
+  "sanayi-hit30-vehicles": {
+    "evidenceUrl": "https://hit30.sanayi.gov.tr/cagrilar",
+    "additionalEvidence": ["https://hit30.sanayi.gov.tr/sikcasorulansorular", "https://hit30.sanayi.gov.tr/tesvikler"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "applicationType", "eligibleCosts", "application", "notice"]
+  },
+  "sanayi-hit30-battery": {
+    "evidenceUrl": "https://hit30.sanayi.gov.tr/cagrilar",
+    "additionalEvidence": ["https://hit30.sanayi.gov.tr/sikcasorulansorular", "https://hit30.sanayi.gov.tr/tesvikler"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "applicationType", "eligibleCosts", "application", "notice"]
+  },
+  "sanayi-hit30-wind": {
+    "evidenceUrl": "https://hit30.sanayi.gov.tr/cagrilar",
+    "additionalEvidence": ["https://hit30.sanayi.gov.tr/sikcasorulansorular", "https://hit30.sanayi.gov.tr/tesvikler"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "applicationType", "eligibleCosts", "application", "notice"]
+  },
+  "sanayi-tidip-programme": {
+    "evidenceUrl": "https://tidip.sanayi.gov.tr/tr/faq",
+    "additionalEvidence": ["https://tidip.sanayi.gov.tr/tr/about", "https://tidip.sanayi.gov.tr/tr/contact", "https://tidip.sanayi.gov.tr/tr/resources", "https://tidip.sanayi.gov.tr/documents/ipps-v1.pdf", "https://tidip.sanayi.gov.tr/tr/news/yatirim-plani-ve-politika-stratejisi-ipps-yayimlandi"],
+    "verifiedFields": ["recordType", "applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "eligibleCosts", "application", "notice"]
+  },
   "tubitak-1007-balistik-kiyafet-2026": {
     "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/1007-programi-balistik-kiyafet-gelistirilmesi-projesi-cagrisi-acildi",
     "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/akademik/ulusal-destek-programlari/1007-kamu-kurumlari-arastirma-ve-gelistirme-projelerini-destekleme-programi", "https://tubitak.gov.tr/sites/default/files/2026-01/1007_Usul_ve_Esaslari_77_YK_islenmis_hali_SON.pdf"],
@@ -334,10 +354,10 @@
   },
   "sanayi-hit30-active": {
     "recordType": "program",
-    "application": "Resmî aktif çağrılar listesinden teknoloji konusu seçilir; ilan edilmiş konu dışında HIT-30 kapsamındaki yüksek teknoloji alanlarında da başvuru alınabildiği belirtiliyor. Konuya özgü yatırım eşiği ve başvuru şartları ayrıca uygulanır.",
     "notice": "HIT-Solar resmî listede sona eren çağrılar arasındadır. Aktif örnekler: elektrikli araçta yılda en az 150.000 araç, bataryada hücreden başlayan yılda en az 5 GWh, robotta yılda en az 5.000 robot kapasitesi. HIT-Ar-Ge, AB endüstriyel Ar-Ge yatırım sıralamasındaki ilk 1.000 şirket ve en az 250 Ar-Ge personeli koşulunu belirtir. Milyar dolarlık bütçeler çağrı toplamıdır, her firmaya verilen tutar değildir.",
     "evidenceUrl": "https://hit30.sanayi.gov.tr/cagrilar",
-    "verifiedFields": ["recordType", "application", "notice"]
+    "additionalEvidence": ["https://hit30.sanayi.gov.tr/sikcasorulansorular", "https://hit30.sanayi.gov.tr/tesvikler"],
+    "verifiedFields": ["recordType", "applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "application", "notice"]
   },
   "sanayi-yesil-donusum-programi-2026": {
     "applicantGroups": ["Özel sektör"],

@@ -2,6 +2,7 @@ import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { pathToFileURL } from 'node:url';
 import { listedProgramme, programmeAtIndex, revisionIndexFor } from '../app/programme-revision.mjs';
+import { hit30CallsUrl, readHit30Statuses } from '../app/hit30-status.mjs';
 
 const fingerprint = value => createHash('sha256').update(value).digest('hex');
 
@@ -107,6 +108,12 @@ async function run() {
         const review = approved.get(url);
         if (review && finalUrl !== url) throw new Error('İncelenmiş duyuru adresi değişti');
         result[url] = evidenceState(previous[url],contentHash(bytes,type,finalUrl,review?.scope),attemptedAt,documentLinksHash(bytes,type,finalUrl,review?.scope),review);
+        if (url === hit30CallsUrl) {
+          if (finalUrl !== url || !type.includes('html')) throw new Error('HIT-30 çağrı listesi okunamadı');
+          const current = readHit30Statuses(new TextDecoder().decode(bytes));
+          result[url].hit30Statuses = Object.fromEntries(Object.entries(current).map(([key, status]) =>
+            [key, status === "unknown" && previous[url]?.hit30Statuses?.[key] === "archived" ? "archived" : status]));
+        }
       } catch(error) { result[url] = {...previous[url],ok:false,attemptedAt,error:error.message}; }
     }
   }));

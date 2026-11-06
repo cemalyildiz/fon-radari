@@ -30,6 +30,7 @@ export function nextDeadline(call: Pick<FundingCall, "deadline" | "deadlines">, 
 }
 export function realStatus(call: FundingCall, now: number): CallStatus {
   if (call.recordType === "program") return "unknown";
+  if (call.hit30Topic && call.status === "open" && stale(call.hit30CheckedAt, now)) return "unknown";
   if (call.status === "unknown") {
     const deadline = nextDeadline(call, now);
     const confirmed = call.verifiedFields?.includes("deadline") && !call.calendarObservation?.conflict &&

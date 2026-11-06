@@ -5,6 +5,7 @@ import type { FundingCall } from "./calls-data";
 import { mergeNationalCalendars, unreviewedAnnouncements } from "./call-utils";
 import { evidenceAlerts } from "./verification-utils";
 import { revisionIndexFor } from "./programme-revision.mjs";
+import { hit30CallsUrl, observedHit30Status } from "./hit30-status.mjs";
 
 const snapshotTime = Date.now();
 
@@ -21,7 +22,9 @@ export default async function Home() {
     ])];
     const urls = [evidenceUrl, ...additionalEvidence].filter(Boolean);
     const alerts = evidenceAlerts(urls, evidence, snapshotTime);
-    return {...c, ...review, additionalEvidence, evidenceAlerts: alerts, evidencePending: alerts.length > 0, sourceConditions: conditions[c.id]};
+    const status = c.hit30Topic ? observedHit30Status(evidence[hit30CallsUrl], c.hit30Topic, snapshotTime) : c.status;
+    const hit30CheckedAt = c.hit30Topic ? evidence[hit30CallsUrl]?.checkedAt : undefined;
+    return {...c, ...review, status, hit30CheckedAt, additionalEvidence, evidenceAlerts: alerts, evidencePending: alerts.length > 0, sourceConditions: conditions[c.id]};
   });
   const feed = await readFile('public/national-calls.json', 'utf8').then(JSON.parse).catch(() => ({ calls: [] }));
   const calendars = mergeNationalCalendars(updatedCalls, feed.calendars ?? [], snapshotTime);

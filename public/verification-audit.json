@@ -1,6 +1,126 @@
 {
   "records": [
     {
+      "id": "sanayi-hit30-vehicles",
+      "title": "HIT-30 — Elektrikli Araç Yatırımları",
+      "source": "https://hit30.sanayi.gov.tr/cagrilar",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "applicationType",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "applicationType"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "sanayi-hit30-battery",
+      "title": "HIT-30 — Batarya ve Aktif Malzeme Yatırımları",
+      "source": "https://hit30.sanayi.gov.tr/cagrilar",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "applicationType",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "applicationType"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "sanayi-hit30-wind",
+      "title": "HIT-30 — Rüzgâr Enerjisi Ekipmanı Yatırımları",
+      "source": "https://hit30.sanayi.gov.tr/cagrilar",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "applicationType",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "applicationType"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "sanayi-tidip-programme",
+      "title": "Türkiye Sanayi Karbonsuzlaşma Yatırım Platformu (TIDIP)",
+      "source": "https://tidip.sanayi.gov.tr/tr/faq",
+      "verifiedFields": [
+        "recordType",
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "recordType"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "tubitak-1007-balistik-kiyafet-2026",
       "title": "TÜBİTAK 1007 — Balistik Kıyafet Geliştirilmesi",
       "source": "https://tubitak.gov.tr/tr/duyuru/1007-programi-balistik-kiyafet-gelistirilmesi-projesi-cagrisi-acildi",
@@ -3263,23 +3383,28 @@
       "source": "https://hit30.sanayi.gov.tr/cagrilar",
       "verifiedFields": [
         "recordType",
-        "application",
-        "notice"
-      ],
-      "verifiedCore": [
-        "application",
-        "recordType"
-      ],
-      "pendingFields": [
         "applicants",
         "companyScale",
         "fundingAmount",
         "fundingType",
         "supportRate",
-        "duration"
+        "duration",
+        "application",
+        "notice"
       ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "recordType"
+      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "ssb-saga-active",
@@ -3399,6 +3524,6 @@
       "complete": true
     }
   ],
-  "total": 108,
-  "complete": 75
+  "total": 112,
+  "complete": 80
 }

@@ -2,6 +2,7 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { calls } from "../app/calls-data.ts";
+import { readHit30Statuses, observedHit30Status } from "../app/hit30-status.mjs";
 import { realStatus, nextDeadline, matchesSector, matchesSearch, stale, mergeCalls, validateFeed, unreviewedAnnouncements } from "../app/call-utils.ts";
 import { parseResult, reconcile, collect, migrateLegacy } from "../scripts/update-live-calls.mjs";
 import { verificationCoverage } from "../app/verification-utils.ts";
@@ -11,6 +12,30 @@ import { energyArchiveLinks, energyArchivePages, fetchEnver } from "../scripts/e
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("HIT-30 accepts only confirmed official call cards and does not treat TIDIP as a grant call", () => {
+  const card = (area, title, rest = "") => `<a href="/cagrilar#area${area}"><div><h3><b>${title}</b></h3>${rest}</div></a>`;
+  const hit30Statuses = readHit30Statuses(card(1, "HIT-Electric Vehicles") + card(2, "HIT-Battery", "<p>This call has ended.</p>") +
+    card(5, "HIT-R&#xFC;zg&#xE2;r", "<p>Pending update</p>"));
+  assert.deepEqual(hit30Statuses, {vehicles:"open", battery:"archived", wind:"unknown"});
+  assert.equal(readHit30Statuses(card(1,"Different Call")).vehicles,"unknown");
+  assert.equal(readHit30Statuses(card(1,"HIT-Electric Vehicles").repeat(2)).vehicles,"unknown");
+  const date = Date.parse("2026-11-06T19:00:00Z");
+  const checked = {hit30Statuses, ok:true, checkedAt:new Date(date).toISOString()};
+  const vehicles = calls.find(c => c.hit30Topic === "vehicles");
+  const battery = calls.find(c => c.hit30Topic === "battery");
+  const open = {...vehicles,status:observedHit30Status(checked,"vehicles",date),hit30CheckedAt:checked.checkedAt};
+  assert.equal(realStatus(open,date),"open");
+  assert.equal(realStatus(open,date + 49 * 3600000),"unknown");
+  assert.equal(observedHit30Status(checked,"vehicles",date + 49 * 3600000),"unknown");
+  assert.equal(observedHit30Status({...checked,ok:false},"vehicles",date),"unknown");
+  assert.equal(realStatus({...battery,status:observedHit30Status(checked,"battery",date)},date),"archived");
+  assert.match(battery.applicants,/2 milyar TL.*5 GWh/);
+  assert.match(battery.fundingAmount,/4,5 milyar ABD doları.*şirket başına tutar.*değildir/);
+  const tidip = calls.find(c => c.id === "sanayi-tidip-programme");
+  assert.equal(realStatus(tidip,date),"unknown");
+  assert.equal(matchesAudience(tidip,"Özel sektör"),true);
+  assert.match(tidip.fundingAmount,/doğrudan finansman sağlamaz/);
+});
 test("public SAVTAG announcements verify firm applications without inventing restricted budget or scale", async () => {
   const data = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const ids = ["tubitak-1007-balistik-kiyafet-2026", "tubitak-1007-aromatik-poliamid-2026", "tubitak-1007-alternatif-haberlesme-2026"];

@@ -490,7 +490,7 @@ export default function CallsExplorer({ calls }: Props) {
               <dl className="card-facts">
                 <div>
                   <dt>Son başvuru</dt>
-                  <dd>{call.recordType === "program" ? "Alt çağrıya göre" : call.applicationType === "continuous" ? "Sürekli başvuru" : closingDisputed(call) ? "Kapanış doğrulanmalı" : formatDate(call.deadline)}</dd>
+                  <dd>{call.recordType === "program" ? "Alt çağrıya göre" : call.applicationType === "continuous" ? call.status === "archived" ? "Başvuru sona erdi" : call.status === "unknown" ? "Kabul durumu doğrulanmalı" : "Sürekli başvuru" : closingDisputed(call) ? "Kapanış doğrulanmalı" : formatDate(call.deadline)}</dd>
                 </div>
                 <div>
                   <dt>Destek türü</dt>
@@ -623,7 +623,7 @@ export default function CallsExplorer({ calls }: Props) {
               {selected.notice && <div className="notice"><b>Önemli not</b><p>{selected.notice}</p></div>}
               <div className="detail-facts">
                 <article><span>Kimler için?</span><b>{selected.turkeyFundingExcluded ? "Türkiye’de yerleşik kuruluşlar fonlanamaz" : selected.applicantGroups?.join(", ") || "Henüz sınıflandırılmamış"}</b></article>
-                <article><span>{calendarDisputed(selected) ? "Önceki takvim · güncel değil" : selected.followUpStages?.length ? selected.scope === "national" ? "Çevrimiçi başvuru" : "İlk uluslararası başvuru" : "Başvuru dönemi"}{selected.calendarDateOnly ? "" : " · Türkiye saati"}</span><b>{selected.recordType === "program" ? "Program rehberi — güncel başvuru kabulünü resmî kaynaktan kontrol edin" : selected.applicationType === "continuous" ? "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, !selected.calendarDateOnly && !selected.openingDateOnly)} – ${formatDate(selected.deadline, !selected.calendarDateOnly)}`}</b></article>
+                <article><span>{calendarDisputed(selected) ? "Önceki takvim · güncel değil" : selected.followUpStages?.length ? selected.scope === "national" ? "Çevrimiçi başvuru" : "İlk uluslararası başvuru" : "Başvuru dönemi"}{selected.calendarDateOnly || selected.applicationType === "continuous" ? "" : " · Türkiye saati"}</span><b>{selected.recordType === "program" ? "Program rehberi — güncel başvuru kabulünü resmî kaynaktan kontrol edin" : selected.applicationType === "continuous" ? selected.status === "archived" ? "Başvuru sona erdi" : selected.status === "unknown" ? "Güncel başvuru kabulü doğrulanamadı" : "Sürekli başvuru — güncel kabul durumunu teyit edin" : `${formatDate(selected.openDate, !selected.calendarDateOnly && !selected.openingDateOnly)} – ${formatDate(selected.deadline, !selected.calendarDateOnly)}`}</b></article>
                 <article><span>Destek miktarı</span><b>{selected.fundingAmount}</b></article>
                 <article><span>Destek şekli</span><b>{selected.fundingType}</b></article>
                 <article><span>Destek oranı</span><b>{selected.supportRate ?? "Çağrı dokümanına göre"}</b></article>

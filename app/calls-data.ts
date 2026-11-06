@@ -1,10 +1,13 @@
 import { cleanIndustryProgramme, cluster4Programme as horizonIndustryProgramme, cluster5Programme } from "./programme-revision.mjs";
+import { hit30CallsUrl } from "./hit30-status.mjs";
 
 export type CallScope = "national" | "international";
 export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
 export type ApplicantGroup = "Özel sektör" | "Girişimci / Bireysel" | "Akademisyen" | "Üniversite / Araştırma" | "Kamu kurum / kuruluşu" | "TTO / Arayüz kuruluşu" | "STK";
 
 export type FundingCall = {
+  hit30Topic?: "vehicles" | "battery" | "wind";
+  hit30CheckedAt?: string;
   applicantGroups?: ApplicantGroup[];
   verificationIssues?: { field: string; message: string }[];
   evidencePending?: boolean;
@@ -520,7 +523,68 @@ const savtag1007Calls = [
   tags: ["1007", "SAVTAG", "Firma Başvurusu"], themes: ["Ar-Ge ve Yenilik"], sectors: ["Savunma ve Güvenlik"],
 }));
 
+const hit30GreenCalls = [
+  {
+    key: "vehicles", anchor: "area1", title: "Elektrikli Araç Yatırımları", budget: "5",
+    criteria: "Çağrı tam destek kapsamında yılda en az 150.000 elektrikli araç kapasitesi sağlayan, yüksek yerli katkılı ve Ar-Ge merkezi içeren yeni yatırımları hedefliyor.",
+    summary: "Türkiye’de elektrikli araç üretim tesisi ve bağlantılı Ar-Ge merkezi yatırımları.",
+    costs: "Yeni elektrikli araç üretim tesisi ve bağlantılı Ar-Ge merkezi yatırımı.",
+  },
+  {
+    key: "battery", anchor: "area2", title: "Batarya ve Aktif Malzeme Yatırımları", budget: "4,5",
+    criteria: "Hücreden başlayan ve yılda en az 5 GWh kapasite sağlayan batarya ve aktif malzeme üretim tesisi yatırımları hedefleniyor.",
+    summary: "Hücreden başlayan batarya ve aktif malzeme üretim yatırımları; yerli katkı ve Ar-Ge odaklı.",
+    costs: "Batarya ve aktif malzeme tesisi ile ilgili üretim ve Ar-Ge yatırımları.",
+  },
+  {
+    key: "wind", anchor: "area5", title: "Rüzgâr Enerjisi Ekipmanı Yatırımları", budget: "1,7",
+    criteria: "Entegre ekipman üreticileri, deniz üstü türbinler, yeni üretim teknolojileri ve kritik türbin bileşenlerine yönelik yatırım projeleri değerlendiriliyor.",
+    summary: "Rüzgâr türbini ve kritik bileşen üretim kapasitesini artırmaya yönelik yatırımlar.",
+    costs: "Entegre türbin üretimi, deniz üstü türbinler ve kritik bileşen yatırımları.",
+  },
+] as const;
+
+const hit30FundingType = "Projeye özel yatırım teşviki: vergi ve istihdam avantajları, finansman desteği, yatırım yeri ve uygun görülürse hibe bileşeni.";
+const hit30SupportRate = "Tek bir sabit hibe oranı yok. Bakanlık farklı teşvik unsurlarının toplamının sabit yatırımın %100’üne kadar ulaşabileceğini belirtiyor; bu bir nakit hibe oranı veya kazanılmış hak değildir.";
+const hit30Duration = "Yatırımın 2030’a kadar tamamlanması hedeflenir; proje niteliğine göre nihai tamamlanma tarihi 2030 sonrasına uzayabilir. Teşvik süreleri projeye göre belirlenir.";
+const hit30Application = "Yatırım sunumu hit30@sanayi.gov.tr adresine gönderilir. Sunumda şirket ve ortaklık bilgileri, yatırım büyüklüğü, istihdam, kapasite, yerli katkı, harcama kırılımı, pazar ve teknik/mali yeterlilik açıklanır. Olumlu ön değerlendirme belge anlamına gelmez; Cumhurbaşkanı Kararı sonrasında E-TUYS üzerinden teşvik belgesi başvurusu yapılır.";
+
 export const calls: FundingCall[] = [
+  ...hit30GreenCalls.map((topic): FundingCall => ({
+    id: `sanayi-hit30-${topic.key}`, hit30Topic: topic.key, scope: "national", code: `HIT-30 · ${topic.title}`,
+    title: `HIT-30 — ${topic.title}`, institution: "T.C. Sanayi ve Teknoloji Bakanlığı", institutionShort: "HIT-30",
+    status: "unknown", openDate: "", applicationType: "continuous",
+    applicants: `Türkiye’de yatırım planlayan yerli veya uluslararası yatırımcı şirketler. Programın asgari sabit yatırım eşiği 2 milyar TL’dir. ${topic.criteria}`,
+    applicantGroups: ["Özel sektör"], companyScale: ["Yatırımcı"],
+    fundingAmount: `${topic.budget} milyar ABD doları çağrının ilan edilen toplam destek bütçesidir; şirket başına tutar veya yatırım alt sınırı değildir. Bireysel destek paketi projeye göre belirlenir.`,
+    fundingType: hit30FundingType, supportRate: hit30SupportRate, duration: hit30Duration,
+    summary: topic.summary, objectives: ["Yüksek teknolojili yerli üretim kapasitesini ve değer zincirini geliştirmek."],
+    eligibleCosts: [topic.costs, "Asgari sabit yatırım hesabında mevzuata uygun arsa, yapı, makine, teçhizat ve varsa Ar-Ge yatırımı dikkate alınabilir."],
+    application: hit30Application,
+    notice: "Sabit kapanış günü ilan edilmiyor. Hedeflenen proje sayısı ve kapasiteye ulaşıldığında yeni başvurular durur. Firma ölçeği yerine yatırım eşiği ve çağrı koşulları belirleyicidir.",
+    sourceUrl: `${hit30CallsUrl}#${topic.anchor}`, sourceLabel: "Sanayi ve Teknoloji Bakanlığı · resmî çağrı", verifiedAt: "2026-11-06",
+    tags: ["HIT-30", "Yatırım Teşviki"], sectors: topic.key === "vehicles" ? ["İmalat", "Otomotiv ve Mobilite"] : ["İmalat", "Enerji"], themes: ["Stratejik Yatırım", "Yeşil Dönüşüm"],
+  })),
+  {
+    id: "sanayi-tidip-programme", scope: "national", recordType: "program", code: "TIDIP",
+    title: "Türkiye Sanayi Karbonsuzlaşma Yatırım Platformu (TIDIP)",
+    institution: "Sanayi ve Teknoloji Bakanlığı · EBRD / IBRD / IFC", institutionShort: "TIDIP",
+    status: "unknown", openDate: "",
+    applicants: "İlk aşamada çelik, çimento, alüminyum ve gübre sektörlerinde faaliyet gösteren şirketler. Proje ilgili sektörün düşük karbonlu yol haritası ve platformun en az bir yatırım alanıyla uyumlu olmalı. Cam, seramik, kimya ve döküm için genişleme öngörülüyor; bunlar mevcut dört öncelikli sektörle aynı statüde değil.",
+    applicantGroups: ["Özel sektör"], companyScale: ["Sektör esaslı · sabit ölçek sınırı ilan edilmedi"],
+    fundingAmount: "Platform doğrudan finansman sağlamaz; şirket başına hibe tutarı yoktur. Bir finans kuruluşuyla eşleşilirse tutarı ve koşulları o kuruluş belirler.",
+    fundingType: "Teknik hazırlık desteği ve finansman eşleştirmesi; doğrudan hibe veya kredi değil.",
+    supportRate: "Platforma ait sabit hibe veya kredi oranı yok; finansman kuruluşu projeye göre karar verir.",
+    duration: "Sabit proje süresi ilan edilmiyor; teknik hazırlık ve finansman süreci yatırımın aşamasına göre.",
+    summary: "Sanayide karbonsuzlaşma yatırımlarını fikir aşamasından finansmana hazırlığa kadar destekleyen ulusal platform.",
+    objectives: ["Yeşil hidrojen; karbon yakalama, kullanma ve depolama; enerji verimliliği ve döngüsellik; sanayi için yenilenebilir elektrik; gelişmekte olan iklim teknolojileri."],
+    eligibleCosts: ["Fizibilite, teknik değerlendirme ve fayda-maliyet analizi hazırlığında teknik destek verilebilir; yatırım harcamalarına doğrudan geri ödeme değildir."],
+    application: "Resmî SSS’ye göre portal açılana kadar proje başvuruları e-postayla kabul ediliyor; Bakanlık iletişim adresi tidip@sanayi.gov.tr. Portal açılınca TIDIP sitesi üzerinden başvurulacak. Sabit bir çağrı kapanış tarihi açıklanmıyor.",
+    notice: "4 Kasım 2026 tarihli Yatırım Planı ve Politika Stratejisi ilk taslak sürümdür; yeni hibe çağrısı veya finansman onayı değildir.",
+    applicationLinks: [{label:"TIDIP · başvuru ve iletişim",url:"https://tidip.sanayi.gov.tr/tr/contact"},{label:"TIDIP · strateji ve yol haritaları",url:"https://tidip.sanayi.gov.tr/tr/resources"}],
+    sourceUrl: "https://tidip.sanayi.gov.tr/tr/faq", sourceLabel: "TIDIP · resmî başvuru koşulları", verifiedAt: "2026-11-06",
+    tags: ["Karbonsuzlaşma", "Çelik", "Çimento", "Alüminyum", "Gübre"], sectors: ["İmalat"], themes: ["Yeşil Dönüşüm", "Enerji Verimliliği"],
+  },
   ...savtag1007Calls,
   ...horizonBattery2027,
   ...cleanIndustry2027,
@@ -2550,17 +2614,16 @@ export const calls: FundingCall[] = [
     title: "HIT-30 Yüksek Teknoloji Yatırım Çağrıları",
     institution: "T.C. Sanayi ve Teknoloji Bakanlığı",
     institutionShort: "HIT-30",
-    status: "open",
-    openDate: "2026-07-26T00:00:00+03:00",
-    applicationType: "continuous",
-    applicants: "Teknik ve mali yeterliliğe sahip yerli veya uluslararası yatırımcı şirketler",
-    companyScale: ["Büyük Ölçek", "KOBİ", "Yatırımcı"],
+    status: "unknown",
+    openDate: "",
+    applicants: "Türkiye’de yatırım planlayan, teknik ve mali yeterliliğe sahip yerli veya uluslararası yatırımcı şirketler. Bakanlık SSS’de asgari sabit yatırım 2 milyar TL olarak belirtiliyor.",
+    applicantGroups: ["Özel sektör"], companyScale: ["Yatırımcı"],
     themes: ["Stratejik Yatırım", "Dijital Dönüşüm", "Yeşil Dönüşüm", "İleri İmalat"],
     sectors: ["Savunma ve Güvenlik", "Otomotiv ve Mobilite", "Enerji", "Yarı İletken", "Veri Merkezi", "Yapay Zekâ", "Kuantum", "Otomasyon ve Robotik"],
-    fundingAmount: "Çağrı bazında milyar dolar ölçekli toplam destek bütçeleri ve proje bazlı teşvikler",
-    fundingType: "Proje bazlı teşvik, finansman, pazar geliştirme ve yatırım yeri desteği",
-    supportRate: "Projenin stratejik değeri ve yatırım ölçeğine göre özel paket",
-    duration: "Yatırım projesine göre",
+    fundingAmount: "Çağrıların toplam bütçesi ayrıdır. Şirket başına sabit destek yok; 2 milyar TL hibe değil, asgari sabit yatırım eşiğidir.",
+    fundingType: hit30FundingType,
+    supportRate: hit30SupportRate,
+    duration: hit30Duration,
     summary:
       "Elektrikli araç, batarya, çip, rüzgâr, Ar-Ge merkezi, veri merkezi, yapay zekâ, kuantum, endüstriyel robot ve yenilikçi savunma teknolojilerindeki büyük yatırımları kapsar.",
     objectives: [
@@ -2573,10 +2636,10 @@ export const calls: FundingCall[] = [
       "Ar-Ge merkezi, üretim tesisi ve kritik altyapı yatırımları",
       "Proje bazlı teşvik paketinde uygun görülen harcamalar",
     ],
-    application: "HIT-30 çağrılar sayfasındaki aktif konu üzerinden veya kapsam dâhilindeki diğer yüksek teknoloji konuları için Bakanlığa başvurulur.",
+    application: hit30Application,
     sourceUrl: "https://hit30.sanayi.gov.tr/cagrilar",
     sourceLabel: "Resmî Sanayi ve Teknoloji Bakanlığı HIT-30 çağrılar sayfası",
-    verifiedAt: "2026-07-26T15:00:00+03:00",
+    verifiedAt: "2026-11-06",
     tags: ["HIT-30", "Yüksek Teknoloji", "Savunma", "Yatırım"],
     featured: true,
     notice: "Resmî sayfa, ilanlı aktif çağrılara ek olarak HIT-30 kapsamındaki diğer yüksek teknoloji konularında da başvuru alınabildiğini belirtiyor.",
