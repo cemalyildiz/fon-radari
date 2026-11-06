@@ -5,9 +5,26 @@ import { calls } from "../app/calls-data.ts";
 import { realStatus, nextDeadline, matchesSector, matchesSearch, stale, mergeCalls, validateFeed, unreviewedAnnouncements } from "../app/call-utils.ts";
 import { parseResult, reconcile, collect, migrateLegacy } from "../scripts/update-live-calls.mjs";
 import { verificationCoverage } from "../app/verification-utils.ts";
+import { matchesAudience } from "../app/audience-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("I3FLOAT retains the verified Turkish cluster route while NACHIP requires EU establishment", async () => {
+  const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const reviewed = ["i3float-2026-1", "nachip-2026-2"].map(id => ({...calls.find(c => c.id === id), ...verified[id]}));
+  const [wind, hydrogen] = reviewed;
+  assert.match(wind.applicants, /Haziran 2026’ya kadar/);
+  assert.equal(matchesAudience(wind, "Özel sektör"), true);
+  assert.equal(matchesAudience(hydrogen, "Özel sektör"), false);
+  assert.equal(matchesAudience(hydrogen, "Türkiye’den fonlanamaz"), true);
+  assert.equal(realStatus(wind, Date.parse("2026-11-10T18:59:59+03:00")), "open");
+  assert.equal(realStatus(wind, Date.parse("2026-11-10T19:00:00+03:00")), "archived");
+  assert.equal(realStatus(hydrogen, Date.parse("2026-11-09T10:00:00+03:00")), "unknown");
+  assert.equal(realStatus(hydrogen, Date.parse("2026-11-10T00:00:00+03:00")), "archived");
+  assert.ok(reviewed.every(call => verificationCoverage(call).complete));
+  const duplicates = reviewed.map(call => ({identifier:call.reviewedPortalIdentifier, sourceKind:"cascade", title:call.title, deadline:"2026-11-10T17:00:00Z"}));
+  assert.equal(mergeCalls(reviewed, {calls:duplicates}, Date.parse("2026-11-10T19:00:00+03:00")).length, 2);
+});
 test("Water4All national steps and invited full proposal do not extend initial application", async () => {
   const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const call = {...calls.find(c => c.id === "water4all-2026"), ...verified["water4all-2026"]};

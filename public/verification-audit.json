@@ -129,6 +129,70 @@
       "complete": false
     },
     {
+      "id": "i3float-2026-1",
+      "title": "I3FLOAT — Yüzer Açık Deniz Rüzgâr Teknolojileri",
+      "source": "https://claner.es/i3float/wp-content/uploads/2026/09/I3FLOAT_Open-Call-Submission-toolkit_FV-1.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "nachip-2026-2",
+      "title": "NACHIP — KOBİ’ler İçin Temiz Hidrojen Pilotları",
+      "source": "https://www.nachip.eu/wp-content/uploads/2026/09/NACHIP-2nd-Open-Call.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "fierce-financing-2026-2",
       "title": "FIERCE — KOBİ’ler İçin Uydu Verisiyle Yeşil Dönüşüm",
       "source": "https://2nd-financing.project-fierce.eu/wp-content/uploads/2025/03/FIERCE_2nd-Open-Call_Financial-Support-Program_Guide-for-Applicants_20261015_FINAL-v2.pdf",
@@ -1980,6 +2044,6 @@
       "complete": true
     }
   ],
-  "total": 64,
-  "complete": 35
+  "total": 66,
+  "complete": 37
 }

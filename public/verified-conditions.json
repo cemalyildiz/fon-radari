@@ -1,4 +1,18 @@
 {
+  "i3float-2026-1": {
+    "applicantGroups": ["Özel sektör"],
+    "reviewedPortalIdentifier": "cascade-46830380-15481",
+    "evidenceUrl": "https://claner.es/i3float/wp-content/uploads/2026/09/I3FLOAT_Open-Call-Submission-toolkit_FV-1.pdf",
+    "additionalEvidence": ["https://claner.es/i3float/open-calls/", "https://claner.es/i3float/wp-content/uploads/2026/10/I3FLOAT_1st-Open-Call_FAQs_20261021.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
+  "nachip-2026-2": {
+    "applicantGroups": ["Özel sektör"],
+    "reviewedPortalIdentifier": "cascade-46039280-15842",
+    "evidenceUrl": "https://www.nachip.eu/wp-content/uploads/2026/09/NACHIP-2nd-Open-Call.pdf",
+    "additionalEvidence": ["https://www.nachip.eu/open-calls/", "https://www.nachip.eu/wp-content/uploads/2026/09/Technical-annex-2nd-Open-Call.pdf", "https://interregional-innovation-investments.ec.europa.eu/news/nachip-launches-second-open-call-smes-developing-innovative-hydrogen-solutions"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "fierce-financing-2026-2": {
     "applicantGroups": ["Özel sektör"],
     "reviewedPortalIdentifier": "cascade-45705096-15162",
