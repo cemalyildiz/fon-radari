@@ -10,6 +10,18 @@ import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 import { extractTkdkCallLinks } from "../scripts/tkdk-calls.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("Eurostars draft national rates are visible but not verified; ARIS e-signature does not change first deadline", async () => {
+  const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const reviewed = id => ({...calls.find(c => c.id === id), ...reviews[id]});
+  const eurostars = reviewed("eurostars-call-12-2027");
+  assert.match(eurostars.supportRate, /geçici.*%75.*%60.*%100/);
+  assert.ok(verificationCoverage(eurostars).pendingFields.includes("supportRate"));
+  assert.ok(verificationCoverage(eurostars).pendingFields.includes("fundingAmount"));
+  const aris = reviewed("tubitak-aris-2508-2026");
+  assert.match(aris.followUpStages[0].schedule, /11\.59 TSİ.*23\.59 TSİ/);
+  assert.equal(aris.deadline, "2026-12-21T23:59:00+03:00");
+  assert.equal(aris.verificationIssues[0].field, "followUpStages");
+});
 test("Innowwide is a verified Turkish SME opportunity and closes at 16:00 Turkey time", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const id = "eureka-innowwide-5-2026";

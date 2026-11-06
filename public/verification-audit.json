@@ -275,7 +275,12 @@
       "pendingFields": [
         "supportRate"
       ],
-      "issues": [],
+      "issues": [
+        {
+          "field": "followUpStages",
+          "message": "TÜBİTAK Türkçe duyuruda 28 Aralık 23.59 TSİ, İngilizce duyuruda 28 Aralık 11.59 TSİ veriyor. Ortak çağrı metninde e-imza saati yok. Portalda teyit edilemiyorsa erken saati esas alın; 21 Aralık proje gönderim son tarihi değişmiyor."
+        }
+      ],
       "complete": false
     },
     {

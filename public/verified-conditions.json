@@ -22,7 +22,8 @@
   "tubitak-aris-2508-2026": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma"],
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-10/2508-ARIS-call_text_2026_0.pdf",
-    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/2508-tubitak-slovenya-arastirma-ve-yenilik-ajansi-aris-ikili-birligi-programi-2026-yili-cagrisi-acildi", "https://tubitak.gov.tr/sites/default/files/2026-03/1071_Usul_Ve_Esaslari_79_sayili_YK_Islenmis_Hali.pdf"],
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/2508-tubitak-slovenya-arastirma-ve-yenilik-ajansi-aris-ikili-birligi-programi-2026-yili-cagrisi-acildi", "https://tubitak.gov.tr/en/announcement/2508-tubitak-slovenian-research-and-innovation-agency-aris-bilateral-cooperation-programme-2026-call-open-application", "https://www.aris-rs.si/objave/razpisi/javni-razpis-za-so-financiranje-znanstvenoraziskovalnega-sodelovanja-med-republiko-slovenijo-in-republiko-turcijo-v-letih-2027-2029-2026-11-30", "https://tubitak.gov.tr/sites/default/files/2026-03/1071_Usul_Ve_Esaslari_79_sayili_YK_Islenmis_Hali.pdf"],
+    "verificationIssues": [{"field":"followUpStages","message":"TÜBİTAK Türkçe duyuruda 28 Aralık 23.59 TSİ, İngilizce duyuruda 28 Aralık 11.59 TSİ veriyor. Ortak çağrı metninde e-imza saati yok. Portalda teyit edilemiyorsa erken saati esas alın; 21 Aralık proje gönderim son tarihi değişmiyor."}],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
   },
   "enhancer-pro-medium-2026": {
@@ -377,6 +378,7 @@
   "eurostars-call-12-2027": {
     "applicantGroups": ["Özel sektör", "Üniversite / Araştırma"],
     "evidenceUrl": "https://www.eurekanetwork.org/programmes-and-calls/eurostars/eurostars-call-12-for-projects-deadline-march-2027/",
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/uluslararasi-ortakli-destek-programlari/1709-eureka-eurostars"],
     "verifiedFields": ["applicants", "companyScale", "duration", "openDate", "deadline", "notice"]
   },
   "eit-urban-mobility-strategic-innovation-cutoff-4": {
