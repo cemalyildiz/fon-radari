@@ -1,4 +1,17 @@
 {
+  "eit-creative-tech-spark-2026": {
+    "applicantGroups": ["Girişimci / Bireysel"],
+    "reviewedPortalIdentifier": "cascade-48939704-16461",
+    "evidenceUrl": "https://eit-culture-creativity.eu/sites/default/files/2026-10/Open%20Call_New%20Ventures%20in%20Creative%20Tech_Spark_v3.pdf",
+    "additionalEvidence": ["https://eit-culture-creativity.eu/your-opportunities/calls-funding/new-ventures-creative-tech-spark-incubation", "https://eit-culture-creativity.eu/sites/default/files/2026-10/EITCC_Template%20for%20FAQ_Spark_v1%20%281%29.pdf", "https://ufukavrupa.org.tr/en/node/6842"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
+  "groundwork-grazing-2026": {
+    "reviewedPortalIdentifier": "cascade-46597762-14981",
+    "evidenceUrl": "https://groundwork-project.eu/wp-content/uploads/2026/08/GroundWork-Open-Call-Terms-and-Conditions.pdf",
+    "additionalEvidence": ["https://groundwork-project.eu/for-farmers/", "https://groundwork-project.eu/wp-content/uploads/2026/09/GroundWork-Open-Call_FAQ.pdf"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "i3float-2026-1": {
     "applicantGroups": ["Özel sektör"],
     "reviewedPortalIdentifier": "cascade-46830380-15481",
@@ -77,9 +90,9 @@
   "tubitak-2244-sanayi-doktora-2026": {
     "applicantGroups": ["Üniversite / Araştırma"],
     "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-10/2244_Cagri_Metni_2026.pdf",
-    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/2244-sanayi-doktora-programi-2026-yili-cagrisi-acildi-0", "https://tubitak.gov.tr/tr/burslar/lisansustu/egitim-burs-programlari/2244-sanayi-doktora-programi", "https://tubitak.gov.tr/sites/default/files/2026-11/2244-Sanayi_Doktora_Programi_Sik_Sorulan_Sorular-Ekim_2026_0.pdf"],
-    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "notice"],
-    "verificationIssues": [{"field":"application","message":"TÜBİTAK’ın 4 Kasım açılış duyurusu ve program sayfası TYBS’yi, duyuruya bağlı çağrı PDF’sinin 4.3.1 maddesi e-BİDEB’i gösteriyor. Başvuru sahibi ve takvim doğrulandı; sistem adı için duyurudaki güncel bağlantı ve çağrı ekranı kontrol edilmeli."}]
+    "additionalEvidence": ["https://tubitak.gov.tr/tr/duyuru/2244-sanayi-doktora-programi-2026-yili-cagrisi-acildi-0", "https://tubitak.gov.tr/tr/burslar/lisansustu/egitim-burs-programlari/2244-sanayi-doktora-programi", "https://tubitak.gov.tr/sites/default/files/2026-11/2244-Sanayi_Doktora_Programi_Sik_Sorulan_Sorular-Ekim_2026_0.pdf", "https://ebideb.tubitak.gov.tr/basvuruacikprogramlar.htm"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "deadline", "eligibleCosts", "application", "notice"],
+    "verificationIssues": [{"field":"openDate","message":"Program sayfası açılışı 4 Kasım, BİDEB’in başvuruya açık programlar tablosu 5 Kasım gösteriyor. Kartta başvuru listesindeki 5 Kasım esas alındı. Bu fark 22 Aralık saat 17.30 kapanışını etkilemiyor."}]
   },
   "ssb-saga-active": {
     "status": "unknown",
@@ -327,6 +340,7 @@
   },
   "eit-urban-mobility-startups-2026-2028": {
     "applicantGroups": ["Özel sektör"],
+    "reviewedPortalIdentifier": "cascade-45033429-9223",
     "evidenceUrl": "https://www.eiturbanmobility.eu/wp-content/uploads/2026/10/Financial-Support-to-Startups_Call-Manual_FINAL_1.4.pdf",
     "additionalEvidence": ["https://www.eiturbanmobility.eu/call-for-proposals/financial-support-to-startups-open-call-3/", "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/common/guidance/list-3rd-country-participation_horizon-euratom_en.pdf"],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "application", "notice"]

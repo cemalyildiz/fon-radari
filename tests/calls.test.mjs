@@ -9,6 +9,30 @@ import { matchesAudience } from "../app/audience-utils.ts";
 import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("EIT Urban Mobility remains open for its next submission round after the November cut-off", () => {
+  const call = calls.find(c => c.id === "eit-urban-mobility-startups-2026-2028");
+  const cutoff = Date.parse("2026-11-16T19:00:00+03:00");
+  assert.equal(nextDeadline(call, cutoff - 1), "2026-11-16T19:00:00+03:00");
+  assert.equal(nextDeadline(call, cutoff), "2027-01-11T19:00:00+03:00");
+  assert.equal(realStatus(call, cutoff), "open");
+  assert.equal(realStatus(call, Date.parse("2028-03-13T19:00:00+03:00")), "archived");
+});
+test("Spark separates unincorporated founders from company applicants and GroundWork preserves a conditional route", async () => {
+  const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const [spark, ground] = ["eit-creative-tech-spark-2026", "groundwork-grazing-2026"].map(id => ({...calls.find(c => c.id === id), ...verified[id]}));
+  assert.equal(matchesAudience(spark, "Girişimci / Bireysel"), true);
+  assert.equal(matchesAudience(spark, "Özel sektör"), false);
+  assert.match(spark.applicants, /Tüzel kişiler başvuramaz/);
+  assert.match(ground.applicants, /gerekçeli istisna/);
+  assert.equal(matchesAudience(ground, "Türkiye’den fonlanamaz"), false);
+  for (const [call, deadline] of [[spark, "2026-11-16T19:00:00+03:00"], [ground, "2026-11-19T17:00:00+03:00"]]) {
+    assert.equal(verificationCoverage(call).complete, true);
+    assert.equal(call.deadline, deadline);
+    const portal = {identifier:call.reviewedPortalIdentifier, sourceKind:"cascade", title:call.title, deadline:"2026-11-19T18:00:00Z"};
+    assert.equal(mergeCalls([call], {calls:[portal]}, Date.parse(deadline)).length, 1);
+    assert.equal(realStatus(call, Date.parse(deadline)), "archived");
+  }
+});
 test("DUT and SBEP keep the organisers' closing times instead of conflicting portal copies", async () => {
   const verified = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const examples = [["dut-2026", "2026-11-17T15:00:00+03:00"], ["sbep-2026", "2026-11-16T17:00:00+03:00"]];
@@ -89,7 +113,8 @@ test("verification coverage separates documented fields, missing values and conf
   assert.equal(verificationCoverage({ ...reviewed, evidenceUrl: undefined }).complete, false);
   const phd = calls.find(c => c.id === "tubitak-2244-sanayi-doktora-2026");
   const check = verificationCoverage({ ...phd, ...data[phd.id] });
-  assert.deepEqual(check.pendingFields, ["application"]);
+  assert.deepEqual(check.pendingFields, ["openDate"]);
+  assert.equal(phd.applicationLinks[0].url, "https://tybs.tubitak.gov.tr/");
   assert.equal(check.complete, false);
 });
 test("EIC 2027 publishes the confirmed WIDERA schedule without assigning a contradictory Transition deadline", async () => {

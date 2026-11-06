@@ -129,6 +129,70 @@
       "complete": false
     },
     {
+      "id": "eit-creative-tech-spark-2026",
+      "title": "Spark — Yaratıcı Teknolojide Yeni Girişimler",
+      "source": "https://eit-culture-creativity.eu/sites/default/files/2026-10/Open%20Call_New%20Ventures%20in%20Creative%20Tech_Spark_v3.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "groundwork-grazing-2026",
+      "title": "GroundWork — Onarıcı Hayvancılık ve Otlatma Pilotları",
+      "source": "https://groundwork-project.eu/wp-content/uploads/2026/08/GroundWork-Open-Call-Terms-and-Conditions.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "i3float-2026-1",
       "title": "I3FLOAT — Yüzer Açık Deniz Rüzgâr Teknolojileri",
       "source": "https://claner.es/i3float/wp-content/uploads/2026/09/I3FLOAT_Open-Call-Submission-toolkit_FV-1.pdf",
@@ -1129,9 +1193,9 @@
         "fundingType",
         "supportRate",
         "duration",
-        "openDate",
         "deadline",
         "eligibleCosts",
+        "application",
         "notice"
       ],
       "verifiedCore": [
@@ -1141,16 +1205,16 @@
         "fundingType",
         "supportRate",
         "duration",
-        "openDate",
+        "application",
         "deadline"
       ],
       "pendingFields": [
-        "application"
+        "openDate"
       ],
       "issues": [
         {
-          "field": "application",
-          "message": "TÜBİTAK’ın 4 Kasım açılış duyurusu ve program sayfası TYBS’yi, duyuruya bağlı çağrı PDF’sinin 4.3.1 maddesi e-BİDEB’i gösteriyor. Başvuru sahibi ve takvim doğrulandı; sistem adı için duyurudaki güncel bağlantı ve çağrı ekranı kontrol edilmeli."
+          "field": "openDate",
+          "message": "Program sayfası açılışı 4 Kasım, BİDEB’in başvuruya açık programlar tablosu 5 Kasım gösteriyor. Kartta başvuru listesindeki 5 Kasım esas alındı. Bu fark 22 Aralık saat 17.30 kapanışını etkilemiyor."
         }
       ],
       "complete": false
@@ -2044,6 +2108,6 @@
       "complete": true
     }
   ],
-  "total": 66,
-  "complete": 37
+  "total": 68,
+  "complete": 39
 }
