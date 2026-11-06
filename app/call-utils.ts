@@ -33,7 +33,7 @@ export function realStatus(call: FundingCall, now: number): CallStatus {
   if (call.status === "unknown") {
     const deadline = nextDeadline(call, now);
     const confirmed = call.verifiedFields?.includes("deadline") && !call.calendarObservation?.conflict &&
-      !call.verificationIssues?.some(issue => issue.field === "deadline");
+      !call.verificationIssues?.some(issue => issue.field === "deadline" || issue.field === "openDate");
     return confirmed && deadline && deadlinePassed(deadline, now) ? "archived" : "unknown";
   }
   if (call.status === "archived") return "archived";
@@ -151,6 +151,31 @@ const turkeyDay = new Intl.DateTimeFormat("sv-SE", { year: "numeric", month: "2-
 export function portalDeadlinePassed(date: string, now: number) {
   return utcMidnight(date) ? date.slice(0, 10) < turkeyDay.format(now) : Date.parse(date) <= now;
 }
+const calendarDay = (value: string) => dateOnly(value) || utcMidnight(value) ? value.slice(0, 10) : turkeyDay.format(Date.parse(value));
+const observedDate = new Intl.DateTimeFormat("tr-TR", { dateStyle: "long", timeStyle: "short", timeZone: "Europe/Istanbul" });
+
+function checkReviewedPortalCalendar(call: FundingCall, portal: LiveCall, now: number): FundingCall {
+  // Multi-stage/batch topics need stage-aware comparison; don't pair dates by guesswork.
+  const checked = Date.parse(portal.sourceCheckedAt ?? "");
+  const reviewedAt = Date.parse(call.verifiedAt);
+  if (call.deadlines?.length || call.followUpStages?.length || (portal.deadlines?.length ?? 0) > 1 ||
+      !Number.isFinite(checked) || checked > now || (Number.isFinite(reviewedAt) && checked < reviewedAt)) return call;
+  const changes = ([
+    ["openDate", "açılış", call.openDate, portal.startDate, call.openingDateOnly],
+    ["deadline", "kapanış", call.deadline, nextDeadline(portal, now), call.calendarDateOnly],
+  ] as const).flatMap(([field, label, reviewed, observed, reviewedDateOnly]) => {
+    if (!reviewed || !observed || !validDate(reviewed) || !validDate(observed) ||
+        !call.verifiedFields?.includes(field) || call.verificationIssues?.some(issue => issue.field === field)) return [];
+    const portalDateOnly = dateOnly(observed) || utcMidnight(observed);
+    const dayOnly = portalDateOnly || reviewedDateOnly || dateOnly(reviewed);
+    const conflict = dayOnly ? calendarDay(reviewed) !== calendarDay(observed) : Date.parse(reviewed) !== Date.parse(observed);
+    if (!conflict) return [];
+    const display = portalDateOnly ? `${calendarDay(observed)} (saat belirtilmemiş)` : `${observedDate.format(Date.parse(observed))} (TSİ)`;
+    return [{field, message: `AB Funding & Tenders Portal taramasında ${label} ${display} olarak görünüyor; önceki resmî belgeyle uyuşmuyor. Yeni takvim başvuru ekranından ve çağrı belgesinden teyit edilmeli.`}];
+  });
+  return changes.length ? { ...call, status: "unknown", verificationIssues: [...(call.verificationIssues ?? []), ...changes] } : call;
+}
+
 export function mergeCalls(curated: FundingCall[], feed: LiveFeed, now: number): FundingCall[] {
   const codes = new Set(curated.map(c => c.code.toLowerCase()));
   const reviewed = new Set(curated.filter(c => c.scope === "international" && c.reviewedPortalIdentifier).map(c => c.reviewedPortalIdentifier!.toLowerCase()));
@@ -182,7 +207,12 @@ export function mergeCalls(curated: FundingCall[], feed: LiveFeed, now: number):
     sourceCheckedAt: c.sourceCheckedAt ?? feed.checkedAt ?? undefined, tags: [c.identifier, ...(c.sourceReference ? [c.sourceReference] : [])],
     notice: [c.sourceWarning, c.sourceBudgetConflict ? "Aynı eylem için farklı bütçe değerleri geldiğinden otomatik tutar gösterilmiyor." : "", utcMidnight(nextDeadline(c, now)) ? "AB API’sindeki gece yarısı zaman damgası kesin kapanış saati olarak gösterilmez. Güncel saati çağrı belgesinden kontrol edin." : ""].filter(Boolean).join(" ") || undefined,
   }));
-  return [...curated, ...imported].map(c => {
+  const topics = new Map((feed.calls ?? []).filter(c => c.sourceKind === "topic").map(c => [c.identifier.toLowerCase(), c]));
+  const reviewedCalls = curated.map(c => {
+    const topic = c.scope === "international" && c.reviewedPortalIdentifier ? topics.get(c.reviewedPortalIdentifier.toLowerCase()) : undefined;
+    return topic ? checkReviewedPortalCalendar(c, topic, now) : c;
+  });
+  return [...reviewedCalls, ...imported].map(c => {
     const deadline = nextDeadline(c, now);
     return { ...c, deadline, calendarDateOnly: c.calendarDateOnly || dateOnly(deadline), status: realStatus(c, now) };
   });

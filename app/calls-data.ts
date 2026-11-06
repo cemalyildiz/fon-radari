@@ -138,7 +138,7 @@ const enhancerCommon = {
 const horizonDecemberEnergy = [
   {
     topic: "14", page: 148, id: "horizon-agri-offshore-pv-2026", title: "Tarım ve Deniz Üstü Fotovoltaik Sistemler",
-    budget: "30", contribution: "7,5", projects: 4, type: "Götürü hibe (IA)", research: false,
+    budget: "30", contribution: "7,5", projects: 4, type: "Götürü hibe (IA)", research: false, ssh: true,
     summary: "Tarım ile güneş elektriğini aynı arazide birleştiren sistemler veya açık denizde/kıyıya yakın sularda yenilikçi fotovoltaik uygulamalar. Proje sonunda THS 7–8 bekleniyor.",
     objectives: ["İki alandan yalnız biri için, farklı AB iklim veya deniz bölgelerinde toplam en az 5 MW kurulu güce sahip demonstrasyonlar yapmak", "Enerji üretimini modellemek, çevresel etkileri ölçmek ve izin ile standardizasyon yaklaşımını göstermek"],
     activities: ["Sistem tasarımı, prototip, demonstrasyon ve saha ölçümleri", "Tarım odaklı projelerde ürün verimi, kalite ve biyoçeşitlilik; deniz uygulamalarında deniz alanı kullanımı ve şebeke entegrasyonu"],
@@ -147,7 +147,7 @@ const horizonDecemberEnergy = [
   },
   {
     topic: "05", page: 123, id: "horizon-biofuel-chp-2026", title: "Katı Biyoyakıtla Yüksek Verimli Kojenerasyon",
-    budget: "13,5", contribution: "6,75", projects: 2, type: "Uygun maliyet esaslı hibe (IA)", research: false,
+    budget: "13,5", contribution: "6,75", projects: 2, type: "Uygun maliyet esaslı hibe (IA)", research: false, ssh: true,
     summary: "Bölgesel biyojenik atık ve kalıntıların işlenip 10–30 MWe ölçeğinde bir kojenerasyon tesisinde kullanılması. Proje sonunda THS 6–7 bekleniyor.",
     objectives: ["İşletmedeki yüksek verimli bir tesiste en az bir bölgesel değer zincirini göstermek; yakıt kalitesi ile sera gazı ve hava kirletici azaltımını doğrulamak", "Yaşam döngüsü analiziyle su, hava, biyoçeşitlilik ve toprak karbonu etkilerini değerlendirmek; hammadde tedarikçilerini sürece katmak"],
     activities: ["Atık ve kalıntıların ön işlemi ve yakıt kalitesinin artırılması", "Bölgesel tedarik lojistiği, tesis demonstrasyonu ve emisyon ölçümü"],
@@ -156,12 +156,30 @@ const horizonDecemberEnergy = [
   },
   {
     topic: "06", page: 125, id: "horizon-deep-geothermal-2026", title: "Derin Jeotermal Rezervuarlarda Kaynak Değerlendirmesi",
-    budget: "18", contribution: "4,5", projects: 4, type: "Götürü hibe (RIA)", research: true,
+    budget: "18", contribution: "4,5", projects: 4, type: "Götürü hibe (RIA)", research: true, ssh: true,
     summary: "2.000–6.000 m derinlikte, doğal geçirgenliği düşük jeotermal kaynakların araştırılması. Proje sonunda THS 4–5 bekleniyor.",
     objectives: ["Geliştirilmiş veya kapalı çevrim jeotermal sistemler için uygun sahaları ve rezervuar davranışını öngören yöntemler geliştirmek", "Çözümün karar ve risk analizine katkısını doğrulamak; sismisite, yeraltı suyu ve yerel topluluk etkilerini ele almak"],
     activities: ["Jeofizik ekipmanı, araştırma yöntemleri ve rezervuar modelleme", "Karar ve risk analizi, çevresel ve toplumsal değerlendirme"],
     notice: "Çağrı ticari santral kurulumunu değil, kaynak değerlendirme yöntemlerinin geliştirilmesini ve doğrulanmasını hedefler. Yerel toplulukların erken ve sürekli katılımı bekleniyor.",
     tags: ["Jeotermal", "Rezervuar Modelleme", "Yerbilimleri"], sectors: ["Enerji"],
+  },
+  {
+    topic: "23", page: 169, id: "horizon-energy-ai-data-2026", title: "Enerjide Temel Yapay Zekâ Modelleri ve Veri Paylaşımı",
+    budget: "30", contribution: "10", projects: 3, type: "Uygun maliyet esaslı hibe (IA)", research: false,
+    summary: "Enerji sistemleri için temel yapay zekâ modellerinin geliştirilmesi, eğitilmesi ve doğrulanması. Proje sonunda THS 7–8 bekleniyor.",
+    objectives: ["Şebeke işletimi, talep tahmini, kestirimci bakım, esneklik veya enerji verimliliği gibi en az bir enerji kullanım senaryosunda model geliştirmek", "Laboratuvar demonstrasyonu ve gerçek saha pilotlarıyla doğrulamak"],
+    activities: ["Güvenli veri paylaşımı ve veri yönetişimi", "Model eğitimi, test ve saha doğrulaması"],
+    notice: "Teklif verilirken ilgili büyük veri kümelerine erişim gösterilmeli. Veri sahipleri, model geliştiricileri ve sahada uygulayacak kuruluşlar birlikte çalışmalı; açık kaynak mümkün olduğunda tercih edilmeli. Seçilen projelerin BRIDGE girişimine katılması bekleniyor.",
+    tags: ["Yapay Zekâ", "Enerji Verisi", "Akıllı Şebeke"], sectors: ["Enerji", "Bilişim ve Yazılım"],
+  },
+  {
+    topic: "04", page: 120, id: "horizon-renewable-fuels-pcp-2026", title: "Yenilenebilir Yakıtlar için Ticari Öncesi Ar-Ge Alımı",
+    budget: "40", contribution: "40", projects: 1, type: "Alıcı konsorsiyumuna hibe (PCP); tedarikçilere ayrı Ar-Ge hizmet sözleşmesi", research: false, procurement: true,
+    summary: "Havacılık ve denizcilik gibi alanlara yönelik yenilenebilir yakıt değer zincirlerinin ortak, aşamalı Ar-Ge alımıyla THS 8’e taşınması.",
+    objectives: ["Birden fazla Ar-Ge sağlayıcısının çözümlerini rekabetçi aşamalarda geliştirip karşılaştırmak", "Seçilen yakıt değer zincirinin doğrulanması ve sonraki uygulama veya alım için plan oluşturmak"],
+    activities: ["Ortak ticari öncesi alımın hazırlanması, yürütülmesi ve izlenmesi", "Ar-Ge hizmetlerinin alımı, prototip ve testlerin doğrulanması"],
+    notice: "Bu, teknoloji sağlayıcılarına açık doğrudan bir şirket hibesi değildir. Türkiye’de yerleşik uygun Ar-Ge sağlayıcıları alıcıların daha sonra yayımlayacağı ayrı ihaleye teklif verebilir; bu ihalenin tarihi ve sözleşme bedelleri ana çağrıda belirlenmemiştir. Nihai ürün olarak hidrojen üretimi kapsam dışı.",
+    tags: ["Yenilenebilir Yakıt", "Ticari Öncesi Alım", "Havacılık", "Denizcilik"], sectors: ["Enerji", "İmalat", "Ulaşım ve Lojistik"],
   },
 ].map((topic): FundingCall => {
   const code = `HORIZON-CL5-2026-11-D3-${topic.topic}`;
@@ -171,19 +189,27 @@ const horizonDecemberEnergy = [
     institution: "Avrupa Komisyonu · Ufuk Avrupa Küme 5 / CINEA", institutionShort: "Horizon Europe",
     status: "open", openDate: "2026-08-04", openingDateOnly: true, deadline: "2026-12-01T19:00:00+03:00",
     calendarSourceUrl: "https://cinea.ec.europa.eu/funding-opportunities/calls-proposals/eur-1315-million-available-horizon-europe-energy-call_en",
-    applicants: "Türkiye dâhil Ufuk Avrupa’ya asosiye ülkelerde veya AB üyesi ülkelerde yerleşik uygun KOBİ’ler, büyük firmalar ve diğer tüzel kişiler. En az üç farklı ülkeden üç bağımsız yararlanıcı gerekir: en az biri AB üyesi ülkede, diğer ikisi farklı AB üyesi veya asosiye ülkelerde yerleşik olmalı.",
-    applicantGroups: ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu", "STK"], companyScale: ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
-    fundingAmount: `Gösterge konu bütçesi ${topic.budget} milyon €. ${topic.projects} proje için proje başına yaklaşık ${topic.contribution} milyon € AB katkısı öngörülüyor; bu tutar tavan veya garanti değildir.`,
+    applicants: topic.procurement
+      ? "Alıcı konsorsiyumu: en az üç farklı AB üyesi veya asosiye ülkeden üç bağımsız yararlanıcı. Bunların en az ikisi farklı ülkelerde yerleşik bağımsız kamu alıcısı olmalı ve bu kamu alıcılarından en az biri AB üyesi ülkede bulunmalı. Türkiye’den uygun kamu alıcıları katılabilir. Kamu yararına benzer hizmet sunan özel alıcılar da ortak olabilir; ihaleye teklif verecek Ar-Ge sağlayıcıları aynı projede yararlanıcı olamaz."
+      : "Türkiye dâhil Ufuk Avrupa’ya asosiye ülkelerde veya AB üyesi ülkelerde yerleşik uygun KOBİ’ler, büyük firmalar ve diğer tüzel kişiler. En az üç farklı ülkeden üç bağımsız yararlanıcı gerekir: en az biri AB üyesi ülkede, diğer ikisi farklı AB üyesi veya asosiye ülkelerde yerleşik olmalı.",
+    applicantGroups: topic.procurement ? ["Kamu kurum / kuruluşu"] : ["Özel sektör", "Üniversite / Araştırma", "Kamu kurum / kuruluşu", "STK"],
+    companyScale: topic.procurement ? ["Ölçek değil, alıcı statüsü belirleyici"] : ["KOBİ", "Büyük Ölçek", "Üniversite / Araştırma"],
+    fundingAmount: topic.procurement
+      ? "Gösterge konu bütçesi 40 milyon €. Bir alıcı konsorsiyumu projesi için yaklaşık 40 milyon € AB katkısı öngörülüyor; bu tutar tedarikçi başına ödeme değildir."
+      : `Gösterge konu bütçesi ${topic.budget} milyon €. ${topic.projects} proje için proje başına yaklaşık ${topic.contribution} milyon € AB katkısı öngörülüyor; bu tutar tavan veya garanti değildir.`,
     fundingType: topic.type,
-    supportRate: topic.research ? "Uygun maliyetlerin %100’üne kadar (RIA)." : "Kâr amaçlı kuruluşlar için en fazla %70; uygun kâr amacı gütmeyen tüzel kişiler için %100’e kadar (IA).",
-    duration: "Konu metninde sabit bir genel proje süresi belirtilmemiş.",
+    supportRate: topic.procurement ? "Alıcı konsorsiyumunun uygun maliyetlerinin %100’üne kadar (PCP). Tedarikçiye ödeme, ayrı ihale sözleşmesine göre yapılır."
+      : topic.research ? "Uygun maliyetlerin %100’üne kadar (RIA)." : "Kâr amaçlı kuruluşlar için en fazla %70; uygun kâr amacı gütmeyen tüzel kişiler için %100’e kadar (IA).",
+    duration: "Konu metninde sabit süre belirtilmiyor. Proje süresi ay olarak hibe sözleşmesinde belirlenir (Genel Ek G).",
     summary: topic.summary, objectives: topic.objectives, eligibleCosts: topic.activities,
-    application: "Koordinatör tek aşamalı teklifi AB Funding & Tenders Portal üzerinden sunar. Son saat Brüksel’de 17.00, Türkiye’de 19.00.",
+    application: topic.procurement
+      ? "Alıcı konsorsiyumunun koordinatörü en fazla 60 sayfalık tek aşamalı teklifi AB Funding & Tenders Portal üzerinden sunar. Son saat Türkiye’de 19.00; bu tarih tedarikçi ihalesinin son tarihi değildir."
+      : "Koordinatör tek aşamalı teklifi AB Funding & Tenders Portal üzerinden sunar. Son saat Brüksel’de 17.00, Türkiye’de 19.00.",
     applicationLinks: [{ label: "Çalışma programı · konu koşulları", url: `https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf#page=${topic.page}` }],
     sourceUrl: `https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/topic-details/${code}`,
     sourceLabel: "Avrupa Komisyonu · resmî konu ve başvuru sayfası", verifiedAt: "2026-11-06",
     tags: topic.tags, sectors: topic.sectors, themes: ["Yeşil Dönüşüm", "Ar-Ge ve Yenilik"],
-    notice: `${topic.notice} Sosyal ve beşerî bilim uzmanlığı gerekli. Uydu tabanlı gözlem, konumlama, navigasyon veya zamanlama kullanılırsa Copernicus ve/veya Galileo/EGNOS kullanılmalı.`,
+    notice: `${topic.notice} ${topic.ssh ? "Sosyal ve beşerî bilim uzmanlığı gerekli. " : ""}Uydu tabanlı gözlem, konumlama, navigasyon veya zamanlama kullanılırsa Copernicus ve/veya Galileo/EGNOS kullanılmalı.`,
   };
 });
 

@@ -138,6 +138,7 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "openDate",
         "deadline",
         "eligibleCosts",
@@ -150,15 +151,14 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "application",
         "openDate",
         "deadline"
       ],
-      "pendingFields": [
-        "duration"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "horizon-biofuel-chp-2026",
@@ -170,6 +170,7 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "openDate",
         "deadline",
         "eligibleCosts",
@@ -182,15 +183,14 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "application",
         "openDate",
         "deadline"
       ],
-      "pendingFields": [
-        "duration"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
     },
     {
       "id": "horizon-deep-geothermal-2026",
@@ -202,6 +202,7 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "openDate",
         "deadline",
         "eligibleCosts",
@@ -214,15 +215,78 @@
         "fundingAmount",
         "fundingType",
         "supportRate",
+        "duration",
         "application",
         "openDate",
         "deadline"
       ],
-      "pendingFields": [
-        "duration"
-      ],
+      "pendingFields": [],
       "issues": [],
-      "complete": false
+      "complete": true
+    },
+    {
+      "id": "horizon-energy-ai-data-2026",
+      "title": "Ufuk Avrupa — Enerjide Temel Yapay Zekâ Modelleri ve Veri Paylaşımı",
+      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
+      "id": "horizon-renewable-fuels-pcp-2026",
+      "title": "Ufuk Avrupa — Yenilenebilir Yakıtlar için Ticari Öncesi Ar-Ge Alımı",
+      "source": "https://ec.europa.eu/info/funding-tenders/opportunities/docs/2021-2027/horizon/wp-call/2026-2027/wp-8-climate-energy-and-mobility_horizon-2026-2027_en.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
     },
     {
       "id": "horizon-industrial-solar-heat-2027",
@@ -2629,6 +2693,6 @@
       "complete": true
     }
   ],
-  "total": 84,
-  "complete": 49
+  "total": 86,
+  "complete": 54
 }

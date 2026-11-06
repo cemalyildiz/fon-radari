@@ -56,11 +56,12 @@ test("industrial solar heat keeps firm eligibility and current work programme re
 test("verified December energy topics replace portal placeholders and close at 19:00 Türkiye time", async () => {
   const read = name => readFile(new URL(`../public/${name}.json`, import.meta.url), "utf8").then(JSON.parse);
   const reviews = await read("verified-conditions");
-  const expected = { "14": "Götürü hibe (IA)", "05": "Uygun maliyet esaslı hibe (IA)", "06": "Götürü hibe (RIA)" };
+  const expected = { "14": "Götürü hibe (IA)", "05": "Uygun maliyet esaslı hibe (IA)", "06": "Götürü hibe (RIA)", "23": "Uygun maliyet esaslı hibe (IA)", "04": "Alıcı konsorsiyumuna hibe (PCP); tedarikçilere ayrı Ar-Ge hizmet sözleşmesi" };
   const close = Date.parse("2026-12-01T19:00:00+03:00");
   const reviewed = calls.map(c => ({ ...c, ...reviews[c.id] }));
   const feed = { calls: Object.keys(expected).map(topic => ({
     identifier: `HORIZON-CL5-2026-11-D3-${topic}`, sourceKind: "topic", deadline: "2026-12-01T00:00:00.000Z",
+    startDate: "2026-08-04T00:00:00.000Z", sourceCheckedAt: "2026-11-29T10:00:00.000Z",
   })) };
   const merged = mergeCalls(reviewed, feed, close - 1);
   for (const [topic, type] of Object.entries(expected)) {
@@ -72,9 +73,34 @@ test("verified December energy topics replace portal placeholders and close at 1
     assert.equal(realStatus(call, close + 1), "archived");
     assert.equal(Date.parse(call.deadline), close);
     assert.equal(call.fundingType, type);
-    assert.equal(matchesAudience(call, "Özel sektör"), true);
-    assert.deepEqual(verificationCoverage(call).pendingFields, ["duration"]);
+    assert.equal(matchesAudience(call, "Özel sektör"), topic !== "04");
+    assert.equal(verificationCoverage(call).complete, true);
   }
+});
+test("a new portal calendar conflict persists without publishing an unconfirmed deadline", () => {
+  const call = {...calls.find(c => c.id === "horizon-energy-ai-data-2026"), verifiedFields: ["openDate", "deadline"]};
+  const source = {identifier:call.code, sourceKind:"topic", sourceCheckedAt:"2026-11-27T12:00:00Z", startDate:"2026-08-04T00:00:00.000Z"};
+  const afterOldDeadline = Date.parse("2026-12-02T00:00:00Z");
+  const merge = data => mergeCalls([call], {calls:[{...source,...data}]}, afterOldDeadline)[0];
+  const changed = merge({deadline:"2026-12-04T00:00:00.000Z"});
+  assert.equal(changed.status, "unknown");
+  assert.equal(changed.deadline, call.deadline);
+  assert.deepEqual(changed.verificationIssues.map(x => x.field), ["deadline"]);
+  assert.match(changed.verificationIssues[0].message, /2026-12-04 \(saat belirtilmemiş\)/);
+  assert.equal(merge({deadline:"2026-12-01T15:00:00Z"}).status, "unknown");
+  assert.equal(merge({deadline:"2026-12-01T16:00:00Z"}).status, "archived");
+  assert.equal(merge({deadline:"2026-12-04T00:00:00.000Z", sourceCheckedAt:"2026-11-01T00:00:00Z"}).status, "archived");
+});
+test("renewable fuel suppliers are tenderers rather than grant beneficiaries", () => {
+  const pcp = calls.find(c => c.id === "horizon-renewable-fuels-pcp-2026");
+  assert.equal(matchesAudience(pcp, "Kamu kurum / kuruluşu"), true);
+  assert.match(pcp.applicants, /en az ikisi.*kamu alıcısı/);
+  assert.match(pcp.notice, /ayrı ihaleye teklif/);
+  assert.match(pcp.supportRate, /konsorsiyumunun uygun maliyetlerinin %100/);
+  assert.match(pcp.application, /tedarikçi ihalesinin son tarihi değildir/);
+  const ai = calls.find(c => c.id === "horizon-energy-ai-data-2026");
+  assert.match(ai.notice, /Teklif verilirken ilgili büyük veri kümelerine erişim/);
+  assert.match(ai.supportRate, /Kâr amaçlı kuruluşlar için en fazla %70/);
 });
 test("Karacadağ technical assistance is non-cash; VAP rates do not imply a verified open window", async () => {
   const reviews = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
