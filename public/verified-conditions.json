@@ -1,4 +1,15 @@
 {
+  "kosgeb-sel-taskin-2026": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://kosgeb.gov.tr/site/tr/genel/detay/9505/kosgebden-sel-ve-taskin-felaketlerinden-etkilenen-kobilere-faizkr-payi-destegi",
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "deadline", "eligibleCosts", "application", "notice"]
+  },
+  "kosgeb-kapasite-gelistirme-2026-3": {
+    "applicantGroups": ["Özel sektör"],
+    "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KAPAS%C4%B0TE%20GEL%C4%B0ST%C4%B0RME/2026/2026.05.12/00-Kapasite_Gelis%CC%A7tirme_Destek_Program%C4%B1_Y%C3%B6nergesi_11.05.26.pdf",
+    "additionalEvidence": ["https://kosgeb.gov.tr/site/tr/genel/detay/9467/kobilerin-buyumesine-guclu-destek-yeni-basvuru-donemi-basladi", "https://kosgeb.gov.tr/site/tr/genel/destekdetay/9200/kapasite-gelistirme-destek-programi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice"]
+  },
   "eureka-globalstars-japan-2026": {
     "applicantGroups": ["Özel sektör"],
     "evidenceUrl": "https://www.eurekanetwork.org/programmes-and-calls/globalstars/globalstars-call-with-japan-2026/",

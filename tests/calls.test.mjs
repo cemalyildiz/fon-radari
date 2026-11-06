@@ -5,8 +5,27 @@ import { calls } from "../app/calls-data.ts";
 import { realStatus, nextDeadline, matchesSector, matchesSearch, stale, mergeCalls, validateFeed, unreviewedAnnouncements } from "../app/call-utils.ts";
 import { parseResult, reconcile, collect, migrateLegacy } from "../scripts/update-live-calls.mjs";
 import { verificationCoverage } from "../app/verification-utils.ts";
+import { isNationalFundingCandidate } from "../app/national-announcements.mjs";
 const now = Date.parse("2026-09-09T12:00:00Z");
 const base = { ...calls.find(c => c.id === "tubitak-1501-2026-2") };
+test("national discovery keeps application and extension notices, not result, training or menu pages", () => {
+  const url = "https://tubitak.gov.tr/tr/duyuru/ilan";
+  assert.equal(isNationalFundingCandidate("TEYDEB 1507 başvuru sonuçları açıklandı", url), false);
+  assert.equal(isNationalFundingCandidate("TÜBİTAK BİGG Çağrısı’nın Sonuçları Belli Oldu", url), false);
+  assert.equal(isNationalFundingCandidate("Kış Okulu 2026 başvuruları başladı", url), false);
+  assert.equal(isNationalFundingCandidate("Sel ve taşkından etkilenen KOBİ’lere faiz/kâr payı desteği", "https://kosgeb.gov.tr/site/tr/genel/detay/9505/destek"), true);
+  assert.equal(isNationalFundingCandidate("Kapasite Geliştirme Destek Programı", "https://www.kosgeb.gov.tr/site/tr/genel/destekdetay/9200/program"), false);
+  assert.equal(isNationalFundingCandidate("1832 Sanayide Yeşil Dönüşüm Çağrısı Süre Uzatımı", url), true);
+  assert.equal(isNationalFundingCandidate("Proje çağrısı", "not a URL"), false);
+});
+test("an unconfirmed opening does not make a call open or prevent archive after verified closing", async () => {
+  const data = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
+  const flood = {...calls.find(c => c.id === "kosgeb-sel-taskin-2026"), ...data["kosgeb-sel-taskin-2026"]};
+  assert.equal(realStatus(flood, Date.parse("2026-11-06T12:00:00+03:00")), "unknown");
+  assert.equal(realStatus(flood, Date.parse("2026-12-31T18:00:00+03:00")), "unknown");
+  assert.equal(realStatus(flood, Date.parse("2027-01-01T00:00:00+03:00")), "archived");
+  assert.equal(realStatus({...flood, verificationIssues:[{field:"deadline",message:"Tarih çelişkisi"}]}, Date.parse("2027-01-01T00:00:00+03:00")), "unknown");
+});
 test("verification coverage separates documented fields, missing values and conflicting sources", async () => {
   const data = JSON.parse(await readFile(new URL("../public/verified-conditions.json", import.meta.url), "utf8"));
   const reviewed = { ...base, ...data[base.id] };
@@ -34,7 +53,7 @@ test("a reviewed national announcement replaces its metadata card without hiding
   const feed = JSON.parse(await readFile(new URL("../public/national-calls.json", import.meta.url), "utf8"));
   const reviewed = calls.find(c => c.id === "tubitak-2244-sanayi-doktora-2026");
   const duplicate = { ...reviewed, id: "national-auto-2244", verification: "metadata" };
-  const other = { ...duplicate, id: "different-announcement", sourceUrl: "https://tubitak.gov.tr/tr/duyuru/another-announcement" };
+  const other = { ...duplicate, id: "different-announcement", title: "Farklı TÜBİTAK proje çağrısı açıldı", sourceUrl: "https://tubitak.gov.tr/tr/duyuru/another-announcement" };
   assert.deepEqual(unreviewedAnnouncements([reviewed], [duplicate, other]), [other]);
   assert.ok(unreviewedAnnouncements(calls, feed.calls).every(c => !calls.some(r => r.sourceUrl === c.sourceUrl)));
   assert.equal(realStatus(reviewed, Date.parse("2026-11-05T12:00:00+03:00")), "open");

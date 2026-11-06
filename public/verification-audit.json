@@ -129,6 +129,70 @@
       "complete": false
     },
     {
+      "id": "kosgeb-sel-taskin-2026",
+      "title": "KOSGEB Acil Durumlar Desteği — Sel ve Taşkın 2026",
+      "source": "https://kosgeb.gov.tr/site/tr/genel/detay/9505/kosgebden-sel-ve-taskin-felaketlerinden-etkilenen-kobilere-faizkr-payi-destegi",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "deadline"
+      ],
+      "pendingFields": [
+        "openDate"
+      ],
+      "issues": [],
+      "complete": false
+    },
+    {
+      "id": "kosgeb-kapasite-gelistirme-2026-3",
+      "title": "KOSGEB Kapasite Geliştirme — 2026/3",
+      "source": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/KAPAS%C4%B0TE%20GEL%C4%B0ST%C4%B0RME/2026/2026.05.12/00-Kapasite_Gelis%CC%A7tirme_Destek_Program%C4%B1_Y%C3%B6nergesi_11.05.26.pdf",
+      "verifiedFields": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "openDate",
+        "deadline",
+        "eligibleCosts",
+        "application",
+        "notice"
+      ],
+      "verifiedCore": [
+        "applicants",
+        "companyScale",
+        "fundingAmount",
+        "fundingType",
+        "supportRate",
+        "duration",
+        "application",
+        "openDate",
+        "deadline"
+      ],
+      "pendingFields": [],
+      "issues": [],
+      "complete": true
+    },
+    {
       "id": "eureka-globalstars-japan-2026",
       "title": "Eureka Globalstars Japonya 2026 — Ortak Sanayi Ar-Ge",
       "source": "https://www.eurekanetwork.org/programmes-and-calls/globalstars/globalstars-call-with-japan-2026/",
@@ -1726,6 +1790,6 @@
       "complete": true
     }
   ],
-  "total": 56,
-  "complete": 28
+  "total": 58,
+  "complete": 29
 }

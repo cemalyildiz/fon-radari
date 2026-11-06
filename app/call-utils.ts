@@ -1,6 +1,7 @@
 import type { FundingCall, CallStatus } from "./calls-data.ts";
 import { destinationIdentifier, officialDestination } from "./live-source.mjs";
 import { officialConditionDocument, validBudgetRow } from "./live-evidence.mjs";
+import { isNationalFundingCandidate } from "./national-announcements.mjs";
 
 type PortalBudget = { action: string; yearly: Record<string, number>; min: number | null; max: number | null; grants: number | null };
 
@@ -28,7 +29,13 @@ export function nextDeadline(call: Pick<FundingCall, "deadline" | "deadlines">, 
   return dates.find(d => !deadlinePassed(d, now)) ?? dates.at(-1);
 }
 export function realStatus(call: FundingCall, now: number): CallStatus {
-  if (call.recordType === "program" || call.status === "unknown") return "unknown";
+  if (call.recordType === "program") return "unknown";
+  if (call.status === "unknown") {
+    const deadline = nextDeadline(call, now);
+    const confirmed = call.verifiedFields?.includes("deadline") && !call.calendarObservation?.conflict &&
+      !call.verificationIssues?.some(issue => issue.field === "deadline");
+    return confirmed && deadline && deadlinePassed(deadline, now) ? "archived" : "unknown";
+  }
   if (call.status === "archived") return "archived";
   const deadline = nextDeadline(call, now);
   if (deadline && deadlinePassed(deadline, now)) return "archived";
@@ -81,7 +88,7 @@ export function validateFeed(value: unknown): value is LiveFeed {
 }
 export function unreviewedAnnouncements(reviewed: Pick<FundingCall, "sourceUrl">[], discovered: FundingCall[]) {
   const reviewedUrls = new Set(reviewed.map(call => call.sourceUrl));
-  return discovered.filter(call => !reviewedUrls.has(call.sourceUrl));
+  return discovered.filter(call => !reviewedUrls.has(call.sourceUrl) && isNationalFundingCandidate(call.title, call.sourceUrl));
 }
 export type NationalCalendarRow = {
   key: string; title: string; sourceUrl: string; openDate: string; deadline: string; checkedAt: string;

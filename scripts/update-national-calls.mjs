@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { createHash } from 'node:crypto';
 import { calls } from '../app/calls-data.ts';
+import { isNationalFundingCandidate } from '../app/national-announcements.mjs';
 import { calendarIndex, confirmCalendarDetail, extractCalendarIndex } from './tubitak-calendar.mjs';
 
 const path = 'public/national-calls.json';
@@ -8,13 +9,17 @@ const previous = await readFile(path, 'utf8').then(JSON.parse).catch(() => ({ ca
 const now = new Date().toISOString();
 const sources = [
   ['TÜBİTAK', 'https://tubitak.gov.tr/tr/duyuru'],
-  ['KOSGEB', 'https://www.kosgeb.gov.tr/site/tr/genel/duyurular'],
+  ['KOSGEB', 'https://kosgeb.gov.tr/site/tr/genel/liste/4/haber'],
   ['Ticaret Bakanlığı', 'https://ticaret.gov.tr/duyurular'],
   ['HIT-30', 'https://hit30.sanayi.gov.tr/cagrilar'],
   ['SSB', 'https://arge.ssb.gov.tr/'],
 ];
-const clean = value => value.replace(/<[^>]*>/g, ' ').replace(/&amp;/g, '&').replace(/&#\d+;/g, ' ').replace(/\s+/g, ' ').trim();
-const records = new Map(previous.calls.map(c => [c.sourceUrl, c]));
+const clean = value => value.replace(/<[^>]*>/g, ' ').replace(/&#(x[0-9a-f]+|\d+);/gi, (_, entity) => {
+  const point = entity[0].toLowerCase() === 'x' ? parseInt(entity.slice(1), 16) : Number(entity);
+  return point > 0 && point <= 0x10ffff ? String.fromCodePoint(point) : ' ';
+}).replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+const reviewed = new Set(calls.flatMap(c => [c.sourceUrl, c.calendarSourceUrl]).filter(Boolean));
+const records = new Map(previous.calls.filter(c => !reviewed.has(c.sourceUrl) && isNationalFundingCandidate(c.title, c.sourceUrl)).map(c => [c.sourceUrl, c]));
 const state = { ...previous.sources };
 let calendars = previous.calendars ?? [];
 try {
@@ -53,15 +58,19 @@ for (const [institution, url] of sources) {
     let found = 0;
     for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi)) {
       const title = clean(match[2]);
-      if (title.length < 25 || !/çağrı|destek|hibe|başvuru|finansman/i.test(title)) continue;
-      const link = new URL(match[1], url);
-      if (link.origin !== new URL(url).origin || !/^https?:$/.test(link.protocol)) continue;
+      if (title.length < 25) continue;
+      let link;
+      try { link = new URL(match[1], url); } catch { continue; }
+      const source = new URL(url);
+      if (institution === 'KOSGEB' && link.hostname === 'www.kosgeb.gov.tr') link.hostname = source.hostname;
+      if (link.origin !== source.origin) continue;
       link.hash = '';
       const sourceUrl = link.href;
-      if (calls.some(c => c.sourceUrl === sourceUrl)) continue;
+      if (!isNationalFundingCandidate(title, sourceUrl)) continue;
+      found++;
+      if (reviewed.has(sourceUrl)) continue;
       const old = records.get(sourceUrl);
       records.set(sourceUrl, { ...old, id: old?.id ?? `national-auto-${createHash('sha256').update(sourceUrl).digest('hex').slice(0,16)}`, scope: 'national', code: 'Resmî duyuru', title, institution, institutionShort: institution, status: 'unknown', openDate: '', recordType: 'program', verification: 'metadata', sourceCheckedAt: now, verifiedAt: '', applicants: 'Resmî çağrı metninden doğrulanmalı', companyScale: [], fundingAmount: 'Resmî çağrı metninden doğrulanmalı', fundingType: 'Doğrulanmalı', summary: 'Resmî kurum sayfasında otomatik keşfedilen duyuru. Başvuru takvimi, uygunluk ve destek koşulları kaynak metinden kontrol edilmelidir.', objectives: [], eligibleCosts: [], application: 'Kaynak bağlantısından güncel çağrı metnini inceleyin.', sourceUrl, sourceLabel: 'Resmî kurum duyurusu', tags: ['Otomatik keşif'], notice: 'Duyurunun bulunması başvurunun açık olduğu anlamına gelmez.' });
-      found++;
     }
     if (!found) throw new Error('Uygun duyuru bağlantısı bulunamadı; sayfa yapısı kontrol edilmeli');
     state[institution] = { url, checkedAt: now, attemptedAt: now, ok: true, found };
