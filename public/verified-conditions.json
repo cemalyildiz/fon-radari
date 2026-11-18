@@ -1,4 +1,6 @@
 {
+  "tubitak-1832-2026-3": {"evidenceUrl":"https://tubitak.gov.tr/sites/default/files/2026-11/1832_2026_3_Cagri_Duyurusu.pdf","verifiedFields":["openDate","deadline","applicants","fundingAmount","fundingType","supportRate","companyScale","application","duration","preDeadline"]},
+  "ahika-sanayi-verimlilik-2026": {"evidenceUrl":"https://www.ahika.gov.tr/destekler/ahika-acik-destek-programlari/2026-yili-sanayide-verimlilik-kalite-ve-kurumsallasma-teknik-destek-programi/","verifiedFields":["openDate","deadline","applicants","fundingAmount","fundingType","supportRate","companyScale","application"]},
   "sanayi-hit30-vehicles": {
     "evidenceUrl": "https://hit30.sanayi.gov.tr/cagrilar",
     "additionalEvidence": ["https://hit30.sanayi.gov.tr/sikcasorulansorular", "https://hit30.sanayi.gov.tr/tesvikler"],
@@ -810,18 +812,18 @@
   "tubitak-1507-2026-2": {
     "applicantGroups": ["Özel sektör"],
     "companyScale": ["KOBİ"],
-    "application": "PRODİS üzerinden e-imzalı başvuru yapılır. Kuruluş bazlı ön kayıt onayı gerekir; mevcut onayı olan şirketler tekrar kayıt yapmaz. 1501 ve 1507 aynı dönemde toplam en fazla iki proje önerisiyle sınırlıdır.",
-    "dateCheckedAt": "2026-11-04T17:00:00+03:00",
+    "application": "PRODİS üzerinden e-imzalı başvuru yapılır. Kuruluş bazlı ön kayıt onayı gerekir; önceden kayıtlı şirketler bilgilerini güncellemelidir. 1501 ve 1507 aynı dönemde toplam en fazla iki proje önerisiyle sınırlıdır.",
+    "dateCheckedAt": "2026-11-18",
     "openDate": "2026-07-20T00:00:00+03:00",
-    "deadline": "2026-11-11T23:59:00+03:00",
-    "preDeadline": "2026-11-09T23:59:00+03:00",
+    "deadline": "2026-11-25T23:59:00+03:00",
+    "preDeadline": "2026-11-23",
     "applicants": "Türkiye’de yerleşik KOBİ ölçeğinde sermaye şirketleri. En az ikisi ortaklı olmak üzere ilk beş proje kuralı ve uygulama esaslarındaki istisnalar geçerlidir.",
     "fundingAmount": "Program sayfasında belirtilen toplam proje bütçesi üst limiti 3.500.000 TL; bu tutar hibe tutarı değildir",
     "fundingType": "Geri ödemesiz hibe",
     "supportRate": "Çağrıda aksi belirtilmedikçe %75; uygulama esaslarındaki harcama ve oransal destek hükümleri uygulanır",
     "duration": "En fazla 18 ay",
-    "notice": "2026/2 döneminde 1501 ve 1507 başvuruları birlikte sayılarak kuruluş başına en fazla iki öneri sunulabilir. Ön kayıt son saati 9 Kasım 23.59; ön kayıt evrakları kapanıştan en az bir iş günü önce ulaşmalı. Mevcut ön kayıt onayı olanlar tekrar kayıt yapmaz. E-imza gerekir.",
-    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-07/1507_KOBI_Ar-Ge_Baslangic_Destek_Programlari_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
+    "notice": "Uzatılmış takvim: kuruluş bazlı ön kayıt 23 Kasım, proje başvurusu 25 Kasım 2026.",
+    "evidenceUrl": "https://tubitak.gov.tr/tr/duyuru/1507-kobi-ar-ge-baslangic-destek-programi-ve-1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-programi-2026-yili-cagrilarinin-suresi-uzatildi",
     "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1507-tubitak-kobi-ar-ge-baslangic-destek-programi", "https://tubitak.gov.tr/sites/default/files/2026-10/1507_UE_25.09.2026_84YK_islenmis_hali_0.pdf"],
     "verifiedFields": ["openDate", "deadline", "preDeadline", "applicants", "fundingAmount", "fundingType", "supportRate", "duration", "notice", "companyScale", "application"]
   },

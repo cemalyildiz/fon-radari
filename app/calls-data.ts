@@ -552,6 +552,100 @@ const hit30Application = "Yatırım sunumu hit30@sanayi.gov.tr adresine gönderi
 
 export const calls: FundingCall[] = [
   {
+    "scope": "national",
+    "status": "open",
+    "applicantGroups": [
+      "Özel sektör"
+    ],
+    "verifiedAt": "2026-11-18",
+    "recordType": "call",
+    "id": "tubitak-1832-2026-3",
+    "code": "1832 · 2026/3",
+    "title": "Sanayide Yeşil Dönüşüm — 2026/3",
+    "institution": "TÜBİTAK · TEYDEB",
+    "institutionShort": "TÜBİTAK",
+    "openDate": "2026-11-09",
+    "preDeadline": "2026-12-30",
+    "deadline": "2027-01-04",
+    "calendarDateOnly": true,
+    "applicants": "Türkiye’de yerleşik sermaye şirketleri; yürütücüde özel sektör payı en az %75 olmalı. Genel kural en az iki yıllık tescildir; spin-off ve 1512/1812 ile kurulan şirketlere istisna vardır. Mali yeterlilik, banka referans mektubu ve teminat şartları geçerlidir.",
+    "companyScale": [
+      "KOBİ",
+      "Büyük Ölçek"
+    ],
+    "fundingAmount": "Proje bütçesi üst sınırı mikro/küçük işletmede 16 milyon TL, orta işletmede 26 milyon TL, büyük işletmede 55 milyon TL. Bunlar hibe tutarı değildir.",
+    "fundingType": "Geri ödemeli destek; koşullu kısmi hibe",
+    "supportRate": "Kabul edilen bütçenin büyük firmada %70’i, KOBİ’de %80’i, kapsamdaki deprem bölgesi KOBİ’lerinde %90’ı geri ödemeli desteklenir.",
+    "duration": "En fazla 24 ay",
+    "summary": "Yeşil ürün ve süreçlerde ölçek büyütmeye yönelik sanayi Ar-Ge projeleri. Başlangıç teknoloji hazırlık seviyesi 3–7, bitiş en az 7 olmalıdır.",
+    "objectives": [
+      "Ölçülebilir yeşil dönüşüm göstergelerinde iyileşme"
+    ],
+    "eligibleCosts": [
+      "Uygun Ar-Ge personeli, ekipman, malzeme ve hizmet alımları"
+    ],
+    "application": "Kuruluş ön kaydını ve gerekiyorsa güncellemeyi tamamlayın. Projeyi PRODİS üzerinden e-imza ile gönderin.",
+    "sourceUrl": "https://tubitak.gov.tr/sites/default/files/2026-11/1832_2026_3_Cagri_Duyurusu.pdf",
+    "sourceLabel": "TÜBİTAK · 1832/2026-3 çağrı metni",
+    "tags": [
+      "1832",
+      "Yeşil Dönüşüm"
+    ],
+    "themes": [
+      "Yeşil Dönüşüm",
+      "Ar-Ge ve Yenilik"
+    ],
+    "sectors": [
+      "İmalat",
+      "Sektörler Arası"
+    ]
+  },
+  {
+    "scope": "national",
+    "status": "open",
+    "applicantGroups": [
+      "Özel sektör"
+    ],
+    "verifiedAt": "2026-11-18",
+    "recordType": "call",
+    "id": "ahika-sanayi-verimlilik-2026",
+    "code": "AHİKA · Teknik Destek 2026",
+    "title": "Sanayide Verimlilik, Kalite ve Kurumsallaşma",
+    "institution": "Ahiler Kalkınma Ajansı",
+    "institutionShort": "AHİKA",
+    "openDate": "2026-09-07",
+    "openingDateOnly": true,
+    "deadline": "2026-12-31T17:00:00+03:00",
+    "applicants": "TR71 Bölgesinde (Aksaray, Kırıkkale, Kırşehir, Nevşehir, Niğde) faaliyet gösteren, seçilen program önceliğinin şartlarını sağlayan KOBİ’ler.",
+    "companyScale": [
+      "KOBİ"
+    ],
+    "fundingAmount": "Proje başına en fazla 750.000 TL değerinde hizmet; program bütçesi 10 milyon TL.",
+    "fundingType": "Ayni teknik destek; firmaya nakit ödeme yapılmaz",
+    "supportRate": "%100",
+    "summary": "TR71 işletmeleri için yalın üretim, kalite sistemleri, otomotiv sertifikasyonu, bilanço yönetimi ve maliyet muhasebesi danışmanlığı.",
+    "objectives": [
+      "Üretimde verimliliği ve kurumsal kapasiteyi artırmak"
+    ],
+    "eligibleCosts": [
+      "Ajansın sunduğu veya satın aldığı danışmanlık hizmeti"
+    ],
+    "application": "KAYS üzerinden başvurun. Kasım–Aralık dönemi 31 Aralık saat 17.00’de kapanır; bütçe tükenirse ajans başvuruları erken kapatabilir.",
+    "sourceUrl": "https://www.ahika.gov.tr/destekler/ahika-acik-destek-programlari/2026-yili-sanayide-verimlilik-kalite-ve-kurumsallasma-teknik-destek-programi/",
+    "sourceLabel": "AHİKA · resmî program sayfası",
+    "tags": [
+      "Yalın Üretim",
+      "TR71"
+    ],
+    "themes": [
+      "Verimlilik",
+      "Kurumsal Kapasite"
+    ],
+    "sectors": [
+      "İmalat"
+    ]
+  },
+  {
     id: "kosgeb-yesil-sanayi-2026-01", scope: "national", code: "Yeşil Sanayi · 2026-01",
     title: "Sanayide Temiz ve Döngüsel Ekonomi",
     institution: "KOSGEB — Yeşil Sanayi Destek Programı", institutionShort: "KOSGEB",
@@ -1841,8 +1935,8 @@ export const calls: FundingCall[] = [
     institutionShort: "TÜBİTAK",
     status: "open",
     openDate: "2026-07-20T00:00:00+03:00",
-    deadline: "2026-11-11T23:59:00+03:00",
-    preDeadline: "2026-11-09T23:59:00+03:00",
+    deadline: "2026-11-25T23:59:00+03:00",
+    preDeadline: "2026-11-23",
     applicants: "Ar-Ge projesi sunan Türkiye’de yerleşik KOBİ’ler",
     companyScale: ["KOBİ"],
     fundingAmount: "Çağrı dokümanındaki proje bütçesi ve üst limitler geçerlidir",
@@ -1870,7 +1964,7 @@ export const calls: FundingCall[] = [
     themes: ["Ar-Ge ve Yenilik", "Ürün Geliştirme", "Girişimcilik"],
     sectors: ["İmalat", "Sektörler Arası"],
     featured: true,
-    notice: "Kuruluş bazlı ön kayıt için son tarih 9 Kasım 2026’dır.",
+    notice: "Kuruluş bazlı ön kayıt için son tarih 23 Kasım 2026’dır.",
   },
   {
     id: "tubitak-1711-2026",
