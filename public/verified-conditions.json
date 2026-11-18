@@ -331,9 +331,14 @@
     "additionalEvidence": ["https://katalog.ssb.gov.tr/pybs-disportal/openpages/basvuruislemleridisportal/sagaGirisi.xhtml"],
     "verifiedFields": ["recordType", "application", "notice"]
   },
+  "kosgeb-yesil-sanayi-2026-01": {
+    "evidenceUrl": "https://webdosya.kosgeb.gov.tr/Content/Upload/Dosya/YE%C5%9E%C4%B0L%20SANAY%C4%B0%20DP/2026/2026.11.16/Sanayide_Temiz_ve_Do%CC%88ngu%CC%88sel_Ekonomi_Proje_Teklif_C%CC%A7ag%CC%86r%C4%B1s%C4%B1.pdf",
+    "additionalEvidence": ["https://kosgeb.gov.tr/site/tr/genel/destekdetay/9022/yesil-sanayi-destek-programi"],
+    "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "eligibleCosts", "application", "notice", "followUpStages"]
+  },
   "tubitak-1707-2026-3": {
     "applicantGroups": ["Özel sektör"],
-    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-08/Siparis_Ar-Ge_2026-3_Cagri_Dokumani.pdf",
+    "evidenceUrl": "https://tubitak.gov.tr/sites/default/files/2026-11/1707_Siparis_Ar-Ge_2026-3_Cagri_Dokumani-sure_uzatimi.pdf",
     "additionalEvidence": ["https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-cagrisi", "https://tubitak.gov.tr/tr/destekler/destek/sanayi/ulusal-destek-programlari/cagri-1707-siparis-ar-ge-2026-yili-3-cagrisi-acildi"],
     "verifiedFields": ["applicants", "companyScale", "fundingAmount", "fundingType", "supportRate", "duration", "openDate", "deadline", "preDeadline", "eligibleCosts", "application", "notice"]
   },
