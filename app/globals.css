@@ -1112,6 +1112,23 @@ a {
   line-height: 1.65;
 }
 
+.source-hub {
+  padding: 28px max(7vw, 20px);
+  background: #eff7f5; color: #183c3a; border-bottom: 1px solid #c9dfda;
+}
+section[id] { scroll-margin-top: 84px; }
+.source-intro { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.source-intro h2 { font-size: 28px; margin: 4px 0; letter-spacing: -.035em; }
+.source-intro p, .source-directory p { color: #45605b; font-size: 14px; line-height: 1.55; margin: 0; }
+.source-shortcuts { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0; }
+.source-shortcuts a { background: white; padding: 9px 14px; border: 1px solid #bdd6d0; border-radius: 7px; font-size: 14px; font-weight: 600; }
+.source-hub a:hover { text-decoration: underline; }
+.source-directory summary { cursor: pointer; padding: 8px 0; font-weight: 600; font-size: 14px; }
+.source-directory ul { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,240px),1fr)); padding: 0; gap: 10px; list-style: none; }
+.source-directory li { display: grid; gap: 5px; align-content: start; background: white; border-radius: 8px; padding: 14px; }
+.source-directory li a { font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.source-directory small { color: #486359; }
+.source-directory .source-error { color: #914714; }
 .integrity-section {
   padding: 64px max(7vw, 42px);
   display: grid;
@@ -1467,7 +1484,9 @@ footer > a:last-child {
     padding: 0 20px;
   }
 
-  .site-header nav,
+  .site-header { height: auto; flex-wrap: wrap; gap: 6px 16px; padding-block: 8px; }
+  .site-header nav { display: flex; flex-wrap: wrap; gap: 14px; }
+  .site-header nav a { padding-block: 5px; }
   .header-cta,
   .brand small {
     display: none;

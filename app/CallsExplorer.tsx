@@ -6,7 +6,7 @@ import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate,
 import { audienceOptions, matchesAudience, privateSectorPriority, type AudienceFilter } from "./audience-utils";
 import { verificationCoverage, verificationFieldLabel } from "./verification-utils";
 
-type Props = { calls: FundingCall[] };
+type Props = { calls: FundingCall[]; sources: Record<string, {url: string; ok: boolean; checkedAt?: string}> };
 type StatusFilter = "active" | CallStatus | "all";
 
 const trDate = new Intl.DateTimeFormat("tr-TR", {
@@ -83,7 +83,7 @@ function Countdown({ call, now }: { call: FundingCall; now: number }) {
   );
 }
 
-export default function CallsExplorer({ calls }: Props) {
+export default function CallsExplorer({ calls, sources }: Props) {
   const [scope, setScope] = useState<CallScope>("national");
   const [status, setStatus] = useState<StatusFilter>("active");
   const [audience, setAudience] = useState<AudienceFilter>("Özel sektör");
@@ -260,7 +260,7 @@ export default function CallsExplorer({ calls }: Props) {
         <div className="hero-copy">
           <div className="eyebrow">
             <span className="pulse" />
-            Resmî kaynaklardan güncel takip
+            Ulusal ve uluslararası fon rehberi
           </div>
           <h1>
             Doğru projeyi,
@@ -287,8 +287,8 @@ export default function CallsExplorer({ calls }: Props) {
 
         <div className="radar-card" aria-label="Aktif çağrı özeti">
           <div className="radar-top">
-            <span>CANLI ÇAĞRI RADARI</span>
-            <span className="live-dot">AKTİF</span>
+            <span>ÇAĞRI RADARI</span>
+            <span>GENEL BAKIŞ</span>
           </div>
           <div className="radar-visual">
             <div className="orbit orbit-one" />
@@ -313,25 +313,28 @@ export default function CallsExplorer({ calls }: Props) {
               Uluslararası
             </span>
             <span>
-              <b>1 saat</b>
-              AB API kontrolü
+              <b>Saatlik</b>
+              tarama planı
             </span>
           </div>
         </div>
       </section>
 
-      <section className="source-strip" aria-label="İzlenen kaynaklar">
-        <span>İzlenen resmî kaynaklar</span>
-        <div><b>SANAYİ</b> BAKANLIĞI</div>
-        <div><b>TİCARET</b> BAKANLIĞI</div>
-        <div><b>SSB</b></div>
-        <div><b>TÜBİTAK</b></div>
-        <div><b>KOSGEB</b></div>
-        <div><b>HORIZON</b> EUROPE</div>
-        <div><b>EUREKA</b></div>
-        <div><b>EUROSTARS</b></div>
-        <div><b>LIFE</b> PROGRAMME</div>
-        <div><b>EIC</b></div>
+      <section className="source-hub" id="kaynaklar" aria-labelledby="sources-title">
+        <div className="source-intro"><div><span className="kicker">RESMÎ DUYURULAR</span><h2 id="sources-title">Kaynaklar</h2></div>
+          <p>Çağrıyı açan kurumun ilanına ulaşın. Tarama tarihi, başvuru koşullarının doğrulandığı tarih değildir.</p></div>
+        <div className="source-shortcuts">
+          <a href="https://tubitak.gov.tr/tr/acik-cagrilar">TÜBİTAK ↗</a>
+          <a href="https://kosgeb.gov.tr/site/tr/genel/liste/4/haber">KOSGEB ↗</a>
+          <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals">AB Funding &amp; Tenders ↗</a>
+        </div>
+        <details className="source-directory"><summary>Ulusal kaynaklar ve tarama durumu ({Object.keys(sources).length})</summary>
+          <p>Doğrulama bekleyen duyuruları incelemek için çağrı filtrelerinde “Tüm durumlar” seçeneğini kullanın.</p>
+          <ul>{Object.entries(sources).map(([name, s]) => <li key={name}>
+            <a href={name === "ETKB · Enerji Verimliliği" ? "https://enerjiverimliligi.enerji.gov.tr/" : s.url}>{name} ↗</a>
+            <small className={s.ok ? "" : "source-error"}>{s.ok ? "Tarama başarılı" : "Son tarama başarısız"}</small>
+            <small>{s.checkedAt ? `Son başarılı kontrol: ${formatDate(s.checkedAt, true)} TSİ` : "Başarılı kontrol kaydı yok"}</small>
+          </li>)}</ul></details>
       </section>
 
       <section className="calls-section" id="cagrilar">
@@ -537,7 +540,7 @@ export default function CallsExplorer({ calls }: Props) {
             <span>01</span>
             <div className="process-icon">⌁</div>
             <h3>Resmî kaynak taraması</h3>
-            <p>AB başlık ve takvim verisi saatlik planlanan işlemle alınır ve siteyle birlikte yayımlanır. Çalışma zamanları gecikebilir. Diğer kaynaklar editoryal olarak güncellenir.</p>
+            <p>AB çağrı başlıkları, takvimleri ve seçili ulusal kurumların duyuruları saatlik olarak taranmak üzere planlanır. Çalışma zamanları gecikebilir. Bir duyurunun bulunması, başvurunun açık olduğu anlamına gelmez.</p>
           </article>
           <article>
             <span>02</span>
@@ -560,7 +563,7 @@ export default function CallsExplorer({ calls }: Props) {
         </div>
       </section>
 
-      <section className="integrity-section" id="kaynaklar">
+      <section className="integrity-section">
         <div>
           <span className="kicker">ŞEFFAFLIK İLKESİ</span>
           <h2>Kararınızı özet bilgiye değil, resmî çağrı metnine dayandırın.</h2>
