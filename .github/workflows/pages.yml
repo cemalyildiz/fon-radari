@@ -34,6 +34,10 @@ jobs:
         run: npm run update:calls
       - name: Scan national official announcements
         run: node --experimental-strip-types scripts/update-national-calls.mjs
+      - name: Read official programme documents and reconcile announcement queue
+        run: |
+          if ! command -v pdftotext >/dev/null; then sudo apt-get update -qq && sudo apt-get install -y poppler-utils; fi
+          node --experimental-strip-types scripts/refresh-watch.mjs
       - name: Read current official conditions
         run: node --experimental-strip-types scripts/check-conditions.mjs
       - name: Monitor verification evidence changes
@@ -42,7 +46,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add public/live-calls.json public/national-calls.json public/conditions.json public/evidence-status.json
+          git add public/live-calls.json public/national-calls.json public/conditions.json public/evidence-status.json public/call-watch.json
           if ! git diff --cached --quiet; then
             git commit -m "Update funding calls"
             git push
@@ -53,11 +57,19 @@ jobs:
         env:
           GITHUB_REPOSITORY: ${{ github.repository }}
       - uses: actions/configure-pages@v5
+      - id: snapshot
+        run: echo "stamp=$(jq -r .checkedAt public/call-watch.json)" >> "$GITHUB_OUTPUT"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
 
+    outputs:
+      stamp: ${{ steps.snapshot.outputs.stamp }}
   deploy:
+    permissions:
+      pages: write
+      id-token: write
+      issues: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -67,3 +79,27 @@ jobs:
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
+      - name: Confirm the actual public page and its data match this run
+        env:
+          SITE_URL: ${{ steps.deployment.outputs.page_url }}
+          STAMP: ${{ needs.build.outputs.stamp }}
+        run: |
+          for n in {1..12}; do
+            if curl -fsSL --max-time 20 "${SITE_URL%/}/call-watch.json?v=$STAMP" -o /tmp/fon-watch-live.json &&
+               jq -e --arg s "$STAMP" '.checkedAt == $s' /tmp/fon-watch-live.json >/dev/null &&
+               curl -fsSL --max-time 20 "${SITE_URL%/}/?v=$STAMP" -o /tmp/fon-watch-index.html &&
+               grep -Fq "data-watch-snapshot=\"$STAMP\"" /tmp/fon-watch-index.html; then exit 0; fi
+            sleep 10
+          done
+          exit 1
+      - name: Keep one administrator alert for outstanding source problems
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Fon Radarı · Kaynak kontrolü gerekli"
+          issue=$(gh issue list -R "$GITHUB_REPOSITORY" --state open --author 'app/github-actions' --search 'in:title "Fon Radarı"' --limit 100 --json number,title,body --jq ".[] | select(.title==\"$title\" and (.body | startswith(\"<!-- fon-watch -->\"))) | .number" | head -1)
+          if jq -e '.alerts | length > 0' /tmp/fon-watch-live.json >/dev/null; then
+            jq -r '"<!-- fon-watch -->", (.alerts | unique[] | "- " + .)' /tmp/fon-watch-live.json > /tmp/fon-watch-alert.txt
+            if [ -z "$issue" ]; then gh issue create -R "$GITHUB_REPOSITORY" --title "$title" --body-file /tmp/fon-watch-alert.txt; else
+              gh issue edit "$issue" -R "$GITHUB_REPOSITORY" --body-file /tmp/fon-watch-alert.txt; fi
+          elif [ -n "$issue" ]; then gh issue close "$issue" -R "$GITHUB_REPOSITORY"; fi

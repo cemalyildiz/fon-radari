@@ -6,6 +6,7 @@ import { mergeMentoring1831Intake, mergeNationalCalendars, unreviewedAnnouncemen
 import { evidenceAlerts } from "./verification-utils";
 import { revisionIndexFor } from "./programme-revision.mjs";
 import { hit30CallsUrl, observedHit30Status } from "./hit30-status.mjs";
+import { applyRounds } from "./programme-watch";
 
 const snapshotTime = Date.now();
 
@@ -28,8 +29,10 @@ export default async function Home() {
   });
   const feed = await readFile('public/national-calls.json', 'utf8').then(JSON.parse).catch(() => ({ calls: [] }));
   const calendars = mergeNationalCalendars(updatedCalls, feed.calendars ?? [], snapshotTime);
-  const displayed = [...calendars.updated, ...calendars.discovered].map(call => mergeMentoring1831Intake(call, feed.mentoring1831, snapshotTime));
+  const watch = JSON.parse(await readFile('public/call-watch.json','utf8'));
+  const displayed = applyRounds([...calendars.updated, ...calendars.discovered],Object.values(watch.rounds),snapshotTime).map(call => mergeMentoring1831Intake(call, feed.mentoring1831, snapshotTime));
   const reviewedUrls = displayed.flatMap(c => c.calendarSourceUrl ? [c, {sourceUrl:c.calendarSourceUrl}] : [c]);
-  const discovered = unreviewedAnnouncements(reviewedUrls, feed.calls as FundingCall[]);
-  return <CallsExplorer calls={[...displayed, ...discovered]} sources={feed.sources ?? {}} />;
+  const separated = new Set(watch.queue.filter((q:{kind:string;linked:string[]})=>q.kind==='Çağrı değil'||q.kind==='Değişiklik'||q.linked.length).map((q:{url:string})=>q.url));
+  const discovered = unreviewedAnnouncements(reviewedUrls, (feed.calls as FundingCall[]).filter(c=>!separated.has(c.sourceUrl)));
+  return <CallsExplorer calls={[...displayed, ...discovered]} sources={watch.sources} watch={watch} />;
 }

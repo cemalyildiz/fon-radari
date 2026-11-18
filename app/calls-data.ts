@@ -6,6 +6,7 @@ export type CallStatus = "open" | "upcoming" | "archived" | "unknown";
 export type ApplicantGroup = "Özel sektör" | "Girişimci / Bireysel" | "Akademisyen" | "Üniversite / Araştırma" | "Kamu kurum / kuruluşu" | "TTO / Arayüz kuruluşu" | "STK";
 
 export type FundingCall = {
+  scheduleEvidence?: {url:string; checkedAt:string; noticeUrls?:string[]; changes:{field:string; before:string; after:string}[]};
   hit30Topic?: "vehicles" | "battery" | "wind";
   hit30CheckedAt?: string;
   mentoring1831CheckedAt?: string;

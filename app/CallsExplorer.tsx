@@ -6,7 +6,7 @@ import { mergeCalls, realStatus, matchesSector, matchesSearch, stale, validDate,
 import { audienceOptions, matchesAudience, privateSectorPriority, type AudienceFilter } from "./audience-utils";
 import { verificationCoverage, verificationFieldLabel } from "./verification-utils";
 
-type Props = { calls: FundingCall[]; sources: Record<string, {url: string; ok: boolean; checkedAt?: string}> };
+type Props = { calls: FundingCall[]; sources: Record<string, {url: string; ok: boolean; checkedAt?: string}>; watch:{checkedAt:string;alerts:string[];queue:{url:string;title:string;kind:string;action:string}[]} };
 type StatusFilter = "active" | CallStatus | "all";
 
 const trDate = new Intl.DateTimeFormat("tr-TR", {
@@ -83,7 +83,7 @@ function Countdown({ call, now }: { call: FundingCall; now: number }) {
   );
 }
 
-export default function CallsExplorer({ calls, sources }: Props) {
+export default function CallsExplorer({ calls, sources, watch }: Props) {
   const [scope, setScope] = useState<CallScope>("national");
   const [status, setStatus] = useState<StatusFilter>("active");
   const [audience, setAudience] = useState<AudienceFilter>("Özel sektör");
@@ -328,13 +328,18 @@ export default function CallsExplorer({ calls, sources }: Props) {
           <a href="https://kosgeb.gov.tr/site/tr/genel/liste/4/haber">KOSGEB ↗</a>
           <a href="https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals">AB Funding &amp; Tenders ↗</a>
         </div>
-        <details className="source-directory"><summary>Ulusal kaynaklar ve tarama durumu ({Object.keys(sources).length})</summary>
+        <details className="source-directory" data-watch-snapshot={watch.checkedAt}><summary>İzlenen kaynaklar ve son başarılı kontroller ({Object.keys(sources).length})</summary>
           <p>Doğrulama bekleyen duyuruları incelemek için çağrı filtrelerinde “Tüm durumlar” seçeneğini kullanın.</p>
           <ul>{Object.entries(sources).map(([name, s]) => <li key={name}>
             <a href={name === "ETKB · Enerji Verimliliği" ? "https://enerjiverimliligi.enerji.gov.tr/" : s.url}>{name} ↗</a>
             <small className={s.ok ? "" : "source-error"}>{s.ok ? "Tarama başarılı" : "Son tarama başarısız"}</small>
             <small>{s.checkedAt ? `Son başarılı kontrol: ${formatDate(s.checkedAt, true)} TSİ` : "Başarılı kontrol kaydı yok"}</small>
           </li>)}</ul></details>
+        <details className="source-directory"><summary>Duyuru inceleme listesi ({watch.queue.length})</summary>
+          <p>Bu liste açık çağrı listesi değildir. Değişiklikler, sonuç ilanları ve başvuru durumu henüz kanıtlanmamış duyurular burada ayrılır.</p>
+          {watch.alerts.map(a=><p className="source-error" key={a}>{a}</p>)}
+          <ul>{watch.queue.map(q=><li key={q.url}><a href={q.url}>{q.title} ↗</a><small>{q.kind} · {q.action}</small></li>)}</ul>
+        </details>
       </section>
 
       <section className="calls-section" id="cagrilar">
@@ -615,6 +620,9 @@ export default function CallsExplorer({ calls, sources }: Props) {
               <div className="notice"><b>Veri durumu</b><p>{freshness(selected, now)}. Türkiye’den başvuru, firma ölçeği ve ortaklık koşullarını resmî kaynaktan teyit edin.</p></div>
               {selected.sourceConditions?.ok && <div className="notice"><b>Otomatik sayfa erişim kontrolü · {formatDate(selected.sourceConditions.checkedAt, true)}</b><p>Resmî sayfa okunabildi. Bu işlem destek koşullarının doğrulandığı anlamına gelmez; otomatik metin eşleşmeleri kesin başvuru koşulu olarak gösterilmez.</p></div>}
               {selected.verificationIssues?.map(issue => <div className="notice" key={issue.field}><b>Çözümlenmemiş kaynak çelişkisi</b><p>{issue.message}</p></div>)}
+              {selected.scheduleEvidence && <div className="notice"><b>Doğrulanmış dönem takvimi</b><p><a href={selected.scheduleEvidence.url}>Resmî dönem belgesi ↗</a> · Kontrol: {formatDate(selected.scheduleEvidence.checkedAt,true)} TSİ</p>
+                {selected.scheduleEvidence.noticeUrls?.map(url=><p key={url}><a href={url}>Resmî takvim değişikliği duyurusu ↗</a></p>)}
+                {selected.scheduleEvidence.changes.map((c,i)=><p key={i}>{c.field==='preDeadline'?'Ön kayıt':c.field==='deadline'?'Nihai kapanış':'Açılış'}: {formatDate(c.before,!dateOnly(c.before))} → {formatDate(c.after,!dateOnly(c.after))}</p>)}</div>}
               {selected.calendarObservation && <div className="notice">
                 <b>{selected.calendarObservation.conflict ? "TÜBİTAK takvimi kayıtla uyuşmuyor" : "TÜBİTAK listesindeki başvuru takvimi"}</b>
                 <p>{formatDate(selected.calendarObservation.openDate, true)} – {formatDate(selected.calendarObservation.deadline, true)} (TSİ). Son eşleşme: {formatDate(selected.calendarObservation.checkedAt, true)}.</p>

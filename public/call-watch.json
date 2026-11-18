@@ -1,0 +1,752 @@
+{
+  "checkedAt": "2026-11-18T13:24:45.294Z",
+  "sources": {
+    "TÜBİTAK": {
+      "url": "https://tubitak.gov.tr/tr/duyuru",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 15,
+      "failures": 0
+    },
+    "KOSGEB": {
+      "url": "https://kosgeb.gov.tr/site/tr/genel/liste/4/haber",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 8,
+      "failures": 0
+    },
+    "Ticaret Bakanlığı": {
+      "url": "https://ticaret.gov.tr/duyurular",
+      "checkedAt": "2026-11-05T10:50:00.646Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": false,
+      "found": 2,
+      "error": "Uygun duyuru bağlantısı bulunamadı; sayfa yapısı kontrol edilmeli",
+      "failures": 1
+    },
+    "HIT-30": {
+      "url": "https://hit30.sanayi.gov.tr/cagrilar",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 2,
+      "failures": 0
+    },
+    "SSB": {
+      "url": "https://arge.ssb.gov.tr/",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 14,
+      "failures": 0
+    },
+    "TÜBİTAK çağrı takvimi": {
+      "url": "https://tubitak.gov.tr/tr/acik-cagrilar",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 2,
+      "unmatched": 0,
+      "failures": 0
+    },
+    "DOĞAKA": {
+      "url": "https://www.dogaka.gov.tr/duyurular",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": false,
+      "error": "Kaynak okunamadı",
+      "failures": 1
+    },
+    "TKDK": {
+      "url": "https://www.tkdk.gov.tr/",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 6,
+      "failures": 0
+    },
+    "TKDK çağrı ilanları": {
+      "url": "https://www.tkdk.gov.tr/ProjeIslemleri/CagriIlanArsiv",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 1,
+      "failures": 0
+    },
+    "Karacadağ Kalkınma Ajansı": {
+      "url": "https://www.karacadag.gov.tr/duyurular/1/duyurular/",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 25,
+      "failures": 0
+    },
+    "ETKB · Enerji Verimliliği": {
+      "url": "https://enerjiverimliligi.enerji.gov.tr/Home/GetirDuyurularGuncel",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 3,
+      "failures": 0
+    },
+    "ETKB · Bakanlık Duyuru Arşivi": {
+      "url": "https://duyuru.enerji.gov.tr/medya-duyurular-liste",
+      "checkedAt": "2026-11-18T13:00:51.487Z",
+      "attemptedAt": "2026-11-18T13:00:51.487Z",
+      "ok": true,
+      "found": 1,
+      "failures": 0
+    },
+    "AB Funding & Tenders": {
+      "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals",
+      "checkedAt": "2026-11-18T12:57:54.179Z",
+      "attemptedAt": "2026-11-18T12:57:54.179Z",
+      "ok": true,
+      "found": 970,
+      "failures": 0
+    },
+    "TÜBİTAK 1831": {
+      "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "attemptedAt": "2026-11-18T13:24:45.294Z",
+      "ok": true,
+      "documentHash": "e1a0769ccfefab704ceb1487a65da470f1ee7318a58a2ee2c949bd081200f7bf",
+      "documentUrl": "https://tubitak.gov.tr/sites/default/files/2025-05/1831_2024-1_Cagri_Duyurusu15052025_tarihli_guncelleme.pdf",
+      "failures": 0
+    },
+    "TÜBİTAK 1832": {
+      "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1832-sanayide-yesil-donusum-cagrisi",
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "attemptedAt": "2026-11-18T13:24:45.294Z",
+      "ok": true,
+      "found": 1,
+      "failures": 0
+    },
+    "TÜBİTAK 1707": {
+      "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-cagrisi",
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "attemptedAt": "2026-11-18T13:24:45.294Z",
+      "ok": true,
+      "found": 1,
+      "failures": 0
+    },
+    "TÜBİTAK 1501": {
+      "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1501-tubitak-sanayi-ar-ge-projeleri-destekleme-programi",
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "attemptedAt": "2026-11-18T13:24:45.294Z",
+      "ok": true,
+      "found": 1,
+      "failures": 0
+    },
+    "TÜBİTAK 1507": {
+      "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1507-tubitak-kobi-ar-ge-baslangic-destek-programi",
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "attemptedAt": "2026-11-18T13:24:45.294Z",
+      "ok": true,
+      "found": 1,
+      "failures": 0
+    }
+  },
+  "rounds": {
+    "1832-2026-3": {
+      "key": "1832-2026-3",
+      "title": "1832 2026-3 Çağrı Duyurusu",
+      "url": "https://tubitak.gov.tr/sites/default/files/2026-11/1832_2026_3_Cagri_Duyurusu.pdf",
+      "openDate": "2026-11-09",
+      "deadline": "2027-01-04",
+      "preDeadline": "2026-12-30",
+      "applicants": "Türkiye’de yerleşik sermaye şirketleri; dönem belgesindeki ek koşullar geçerlidir.",
+      "companyScale": [
+        "KOBİ",
+        "Büyük Ölçek"
+      ],
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "hash": "342d241d519d0514de84b81de504b3b85496f13b925d456552cfd9adab56ad5c",
+      "changes": []
+    },
+    "1707-2026-3": {
+      "key": "1707-2026-3",
+      "title": "Sipariş Ar-ge 2026-3 Çağrı Dokümanı",
+      "url": "https://tubitak.gov.tr/sites/default/files/2026-11/Siparis_Ar-Ge_2026-3_Cagri_Dokumani-sure_uzatimi.pdf",
+      "openDate": "2026-08-31T21:00:00Z",
+      "deadline": "2026-11-27T20:59:00Z",
+      "preDeadline": "2026-11-25",
+      "applicants": "Türkiye’de yerleşik müşteri şirket, KOBİ tedarikçi ile birlikte başvurur. Dönem belgesindeki ek koşullar geçerlidir.",
+      "companyScale": [
+        "KOBİ",
+        "Büyük Ölçek"
+      ],
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "hash": "d060290ab4f94424e413998e1bb9594790c0daaa317d1040a39efbd2bb60fd53",
+      "changes": []
+    },
+    "1501-2026-2": {
+      "key": "1501-2026-2",
+      "title": "1501-Sanayi Ar-Ge Destek Programı 2026 yılı 2. Çağrı Dokümanı",
+      "url": "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
+      "openDate": "2026-07-20",
+      "deadline": "2026-10-26T23:59:00+03:00",
+      "preDeadline": "2026-10-22T23:59:00+03:00",
+      "applicants": "KOBİ niteliğinde sermaye şirketleri; dönem belgesindeki ek koşullar geçerlidir.",
+      "companyScale": [
+        "KOBİ"
+      ],
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "hash": "10f733d7f6a2d0f8e728c63bdc119392f4373693e0c900fb42110c5cde704563",
+      "changes": []
+    },
+    "1507-2026-2": {
+      "key": "1507-2026-2",
+      "title": "1507-KOBİ Ar-Ge Başlangıç Destek Programı 2026 yılı 2. Çağrı Dokümanı",
+      "url": "https://tubitak.gov.tr/sites/default/files/2026-11/1507_KOBI_Ar-Ge_Baslangic_Destek_Programlari_2026-2_Proje_Cagri_Metni_06.11.2026_0.pdf",
+      "openDate": "2026-07-19T21:00:00Z",
+      "deadline": "2026-11-25T23:59:00+03:00",
+      "preDeadline": "2026-11-23T23:59:00+03:00",
+      "applicants": "KOBİ niteliğinde sermaye şirketleri; dönem belgesindeki ek koşullar geçerlidir.",
+      "companyScale": [
+        "KOBİ"
+      ],
+      "checkedAt": "2026-11-18T13:24:45.294Z",
+      "hash": "52ef3b8537b140c27d1a16937fa6187943fcd137a2c917afbfa491ebe73a989a",
+      "changes": []
+    }
+  },
+  "queue": [
+    {
+      "title": "2247-C Stajyer Araştırmacı Burs Programı (STAR) 2026 Yılı 2. Dönem STAR Lisans ve STAR Öğretmen Çağrıları Açıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/2247-c-stajyer-arastirmaci-burs-programi-star-2026-yili-2-donem-star-lisans-ve-star-ogretmen-cagrilari-acildi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "2531 – TÜBİTAK & DAAD (Almanya) İkili İş Birliği Seyahat Destek Programı 7. Çağrısı Açıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/2531-tubitak-daad-almanya-ikili-birligi-seyahat-destek-programi-7-cagrisi-acildi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "BiodivERsA+ 2026 Yılı “Yeni Ekosistemler: Biyoçeşitlilik, Sosyo-Ekolojik Sonuçlar ve Gelecekteki Seyirler – BiodivFuture” Başlıklı Çağrısı Açıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/biodiversa-2026-yili-yeni-ekosistemler-biyocesitlilik-sosyo-ekolojik-sonuclar-ve-gelecekteki-seyirler-biodivfuture-baslikli-cagrisi-acildi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "2209-A Üniversite Öğrencileri Araştırma Projeleri Destekleme Programı ve 2209-B Üniversite Öğrencileri Sanayiye Yönelik Araştırma Projeleri Desteği Programı 2026 Yılı Çağrıları Açıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/2209-universite-ogrencileri-arastirma-projeleri-destekleme-programi-ve-2209-b-universite-ogrencileri-sanayiye-yonelik-arastirma-projeleri-destegi-programi-2026-yili-cagrilari-acildi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "2224-Bilimsel Etkinliklere Katılımı Destekleme Programları 2026 Yılı 3. Dönem Çağrıları Açıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/2224-bilimsel-etkinliklere-katilimi-destekleme-programlari-2026-yili-3-donem-cagrilari-acildi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "2247–A Ulusal Lider Araştırmacılar Programı ve 2247–D Ulusal Genç Liderler Programı 2026 Yılı Çağrıları Açıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/2247-ulusal-lider-arastirmacilar-programi-ve-2247-d-ulusal-genc-liderler-programi-2026-yili-cagrilari-acildi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "2211-Yurt İçi Doktora Burs Programları 2026 Yılı 2. Dönem Çağrıları Başvuruya Açıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/2211-yurt-ici-doktora-burs-programlari-2026-yili-2-donem-cagrilari-basvuruya-acildi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Savunma Sanayii Ar-Ge Gen​iş Alan (SAGA) Çağrıları",
+      "url": "https://arge.ssb.gov.tr/Kurumsal/Sayfalar/saga.aspx",
+      "institution": "SSB",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Fotonik Entegre Devre Teknolojileri SAGA Çağrısı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=6402",
+      "institution": "SSB",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Kimyasal Dekontaminasyon Atıklarına Yönelik Nötralizasyon Teknolojileri Geliştirilmesi (ARI) SAGA Çağrısı Süre Uzatımı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=6215",
+      "institution": "SSB",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Kimyasal Dekontaminasyon Atıklarına Yönelik Nötralizasyon Teknolojileri Geliştirilmesi (ARI) SAGA Çağrısı Başvuruları Başladı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=5637",
+      "institution": "SSB",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Savunma Sanayii Uygulamaları için Hidrojen Teknolojilerinin Geliştirilmesi (HİDROJEN) SAGA Çağrısı Süre Uzatımı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=4951",
+      "institution": "SSB",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Eklemeli İmalat Yöntemi ile RF Bileşen Geliştirilmesi (EKİM) SAGA Çağrısı Süre Uzatımı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=5094",
+      "institution": "SSB",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Savunma Sanayii Uygulamaları için Hidrojen Teknolojilerinin Geliştirilmesi (HİDROJEN) SAGA Çağrısı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=4921",
+      "institution": "SSB",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Afet Bölgelerinde Acil Haberleşme, Enkaz Altında Canlı Arama ve Tespit Teknolojileri (HIZIR) SAGA Çağrısı Süre Uzatımı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=4871",
+      "institution": "SSB",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Yeni Nesil Yapay Zekâ Yöntemleri Geliştirilmesi SAGA Çağrısı Süre Uzatımı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=5022",
+      "institution": "SSB",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Eklemeli İmalat Yöntemi ile RF Bileşen Geliştirilmesi (EKİM) SAGA Çağrısı Başvuruları Başladı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=5051",
+      "institution": "SSB",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Bilişsel Elektronik Harp Yöntemleri SAGA Çağrısı Başvuruları Başladı.",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=4323",
+      "institution": "SSB",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "GÖÇMEN Programı SAGA Çağrısı Süre Uzatımı-Küresel Konumlama Sistemlerinin (KKS) Çalışmadığı ya da Engellendiği Ortamlar için Yenilikçi Navigasyon Kavramları Geliştirilmesi",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=4441",
+      "institution": "SSB",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Küresel Konumlama Sistemlerinin (KKS) Çalışmadığı ya da Engellendiği Ortamlar İçin Yenilikçi Navigasyon Kavramları Geliştirilmesi (GÖÇMEN) Programı SAGA Çağrısı",
+      "url": "https://arge.ssb.gov.tr/HaberDuyuru?q=4431",
+      "institution": "SSB",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "TÜBİTAK Bilim Söyleşileri 2026 Yılı Başvurularının Süresi Uzatıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/tubitak-bilim-soylesileri-2026-yili-basvurularinin-suresi-uzatildi",
+      "institution": "TÜBİTAK",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "KOSGEB’den COP31 Odaklı Hızlandırma Desteği Çağrısı",
+      "url": "https://kosgeb.gov.tr/site/tr/genel/detay/9453/kosgebden-cop31-odakli-hizlandirma-destegi-cagrisi",
+      "institution": "KOSGEB",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Üreten KOBİ’lere Güçlü Destek, Yeni Başvuru Dönemi Başladı",
+      "url": "https://kosgeb.gov.tr/site/tr/genel/detay/9391/ureten-kobilere-guclu-destek-yeni-basvuru-donemi-basladi",
+      "institution": "KOSGEB",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Savunma, Uzay ve Havacılık Sanayii KOBİ’lerine KOSGEB’den 30 Milyon Liralık Destek",
+      "url": "https://kosgeb.gov.tr/site/tr/genel/detay/9389/savunma-uzay-ve-havacilik-sanayii-kobilerine-kosgebden-30-milyon-liralik-destek",
+      "institution": "KOSGEB",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Mentorluk Desteği Programı",
+      "url": "https://tubitak.gov.tr/tr/burslar/lisans/mentorluk-destegi-programi",
+      "institution": "TÜBİTAK",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "IPARD III 12. Başvuru Çağrı İlanı kapsamında “M1- Tarımsal İşletmelerin Fiziki Varlıklarına Yönelik Yatırımlar” tedbirinde uygulanmak üzere Basitleştirilmiş Maliyet Sistemi ile ilgili bilgilendirme duyurusu yayımlanmıştır.",
+      "url": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-12-basvuru-cagri-ilani-kapsaminda-m1-tarimsal-isletmelerin-fiziki-varliklarina-yonelik-yatirimlar-tedbirinde-uygulanmak-uzere-basitlestirilm-13121",
+      "institution": "TKDK",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "IPARD III 11. Başvuru Çağrı İlanı kapsamında “M3- Tarım ve Balıkçılık Ürünlerinin İşlenmesi ve Pazarlanması İle İlgili Fiziki Varlıklara Yönelik Yatırımlar” tedbirinde uygulanmak üzere Basitleştirilmiş Maliyet Sistemi ile ilgili bilgilendirme duyurusu yayımlanmıştır.",
+      "url": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-11-basvuru-cagri-ilani-kapsaminda-m3-tarim-ve-balikcilik-urunlerinin-islenmesi-ve-pazarlanmasi-ile-ilgili-fiziki-varliklara-yonelik-yatiriml-13109",
+      "institution": "TKDK",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "IPARD III Programı 10. Başvuru Çağrı İlanı - M3 Tedbiri kapsamında uygulanacak Basitleştirilmiş Maliyet Sistemine (BMS) ilişkin Sık Sorulan Sorular (SSS) yayımlanmıştır.",
+      "url": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-programi-10-basvuru-cagri-ilani-m3-tedbiri-kapsaminda-uygulanacak-basitlestirilmis-maliyet-sistemine-bms-iliskin-sik-sorulan-sorular-sss-yay-13007",
+      "institution": "TKDK",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "IPARD III Programı 1. Çağrı Dönemi Yatırım Uygulama Süresi Hakkında Duyuru",
+      "url": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-programi-1-cagri-donemi-yatirim-uygulama-suresi-hakkinda-duyuru-12835",
+      "institution": "TKDK",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "IPARD III PROGRAMI 4. ÇAĞRI DÖNEMİ 1. GRUP DESTEKLEMEK ÜZERE SEÇİLEN BAŞVURU LİSTELERİ YAYIMLANMIŞTIR",
+      "url": "https://www.tkdk.gov.tr/Duyuru/ipard-iii-programi-4-cagri-donemi-1-grup-desteklemek-uzere-secilen-basvuru-listeleri-yayimlanmistir-12807",
+      "institution": "TKDK",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "Tarihi Kent Merkezlerinde Turizmin Geliştirilmesi Faizsiz Kredi Destek Programı (TURGEP) Başvuru Rehberinde Önemli 2 Değişiklik Yapıldı 21 Eylül 2026 Pazartesi",
+      "url": "https://www.karacadag.gov.tr/duyuru/27493/tarihi-kent-merkezlerinde-turizmin-gelistirilmesi-faizsiz-kredi-destek-programi-turgep-basvuru-rehberinde-onemli-2-degisiklik-yapildi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Tarihi Kent Merkezlerinde Turizmin Geliştirilmesi Faizsiz Kredi Destek Programı Sıkça Sorulan Sorular ve Cevaplar 4 Eylül 2026 Cuma",
+      "url": "https://www.karacadag.gov.tr/duyuru/27490/tarihi-kent-merkezlerinde-turizmin-gelistirilmesi-faizsiz-kredi-destek-programi-sikca-sorulan-sorular-ve-cevaplar/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "2026 Yılı Tarihi Kent Merkezlerinde Turizmin Geliştirilmesi Faizsiz Kredi Destek Programı (TURGEP) 3 Ağustos 2026 Pazartesi",
+      "url": "https://www.karacadag.gov.tr/duyuru/27480/2026-yili-tarihi-kent-merkezlerinde-turizmin-gelistirilmesi-faizsiz-kredi-destek-programi-turgep/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "SoGreen Kapsamında Ajansımızla Sözleşme İmzalayacak Başvuru Sahiplerinin Dikkatine! 30 Nisan 2026 Perşembe",
+      "url": "https://www.karacadag.gov.tr/duyuru/27474/sogreen-kapsaminda-ajansimizla-sozlesme-imzalayacak-basvuru-sahiplerinin-dikkatine/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "Çukurova Kalkınma Ajansı, Türkiye Sosyal Kapsayıcı Yeşil Geçiş ( SoGreen ) Geri Ödemeli Finansman Desteği İlanı 6 Nisan 2026 Pazartesi",
+      "url": "https://www.karacadag.gov.tr/duyuru/27471/cukurova-kalkinma-ajansi-turkiye-sosyal-kapsayici-yesil-gecis-sogreen-geri-odemeli-finansman-destegi-ilani/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "MEVKA, 2026 Yılı Sogreen Sosyal Kapsayıcı Yeşil Geçiş Geri Ödemeli Finansman Desteği Programı İlanı 6 Nisan 2026 Pazartesi",
+      "url": "https://www.karacadag.gov.tr/duyuru/27470/mevka-2026-yili-sogreen-sosyal-kapsayici-yesil-gecis-geri-odemeli-finansman-destegi-programi-ilani/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Yerel Kalkınma Hamlesi Teşvik Programı 2026 Yılı Çağrı Duyurusu 19 Şubat 2026 Perşembe",
+      "url": "https://www.karacadag.gov.tr/duyuru/27465/yerel-kalkinma-hamlesi-tesvik-programi-2026-yili-cagri-duyurusu/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Diyarbakır ve Şanlıurfa İçin 2026 Yılında 301 Milyon TL’ye Kadar nakdi Olarak Desteklenecek Yatırım Konuları Belirlendi 16 Şubat 2026 Pazartesi",
+      "url": "https://www.karacadag.gov.tr/duyuru/27462/diyarbakir-ve-sanliurfa-icin-2026-yilinda-301-milyon-tlye-kadar-nakdi-olarak-desteklenecek-yatirim-konulari-belirlendi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "GAP Eküs Proje Başvuruları Başladı 9 Şubat 2026 Pazartesi",
+      "url": "https://www.karacadag.gov.tr/duyuru/27458/gap-ekus-proje-basvurulari-basladi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "SoGgreen Projesi Başvuru Süresi 23 Ocak 2026'ya Kadar Uzatıldı 16 Ocak 2026 Cuma",
+      "url": "https://www.karacadag.gov.tr/duyuru/27456/soggreen-projesi-basvuru-suresi-23-ocak-2026ya-kadar-uzatildi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Sürdürülebilir Kalkınma İçin Yeşil Dönüşüm Destek Programı Online Bilgilendirme ve Eğitim Toplantısı 25 Aralık 2025 Perşembe",
+      "url": "https://www.karacadag.gov.tr/duyuru/27450/surdurulebilir-kalkinma-icin-yesil-donusum-destek-programi-online-bilgilendirme-ve-egitim-toplantisi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "Sürdürülebilir Kalkınma İçin Yeşil Dönüşüm Destek Programı Online Bilgilendirme ve Eğitim Toplantısı 22 Aralık 2025 Pazartesi",
+      "url": "https://www.karacadag.gov.tr/duyuru/27448/surdurulebilir-kalkinma-icin-yesil-donusum-destek-programi-online-bilgilendirme-ve-egitim-toplantisi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "Sürdürülebilir Kalkınma İçin Yeşil Dönüşüm Destek Programı Sıkça Sorulan Sorular 22 Aralık 2025 Pazartesi",
+      "url": "https://www.karacadag.gov.tr/duyuru/27449/surdurulebilir-kalkinma-icin-yesil-donusum-destek-programi-sikca-sorulan-sorular/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "Sürdürülebilir Kalkınma İçin Yeşil Dönüşüm Destek Programı Online Bilgilendirme ve Eğitim Toplantısı 9 Aralık 2025 Salı",
+      "url": "https://www.karacadag.gov.tr/duyuru/27447/surdurulebilir-kalkinma-icin-yesil-donusum-destek-programi-online-bilgilendirme-ve-egitim-toplantisi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "Sürdürülebilir Kalkınma İçin Yeşil Dönüşüm Destek Programı Online Bilgilendirme ve Eğitim Toplantısı 25 Kasım 2025 Salı",
+      "url": "https://www.karacadag.gov.tr/duyuru/27445/surdurulebilir-kalkinma-icin-yesil-donusum-destek-programi-online-bilgilendirme-ve-egitim-toplantisi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "Sürdürülebilir Kalkınma İçin Yeşil Dönüşüm Destek Programı 14 Kasım 2025 Cuma",
+      "url": "https://www.karacadag.gov.tr/duyuru/27443/surdurulebilir-kalkinma-icin-yesil-donusum-destek-programi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "2025 Yılı İmalat Sektörlerinde Dönüşüm Teknik Destek Programı Başvuruları Başladı 6 Mayıs 2025 Salı",
+      "url": "https://www.karacadag.gov.tr/duyuru/26441/2025-yili-imalat-sektorlerinde-donusum-teknik-destek-programi-basvurulari-basladi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "2024 Yılı İstihdam Garantili Nitelikli Genç Yazılımcı Yetiştirme Destek Programı (GENÇİŞ) 30 Ekim 2024 Çarşamba",
+      "url": "https://www.karacadag.gov.tr/duyuru/23440/2024-yili-istihdam-garantili-nitelikli-genc-yazilimci-yetistirme-destek-programi-gencis/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "GAP Bedesten Teknik Destek Programı Teknik Destek Almaya Hak Kazanan Kuruluşlar Açıklandı 8 Ekim 2024 Salı",
+      "url": "https://www.karacadag.gov.tr/duyuru/23439/gap-bedesten-teknik-destek-programi-teknik-destek-almaya-hak-kazanan-kuruluslar-aciklandi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Çağrı değil",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Çağrı listesinden ayrıldı"
+    },
+    {
+      "title": "E-ihracat Uzmanı Yetiştirme Programı Başvuruları Başladı 21 Ağustos 2024 Çarşamba",
+      "url": "https://www.karacadag.gov.tr/duyuru/23433/e-ihracat-uzmani-yetistirme-programi-basvurulari-basladi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Anadoludakiler: GAP Bedesten Teknik Destek Programı İlan Edildi 28 Haziran 2024 Cuma",
+      "url": "https://www.karacadag.gov.tr/duyuru/22433/anadoludakiler-gap-bedesten-teknik-destek-programi-ilan-edildi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "İnceleme gerekli",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "Sosyal Gelişmeyi Destekleme Programı (SOGEP) - Anadoludakiler Proje Teklif Çağrısı İlan Edildi 28 Haziran 2024 Cuma",
+      "url": "https://www.karacadag.gov.tr/duyuru/22432/sosyal-gelismeyi-destekleme-programi-sogep--anadoludakiler-proje-teklif-cagrisi-ilan-edildi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "SEECO Projesi 2. Hibe Çağrısı Programı Başladı 21 Mart 2024 Perşembe",
+      "url": "https://www.karacadag.gov.tr/duyuru/19432/seeco-projesi-2-hibe-cagrisi-programi-basladi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "TEKNOFEST 2024 Teknoloji Yarışmalarına Başvurular Başladı! 26 Ocak 2024 Cuma",
+      "url": "https://www.karacadag.gov.tr/duyuru/17431/teknofest-2024-teknoloji-yarismalarina-basvurular-basladi/",
+      "institution": "Karacadağ Kalkınma Ajansı",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "1507-KOBİ Ar-Ge Başlangıç Destek Programı ve 1707-Siparişe Dayalı Ar-Ge Projeleri için KOBİ Destekleme Programı 2026 Yılı Çağrılarının Süresi Uzatıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/1507-kobi-ar-ge-baslangic-destek-programi-ve-1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-programi-2026-yili-cagrilarinin-suresi-uzatildi",
+      "institution": "TÜBİTAK",
+      "kind": "Değişiklik",
+      "linked": [
+        "tubitak-1507-2026-2",
+        "tubitak-1707-2026-3"
+      ],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Mevcut kayda bağlı"
+    },
+    {
+      "title": "Kişiselleştirilmiş Tıp Avrupa Ortaklığı 2027 Yılı Çağrısı Açıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/kisisellestirilmis-tip-avrupa-ortakligi-2027-yili-cagrisi-acildi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "4006-TÜBİTAK Bilim Fuarları Destekleme Programı 13. Dönem Çağrılarının Başvuru Süresi Uzatıldı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/4006-tubitak-bilim-fuarlari-destekleme-programi-13-donem-cagrilarinin-basvuru-suresi-uzatildi",
+      "institution": "TÜBİTAK",
+      "kind": "Değişiklik",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "4004-Doğa Eğitimi ve Bilim Okulları Destekleme Programı’nın 20. Dönem Çağrısı Yayınlandı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/4004-doga-egitimi-ve-bilim-okullari-destekleme-programinin-20-donem-cagrisi-yayinlandi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    },
+    {
+      "title": "4005-Yenilikçi Eğitim Uygulamaları Destekleme Programı’nın 14. Çağrısı Yayınlandı",
+      "url": "https://tubitak.gov.tr/tr/duyuru/4005-yenilikci-egitim-uygulamalari-destekleme-programinin-14-cagrisi-yayinlandi",
+      "institution": "TÜBİTAK",
+      "kind": "Yeni çağrı adayı",
+      "linked": [],
+      "firstSeen": "2026-11-18T13:21:17.766Z",
+      "action": "Resmî koşullar incelenmeli"
+    }
+  ],
+  "alerts": []
+}
