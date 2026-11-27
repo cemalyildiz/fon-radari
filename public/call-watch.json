@@ -1,50 +1,50 @@
 {
-  "checkedAt": "2026-11-26T15:20:06.402Z",
+  "checkedAt": "2026-11-27T00:37:22.883Z",
   "sources": {
     "TÜBİTAK": {
       "url": "https://tubitak.gov.tr/tr/duyuru",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 15,
       "failures": 0
     },
     "KOSGEB": {
       "url": "https://kosgeb.gov.tr/site/tr/genel/liste/4/haber",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 8,
       "failures": 0
     },
     "Ticaret Bakanlığı": {
       "url": "https://ticaret.gov.tr/duyurular",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 1,
       "failures": 0
     },
     "HIT-30": {
       "url": "https://hit30.sanayi.gov.tr/cagrilar",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 2,
       "failures": 0
     },
     "SSB": {
       "url": "https://arge.ssb.gov.tr/",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 14,
       "failures": 0
     },
     "TÜBİTAK çağrı takvimi": {
       "url": "https://tubitak.gov.tr/tr/acik-cagrilar",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 1,
       "unmatched": 0,
@@ -52,118 +52,102 @@
     },
     "DOĞAKA": {
       "url": "https://www.dogaka.gov.tr/duyurular",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": false,
-      "error": "Kaynak okunamadı",
-      "failures": 27
+      "error": "Uygun duyuru bağlantısı bulunamadı; sayfa yapısı kontrol edilmeli",
+      "failures": 28
     },
     "TKDK": {
       "url": "https://www.tkdk.gov.tr/",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 6,
       "failures": 0
     },
     "TKDK çağrı ilanları": {
       "url": "https://www.tkdk.gov.tr/ProjeIslemleri/CagriIlanArsiv",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 1,
       "failures": 0
     },
     "Karacadağ Kalkınma Ajansı": {
       "url": "https://www.karacadag.gov.tr/duyurular/1/duyurular/",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 25,
       "failures": 0
     },
     "ETKB · Enerji Verimliliği": {
       "url": "https://enerjiverimliligi.enerji.gov.tr/Home/GetirDuyurularGuncel",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 2,
       "failures": 0
     },
     "ETKB · Bakanlık Duyuru Arşivi": {
       "url": "https://duyuru.enerji.gov.tr/medya-duyurular-liste",
-      "checkedAt": "2026-11-26T15:19:34.215Z",
-      "attemptedAt": "2026-11-26T15:19:34.215Z",
+      "checkedAt": "2026-11-27T00:36:53.219Z",
+      "attemptedAt": "2026-11-27T00:36:53.219Z",
       "ok": true,
       "found": 1,
       "failures": 0
     },
     "AB Funding & Tenders": {
       "url": "https://ec.europa.eu/info/funding-tenders/opportunities/portal/screen/opportunities/calls-for-proposals",
-      "checkedAt": "2026-11-26T15:18:27.683Z",
-      "attemptedAt": "2026-11-26T15:18:27.683Z",
+      "checkedAt": "2026-11-27T00:35:40.718Z",
+      "attemptedAt": "2026-11-27T00:35:40.718Z",
       "ok": true,
-      "found": 1022,
+      "found": 1039,
       "failures": 0
     },
     "TÜBİTAK 1831": {
       "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1831-yesil-inovasyon-teknoloji-mentorluk-cagrisi",
-      "checkedAt": "2026-11-26T15:20:06.402Z",
-      "attemptedAt": "2026-11-26T15:20:06.402Z",
+      "checkedAt": "2026-11-27T00:37:22.883Z",
+      "attemptedAt": "2026-11-27T00:37:22.883Z",
       "ok": true,
       "documentHash": "e1a0769ccfefab704ceb1487a65da470f1ee7318a58a2ee2c949bd081200f7bf",
       "documentUrl": "https://tubitak.gov.tr/sites/default/files/2025-05/1831_2024-1_Cagri_Duyurusu15052025_tarihli_guncelleme.pdf",
       "failures": 0
     },
-    "TÜBİTAK 1501": {
-      "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1501-tubitak-sanayi-ar-ge-projeleri-destekleme-programi",
-      "checkedAt": "2026-11-26T15:20:06.402Z",
-      "attemptedAt": "2026-11-26T15:20:06.402Z",
-      "ok": true,
-      "found": 1,
-      "failures": 0
-    },
     "TÜBİTAK 1507": {
       "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1507-tubitak-kobi-ar-ge-baslangic-destek-programi",
-      "checkedAt": "2026-11-26T15:20:06.402Z",
-      "attemptedAt": "2026-11-26T15:20:06.402Z",
+      "checkedAt": "2026-11-27T00:37:22.883Z",
+      "attemptedAt": "2026-11-27T00:37:22.883Z",
       "ok": true,
       "found": 1,
       "failures": 0
     },
     "TÜBİTAK 1707": {
       "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-cagrisi",
-      "checkedAt": "2026-11-26T15:20:06.402Z",
-      "attemptedAt": "2026-11-26T15:20:06.402Z",
+      "checkedAt": "2026-11-27T00:37:22.883Z",
+      "attemptedAt": "2026-11-27T00:37:22.883Z",
+      "ok": true,
+      "found": 1,
+      "failures": 0
+    },
+    "TÜBİTAK 1501": {
+      "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1501-tubitak-sanayi-ar-ge-projeleri-destekleme-programi",
+      "checkedAt": "2026-11-27T00:37:22.883Z",
+      "attemptedAt": "2026-11-27T00:37:22.883Z",
       "ok": true,
       "found": 1,
       "failures": 0
     },
     "TÜBİTAK 1832": {
       "url": "https://tubitak.gov.tr/tr/destekler/sanayi/ulusal-destek-programlari/1832-sanayide-yesil-donusum-cagrisi",
-      "checkedAt": "2026-11-26T15:20:06.402Z",
-      "attemptedAt": "2026-11-26T15:20:06.402Z",
+      "checkedAt": "2026-11-27T00:37:22.883Z",
+      "attemptedAt": "2026-11-27T00:37:22.883Z",
       "ok": true,
       "found": 1,
       "failures": 0
     }
   },
   "rounds": {
-    "1501-2026-2": {
-      "key": "1501-2026-2",
-      "title": "1501-Sanayi Ar-Ge Destek Programı 2026 yılı 2. Çağrı Dokümanı",
-      "url": "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
-      "openDate": "2026-07-20",
-      "deadline": "2026-10-26T23:59:00+03:00",
-      "preDeadline": "2026-10-22T23:59:00+03:00",
-      "applicants": "KOBİ niteliğinde sermaye şirketleri; dönem belgesindeki ek koşullar geçerlidir.",
-      "companyScale": [
-        "KOBİ"
-      ],
-      "checkedAt": "2026-11-26T15:20:06.402Z",
-      "hash": "10f733d7f6a2d0f8e728c63bdc119392f4373693e0c900fb42110c5cde704563",
-      "noticeUrls": [],
-      "changes": []
-    },
     "1507-2026-2": {
       "key": "1507-2026-2",
       "title": "1507-KOBİ Ar-Ge Başlangıç Destek Programı 2026 yılı 2. Çağrı Dokümanı",
@@ -175,7 +159,7 @@
       "companyScale": [
         "KOBİ"
       ],
-      "checkedAt": "2026-11-26T15:20:06.402Z",
+      "checkedAt": "2026-11-27T00:37:22.883Z",
       "hash": "52ef3b8537b140c27d1a16937fa6187943fcd137a2c917afbfa491ebe73a989a",
       "noticeUrls": [
         "https://tubitak.gov.tr/tr/duyuru/1507-kobi-ar-ge-baslangic-destek-programi-ve-1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-programi-2026-yili-cagrilarinin-suresi-uzatildi"
@@ -194,11 +178,27 @@
         "KOBİ",
         "Büyük Ölçek"
       ],
-      "checkedAt": "2026-11-26T15:20:06.402Z",
+      "checkedAt": "2026-11-27T00:37:22.883Z",
       "hash": "d060290ab4f94424e413998e1bb9594790c0daaa317d1040a39efbd2bb60fd53",
       "noticeUrls": [
         "https://tubitak.gov.tr/tr/duyuru/1507-kobi-ar-ge-baslangic-destek-programi-ve-1707-siparise-dayali-ar-ge-projeleri-icin-kobi-destekleme-programi-2026-yili-cagrilarinin-suresi-uzatildi"
       ],
+      "changes": []
+    },
+    "1501-2026-2": {
+      "key": "1501-2026-2",
+      "title": "1501-Sanayi Ar-Ge Destek Programı 2026 yılı 2. Çağrı Dokümanı",
+      "url": "https://tubitak.gov.tr/sites/default/files/2026-07/1501_Sanayi_Ar-Ge_Destek_Programi_2026-2_Proje_Cagri_Metni_13.07.2026_v2.pdf",
+      "openDate": "2026-07-20",
+      "deadline": "2026-10-26T23:59:00+03:00",
+      "preDeadline": "2026-10-22T23:59:00+03:00",
+      "applicants": "KOBİ niteliğinde sermaye şirketleri; dönem belgesindeki ek koşullar geçerlidir.",
+      "companyScale": [
+        "KOBİ"
+      ],
+      "checkedAt": "2026-11-27T00:37:22.883Z",
+      "hash": "10f733d7f6a2d0f8e728c63bdc119392f4373693e0c900fb42110c5cde704563",
+      "noticeUrls": [],
       "changes": []
     },
     "1832-2026-3": {
@@ -213,7 +213,7 @@
         "KOBİ",
         "Büyük Ölçek"
       ],
-      "checkedAt": "2026-11-26T15:20:06.402Z",
+      "checkedAt": "2026-11-27T00:37:22.883Z",
       "hash": "342d241d519d0514de84b81de504b3b85496f13b925d456552cfd9adab56ad5c",
       "noticeUrls": [],
       "changes": []
@@ -774,7 +774,7 @@
     }
   ],
   "alerts": [
-    "DOĞAKA: art arda 27 başarısız kontrol",
+    "DOĞAKA: art arda 28 başarısız kontrol",
     "47 duyuru 24 saatten uzun süredir inceleme bekliyor"
   ]
 }
